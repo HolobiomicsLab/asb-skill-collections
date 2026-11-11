@@ -36,6 +36,7 @@ PIPELINE_NAME = "AgenticScienceBuilder"
 PIPELINE_URL = f"https://github.com/HolobiomicsLab/{PIPELINE_NAME}"
 # Citation keys that may point at a private domain repository.
 PRIVATE_CITATION_KEYS = ("url", "repository-code")
+REGISTRY = Path(__file__).resolve().parent.parent / "collections.yaml"
 TOOLING_URL = "https://github.com/HolobiomicsLab/asb-skill-collections"
 DOI_PLACEHOLDER = "ZENODO_DOI_RESERVED_AFTER_PUBLICATION"
 
@@ -206,11 +207,26 @@ def build_input_receipt(source: Path, with_indicium: bool) -> dict:
     return {path.relative_to(source).as_posix(): digest(path) for path in sorted(files)}
 
 
-def screen_build(root: Path, paper: dict, collection_meta: dict, deny_patterns: tuple[str, ...]) -> tuple[dict, dict]:
+def private_repositories(registry: Path = REGISTRY, pipeline_public: bool = False) -> tuple[str, ...]:
+    """Return the private repositories: every domain repository of the registry and the pipeline.
+
+    The screen rewrites their URLs and `capsules_deposit.py plan` refuses any
+    that remains. With `pipeline_public` the pipeline is left out of the list.
+    """
+    document = yaml.safe_load(registry.read_text(encoding="utf-8")) or {}
+    names = {domain["repository"] for domain in (document.get("domains") or {}).values()
+             if isinstance(domain, dict) and domain.get("repository")}
+    if not pipeline_public:
+        names.add(f"HolobiomicsLab/{PIPELINE_NAME}")
+    return tuple(sorted(names))
+
+
+def screen_build(root: Path, paper: dict, collection_meta: dict, options: dict) -> tuple[dict, dict]:
     """Screen every staged text file and return counts and per-capsule quotes."""
     context = capsule_screen.context_for(paper.get("doi") or "", paper.get("access") or {})
     context.email_allowlist, context.email_role = _build_email_allowlist(collection_meta)
-    context.deny_patterns = deny_patterns
+    context.deny_patterns = options["deny_patterns"]
+    context.private_repositories = options["private_repositories"]
     budget = capsule_screen.QuoteBudget()
     counts = capsule_screen.empty_counts()
     failures = []
@@ -297,7 +313,7 @@ def pack_one(source: Path, stage_parent: Path, out: Path, paper: dict, collectio
     stage_root = stage_parent / slug
     stage_root.mkdir()
     missing, capsules = stage_build(source, stage_root, options["with_indicium"])
-    screen, quotes = screen_build(stage_root, paper, collection_meta, options["deny_patterns"])
+    screen, quotes = screen_build(stage_root, paper, collection_meta, options)
     screen["failures"].extend(f"missing:{name}" for name in missing)
     screen["counts"]["failures"] = len(screen["failures"])
     rows = capsule_rows(stage_root, slug, paper, capsules, quotes)
@@ -377,6 +393,7 @@ def make_manifest(args, collection, builds, rows) -> dict:
             "capsule_members": _CAPSULE_KEEP + list(CAPSULE_FILES),
             "build_members": ["ledger"] + list(BUILD_FILES),
             "with_indicium": args.with_indicium,
+            "pipeline_public": args.pipeline_public,
         },
         "build_count": len(builds),
         "capsule_count": len(rows),
@@ -600,7 +617,8 @@ def run(args) -> int:
     args.not_released = sorted(build_slug(source.name) for source in sources if source.name not in released)
     overrides = load_access_records(args.access_records)
     deny_patterns = tuple(line.strip() for line in args.deny_patterns_file.read_text(encoding="utf-8").splitlines() if line.strip()) if args.deny_patterns_file else ()
-    options = {"with_indicium": args.with_indicium, "deny_patterns": deny_patterns}
+    options = {"with_indicium": args.with_indicium, "deny_patterns": deny_patterns,
+               "private_repositories": private_repositories(pipeline_public=args.pipeline_public)}
     builds, rows = [], []
     with tempfile.TemporaryDirectory(prefix="capsules-stage-", dir=args.out) as temporary:
         for source in (source for source in sources if source.name in released):
@@ -630,7 +648,7 @@ def parse_args(argv=None):
     parser.add_argument("--deny-patterns-file", type=Path)
     parser.add_argument("--strict", action="store_true")
     parser.add_argument("--pipeline-public", action="store_true",
-                        help=f"link the {PIPELINE_NAME} repository; leave off while it is private")
+                        help=f"link the {PIPELINE_NAME} repository and keep its URLs; leave off while it is private")
     args = parser.parse_args(argv)
     args.view = args.view.resolve()
     args.collection = args.collection.resolve()

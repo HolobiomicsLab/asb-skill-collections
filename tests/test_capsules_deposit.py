@@ -14,7 +14,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from scripts import capsules_deposit, check_collections_manifest, pack_capsules, regen_catalogue, release_domain, zenodo_deposit
+from scripts import capsule_screen, capsules_deposit, check_collections_manifest, pack_capsules, regen_catalogue, release_domain, zenodo_deposit
 from tests.test_zenodo_deposit import FakeZenodo
 
 FIXTURE = Path(__file__).parent / "fixtures" / "capsules"
@@ -149,6 +149,103 @@ def test_pack_links_the_pipeline_only_when_declared_public(tmp_path):
     metadata = json.loads((out / "zenodo" / "metadata.json").read_text())
     assert {"relation": "isCompiledBy", "identifier": pack_capsules.PIPELINE_URL, "scheme": "url"} in metadata["related_identifiers"]
     assert PIPELINE_LINK in (out / "hf" / "README.md").read_text()
+
+
+URL_FORMS = {
+    "web": "https://github.com/HolobiomicsLab/AgenticScienceBuilder",
+    "web_git": "https://github.com/HolobiomicsLab/AgenticScienceBuilder.git",
+    "web_path": "https://github.com/HolobiomicsLab/AgenticScienceBuilder/blob/abc123/src/run.py#L4",
+    "raw": "https://raw.githubusercontent.com/HolobiomicsLab/AgenticScienceBuilder/abc123/README.md",
+    "ssh": "git@github.com:HolobiomicsLab/AgenticScienceBuilder.git",
+    "ssh_url": "ssh://git@github.com/HolobiomicsLab/AgenticScienceBuilder",
+    "domain": "https://github.com/HolobiomicsLab/asb-skills-metabolomics/tree/main",
+    "bare": "HolobiomicsLab/AgenticScienceBuilder",
+    "public": "https://github.com/HolobiomicsLab/asb-skill-collections",
+}
+
+
+def view_with_urls(tmp_path):
+    """The fixture view with every URL form in one build's manifest and a commit hash beside them."""
+    view = tmp_path / "view"
+    shutil.copytree(FIXTURE / "view", view, symlinks=True)
+    manifest = view / "build__coll_open" / "build_manifest.json"
+    value = json.loads(manifest.read_text())
+    value["git"] = {"commit": "abc123", **URL_FORMS}
+    value["prose"] = f"Built from {URL_FORMS['web']}/tree/main. See {URL_FORMS['ssh']}; done."
+    manifest.write_text(json.dumps(value))
+    return view
+
+
+def build_member(pack_dir, slug, member):
+    with zipfile.ZipFile(pack_dir / "builds" / f"{slug}.zip") as zipped:
+        return zipped.read(member).decode()
+
+
+def test_screen_rewrites_every_private_url_form_to_owner_and_name(tmp_path):
+    out = pack(tmp_path / "pack", view=view_with_urls(tmp_path))
+    text = build_member(out, "open", "build_manifest.json")
+    value = json.loads(text)
+    git = value["git"]
+    for form in ("web", "web_git", "web_path", "raw", "ssh", "ssh_url", "bare"):
+        assert git[form] == "HolobiomicsLab/AgenticScienceBuilder", form
+    assert git["domain"] == "HolobiomicsLab/asb-skills-metabolomics"
+    assert git["public"] == URL_FORMS["public"]
+    assert git["commit"] == "abc123"
+    assert value["prose"] == "Built from HolobiomicsLab/AgenticScienceBuilder. See HolobiomicsLab/AgenticScienceBuilder; done."
+    screen = json.loads((out / "SCREEN.json").read_text())
+    counts = {build["build_slug"]: build["counts"]["private_urls_rewritten"] for build in screen["builds"]}
+    assert counts == {"closed": 0, "open": 9, "open_capped": 0, "preprint": 0}
+    assert screen["totals"]["private_urls_rewritten"] == 9
+    assert screen["totals"]["failures"] == 0
+    assert "github.com" not in text.replace(URL_FORMS["public"], "")
+
+
+def test_screen_rewrite_is_deterministic(tmp_path):
+    view = view_with_urls(tmp_path)
+    assert digests(pack(tmp_path / "a", view=view)) == digests(pack(tmp_path / "b", view=view))
+
+
+def test_screen_keeps_the_pipeline_url_when_declared_public(tmp_path):
+    out = pack(tmp_path / "pack", view=view_with_urls(tmp_path), pipeline_public=True)
+    git = json.loads(build_member(out, "open", "build_manifest.json"))["git"]
+    assert git["web"] == URL_FORMS["web"]
+    assert git["domain"] == "HolobiomicsLab/asb-skills-metabolomics"
+    assert json.loads((out / "SCREEN.json").read_text())["totals"]["private_urls_rewritten"] == 1
+    assert json.loads((out / "MANIFEST.json").read_text())["inclusion_policy"]["pipeline_public"] is True
+
+
+def test_a_private_url_left_after_the_screen_is_a_failure(tmp_path, monkeypatch):
+    monkeypatch.setattr(capsule_screen, "rewrite_private_urls", lambda text, repositories, counts: text)
+    out = tmp_path / "pack"
+    values = {"view": view_with_urls(tmp_path), "collection": FIXTURE / "collection", "out": out, "date": DATE,
+              "access_records": None, "limit": None, "with_indicium": False, "deny_patterns_file": None,
+              "strict": True, "pipeline_public": False}
+    assert pack_capsules.run(type("Arguments", (), values)()) == 1
+    failures = next(build for build in json.loads((out / "SCREEN.json").read_text())["builds"]
+                    if build["build_slug"] == "open")["failures"]
+    assert "build_manifest.json: residual_private_urls_rewritten" in failures
+
+
+def test_a_rewrite_that_breaks_json_is_a_failure():
+    context = capsule_screen.context_for("10.1234/x", {"type": "gold", "license": "CC-BY-4.0"})
+    context.private_repositories = ("HolobiomicsLab/AgenticScienceBuilder",)
+    result = capsule_screen.screen_text('{"a": "x"}', "doc.json", context, capsule_screen.QuoteBudget())
+    assert result.failures == []
+    original = capsule_screen.rewrite_private_urls
+    try:
+        capsule_screen.rewrite_private_urls = lambda text, repositories, counts: text[:-3]
+        broken = capsule_screen.screen_text('{"a": "x"}', "doc.json", context, capsule_screen.QuoteBudget())
+    finally:
+        capsule_screen.rewrite_private_urls = original
+    assert "doc.json: invalid_json_after_rewrite" in broken.failures
+
+
+def test_the_screen_and_the_plan_read_one_list_of_private_repositories():
+    listed = pack_capsules.private_repositories()
+    assert "HolobiomicsLab/AgenticScienceBuilder" in listed
+    assert "HolobiomicsLab/asb-skills-metabolomics" in listed
+    assert "HolobiomicsLab/asb-skill-collections" not in listed
+    assert "HolobiomicsLab/AgenticScienceBuilder" not in pack_capsules.private_repositories(pipeline_public=True)
 
 
 # refresh -------------------------------------------------------------------
@@ -305,26 +402,38 @@ def test_plan_refuses_a_pack_that_supplements_an_older_version_doi(tmp_path, pac
     assert "MANIFEST.json: collection_version_doi is 10.1234/example.collection" in refusals
 
 
-def test_plan_refuses_a_link_to_the_private_pipeline(tmp_path):
+def test_plan_refuses_a_link_to_the_private_pipeline(tmp_path, packed):
+    link = {"relation": "isCompiledBy", "identifier": pack_capsules.PIPELINE_URL, "scheme": "url"}
+    edit_json(packed / "zenodo" / "metadata.json", lambda metadata: metadata["related_identifiers"].append(link))
+    with (packed / "hf" / "README.md").open("a") as stream:
+        stream.write(f"Pipeline: {pack_capsules.PIPELINE_URL}\n")
+    refusals = refusals_of(tmp_path, packed)
+    assert f"zenodo/metadata.json: private repository URL https://{PIPELINE_LINK}" in refusals
+    assert f"hf/README.md: private repository URL https://{PIPELINE_LINK}" in refusals
+
+
+def test_plan_accepts_the_pipeline_link_of_a_pack_declared_public(tmp_path):
     public = pack(tmp_path / "pack", pipeline_public=True)
-    refusals = refusals_of(tmp_path, public)
-    assert f"zenodo/metadata.json: private repository URL {PIPELINE_LINK}" in refusals
-    assert f"hf/README.md: private repository URL {PIPELINE_LINK}" in refusals
+    status, written = plan(tmp_path, public)
+    assert status == 0, written["refusals"]
 
 
 def test_plan_refuses_a_link_to_a_private_domain_repository(tmp_path, packed):
     with (packed / "hf" / "README.md").open("a") as stream:
         stream.write("Source: git@github.com:HolobiomicsLab/asb-skills-metabolomics.git\n")
-    assert "hf/README.md: private repository URL github.com:HolobiomicsLab/asb-skills-metabolomics" in refusals_of(tmp_path, packed)
+    assert "hf/README.md: private repository URL git@github.com:HolobiomicsLab/asb-skills-metabolomics.git" in refusals_of(tmp_path, packed)
 
 
-def test_plan_refuses_a_private_link_inside_a_build_zip(tmp_path):
-    view = tmp_path / "view"
-    shutil.copytree(FIXTURE / "view", view, symlinks=True)
-    with (view / "build__coll_open" / "workflow.yaml").open("a") as stream:
-        stream.write(f"# built by https://{PIPELINE_LINK}\n")
-    built = pack(tmp_path / "pack", view=view)
-    assert f"workflow.yaml in 1 build zips: private repository URL {PIPELINE_LINK} (first: builds/open.zip)" in refusals_of(tmp_path, built)
+def test_plan_refuses_a_private_link_inside_a_build_zip(tmp_path, packed):
+    target = packed / "builds" / "open.zip"
+    with zipfile.ZipFile(target, "a") as zipped:
+        zipped.writestr("notes.md", f"built by https://{PIPELINE_LINK}\n")
+    data = target.read_bytes()
+    edit_json(packed / "MANIFEST.json", lambda manifest: next(
+        entry for entry in manifest["builds"] if entry["build_slug"] == "open").update(
+        bytes=len(data), sha256=hashlib.sha256(data).hexdigest()))
+    expected = f"notes.md in 1 build zips: private repository URL https://{PIPELINE_LINK} (first: builds/open.zip)"
+    assert expected in refusals_of(tmp_path, packed)
 
 
 def test_plan_refuses_a_local_absolute_path_in_a_descriptive_file(tmp_path, packed):
@@ -383,6 +492,33 @@ def test_create_uploads_every_planned_file_and_never_publishes(tmp_path, packed,
     assert "not published" in output and "tok-sandbox-test" not in output
 
 
+def test_create_records_the_draft_and_refuses_a_second_run(tmp_path, packed, monkeypatch, capsys):
+    plan_path, _ = good_plan(tmp_path, packed)
+    assert create(plan_path, monkeypatch, FakeZenodo(zenodo_deposit.SANDBOX_URL)) == 0
+    receipt = json.loads((plan_path.parent / "draft-sandbox.json").read_text())
+    assert receipt == {"draft_id": 777, "conceptrecid": "444", "url": f"{zenodo_deposit.SANDBOX_URL}/deposit/777",
+                       "host": zenodo_deposit.SANDBOX_URL, "complete": True}
+    assert not (plan_path.parent / "draft.json").exists()
+    second = FakeZenodo(zenodo_deposit.SANDBOX_URL)
+    assert create(plan_path, monkeypatch, second) == 1
+    assert "a draft was already created from this plan" in capsys.readouterr().err
+    assert second.calls == []
+    third = FakeZenodo(zenodo_deposit.SANDBOX_URL)
+    monkeypatch.setattr(zenodo_deposit, "_request", third)
+    assert capsules_deposit.main(["create", "--plan", str(plan_path), "--sandbox", "--again"]) == 0
+    assert third.steps()[0] == ("POST", "/api/deposit/depositions")
+
+
+def test_create_failing_halfway_still_blocks_a_rerun(tmp_path, packed, monkeypatch, capsys):
+    plan_path, _ = good_plan(tmp_path, packed)
+    fake = FakeZenodo(zenodo_deposit.SANDBOX_URL, stored_override={"checksum": "md5:" + "0" * 32})
+    assert create(plan_path, monkeypatch, fake) == 1
+    assert json.loads((plan_path.parent / "draft-sandbox.json").read_text())["complete"] is False
+    rerun = FakeZenodo(zenodo_deposit.SANDBOX_URL)
+    assert create(plan_path, monkeypatch, rerun) == 1
+    assert rerun.calls == []
+
+
 def test_create_refuses_a_stale_plan_before_any_request(tmp_path, packed, monkeypatch, capsys):
     plan_path, _ = good_plan(tmp_path, packed)
     with (tmp_path / "plan" / "upload" / "README.md").open("a") as stream:
@@ -409,12 +545,20 @@ def test_create_stops_when_zenodo_stores_another_md5(tmp_path, packed, monkeypat
 
 # record-doi ----------------------------------------------------------------
 
-def record(plan_path, tooling, record_id="2002"):
+def record(plan_path, tooling, record_id="2002", *extra):
     return capsules_deposit.main([
         "record-doi", "--plan", str(plan_path), "--doi", f"10.5281/zenodo.{record_id}",
         "--concept-doi", "10.5281/zenodo.2001", "--record-id", "2002",
-        "--manifest", str(tooling / "collections.yaml"),
+        "--manifest", str(tooling / "collections.yaml"), *extra,
     ])
+
+
+def test_record_doi_writes_the_publication_date_given(tmp_path, packed):
+    plan_path, _ = good_plan(tmp_path, packed)
+    tooling = tmp_path / "tooling"
+    assert record(plan_path, tooling, "2002", "--published", "2026-11-14") == 0
+    block = yaml.safe_load((tooling / "collections.yaml").read_text())["domains"]["synthetic"]["releases"][0]["capsules"]
+    assert str(block["published"]) == "2026-11-14"
 
 
 def test_record_doi_writes_the_block_the_catalogue_and_the_readme_cell(tmp_path, packed):

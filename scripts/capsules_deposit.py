@@ -141,8 +141,13 @@ def refresh_args(args, loaded: dict, manifest: dict, screen: dict, not_released:
         receipt_digests={key: value for key, value in inputs.items() if key not in {"view", "collection", "collection_files"}},
         with_indicium=bool((manifest.get("inclusion_policy") or {}).get("with_indicium")),
         strict=bool(screen.get("strict")), not_released=not_released,
-        pipeline_public=args.pipeline_public,
+        pipeline_public=pipeline_public(manifest),
     )
+
+
+def pipeline_public(manifest: dict) -> bool:
+    """Read whether the pack was screened with the pipeline declared public."""
+    return bool((manifest.get("inclusion_policy") or {}).get("pipeline_public"))
 
 
 def released_split(manifest: dict, rows: list[dict], released: set[str]):
@@ -246,25 +251,10 @@ def run_archive(args) -> int:
 
 # plan ------------------------------------------------------------------------
 
-def private_repositories(tooling_root: Path) -> list[str]:
-    """Return the private repositories: the pipeline and every registry domain repository."""
-    registry = yaml.safe_load((tooling_root / "collections.yaml").read_text(encoding="utf-8"))
-    domains = (registry or {}).get("domains") or {}
-    names = {f"HolobiomicsLab/{pack_capsules.PIPELINE_NAME}"}
-    names.update(domain["repository"] for domain in domains.values() if isinstance(domain, dict) and domain.get("repository"))
-    return sorted(names)
-
-
-def private_url_pattern(repositories: list[str]) -> re.Pattern:
-    """Match a GitHub URL of any private repository, in web, raw or SSH form."""
-    names = "|".join(re.escape(name) for name in repositories)
-    return re.compile(rf"(?:github\.com|githubusercontent\.com)[/:](?:{names})(?:\.git)?(?![\w.-])", re.IGNORECASE)
-
-
 def text_problems(label: str, text: str, url_pattern: re.Pattern, check_paths: bool) -> list[str]:
     """List private-repository URLs and, when asked, local absolute paths in one text."""
     problems = []
-    match = url_pattern.search(text)
+    match = url_pattern.search(text) if url_pattern else None
     if match:
         problems.append(f"{label}: private repository URL {match.group(0)}")
     if check_paths:
@@ -272,9 +262,11 @@ def text_problems(label: str, text: str, url_pattern: re.Pattern, check_paths: b
     return problems
 
 
-def build_zip_findings(name: str, data: bytes, url_pattern: re.Pattern) -> list[tuple[str, str, str]]:
+def build_zip_findings(name: str, data: bytes, url_pattern) -> list[tuple[str, str, str]]:
     """Return (member, URL, build zip) for each private-repository URL in a build zip's text members."""
     findings = []
+    if url_pattern is None:
+        return findings
     with zipfile.ZipFile(io.BytesIO(data)) as inner:
         for member in inner.namelist():
             if Path(member).suffix.lower() in capsule_screen.TEXT_SUFFIXES:
@@ -411,7 +403,9 @@ def load_pack(pack: Path, url_pattern: re.Pattern) -> dict:
 
 def make_plan(args) -> dict:
     """Check the pack, build the archive and return the deposit plan."""
-    pack = load_pack(args.pack, private_url_pattern(private_repositories(args.tooling_root)))
+    manifest = read_json(args.pack / "MANIFEST.json")
+    repositories = pack_capsules.private_repositories(args.tooling_root / "collections.yaml", pipeline_public(manifest))
+    pack = load_pack(args.pack, capsule_screen.private_url_pattern(repositories))
     loaded = pack_capsules.load_collection(args.collection)
     refusals = pack_refusals(args, pack, loaded)
     zip_findings = []
@@ -478,8 +472,29 @@ def checked_plan(path: Path) -> tuple[dict, list[Path]]:
     return plan, paths
 
 
+def draft_receipt_path(plan_path: Path, sandbox: bool) -> Path:
+    """Return the file beside the plan that records the draft created from it."""
+    return plan_path.parent / ("draft-sandbox.json" if sandbox else "draft.json")
+
+
+def write_draft_receipt(path: Path, draft: dict, host: str, complete: bool) -> None:
+    """Record the draft id, concept record id, address and host, and whether setup finished."""
+    url = draft["links"].get("html") or f"{host}/deposit/{draft['id']}"
+    pack_capsules.write_json(path, {"draft_id": draft["id"], "conceptrecid": draft.get("conceptrecid"),
+                                    "url": url, "host": host, "complete": complete})
+
+
 def run_create(args) -> int:
-    """Create a first-release draft as a new record from a plan. Never publishes."""
+    """Create a first-release draft as a new record from a plan. Never publishes.
+
+    The receipt beside the plan is written as soon as the draft exists, so a
+    rerun after a failure halfway refuses instead of creating a second draft;
+    `--again` overrides it.
+    """
+    receipt = draft_receipt_path(args.plan, args.sandbox)
+    if receipt.exists() and not args.again:
+        raise CapsulesError(f"a draft was already created from this plan ({receipt}); "
+                            "finish it in the web interface, or pass --again to create another")
     plan, paths = checked_plan(args.plan)
     problems = zenodo_deposit.validate_metadata(plan["metadata"])
     if problems:
@@ -488,12 +503,12 @@ def run_create(args) -> int:
     host = zenodo_deposit._host(args.sandbox)
     base = f"{host}/api/deposit/depositions"
     draft = zenodo_deposit._call("new record", "POST", base, token, {})
-    bucket = draft["links"]["bucket"]
+    write_draft_receipt(receipt, draft, host, complete=False)
     for path in paths:
-        zenodo_deposit._upload("file upload", f"{bucket}/{urllib.parse.quote(path.name)}", path, token)
+        zenodo_deposit._upload("file upload", f"{draft['links']['bucket']}/{urllib.parse.quote(path.name)}", path, token)
     zenodo_deposit.update_metadata(draft, {"metadata": plan["metadata"]}, token, base, inherited=False)
-    url = draft["links"].get("html") or f"{host}/deposit/{draft['id']}"
-    print(f"draft {draft['id']} created as a new record, not published: {url}")
+    write_draft_receipt(receipt, draft, host, complete=True)
+    print(f"draft {draft['id']} created as a new record, not published: {read_json(receipt)['url']}")
     print(f"conceptrecid {draft.get('conceptrecid')}")
     return 0
 
@@ -514,7 +529,7 @@ def capsules_block(plan: dict, args) -> dict:
         "benchmark_capsules": plan["counts"]["benchmark_capsules"],
         "archive_bytes": plan["archive"]["bytes"],
         "archive_sha256": plan["archive"]["sha256"],
-        "published": datetime.date.fromisoformat(plan["publication_date"]),
+        "published": datetime.date.fromisoformat(args.published or plan["publication_date"]),
     }
 
 
@@ -600,19 +615,21 @@ def _parser() -> argparse.ArgumentParser:
     for command in (refresh, plan):
         command.add_argument("--collection", type=Path, required=True, help="released collection root")
         command.add_argument("--date", required=True, type=_date)
-    refresh.add_argument("--pipeline-public", action="store_true",
-                         help=f"link the {pack_capsules.PIPELINE_NAME} repository; leave off while it is private")
     plan.add_argument("--tooling-root", type=Path, default=TOOLING_ROOT,
                       help="root holding collections.yaml and scripts/release_creators.yaml")
     create = commands.add_parser("create", help="create a first-release draft on Zenodo from a plan; never publishes")
     create.set_defaults(handler=run_create)
     create.add_argument("--sandbox", action="store_true", help="use sandbox.zenodo.org and ZENODO_SANDBOX_TOKEN")
+    create.add_argument("--again", action="store_true",
+                        help="create another draft although draft.json (or draft-sandbox.json) exists beside the plan")
     record = commands.add_parser("record-doi", help="record a published capsules record in collections.yaml")
     record.set_defaults(handler=run_record_doi)
     record.add_argument("--doi", required=True, help="version DOI of the published record")
     record.add_argument("--concept-doi", required=True)
     record.add_argument("--record-id", required=True)
     record.add_argument("--manifest", type=Path, required=True, help="collections.yaml of this repository")
+    record.add_argument("--published", type=_date, default=None,
+                        help="publication date of the record; defaults to the plan's date")
     for command in (create, record):
         command.add_argument("--plan", type=Path, required=True)
     return parser

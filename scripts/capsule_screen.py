@@ -38,6 +38,10 @@ RESIDUAL_PATH_RE = re.compile(
     r"file://(?=[^\s\"'<>()\[\]{},.;:])|/(?:Users|Volumes|private|tmp|var/folders)/"
     r"|(?<![A-Za-z0-9+.-])[A-Za-z]:[\\/]"
 )
+# Characters a URL path can hold inside JSON, YAML or Markdown text; a
+# backslash is excluded so a JSON escape is never cut in half.
+URL_TAIL = r"""[^\s"'<>()\[\]{},\\]*"""
+URL_TRAILING_PUNCTUATION = ".;:"
 OPEN_ACCESS = {"open", "open-access", "open_access", "oa", "gold", "gold-oa", "gold_oa", "green", "green-oa", "diamond"}
 PERMISSIVE_LICENSE_PREFIXES = ("cc-by", "cc0", "public-domain", "public_domain")
 
@@ -50,6 +54,7 @@ def empty_counts() -> Counter:
         "emails_redacted": 0,
         "phones_redacted": 0,
         "paths_rewritten": 0,
+        "private_urls_rewritten": 0,
         "crates_pruned": 0,
         "deny_hits": 0,
         "failures": 0,
@@ -69,6 +74,7 @@ class ScreenContext:
     email_allowlist: set[str] = field(default_factory=set)
     email_role: re.Pattern | None = None
     deny_patterns: tuple[str, ...] = ()
+    private_repositories: tuple[str, ...] = ()
 
     @property
     def retention(self) -> str:
@@ -170,6 +176,49 @@ def rewrite_paths(text: str, counts: Counter) -> str:
     return PATH_RE.sub(replacement, text)
 
 
+def private_url_pattern(repositories) -> re.Pattern | None:
+    """Match a GitHub URL of a private repository and capture its owner/name.
+
+    Web, raw and SSH forms are matched, with or without a scheme, `.git` and a
+    trailing path, fragment or query; the trailing part is part of the match.
+    """
+    if not repositories:
+        return None
+    names = "|".join(re.escape(name) for name in sorted(repositories))
+    return re.compile(
+        r"(?:(?:git\+)?(?:https?|ssh|git)://)?(?:[\w.-]+@)?"
+        r"(?:www\.|raw\.|api\.)?(?:github\.com|githubusercontent\.com)[/:](?:repos/)?"
+        rf"(?P<repository>{names})(?:\.git)?(?![\w.-])(?:[/#?]{URL_TAIL})?",
+        re.IGNORECASE,
+    )
+
+
+def private_repository_hits(text: str, repositories) -> int:
+    """Count GitHub URLs of private repositories, in any form, without returning them."""
+    pattern = private_url_pattern(repositories)
+    return len(pattern.findall(text)) if pattern else 0
+
+
+def rewrite_private_urls(text: str, repositories, counts: Counter) -> str:
+    """Replace each GitHub URL of a private repository with its bare owner/name.
+
+    The canonical spelling comes from the repository list, so the output does
+    not depend on the case the URL was written in. Trailing sentence punctuation
+    is kept outside the URL.
+    """
+    pattern = private_url_pattern(repositories)
+    if pattern is None:
+        return text
+    canonical = {name.lower(): name for name in repositories}
+
+    def replacement(match: re.Match) -> str:
+        value = match.group(0)
+        stripped = value.rstrip(URL_TRAILING_PUNCTUATION)
+        counts["private_urls_rewritten"] += 1
+        return canonical[match.group("repository").lower()] + value[len(stripped):]
+    return pattern.sub(replacement, text)
+
+
 def _is_machine_path(value: str) -> bool:
     """Accept a drive only as a path, never as a URI scheme."""
     if not re.match(r"^[A-Za-z]:", value):
@@ -183,6 +232,7 @@ def residual_findings(text: str, context: ScreenContext) -> Counter:
     findings = empty_counts()
     redact_pii(text, context, findings)
     findings["paths_rewritten"] = len(RESIDUAL_PATH_RE.findall(text))
+    findings["private_urls_rewritten"] = private_repository_hits(text, context.private_repositories)
     findings["deny_hits"] = count_deny_hits(text, context.deny_patterns)
     return findings
 
@@ -227,15 +277,34 @@ def screen_text(
             text = _screen_markdown(text, relative_path, context, budget, counts, quotes)
     except (ValueError, TypeError, yaml.YAMLError) as exc:
         failures.append(f"{relative_path}: parse_{type(exc).__name__}")
+    parsed = not failures
+    # Before PII: an SSH URL user part reads as an email.
+    text = rewrite_private_urls(text, context.private_repositories, counts)
     text = redact_pii(text, context, counts)
     text = rewrite_paths(text, counts)
+    if parsed:
+        failures += _still_parses(text, suffix, relative_path)
     counts["deny_hits"] = count_deny_hits(text, context.deny_patterns)
     residuals = residual_findings(text, context)
-    for key in ("emails_redacted", "phones_redacted", "paths_rewritten", "deny_hits"):
+    for key in ("emails_redacted", "phones_redacted", "paths_rewritten", "private_urls_rewritten", "deny_hits"):
         if residuals[key]:
             failures.append(f"{relative_path}: residual_{key}")
     counts["failures"] = len(failures)
     return ScreenResult(text, counts, quotes, failures)
+
+
+def _still_parses(text: str, suffix: str, relative_path: str) -> list[str]:
+    """Report a JSON document that the text rewrites left unparsable."""
+    try:
+        if suffix in {".json", ".jsonld"}:
+            json.loads(text)
+        elif suffix == ".jsonl":
+            for line in text.splitlines():
+                if line.strip():
+                    json.loads(line)
+    except ValueError:
+        return [f"{relative_path}: invalid_json_after_rewrite"]
+    return []
 
 
 def _screen_json_lines(text, relative_path, context, budget, counts, quotes) -> str:
