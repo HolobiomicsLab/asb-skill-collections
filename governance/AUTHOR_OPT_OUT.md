@@ -28,8 +28,9 @@ cannot be verified within 30 days are **not honored**.
    `needs-lead-curator` labels.
 2. Fill in the paper DOI, your ORCID, the affected collection(s), and the
    identity-proof link.
-3. The relevant Lead Curator is automatically notified (label routing) and
-   acknowledges the request within the SLA below.
+3. The labels mark the request for the relevant Lead Curator, who
+   acknowledges it within the SLA below. No workflow routes the labels or
+   sends a notification.
 
 ## What we remove
 

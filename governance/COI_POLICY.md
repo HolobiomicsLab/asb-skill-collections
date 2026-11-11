@@ -4,9 +4,9 @@
 
 Self-review of papers you co-authored is **allowed** with three safeguards.
 
-## Safeguard 1 — Automatic COI detection
+## Safeguard 1: COI detection by a script a maintainer runs
 
-A maintainer runs `scripts/check_coi.py` on a PR that touches `collections/<slug>/v<N>/reviews/*.yaml`
+COI detection is not automatic. A maintainer runs `scripts/check_coi.py` on a PR that touches `collections/<slug>/v<N>/reviews/*.yaml`
 in the domain repository. (The `verify-coi.yml` workflow that once ran it on every such PR no longer
 exists.) It cross-checks the paper's author list (via OpenAlex) against the reviewer's ORCID.
 The script reports three fields for the attestation:
@@ -22,6 +22,8 @@ fails a PR on a mismatch any more.
 ## Safeguard 2 — Mandatory disclosure
 
 Every `attestation.yaml` file must include an `is_coauthor` field. Omission blocks merge.
+No workflow checks for the field; the maintainer who reviews the PR does not merge an
+attestation without it.
 
 ## Safeguard 3 — Second reviewer when is_coauthor: true
 
@@ -75,9 +77,11 @@ separate counters, both publicly visible.
 
 ## Process for detected COI violations
 
-1. CI flags the mismatch as a PR comment
+1. The maintainer who runs `scripts/check_coi.py` reports the mismatch on the PR (no
+   workflow posts it)
 2. Reviewer must amend their attestation to match detected values
-3. If second reviewer is missing, the PR blocks until they are added
+3. If second reviewer is missing, the PR blocks until they are added (from v1; gate 13
+   is waived at v0, see Safeguard 3)
 4. Maintainer reviews both attestations before merge
 
 ## Appeals
