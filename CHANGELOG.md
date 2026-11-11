@@ -184,6 +184,11 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- Build capsules keep the quoted text of papers under any Creative Commons licence in full,
+  NC and ND variants included (`capsule_screen.allows_verbatim_sharing`): these licences
+  allow verbatim sharing with attribution. The text stays under the paper's licence, which
+  the record README, the dataset card and the Zenodo description now say, instead of calling
+  every quotation bounded. Other open-access licence strings remain capped.
 - The capsule screen applies the quotation policy to every field that carries text of the
   paper, recognised by its place in the document: quote properties by local name (so
   `asbval:evidence_quote` counts), the items of `passages_used` and `substring_hits`, plain
@@ -191,9 +196,8 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   Markdown block quotes were covered, and the passages retrieved from papers that are not
   open shipped in the local packs. Text is kept, capped under one budget per DOI across the
   members of a build, or removed with an anchor; a second pass reads the output and leaves out
-  a build that holds text it should not. Full retention is for CC-BY, CC-BY-SA, CC0 and public
-  domain; the NC and ND variants of Creative Commons are capped (a prefix test gave them
-  full retention). A drive letter counts as a path only before a home directory, which stops
+  a build that holds text it should not. The licences with full retention are named one by
+  one instead of by a prefix test. A drive letter counts as a path only before a home directory, which stops
   the rewrite of mathematics such as `X:\mathbb`.
 - Capsule tables and guides say what the files hold. The validation label is derived from the
   claim entries and lowered when the summary of `validation.json` disagrees, which the row

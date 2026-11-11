@@ -77,22 +77,23 @@ URL_TRAILING_PUNCTUATION = ".;:"
 OPEN_ACCESS = {"open", "open-access", "open_access", "oa", "gold", "gold-oa", "gold_oa", "green", "green-oa", "diamond"}
 
 
-def is_permissive_license(licence: str) -> bool:
-    """Keep only CC-BY, CC-BY-SA, CC0 and public-domain text without caps.
+def allows_verbatim_sharing(licence: str) -> bool:
+    """Tell whether a paper licence lets its text be shared verbatim with attribution.
 
-    This is the default quotation policy, not a prefix match of the CC family:
-    NC and ND variants, including their combinations, do not qualify.
+    Every Creative Commons licence does (BY, BY-SA, BY-NC, BY-ND, BY-NC-SA,
+    BY-NC-ND), and so do CC0 and the public domain. The text stays under the
+    paper's licence, NonCommercial and NoDerivatives terms included, which the
+    record guides state. Any other licence string is not recognised here.
     """
     value = licence.strip().lower()
-    match = re.fullmatch(
+    if re.fullmatch(
         r"https?://(?:www\.)?creativecommons\.org/"
-        r"(?:licenses/(by(?:-sa)?)/|publicdomain/(zero|mark)/)"
+        r"(?:licenses/by(?:-nc)?(?:-nd|-sa)?/|publicdomain/(?:zero|mark)/)"
         r"\d+(?:\.\d+)*/?(?:legalcode/?)?", value
-    )
-    if match:
+    ):
         return True
     value = re.sub(r"[\s_]+", "-", value)
-    return bool(re.fullmatch(r"(?:cc-by(?:-sa)?|cc0)(?:-\d+(?:\.\d+)*)?|public-domain", value))
+    return bool(re.fullmatch(r"(?:cc-by(?:-nc)?(?:-nd|-sa)?|cc0)(?:-\d+(?:\.\d+)*)?|public-domain", value))
 
 
 def empty_counts() -> Counter:
@@ -204,9 +205,9 @@ class ScreenResult:
 def context_for(doi: str, access: dict[str, Any]) -> ScreenContext:
     """Map access metadata to the G2 text-retention decision.
 
-    Open-access sources under a permissive licence (CC-BY, CC-BY-SA, CC0,
-    public domain, or an explicit reuse grant) keep their attributed text in
-    full. Open-access sources under any other licence string keep it under the
+    Open-access sources under a Creative Commons licence (NC and ND variants
+    included), CC0, the public domain, or an explicit reuse grant keep their
+    attributed text in full. Open-access sources under any other licence string keep it under the
     caps. Restricted, unresolved and licence-less sources, and preprints without
     a reuse grant, drop the text and keep the anchor.
     """
@@ -214,7 +215,7 @@ def context_for(doi: str, access: dict[str, Any]) -> ScreenContext:
     licence = access.get("license") or access.get("licence")
     is_preprint = access_class == "preprint" or bool(access.get("preprint"))
     has_grant = bool(access.get("reuse_grant") or access.get("reuse_allowed"))
-    has_grant = has_grant or bool(licence and is_permissive_license(str(licence)))
+    has_grant = has_grant or bool(licence and allows_verbatim_sharing(str(licence)))
     drop = access_class not in OPEN_ACCESS or not licence or (is_preprint and not has_grant)
     cap = drop or not has_grant
     if is_preprint and not has_grant:
