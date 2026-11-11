@@ -35,7 +35,7 @@ Two kinds of entry appear below.
 | PyPI | not published, by design in v0 | n/a |
 | Documentation site (GitHub Pages) | live: HTTP 200 for the site root and `search.html` on 2026-11-10; not enabled at the 2026-10-30 measurement | 2026-11-10 |
 | HuggingFace mirror and leaderboard | planned, not yet live | n/a |
-| Benchmark and capsules | to be released later; the capsules deposit path (`scripts/capsules_deposit.py`: refresh, archive, plan, draft, record) exists and was rehearsed offline, no record published; the packs are being redone with a screen that rewrites private repository URLs | rehearsal 2026-11-11 |
+| Benchmark and capsules | to be released later; the capsules deposit path (`scripts/capsules_deposit.py`: refresh, archive, plan, draft, record) exists and was rehearsed offline, no record published | rehearsal 2026-11-11 |
 | `w3id.org/holobiomicslab/` IRIs | resolve | since 2026-09-14 |
 | `w3id.org/asb` and `w3id.org/asb/validation` | resolve | since 2026-10-29 |
 | Zenodo DOI | metabolomics concept DOI 10.5281/zenodo.20794026 with versions `metabolomics-v0.1.0` (2026-06-22, v2), `metabolomics-v3.0.0` and `metabolomics-v3.0.1` (both superseded) and `metabolomics-v3.0.2`; nine further domain records, each with its concept and version DOI in `collections.yaml` | 2026-06-22 deposit measured 2026-10-30; later records are registry rows of 2026-11-09 |
@@ -287,9 +287,8 @@ README (e80767838):
 Measured 2026-10-30: nothing.
 
 Measured 2026-11-11: no capsules record exists. The deposit path,
-`scripts/capsules_deposit.py`, was rehearsed offline on 2026-11-11. The packs are
-being redone with a screen that rewrites private repository URLs. The path is
-described in [`capsules-record.md`](capsules-record.md).
+`scripts/capsules_deposit.py`, was rehearsed offline on 2026-11-11; the screen rewrites the URLs of private
+repositories to their bare names. The path is described in [`capsules-record.md`](capsules-record.md).
 
 ## w3id identifiers
 
