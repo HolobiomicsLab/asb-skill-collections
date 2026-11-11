@@ -21,7 +21,7 @@
 - Annual release cycle stewardship
 - The owner's steps of a release. A release is driven with `scripts/release_domain.py`
   (`docs/RELEASE_DEPOSIT.md`). The steps that tool never performs are the lead
-  maintainer's: merging the domain and registry pull requests, publishing the Zenodo
+  maintainer's, or are done on the lead maintainer's word: merging the domain and registry pull requests, publishing the Zenodo
   draft, creating and pushing the release tag, and changing repository visibility
   (`CONTENT_POLICY.md` §7.3).
 

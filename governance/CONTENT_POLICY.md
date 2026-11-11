@@ -629,8 +629,9 @@ domain release. `docs/RELEASE_DEPOSIT.md` ("Orchestrated release") and
    this repository, on which `Validate` runs (§7.1), including
    `scripts/sync_marketplace.py --check`.
 7. `tag` prints the commands that create the tag `<domain>-<label>` on the DOI merge
-   commit and push it. The owner runs them, and `tag --verify` checks that the remote
-   tag points at that commit. Tags never move.
+   commit and push it. The owner, or a maintainer acting on the owner's word, runs
+   them, and `tag --verify` checks that the remote tag points at that commit. Tags
+   never move.
 
 **Patch release.** A patch release keeps the collection version and takes a new
 label, for example `v1.0.1`. It is a new Zenodo version of the same record, under
@@ -970,8 +971,8 @@ implemented. "Not checkable here" means the evidence lives outside this reposito
   ~~`asbb registry verify`~~ never existed and `asbb registry` was removed on
   2026-09-14 (`docs/REGISTRY.md` §4.1); registry consistency is gate 10, carried by
   `release_gate.py`, not by the CLI.
-- [x] **First collection (metabolomics) released.** `collections.yaml` registers
-  `metabolomics-v3.0.1`, and `scripts/check_collections_manifest.py` checks that row in
+- [x] **First collection (metabolomics) released.** `collections.yaml` registers the
+  metabolomics v3 release, and `scripts/check_collections_manifest.py` checks that row in
   `Validate`. The domain repository's CI record is not checkable here.
 - [ ] **`CHANGELOG.md` / release notes updated with this policy.** Partly done.
   `CHANGELOG.md` records earlier corrections to this policy. The release notes of the
