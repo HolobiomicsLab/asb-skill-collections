@@ -41,6 +41,8 @@ from scripts.license_tier import (UNESTABLISHED_DETECTIONS, load_map, tier_for_l
                                   tool_license, warn_legacy_tool_licenses)
 from scripts.tool_identity import build_context, collection_word_share, judge, repo_key
 from scripts.tool_licence_text import read_licence
+from scripts.repository_licence import (DETECTION_REPOSITORY_FILE, agrees, raw_urls,
+                                        repository_statement)
 from scripts.tool_registry_sources import Fetcher, Registry, RegistryRefused, normalize
 
 _GOVERNANCE = pathlib.Path(__file__).resolve().parent.parent / "governance"
@@ -166,18 +168,7 @@ def _introducing_hint(record, ctx, tool_yaml) -> bool:
     Used only to decide whether to ask a per-name registry (bio.tools) at all:
     its answer is then accepted only on a shared repository or DOI.
     """
-    key = normalize(record.get("name"))
-    if len(key) < 3:
-        return False
-    for repo in ctx.repos:
-        if normalize(repo.rsplit("/", 1)[-1]) == key:
-            return True
-    for item in (tool_yaml or {}).get("derived_from") or []:
-        title = str((item or {}).get("title") or "")
-        head = re.split(r"[:\u2013\u2014]|\s-\s|,", title, maxsplit=1)[0]
-        if normalize(head) == key:
-            return True
-    return False
+    return ctx.is_subject
 
 
 def registry_candidates(record, ctx, tool_yaml, registries, common_words, excluded) -> list:
@@ -305,6 +296,68 @@ def choose(candidates) -> tuple[dict | None, str]:
     return _evidence_from_candidate(chosen), "resolved"
 
 
+THIRD_PARTY = frozenset({"bioconda", "biotools"})
+R_DECLARED = frozenset({"bioconductor", "cran"})
+
+
+def confirm(evidence, fetcher) -> tuple[dict | None, str]:
+    """(evidence, outcome) after checking a registry licence against the repository.
+
+    Who wrote the registry's licence field decides what the repository may change:
+
+    - Bioconda, bio.tools (written by a third party): the repository's licence
+      file wins when it is read (`replaced`); without one the record is unknown
+      (`withheld-unconfirmed`), because a third-party string is not the tool's
+      own statement.
+    - PyPI (the authors' metadata, often careless): a file of the same tier with
+      another licence replaces it; a file of another tier makes the record unknown
+      (`withheld-contradiction`), because the authors' two statements contradict
+      each other (MassCube: PyPI says CC BY-NC 4.0, the repository Apache-2.0);
+      no readable file keeps the PyPI licence (`kept-unconfirmed`).
+    - Bioconductor, CRAN (the DESCRIPTION file is the declared licence): the
+      registry licence is kept. Only the repository's DESCRIPTION is read, and only
+      a tier contradiction with it withholds. A LICENSE file may carry terms for a
+      bundled component (xcms) and never overrides the declaration.
+
+    `confirmed` means the file agrees in family and version.
+    """
+    registry = evidence["route"].split(":", 1)[1]
+    statement = repository_statement(evidence.get("repo_url"), fetcher,
+                                     description_only=registry in R_DECLARED)
+    read = bool(statement and statement["tier"])
+    if read and agrees(evidence["license"], statement["license"]):
+        evidence["confirmation"] = {"status": "confirmed", "file": statement["file"],
+                                    "file_license": statement["license"]}
+        return evidence, "confirmed"
+    if read:
+        differs = {"file": statement["file"], "file_license": statement["license"],
+                   "file_tier": statement["tier"], "registry_license": evidence["license"],
+                   "registry_license_raw": evidence.get("license_raw"),
+                   "registry_tier": evidence["license_tier"],
+                   "registry_evidence": evidence.get("license_evidence")}
+        same_tier = statement["tier"] == evidence["license_tier"]
+        if registry in R_DECLARED or (registry == "pypi" and not same_tier):
+            if not same_tier:
+                return None, (f"withheld-contradiction:{registry}={evidence['license']}"
+                              f"|repository={statement['license']}")
+            evidence["confirmation"] = dict(differs, status="kept-registry-declares")
+            return evidence, "kept-registry-declares"
+        out = dict(evidence)
+        out.update(license=statement["license"], license_tier=statement["tier"],
+                   license_raw=statement["license"],
+                   license_detection=DETECTION_REPOSITORY_FILE,
+                   license_evidence=statement["file"])
+        out["confirmation"] = dict(differs, status="replaced")
+        return out, "replaced"
+    why = statement["reason"] if statement else (
+        "no-code-host-repository" if not raw_urls(evidence.get("repo_url")) else "no-licence-file")
+    if registry in THIRD_PARTY:
+        return None, f"withheld-unconfirmed:{why}"
+    evidence["confirmation"] = {"status": "kept-unconfirmed", "reason": why,
+                                "file": (statement or {}).get("file")}
+    return evidence, "kept-unconfirmed"
+
+
 def reconcile(self_published, registry, _map=None) -> tuple:
     """(evidence, conflict) from the introducing-paper route and the registry route.
 
@@ -358,7 +411,8 @@ def collection_domain(collection_dir) -> str:
 
 
 def resolve(collection_dir, cache_dir, registries=None, *, domain=None, reviewed=None,
-            common_words=None, config=None, offline=False, fetcher=None, report=None) -> dict:
+            common_words=None, config=None, offline=False, fetcher=None, report=None,
+            confirm_registry=True) -> dict:
     """Write tool_licenses.json for a collection and return a summary."""
     d = pathlib.Path(collection_dir)
     tools = json.loads((d / "tools_index.json").read_text(encoding="utf-8"))
@@ -409,8 +463,18 @@ def resolve(collection_dir, cache_dir, registries=None, *, domain=None, reviewed
                 continue
             candidates = registry_candidates(tool, ctx, tool_yaml, regs, words, excluded)
             registry_ev, reason = choose(candidates)
+            confirmation = None
+            if registry_ev and confirm_registry:
+                outcome["confirmation_source"] = registry_ev["route"].split(":", 1)[1]
+                outcome["registry_reading"] = {k: registry_ev.get(k) for k in (
+                    "matched", "license", "license_tier", "license_evidence", "repo_url")}
+                registry_ev, confirmation = confirm(registry_ev, fetcher)
+                if registry_ev is None:
+                    reason = confirmation
             evidence, conflict = reconcile(self_published_evidence(tool, papers), registry_ev,
                                            tier_map)
+            if confirmation:
+                outcome["confirmation"] = confirmation
             if conflict:
                 conflicts[slug] = conflict
                 withheld[slug] = "routes-disagree-on-tier"
@@ -448,6 +512,11 @@ def resolve(collection_dir, cache_dir, registries=None, *, domain=None, reviewed
     for e in resolved.values():
         routes[e["route"]] = routes.get(e["route"], 0) + 1
         tiers[e["license_tier"]] = tiers.get(e["license_tier"], 0) + 1
+    confirmations: dict[str, int] = {}
+    for o in outcomes:
+        if o.get("confirmation"):
+            key = o["confirmation"].split(":")[0]
+            confirmations[key] = confirmations.get(key, 0) + 1
     reasons: dict[str, int] = {}
     for r in withheld.values():
         key = r.split(":")[0] if not r.startswith("identity:") else r
@@ -456,6 +525,7 @@ def resolve(collection_dir, cache_dir, registries=None, *, domain=None, reviewed
             "resolved": sum(1 for e in resolved.values() if e["license_tier"] != "unknown"),
             "routes": dict(sorted(routes.items())), "tiers": dict(sorted(tiers.items())),
             "withheld": dict(sorted(reasons.items())),
+            "confirmation": dict(sorted(confirmations.items())),
             "reviewed_exclusions": len(excluded),
             "conflicts": conflicts,
             "index_sizes": {r.id: r.bulk_size() for r in regs},

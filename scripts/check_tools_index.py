@@ -38,7 +38,8 @@ _RETIRED_TOOL_KEYS = ("canonical_url",)
 # Detections written by scripts/resolve_tool_licenses.py from a registry or the
 # reviewed map. A tier resting on one of them must name where it was read.
 RESOLVER_DETECTIONS = frozenset({"bioconductor-package", "bioconda-package", "cran-package",
-                                 "pypi-package", "biotools-entry", "reviewed-map"})
+                                 "pypi-package", "biotools-entry", "reviewed-map",
+                                 "repository-licence-file"})
 
 
 def _licence_provenance_violations(slug, tool, tier) -> list[str]:

@@ -1,0 +1,27 @@
+{
+ "info": {
+  "name": "vega",
+  "summary": "A Jupyter widget for Vega 5 and Vega-Lite 4",
+  "license": "BSD 3-clause",
+  "license_expression": null,
+  "home_page": "https://github.com/vega/ipyvega",
+  "project_urls": {
+   "Homepage": "https://github.com/vega/ipyvega",
+   "Repository": "https://github.com/vega/ipyvega"
+  },
+  "classifiers": [
+   "Development Status :: 5 - Production/Stable",
+   "Environment :: Console",
+   "Intended Audience :: Science/Research",
+   "License :: OSI Approved :: BSD License",
+   "License :: Other/Proprietary License",
+   "Natural Language :: English",
+   "Programming Language :: Python :: 3",
+   "Programming Language :: Python :: 3.10",
+   "Programming Language :: Python :: 3.11",
+   "Programming Language :: Python :: 3.12",
+   "Programming Language :: Python :: 3.8",
+   "Programming Language :: Python :: 3.9"
+  ]
+ }
+}

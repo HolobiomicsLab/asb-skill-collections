@@ -69,9 +69,9 @@ def repo_key(url) -> str | None:
     Code hosts compare on owner and repository; other hosts on host and path,
     and a bare host is not a key (`https://www.bioconductor.org` names no tool).
     """
-    text = str(url or "").strip().rstrip("/.")
+    text = str(url or "").strip().strip("\"'<>[](),;").rstrip("/.")
     text = re.sub(r"^git\+", "", text)
-    m = re.match(r"^(?:https?://)?(?:www\.)?([^/\s]+)(/[^?#\s]*)?", text, re.I)
+    m = re.match(r"^(?:https?://)?(?:www\.)?([^/\s,;]+)(/[^?#\s,;]*)?", text, re.I)
     if not m:
         return None
     host, path = m.group(1).lower(), (m.group(2) or "").rstrip("/")
@@ -147,6 +147,14 @@ class RecordContext:
     dois: set[str] = field(default_factory=set)
     # Share of the collection's skills whose text holds each word; see specific_overlap().
     word_share: dict = field(default_factory=dict)
+    # Set when the record shows that the tool is the subject of its citing paper:
+    # the repositories named after the tool, and whether a title opens with it.
+    subject_repos: set = field(default_factory=set)
+    subject_title: bool = False
+
+    @property
+    def is_subject(self) -> bool:
+        return bool(self.subject_repos) or self.subject_title
 
     def all_text(self) -> str:
         return self.local_text + "\n" + self.skill_text
@@ -203,6 +211,38 @@ def collection_word_share(skills) -> dict:
     return {w: c / n for w, c in counts.items()}
 
 
+# Verbs a title uses when the tool it opens with is its subject: "X enables ...".
+_SUBJECT_VERBS = ("is", "are", "enables", "allows", "provides", "offers", "uses", "identifies",
+                  "improves", "reveals", "integrates", "infers", "predicts", "maps", "detects",
+                  "performs", "accelerates", "facilitates", "achieves", "delivers", "supports",
+                  "characterizes", "characterises", "quantifies", "models", "learns", "leverages")
+
+
+def title_has_subject(title, name) -> bool:
+    """Whether a paper title opens with the tool name as its subject.
+
+    `VEGA is an interpretable generative model ...`, `STEM enables mapping ...`,
+    `Seurat: ...`, `MS-DIAL - ...`. A title that merely mentions the tool later on
+    does not count.
+    """
+    title, name = str(title or "").strip(), str(name or "").strip()
+    key = normalize(name)
+    if len(key) < 3:
+        return False
+    head = re.split(r"[:\u2013\u2014]|\s-\s|,", title, maxsplit=1)[0]
+    if normalize(head) == key:
+        return True
+    verbs = "|".join(_SUBJECT_VERBS)
+    return re.match(rf"^\s*{re.escape(name)}\s+(?:{verbs})\b", title, re.I) is not None
+
+
+def subject_evidence(names, repos, titles) -> tuple[set, bool]:
+    """(repositories named after the tool, whether a title opens with it)."""
+    keys = {normalize(n) for n in names if len(normalize(n)) >= 3}
+    named = {r for r in repos if normalize(r.rsplit("/", 1)[-1]) in keys}
+    return named, any(title_has_subject(t, n) for t in titles for n in names)
+
+
 def build_context(collection, life_science, record, tool_yaml, citing_skills,
                   word_share=None) -> RecordContext:
     """The record's own evidence, gathered from its index row, its yaml and its citing skills."""
@@ -222,9 +262,12 @@ def build_context(collection, life_science, record, tool_yaml, citing_skills,
     dois |= {str(d.get("doi")).lower() for d in tool_yaml.get("derived_from") or []
              if isinstance(d, dict) and d.get("doi")}
     names = [n for n in (record.get("name"), record.get("slug")) if n]
+    own = {k for k in (repo_key(u) for u in tool_yaml.get("source_repos") or []) if k}
+    subject_repos, subject_title = subject_evidence(names, own, titles)
     return RecordContext(collection=collection, life_science=life_science, names=names,
                          local_text=local, skill_text="\n".join(skill_parts),
-                         repos=repos, dois=dois, word_share=word_share or {})
+                         repos=repos, dois=dois, word_share=word_share or {},
+                         subject_repos=subject_repos, subject_title=subject_title)
 
 
 def name_is_weak(name, common_words) -> bool:
@@ -312,6 +355,10 @@ def judge(registry, canonical, record, ctx: RecordContext, common_words) -> Verd
     The rule, in order:
 
     1. A Bioconductor data package is never the tool (it names a dataset).
+       When the record shows that the tool is the subject of its citing paper
+       (a repository named after the tool, or a title opening with it), a package
+       is the tool only if it declares that repository or lists that paper; for
+       Bioconductor, a repository of the same name or none declared suffices.
     2. A contradiction always refuses unless the package's repository or
        publication is the record's own: code evidence for another ecosystem
        (`library(x)` against a Python package, `import x` against an R one, an
@@ -354,6 +401,27 @@ def judge(registry, canonical, record, ctx: RecordContext, common_words) -> Verd
     if registry.restricts_use(record):
         # The licence field is then not the whole story; leave it to a reviewer.
         return Verdict(False, "registry-flags-restricted-use", strong, [])
+
+    # The paper that cites the tool is about it, so the tool is that paper's code.
+    # A package is then the tool only if it declares that repository (or lists that
+    # paper): an import name is not a distribution name. `import vega` in the VEGA
+    # paper is not PyPI's `vega`, the Jupyter widget of vega/ipyvega.
+    if ctx.is_subject:
+        own = ctx.subject_repos or ctx.repos
+        same = bool(package_repos & own) or bool(shared_dois)
+        if registry.id == "bioconductor" and not same:
+            # Bioconductor names are unique and curated, and its packages move
+            # between accounts (GuangchuangYu/clusterProfiler is now
+            # YuLab-SMU/clusterProfiler). The same repository name, or no declared
+            # repository at all, is not a contradiction there.
+            names = {k.rsplit("/", 1)[-1] for k in own}
+            same = not package_repos or any(k.rsplit("/", 1)[-1] in names for k in package_repos)
+        if not same:
+            return Verdict(False, "contradicted", strong, [{
+                "kind": "subject-repository",
+                "value": "record is the subject of its paper ("
+                         + (", ".join(sorted(ctx.subject_repos)) or "title") + "); package declares "
+                         + (", ".join(sorted(package_repos)) or "no repository")}])
 
     other = {"r": "python", "python": "r"}.get(ecosystem)
     if other and code.get(other) and not code.get(ecosystem):

@@ -127,13 +127,15 @@ def _collection(tmp_path, records, domain="transcriptomics", skills=(), papers=(
     return d
 
 
-def _resolve(tmp_path, records, reviewed=None, **kw):
+def _resolve(tmp_path, records, reviewed=None, confirm=False, **kw):
+    """Resolve offline. Identity tests leave out the repository confirmation, which
+    tests/test_repository_licence.py covers; `confirm=True` runs it on recorded files."""
     import shutil
     cache = tmp_path / "cache"
     if not cache.exists():
         shutil.copytree(FIXTURE_CACHE, cache)
     d = _collection(tmp_path, records, **kw)
-    summary = r.resolve(d, cache, offline=True,
+    summary = r.resolve(d, cache, offline=True, confirm_registry=confirm,
                         reviewed=reviewed if reviewed is not None else {"version": 1, "entries": []},
                         report=tmp_path / "report.json")
     out = json.loads((d / "tool_licenses.json").read_text())
@@ -291,12 +293,25 @@ def test_docker_is_not_the_python_sdk(tmp_path):
 
 
 def test_bio_tools_needs_a_shared_repository_or_publication(tmp_path):
-    out, _, _ = _resolve(tmp_path, [
+    out, report, _ = _resolve(tmp_path, [
         ("dssp", "DSSP", {"source_repos": ["https://github.com/PDB-REDO/dssp"]}),
-    ], domain="proteomics")
+    ], domain="proteomics", confirm=True)
     assert out["dssp"]["route"] == "registry:biotools"
     assert out["dssp"]["license"] == "BSD-2-Clause"
     assert out["dssp"]["license_evidence"] == "https://bio.tools/dssp"
+    # The repository's recorded LICENSE agrees, so the bio.tools reading stands.
+    assert out["dssp"]["confirmation"]["status"] == "confirmed"
+    assert report["dssp"]["confirmation"] == "confirmed"
+
+
+def test_a_third_party_licence_without_a_repository_file_is_withheld_end_to_end(tmp_path):
+    out, report, _ = _resolve(tmp_path, [
+        ("unitas", "unitas", {"evidence_spans": [
+            "annotation of small non-coding RNA sequence datasets with unitas"],
+            "source_repos": ["http://www.smallrnagroup.uni-mainz.de/software.html"]}),
+    ], domain="genomics", confirm=True)
+    assert out == {}
+    assert report["unitas"]["reason"] == "withheld-unconfirmed:no-code-host-repository"
 
 
 def test_bio_tools_without_a_shared_repository_is_refused(tmp_path):
@@ -345,6 +360,45 @@ def test_one_repository_in_two_registries_is_one_tool(tmp_path):
     evidence, reason = R.choose(cands)
     assert reason == "resolved" and evidence["license"] == "MIT"
     assert evidence["superseded"][0]["license"] == "GPL-2.0-only"
+
+
+# An import name is not a distribution name.
+
+def test_the_papers_own_tool_is_not_a_package_with_its_import_name(tmp_path):
+    """VEGA's paper does `import vega`; PyPI's `vega` is the Jupyter widget of vega/ipyvega.
+
+    STEM is not PyPI's `stem` (a Tor controller), SIMILE not PyPI's `simile` (an SDK).
+    """
+    out, report, _ = _resolve(tmp_path, [
+        ("vega", "VEGA", {"source_repos": ["https://github.com/LucasESBS/vega"],
+                          "derived_from": [{"doi": "10.1/x", "title":
+                                            "VEGA is an interpretable generative model for inferring "
+                                            "biological network activity"}],
+                          "evidence_spans": ["import vega", "pip install vega"]}),
+        ("stem", "STEM", {"source_repos": ["https://github.com/WhirlFirst/STEM"],
+                          "derived_from": [{"doi": "10.1/x", "title":
+                                            "STEM enables mapping of single-cell and spatial "
+                                            "transcriptomics data with transfer learning"}],
+                          "evidence_spans": ["from STEM.model import *", "import stem"]}),
+        ("simile", "SIMILE", {"source_repos": ["https://github.com/biorack/simile"],
+                              "derived_from": [{"doi": "10.1/x", "title":
+                                                "SIMILE enables alignment of tandem mass spectra "
+                                                "with statistical significance"}],
+                              "evidence_spans": ["import simile as sml"]}),
+    ])
+    assert out == {}
+    for slug in ("vega", "stem", "simile"):
+        assert report[slug]["reason"] == "identity:contradicted"
+        kinds = [k["kind"] for c in report[slug]["candidates"] for k in c.get("contradiction", [])]
+        assert "subject-repository" in kinds
+
+
+def test_a_title_naming_the_tool_as_its_subject_is_recognised():
+    from scripts.tool_identity import title_has_subject
+    assert title_has_subject("STEM enables mapping of single-cell data", "STEM")
+    assert title_has_subject("Seurat: integrated analysis", "Seurat")
+    assert not title_has_subject("Benchmarking STEM and others", "STEM")
+    assert not title_has_subject("STEMNET predicts fate", "STEM")
 
 
 # Trap 2: licence strings.

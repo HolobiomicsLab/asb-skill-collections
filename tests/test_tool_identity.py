@@ -21,6 +21,11 @@ from scripts.tool_registry_sources import read_rds_matrix
     ("https://bioconductor.org/packages/limma", None),
     ("http://www.smallrnagroup.uni-mainz.de/software.html",
      "smallrnagroup.uni-mainz.de/software.html"),
+    ('"https://github.com/Mercedeh66/mbQTL"', "github.com/mercedeh66/mbqtl"),
+    ("https://github.com/computational-metabolomics/structToolbox,",
+     "github.com/computational-metabolomics/structtoolbox"),
+    ("https://github.com/computational-metabolomics/structToolbox, https://example.org/x",
+     "github.com/computational-metabolomics/structtoolbox"),
 ])
 def test_repo_key(url, key):
     assert ti.repo_key(url) == key
@@ -118,3 +123,44 @@ def test_a_package_name_with_its_own_capitals_must_appear_as_written():
     lower = ti.RecordContext(collection="genomics", life_science=True, names=["Splatter"],
                              local_text="generated with the R package Splatter", skill_text="")
     assert "r" in lower.code_evidence(only="splatter")
+
+
+class _Reg:
+    id, scope, ecosystem = "bioconductor", "life_science", "r"
+
+    def __init__(self, repo):
+        self.repo = repo
+
+    def repo_values(self, record):
+        return [self.repo] if self.repo else []
+
+    def dois(self, record):
+        return set()
+
+    def is_data_package(self, record):
+        return False
+
+    def restricts_use(self, record):
+        return False
+
+    def text(self, record):
+        return "Universal enrichment tool for interpreting omics data"
+
+    def word_share(self, tokenize):
+        return {}
+
+
+def _subject_ctx():
+    own = {"github.com/guangchuangyu/clusterprofiler"}
+    return ti.RecordContext(collection="metagenomics", life_science=True, names=["clusterProfiler"],
+                            local_text="library(clusterProfiler)", skill_text="", repos=own,
+                            subject_repos=own)
+
+
+def test_a_bioconductor_package_that_moved_account_is_still_the_tool():
+    moved = ti.judge(_Reg("https://github.com/YuLab-SMU/clusterProfiler"), "clusterProfiler", {},
+                     _subject_ctx(), frozenset())
+    assert moved.accept
+    other = ti.judge(_Reg("https://github.com/someone/otherpkg"), "clusterProfiler", {},
+                     _subject_ctx(), frozenset())
+    assert not other.accept and other.contradiction[0]["kind"] == "subject-repository"

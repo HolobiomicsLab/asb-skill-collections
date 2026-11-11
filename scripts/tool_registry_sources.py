@@ -379,7 +379,8 @@ class Registry:
         values: list[str] = []
         for field in self.spec.get("repo_fields") or []:
             values.extend(_flatten(record.get(field)))
-        return [v for v in values if v]
+        # A field can hold several addresses in one string ("url1, url2").
+        return [part for v in values if v for part in re.split(r"[\s,;]+", str(v)) if part]
 
     def homepage(self, record) -> str | None:
         field = self.spec.get("homepage_field")

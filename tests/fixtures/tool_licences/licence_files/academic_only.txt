@@ -1,0 +1,5 @@
+Copyright (c) 2019 Example University. All rights reserved.
+
+This software is provided free of charge for academic use only.
+Commercial use is prohibited without a separate written licence from
+Example University. Contact the technology transfer office.
