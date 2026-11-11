@@ -68,12 +68,15 @@ function renderSummary() {
   const doi = c.doi
     ? `<a href="${doiURL(c.doi)}" target="_blank" rel="noopener">${siteEsc(c.doi)}</a>` : "none";
   const released = (c.released_at || "").slice(0, 10);
+  // The registry carries a capsules DOI only once that record is published.
+  const capsules = c.capsules_doi
+    ? ` · build capsules DOI <a href="${doiURL(c.capsules_doi)}" target="_blank" rel="noopener">${siteEsc(c.capsules_doi)}</a>` : "";
   box.innerHTML =
     `<div class="card summary-card">
        <div class="stat-row">
          ${stats.map(([k, v]) => `<div class="stat"><div class="stat-n">${siteEsc(v)}</div><div class="stat-k">${k}</div></div>`).join("")}
        </div>
-       <p class="muted">${siteEsc(c.title || c.label)} · version ${siteEsc(c.version)} · released ${siteEsc(released || "")} · version DOI ${doi}</p>
+       <p class="muted">${siteEsc(c.title || c.label)} · version ${siteEsc(c.version)} · released ${siteEsc(released || "")} · version DOI ${doi}${capsules}</p>
        ${mismatch}
        <p class="muted">This page shows what the public index holds for each item. The full text of every
          skill, workflow and tool record is in the Zenodo record of the release (${doi}) and in the private

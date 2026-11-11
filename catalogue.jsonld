@@ -35,7 +35,8 @@
     },
     "slug": "asb:slug",
     "leaf_dir": "asb:leafDir",
-    "status": "asb:status"
+    "status": "asb:status",
+    "capsules_doi": "asb:capsulesDoi"
   },
   "@type": "asb:SkillCollectionRegistry",
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",

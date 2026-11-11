@@ -950,8 +950,11 @@ def replace_release(existing: dict, row: dict) -> dict:
 
     A different tag means a later patch of the same major: the replaced tag,
     commit, digest, DOI and date join `superseded`. The same tag is a rerun and
-    keeps the trace unchanged.
+    keeps the trace unchanged. A `capsules` block stays: its `supplements` field
+    names the version DOI the build-capsules record supplements.
     """
+    if "capsules" in existing:
+        row = {**row, "capsules": existing["capsules"]}
     superseded = list(existing.get("superseded") or [])
     if existing.get("tag") and existing.get("tag") != row["tag"]:
         if any(entry.get("tag") == row["tag"] for entry in superseded):
