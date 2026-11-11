@@ -17,11 +17,17 @@ def unresolved(slug, **extra):
             "used_by_skills": [], **extra}
 
 
-def _collection(tmp_path, tools_index, skills_index):
+def _collection(tmp_path, tools_index, skills_index, evidence=True):
+    """A collection; with ``evidence``, a tool_licenses.json backing each tiered tool."""
     d = tmp_path / "v"
     d.mkdir(parents=True)
     (d / "tools_index.json").write_text(json.dumps(tools_index))
     (d / "skills_index.json").write_text(json.dumps(skills_index))
+    if evidence:
+        (d / "tool_licenses.json").write_text(json.dumps({
+            t["slug"]: {"license": t.get("license"), "license_detection": t.get("license_detection")}
+            for t in tools_index if t.get("license_tier") not in ("unknown", None, "bogus")
+            and t.get("license")}))
     return d
 
 
@@ -233,3 +239,53 @@ def test_the_tier_vocabulary_comes_from_governance_not_a_local_copy():
     import yaml as _yaml
     governance = pathlib.Path(__file__).parent.parent / "governance" / "license_tiers.yaml"
     assert c._VALID == set(_yaml.safe_load(governance.read_text())["tiers"])
+
+
+# --------------------------------------------------------------------------- #
+# The resolution behind the catalogue                                          #
+# --------------------------------------------------------------------------- #
+
+def test_a_tiered_tool_without_tool_licenses_json_is_drift(tmp_path):
+    d = _collection(tmp_path, [resolved("t1"), unresolved("t2")], [], evidence=False)
+    v = c.check_collection(str(d))
+    assert any("t1" in x and "tool_licenses.json is absent" in x for x in v)
+
+
+def test_an_all_unknown_collection_without_resolution_passes_and_says_so(tmp_path, capsys):
+    d = _collection(tmp_path, [unresolved("t1"), unresolved("t2")], [], evidence=False)
+    assert c.main([str(d)]) == 0
+    out = capsys.readouterr().out
+    assert "0 resolved" in out and "2 unknown of 2" in out and "resolution not run" in out
+
+
+def test_the_gate_line_counts_resolved_tools(tmp_path, capsys):
+    d = _collection(tmp_path, [resolved("t1"), unresolved("t2")], [])
+    assert c.main([str(d)]) == 0
+    assert "1 resolved, 0 vendor products, 1 unknown of 2" in capsys.readouterr().out
+
+
+def _registry_resolved(slug, **extra):
+    return resolved(slug, license_detection="bioconda-package",
+                    license_evidence=f"https://anaconda.org/bioconda/{slug}", **extra)
+
+
+def test_a_registry_tier_needs_its_evidence_address(tmp_path):
+    row = _registry_resolved("t1")
+    row.pop("license_evidence")
+    d = _collection(tmp_path, [row], [])
+    assert any("license_evidence" in x for x in c.check_collection(str(d)))
+
+
+def test_a_registry_tier_with_its_address_passes(tmp_path):
+    d = _collection(tmp_path, [_registry_resolved("t1")], [])
+    assert c.check_collection(str(d)) == []
+
+
+def test_tier_and_address_must_match_the_resolution(tmp_path):
+    d = _collection(tmp_path, [_registry_resolved("t1")], [])
+    (d / "tool_licenses.json").write_text(json.dumps({"t1": {
+        "license": "MIT", "license_tier": "noncommercial", "license_detection": "bioconda-package",
+        "license_evidence": "https://anaconda.org/bioconda/other"}}))
+    v = c.check_collection(str(d))
+    assert any("tier 'open' does not match" in x for x in v)
+    assert any("license_evidence" in x and "does not match" in x for x in v)
