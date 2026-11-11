@@ -24,7 +24,8 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   build that is not an included paper of the collection, metadata the deposit API would reject,
   creators that differ from the release list, a stale collection DOI, a private repository URL
   and a local path; `create` makes a first-release draft from the owner's terminal and never
-  publishes; `record-doi` writes an optional `capsules` block on the released version's row of
+  publishes and records the draft beside the plan so a rerun refuses unless `--again` is
+  given; `record-doi` (with `--published`) writes an optional `capsules` block on the released version's row of
   `collections.yaml`, which `check_collections_manifest.py` validates, `regen_catalogue.py`
   carries as `capsules_doi`, the documentation site and the README collections table show, and a
   later patch release keeps. No capsules record is published.
@@ -105,7 +106,10 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 - `scripts/pack_capsules.py` packs only builds of papers that the released corpus includes and
   lists the others under `not_released` in `MANIFEST.json`. It names the private
   AgenticScienceBuilder pipeline in the record description and links it only with
-  `--pipeline-public`. Benchmark rows keep the sorted key order of `capsules.jsonl`.
+  `--pipeline-public`. The screen rewrites a GitHub URL of a private repository (the
+  pipeline and every registry domain repository) to the bare `owner/name`, counts it as
+  `private_urls_rewritten` in `SCREEN.json`, fails a build on a residual one, and fails a JSON
+  document that no longer parses. Benchmark rows keep the sorted key order of `capsules.jsonl`.
 - `check_tools_index.py` reports resolved and unknown tool counts for each collection,
   fails when a record claims a licence and `tool_licenses.json` is absent, when a registry
   or reviewed tier names no `license_evidence`, and when the tier or address drifts from

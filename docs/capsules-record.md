@@ -44,9 +44,16 @@ sources under any other licence string keep structured quote fields and
 evidence blockquotes under 300 characters per field and 1,500 retained
 characters per DOI (`capped`). Restricted, unresolved, licence-less, and
 ungranted-preprint sources drop quote text and retain a DOI, location,
-offsets, original length, digest and reason (`dropped`). Emails and phone-shaped values then use the release-gate rules.
-Build-machine paths become build locators and RO-Crates use the canonical
-release pruning rule. The optional deny list runs last.
+offsets, original length, digest and reason (`dropped`). A GitHub URL of a
+private repository (web, raw or SSH form, with or without `.git` and a trailing
+path) then becomes the bare `owner/name`, counted as `private_urls_rewritten`;
+other fields, such as a commit hash, are untouched. The private repositories
+are the pipeline and every `repository` of `collections.yaml`, read by
+`pack_capsules.private_repositories`, which the plan also uses. Emails and
+phone-shaped values then use the release-gate rules. Build-machine paths
+become build locators and RO-Crates use the canonical release pruning rule.
+The optional deny list runs last. A JSON document must still parse after
+these rewrites.
 
 Residual sensitive content or a deny hit is a build failure. In advisory mode
 the failing build is omitted while receipts remain. `--strict` returns
@@ -55,9 +62,10 @@ retaining the receipts for diagnosis.
 
 The generated metadata links the collection's Zenodo DOI and this tooling
 repository. The pipeline repository, AgenticScienceBuilder, is private: it is
-named in the description and not linked. `--pipeline-public` adds the
-`isCompiledBy` link and the URL in `hf/README.md`, once that repository is
-public. A capsules DOI placeholder remains until the owner publishes the record.
+named in the description and not linked, and the screen rewrites its URLs.
+`--pipeline-public`, once that repository is public, adds the `isCompiledBy`
+link and the URL in `hf/README.md`, keeps its URLs in the builds, and is
+recorded as `inclusion_policy.pipeline_public` in `MANIFEST.json`. A capsules DOI placeholder remains until the owner publishes the record.
 No existing collection record is modified.
 
 Only builds of papers that the released `corpus.yaml` lists as `included` are
@@ -84,8 +92,9 @@ slug is listed under `not_released` in `MANIFEST.json`, with
    copied unchanged after its size and sha256 are checked against
    `MANIFEST.json`. Builds whose paper is no longer an included paper of the
    corpus are dropped and listed under `not_released`. The source pack is never
-   written. The screen is not rerun: a change of the collection's roles or
-   access records needs a full pack.
+   written. The screen is not rerun: a change of the collection's roles,
+   access records or private repositories needs a full pack, and the pack's
+   recorded `pipeline_public` is kept.
 3. Plan:
 
    ```sh
@@ -124,7 +133,12 @@ slug is listed under `not_released` in `MANIFEST.json`, with
    It refuses a plan with refusals and a stale plan (a file whose size, sha256
    or md5 no longer matches). It creates a new record, uploads the six files,
    checks the size and md5 Zenodo stores for each, sets the metadata, and
-   prints the draft address. It never publishes.
+   prints the draft address. It never publishes. As soon as the draft exists
+   it writes `draft.json` (`draft-sandbox.json` with `--sandbox`) beside the
+   plan with the draft id, concept record id, address, host and whether the
+   setup finished. A second run with that file present refuses, so a script
+   rerun after a failure halfway does not create a second draft; `--again`
+   creates another one.
 5. Publish: the owner checks the draft in the Zenodo web interface and clicks
    Publish. Publishing mints the DOI and cannot be undone.
 6. Record:
@@ -132,13 +146,14 @@ slug is listed under `not_released` in `MANIFEST.json`, with
    ```sh
    python scripts/capsules_deposit.py record-doi --plan <plan-dir>/deposit-plan.json \
      --doi <version DOI> --concept-doi <concept DOI> --record-id <id> \
-     --manifest collections.yaml
+     --manifest collections.yaml [--published YYYY-MM-DD]
    ```
 
    It writes a `capsules` block on the released version's row of
    `collections.yaml` (version and concept DOI, record id, the version DOI the
    record supplements, builds packed, left out and not released, capsules,
-   benchmark capsules, archive size and sha256, publication date), adds the
+   benchmark capsules, archive size and sha256, and the publication date:
+   `--published`, by default the plan's date), adds the
    capsules DOI to that domain's version DOI cell in the `README.md`
    collections table, regenerates `catalogue.jsonld` (the documentation site
    shows `capsules_doi` beside the version DOI), and runs
