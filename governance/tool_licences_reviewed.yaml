@@ -1982,3 +1982,33 @@ entries:
   verified: '2026-11-11'
   note: The records cite the hosted platform, whose pages state no terms of use. The engine's source code is published
     under Apache-2.0 in the repository above.
+- names:
+  - liftOver
+  - LiftOver
+  - UCSC liftOver
+  entity: UCSC liftOver
+  entry_kind: software
+  category: application
+  license: null
+  license_tier: noncommercial
+  repo_url: https://github.com/ucscGenomeBrowser/kent
+  homepage: https://genome.ucsc.edu
+  evidence_url: https://genome.ucsc.edu/license/
+  verified: '2026-11-11'
+  note: The UCSC licence page says the Genome Browser utilities may be used and redistributed freely, also commercially,
+    except BLAT and liftOver, whose source directories carry non-commercial licences. A package of the same name
+    in a registry may be an independent reimplementation with another licence; the records cite the UCSC tool.
+- names:
+  - BLAT
+  entity: BLAT (UCSC, Jim Kent)
+  entry_kind: software
+  category: application
+  license: null
+  license_tier: noncommercial
+  repo_url: https://github.com/ucscGenomeBrowser/kent
+  homepage: https://genome.ucsc.edu
+  evidence_url: https://genome.ucsc.edu/license/
+  verified: '2026-11-11'
+  note: The UCSC licence page says the Genome Browser utilities may be used and redistributed freely, also commercially,
+    except BLAT and liftOver, whose source directories carry non-commercial licences. A package of the same name
+    in a registry may be an independent reimplementation with another licence; the records cite the UCSC tool.
