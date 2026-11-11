@@ -45,6 +45,23 @@ SEARCH_SCRIPT = REPO / "scripts" / "templates" / "search_skills.py"
 SELECTOR_SOURCE = REPO / "asb_skill_collections" / "asb_skill_index.py"
 SELECTOR_BEGIN = b"# BEGIN VENDORED SELECTOR\n"
 SELECTOR_END = b"# END VENDORED SELECTOR\n"
+# The report helper a unit may ship in bin/: its two vendored blocks are the
+# report logic of scripts/skill_feedback.py and the patterns of pii_config.py.
+REPORT_HELPER = REPO / "scripts" / "templates" / "report_issue.py"
+PACKAGE_REPORT_HELPER = REPO / "asb_skill_collections" / "report_issue.py"
+REPORT_HELPER_NAME = "report_issue.py"
+FEEDBACK_SOURCE = REPO / "scripts" / "skill_feedback.py"
+PII_SOURCE = REPO / "scripts" / "pii_config.py"
+PII_BEGIN = b"# BEGIN VENDORED PII CONFIG\n"
+PII_END = b"# END VENDORED PII CONFIG\n"
+LOGIC_BEGIN = b"# BEGIN VENDORED REPORT LOGIC\n"
+LOGIC_END = b"# END VENDORED REPORT LOGIC\n"
+SHARED_BEGIN = b"# BEGIN SHARED REPORT LOGIC\n"
+SHARED_END = b"# END SHARED REPORT LOGIC\n"
+FUTURE_IMPORT = b"from __future__ import annotations\n"
+REGISTRY = "HolobiomicsLab/asb-skill-collections"
+REGISTRY_ISSUES = f"https://github.com/{REGISTRY}/issues"
+CONTRIBUTION_HEADING = "## Report and contribute"
 ROUTER_SLUG = "_router"
 MAX_CONTRACT_LEAVES = 20
 TOOL_FIELDS = ("tools", "metadata.tools")
@@ -126,6 +143,132 @@ vendor licence); say so before commercial use or redistribution. `unknown`: no
 licence for the tool was established; say so, and treat the tool as all rights
 reserved until the user has checked it."""
 
+# Addressed to the agent: the four routes of scripts/skill_feedback.py ROUTES, in
+# the same words, the moments to offer a report and the consent rule. Rendered
+# whole from the unit (collection, release, helper shipped or not), so a present
+# section is either current or stale; routers released without it stay valid.
+CONTRIBUTION_SECTION = """{heading}
+
+`{collection}`{release} improves from use. Offer a report yourself, once per
+problem, when a procedure failed or no longer matches the tool, the search
+returned nothing usable and the work was done unaided, the user names a
+method paper whose DOI the search does not find, the leaves had to be
+composed by hand, or a command of this collection failed. Name the route:
+
+1. this skill is wrong or could be better;
+2. a skill is missing: request it, or propose yours;
+3. a paper is not referenced: propose it;
+4. something technical failed: report it.
+
+After a no, do not raise it again. Draft the report, show the user its exact
+title, labels and body, and post only on an explicit yes. Never paste paths,
+credentials or sample names.
+{how}
+Reports go to the public registry; a maintainer carries them into the private
+domain repository."""
+
+CONTRIBUTION_WITH_HELPER = """
+```bash
+{helper} skill --skill <slug> --kind defect --symptom "<what happened>"
+```
+
+Routes: `skill`, `missing`, `paper`, `fault` (`--help` lists the fields). It
+redacts and prints the report and a prefilled address. With `gh` and the
+user's yes, run `gh issue create --repo {registry}`; otherwise give the user
+the address.
+"""
+
+CONTRIBUTION_WITHOUT_HELPER = """
+Write the title and body: the route, the skill slug or task, what happened.
+With `gh` and the user's yes, run `gh issue create --repo {registry}`;
+otherwise give the user the address
+`{issues}/new?title=<title>&body=<body>`, URL-encoded.
+"""
+
+REPORT_COMMAND = f'{PYTHON} "{ROOT_FROM_SKILL}/bin/{REPORT_HELPER_NAME}"'
+
+
+def unit_identity(unit: Path) -> dict:
+    """Collection and release labels of a unit, so its reports are attributable.
+
+    The collection is `<slug>/v<version>` from `collection.yaml`, else the plugin
+    name; the release is `<plugin name>-v<plugin version>`.
+    """
+    meta = {}
+    plugin = unit / ".claude-plugin" / "plugin.json"
+    if plugin.is_file():
+        meta = json.loads(plugin.read_text(encoding="utf-8"))
+    name = str(meta.get("name") or unit.name)
+    version = str(meta.get("version") or "")
+    collection = name
+    manifest = unit / "collection.yaml"
+    if manifest.is_file():
+        document = yaml.safe_load(manifest.read_text(encoding="utf-8")) or {}
+        if document.get("slug") and document.get("version") is not None:
+            collection = f"{document['slug']}/v{document['version']}"
+    return {"collection": collection, "release": f"{name}-v{version}" if version else ""}
+
+
+def contribution_section(contract: dict) -> str:
+    """Render the report-and-contribute section of a unit's routers."""
+    how = (CONTRIBUTION_WITH_HELPER if contract.get("has_report_helper")
+           else CONTRIBUTION_WITHOUT_HELPER)
+    release = contract.get("release") or ""
+    return CONTRIBUTION_SECTION.format(
+        heading=CONTRIBUTION_HEADING,
+        collection=contract.get("collection") or "this collection",
+        release=f" (release `{release}`)" if release else "",
+        how=how.format(helper=REPORT_COMMAND, registry=REGISTRY, issues=REGISTRY_ISSUES),
+    )
+
+
+def contribution_status(text: str, contract: dict) -> str:
+    """`absent`, `current` or `stale`: the state of a router's contribution section.
+
+    Routers released before the section existed carry none, and that is
+    accepted; a section that is present must be the one the unit renders.
+    """
+    pattern = re.compile(rf"^{re.escape(CONTRIBUTION_HEADING)}[^\n]*\n.*?(?=^## |\Z)", re.M | re.S)
+    match = pattern.search(text)
+    if not match:
+        return "absent"
+    expected = contribution_section(contract).strip()
+    # The labels are compared apart from the text: a release stage that bumps
+    # the plugin version after the routers were rendered must not turn every
+    # router stale. The labels are refreshed with the section.
+    return "current" if _mask_identity(match.group().strip()) == _mask_identity(expected) else "stale"
+
+
+IDENTITY_SENTENCE = re.compile(r"^`[^`\n]*`(?: \(release `[^`\n]*`\))? improves from use\.", re.M)
+
+
+def _mask_identity(section: str) -> str:
+    return IDENTITY_SENTENCE.sub("<collection> improves from use.", section, count=1)
+
+
+def router_contribution_findings(unit: Path) -> list[str]:
+    """Routers of a unit whose contribution section is present and stale."""
+    contract = None
+    findings = []
+    for relative in (f"{layout.ADVERTISED_DIRNAME}/{ROUTER_SLUG}/SKILL.md",
+                     f"{layout.WORKFLOW_DIRNAME}/{WORKFLOW_ROUTER_SLUG}/SKILL.md"):
+        router = unit / relative
+        if not router.is_file():
+            continue
+        text = router.read_text(encoding="utf-8")
+        if CONTRIBUTION_HEADING not in text:
+            continue
+        if contract is None:
+            contract = {**unit_identity(unit), "has_report_helper": has_report_helper(unit)}
+        if contribution_status(text, contract) == "stale":
+            findings.append(relative)
+    return findings
+
+
+def has_report_helper(unit: Path) -> bool:
+    return (unit / "bin" / REPORT_HELPER_NAME).is_file()
+
+
 # The frontmatter is rendered by `router_frontmatter` with yaml.safe_dump, never
 # by string formatting: a description holds free text such as "ASB Genomics: 3246
 # skills", and an unquoted ": " makes the whole frontmatter unparsable.
@@ -147,6 +290,8 @@ file you need.
 {grounding_section}
 
 {tiers_section}
+
+{contribution_section}
 """
 
 
@@ -273,6 +418,8 @@ def unit_contract(unit: Path) -> dict:
             tool_keys=tool_keys, source_keys=source_keys, cite=CITE_IN_ANSWER
         ),
         "grounding_section": grounding_section,
+        "has_report_helper": has_report_helper(unit),
+        **unit_identity(unit),
         **unit_inventory(unit),
     }
 
@@ -373,8 +520,10 @@ def _section_is_stale_search(section: str, contract: dict) -> bool:
 def _refresh_router_sections(body: str, contract: dict) -> str:
     """Replace only stale sections in an existing router.
 
-    Steps 1 to 3 and the licence tiers are refreshed; the frontmatter, title
-    and introduction of an existing router are kept as written.
+    Steps 1 to 3, the licence tiers and a contribution section that is
+    present are refreshed; the frontmatter, title and introduction of an
+    existing router are kept as written, and a router without a contribution
+    section does not gain one (only a rewrite renders it).
     """
     rendered = body
     replacements = {
@@ -390,6 +539,11 @@ def _refresh_router_sections(body: str, contract: dict) -> str:
         r"## Licen[cs]e tiers": (
             TIERS_SECTION,
             lambda section, c: section.strip() != TIERS_SECTION.strip(),
+        ),
+        # Never added to a released router by a refresh: absent stays absent.
+        re.escape(CONTRIBUTION_HEADING): (
+            contribution_section(contract),
+            lambda section, c: section.strip() != contribution_section(c).strip(),
         ),
     }
     for heading, (replacement, is_stale) in replacements.items():
@@ -525,6 +679,7 @@ def write_router(unit: Path, count: int, rewrite: bool = False) -> None:
         apply_section=contract["apply_section"],
         grounding_section=contract["grounding_section"],
         tiers_section=TIERS_SECTION,
+        contribution_section=contribution_section(contract),
     )
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(body, encoding="utf-8")
@@ -586,6 +741,8 @@ bases.
 > validated, the execution is not. Bindings were chosen by semantic retrieval
 > plus deterministic selection. `derived_from_workflows` is a provenance record;
 > no ablation experiment consuming it is released.
+
+{contribution_section}
 """
 
 
@@ -661,6 +818,9 @@ def write_workflow_router(unit: Path, rewrite: bool = False) -> bool:
         skill_dir=SKILL_DIR,
         root=ROOT_FROM_SKILL,
         rows=table,
+        contribution_section=contribution_section(
+            {**unit_identity(unit), "has_report_helper": has_report_helper(unit)}
+        ),
     )
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(body, encoding="utf-8")
@@ -681,6 +841,64 @@ def selector_block(script: bytes) -> bytes | None:
     if script.count(SELECTOR_BEGIN) != 1 or script.count(SELECTOR_END) != 1:
         return None
     return script.split(SELECTOR_BEGIN)[1].split(SELECTOR_END)[0]
+
+
+def _between(source: bytes, begin: bytes, end: bytes, label: str) -> bytes:
+    if source.count(begin) != 1 or source.count(end) != 1:
+        raise ValueError(f"{label} must contain exactly one {begin.decode().strip()} block")
+    return source.split(begin)[1].split(end)[0]
+
+
+def report_logic_blocks() -> tuple[bytes, bytes]:
+    """The PII patterns and the shared report logic, as the helper vendors them.
+
+    pii_config.py is taken whole after its future import (a second future
+    import mid-file is a syntax error); skill_feedback.py between its SHARED
+    REPORT LOGIC markers.
+    """
+    pii = PII_SOURCE.read_bytes()
+    if pii.count(FUTURE_IMPORT) != 1:
+        raise ValueError("pii_config.py must hold exactly one future import")
+    logic = _between(FEEDBACK_SOURCE.read_bytes(), SHARED_BEGIN, SHARED_END, "skill_feedback.py")
+    return pii.split(FUTURE_IMPORT, 1)[1], logic
+
+
+def embed_report_logic(script: bytes) -> bytes:
+    """Replace the two vendored blocks of the report helper with current sources."""
+    pii, logic = report_logic_blocks()
+    for begin, end, body in ((PII_BEGIN, PII_END, pii), (LOGIC_BEGIN, LOGIC_END, logic)):
+        _between(script, begin, end, "report helper")
+        before, rest = script.split(begin)
+        _, after = rest.split(end)
+        script = before + begin + body + end + after
+    return script
+
+
+def sync_report_helper() -> list[str]:
+    """Regenerate the helper template and its package copy; return what changed."""
+    generated = embed_report_logic(REPORT_HELPER.read_bytes())
+    changed = []
+    for path in (REPORT_HELPER, PACKAGE_REPORT_HELPER):
+        if not path.is_file() or path.read_bytes() != generated:
+            path.write_bytes(generated)
+            changed.append(str(path))
+    return changed
+
+
+def write_report_helper(unit: Path) -> bool:
+    """Ship the report helper in a unit's bin/; return whether it wrote.
+
+    Only the generation of a new unit calls this. Released collections without
+    the helper stay valid: their routers carry no contribution section, or one
+    rendered without the helper.
+    """
+    out = unit / "bin" / REPORT_HELPER_NAME
+    generated = embed_report_logic(REPORT_HELPER.read_bytes())
+    if out.is_file() and out.read_bytes() == generated:
+        return False
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_bytes(generated)
+    return True
 
 
 def refresh_scripts(unit: Path, keep_selector: bool = False) -> dict:
@@ -725,6 +943,7 @@ def shape(
     slugs = set(leaf_slugs(unit))
     moved = move_leaves(unit, keep | {ROUTER_SLUG})
     refresh_scripts(unit)
+    write_report_helper(unit)
     indexed = write_index(unit, source_index, slugs)
     write_router(unit, indexed or len(slugs), rewrite=rewrite)
     write_workflow_router(unit, rewrite=rewrite)
@@ -744,7 +963,7 @@ def write_routers(unit: Path, rewrite: bool = False) -> dict:
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    p.add_argument("units", nargs="+", help="unit directories to convert")
+    p.add_argument("units", nargs="*", help="unit directories to convert")
     p.add_argument("--index", help="parent skills_index.json to subset (required for conversion)")
     p.add_argument("--keep", default="", help="comma-separated slugs to keep advertised")
     p.add_argument("--scripts-only", action="store_true",
@@ -754,10 +973,32 @@ def main(argv: list[str] | None = None) -> int:
                         "selector block the unit already ships (same ranking, new output)")
     p.add_argument("--routers-only", action="store_true",
                    help="render the routers of a shaped unit only; no leaf, index or script change")
+    p.add_argument("--with-report-helper", action="store_true",
+                   help="with --scripts-only: also ship bin/report_issue.py (next generation only)")
+    p.add_argument("--check", action="store_true",
+                   help="read-only: fail when a router carries a stale contribution section "
+                        "(a router without one is accepted)")
+    p.add_argument("--sync-report-helper", action="store_true",
+                   help="regenerate scripts/templates/report_issue.py and its package copy")
     p.add_argument("--rewrite", action="store_true",
                    help="render existing routers whole (frontmatter included) instead of "
                         "refreshing stale sections")
     args = p.parse_args(argv)
+    if args.sync_report_helper:
+        print({"updated": sync_report_helper()})
+        return 0
+    if not args.units:
+        p.error("at least one unit directory is required")
+    if args.check:
+        stale = {raw: router_contribution_findings(Path(raw)) for raw in args.units}
+        for raw, routers in stale.items():
+            for router in routers:
+                print(f"{raw}: {router}: stale contribution section; render it with --routers-only --rewrite")
+        print(f"router check: {sum(map(len, stale.values()))} stale contribution sections "
+              f"in {len(stale)} units")
+        return 1 if any(stale.values()) else 0
+    if args.with_report_helper and not args.scripts_only:
+        p.error("--with-report-helper needs --scripts-only")
     if args.scripts_only and args.routers_only:
         p.error("--scripts-only and --routers-only are exclusive")
     if args.keep_selector and not args.scripts_only:
@@ -768,6 +1009,8 @@ def main(argv: list[str] | None = None) -> int:
     for raw in args.units:
         if args.scripts_only:
             print(refresh_scripts(Path(raw), keep_selector=args.keep_selector))
+            if args.with_report_helper:
+                print({"unit": raw, "report_helper": write_report_helper(Path(raw))})
         elif args.routers_only:
             print(write_routers(Path(raw), rewrite=args.rewrite))
         else:
