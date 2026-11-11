@@ -1299,6 +1299,34 @@ entries:
     the same README says ''(Re-)distribution of the methods ... for commercial purposes is prohibited'': an unresolved
     inconsistency inside the README, not recorded as a licence.'
 - names:
+  - CANOPUS
+  entity: CANOPUS (SIRIUS web service)
+  entry_kind: software
+  category: web_service
+  license: null
+  license_tier: noncommercial
+  repo_url: https://github.com/sirius-ms/sirius
+  homepage: https://bio.informatik.uni-jena.de/software/sirius/
+  evidence_url: https://bio.informatik.uni-jena.de/terms-of-service-fsu-csi
+  verified: '2026-11-11'
+  note: 'Compound class prediction served by the SIRIUS web services, under the same terms as CSI:FingerID. The SIRIUS
+    README says the web services (CSI:FingerID, CANOPUS, MSNovelist) are ''for academic research and education use
+    only''. The bio.tools entry `canopus` names kaibioinfo/canopus_treemap, a notebook helper for CANOPUS output
+    (MIT), which is not the tool.'
+- names:
+  - MSNovelist
+  entity: MSNovelist (SIRIUS web service)
+  entry_kind: software
+  category: web_service
+  license: null
+  license_tier: noncommercial
+  repo_url: https://github.com/sirius-ms/sirius
+  homepage: https://bio.informatik.uni-jena.de/software/sirius/
+  evidence_url: https://bio.informatik.uni-jena.de/terms-of-service-fsu-csi
+  verified: '2026-11-11'
+  note: 'De novo structure generation served by the SIRIUS web services, under the same terms as CSI:FingerID. The
+    research repository meowcat/MSNovelist (AGPL-3.0) directs users to SIRIUS; the usable tool is the web service.'
+- names:
   - Julia
   entity: Julia
   entry_kind: software
