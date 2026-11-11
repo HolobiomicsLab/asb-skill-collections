@@ -24,6 +24,24 @@ PHONE_RE = re.compile(
     r"(?<!\w)(?:\+\d{1,3}[ .-]?)?(?:\(\d{2,4}\)[ .-]?)?"
     r"\d{2,4}[ .-]\d{3,4}[ .-]\d{3,4}(?:[ .-]\d{2,4})?(?!\w)"
 )
+# Digit groups alone are the numeric data of a paper (masses, axis ticks, page
+# ranges, identifiers), so a phone-shaped number is redacted only with a cue: an
+# international prefix, a parenthesised area code that is not a year, or a
+# telephone or fax label shortly before it on the same line.
+PHONE_LABEL = r"(?<![^\W\d_])(?:t[eé]l(?:[eé]phone|efon|efax)?|phone|fax)(?![^\W\d_])"
+PHONE_LABEL_BEFORE_RE = re.compile(PHONE_LABEL + r"[^\n]{0,30}\Z", re.IGNORECASE)
+# Right after a label any grouping counts ("04 92 07 61 00"), within the digit
+# count of a telephone number.
+LABELLED_PHONE_RE = re.compile(
+    PHONE_LABEL + r"\.?[ \t]*(?:(?:number|no|nr|n°|#)\.?)?[ \t]*[:=]?[ \t]*(\+?\(?\d[\d ().\-/]{5,22}\d)",
+    re.IGNORECASE,
+)
+PHONE_DIGITS = range(7, 16)
+# An area code in parentheses has three to five digits and is not a year; shorter
+# ones are issue numbers of a reference list.
+AREA_CODE = r"\((?!(?:19|20)\d\d\))\d{3,5}\)"
+AREA_CODE_RE = re.compile(AREA_CODE)
+AREA_CODE_PHONE_RE = re.compile(rf"(?<!\w){AREA_CODE}[ .-]?\d{{3,4}}[ .-]\d{{3,4}}(?!\w)")
 # A machine path is a root marker followed by at least one path character. Users,
 # Volumes and var/folders are distinctive and count anywhere; home, tmp and private
 # are ordinary directory names and count only where an absolute path starts, not as
@@ -161,10 +179,37 @@ def redact_pii(text: str, context: ScreenContext, counts: Counter) -> str:
         return "[redacted-email]"
 
     text = EMAIL_RE.sub(email_replacement, text)
+
+    def labelled_replacement(match: re.Match) -> str:
+        number = match.group(1)
+        if sum(character.isdigit() for character in number) not in PHONE_DIGITS:
+            return match.group(0)
+        counts["phones_redacted"] += 1
+        return match.group(0)[: match.start(1) - match.start()] + "[redacted-phone]"
+
     def phone_replacement(match: re.Match) -> str:
+        if not _has_phone_cue(match):
+            return match.group(0)
         counts["phones_redacted"] += 1
         return "[redacted-phone]"
+
+    def area_code_replacement(match: re.Match) -> str:
+        counts["phones_redacted"] += 1
+        return "[redacted-phone]"
+
+    text = LABELLED_PHONE_RE.sub(labelled_replacement, text)
+    text = AREA_CODE_PHONE_RE.sub(area_code_replacement, text)
     return PHONE_RE.sub(phone_replacement, text)
+
+
+def _has_phone_cue(match: re.Match) -> bool:
+    """Tell a telephone number from numeric data by what introduces it."""
+    value = match.group(0)
+    if value.startswith("+"):
+        return True
+    if AREA_CODE_RE.match(value):
+        return True
+    return bool(PHONE_LABEL_BEFORE_RE.search(match.string[max(0, match.start() - 60):match.start()]))
 
 
 def rewrite_paths(text: str, counts: Counter) -> str:

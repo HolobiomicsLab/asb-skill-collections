@@ -82,6 +82,42 @@ def test_pii_rules_keep_notation_role_addresses_and_redact_phone():
     assert result.counts["phones_redacted"] == 1
 
 
+@pytest.mark.parametrize("text", [
+    "fragments at m/z 301.1410 303.1567 305.1723 were kept",
+    "axis ticks 0 100 200 300 400 500",
+    "knowledge base asb-paper-10-1101-2024-10-31-621429",
+    "seasons 2019-2020-2021",
+    "Anal. Chem. (2019) 91 4346-4356",
+    "J. Sep. Sci. 44 (12) 2345-2356",
+    "the phone line is described below\nvalues 100 200 300 400",
+    "a telephone survey of 1200 households, then 100 200 300",
+])
+def test_digit_groups_without_a_phone_cue_are_numeric_data(text):
+    for value, name in ((text, "evidence/note.txt"), (json.dumps({"v": text}), "ledger/note.json")):
+        result = screen.screen_text(value, name, context(), screen.QuoteBudget())
+        assert "[redacted-phone]" not in result.text
+        assert result.counts["phones_redacted"] == 0
+        assert not result.failures
+
+
+@pytest.mark.parametrize(("text", "expected"), [
+    ("call +33 493 001 234 for access", 1),
+    ("office (555) 123-4567", 1),
+    ("office (01865) 270 000 or (020) 7946 0958", 2),
+    ("Tel: 555-123-4567", 1),
+    ("Tél. : 04 92 07 61 00", 1),
+    ("Fax 0044 20 7946 0958", 1),
+    ("Telephone number: 0123456789", 1),
+    ("Phone: 555 123 4567, 555 987 6543", 2),
+])
+def test_a_phone_number_with_a_cue_is_redacted(text, expected):
+    for value, name in ((text, "evidence/note.txt"), (json.dumps({"v": text}), "ledger/note.json")):
+        result = screen.screen_text(value, name, context(), screen.QuoteBudget())
+        assert result.counts["phones_redacted"] == expected
+        assert not any(character.isdigit() for character in result.text.replace("\\u00e9", ""))
+        assert not result.failures
+
+
 @pytest.mark.parametrize("path", [
     "/Users/example/outputs/demo/ledger/a.json",
     "/Volumes/data/outputs/demo/evidence/a.md",

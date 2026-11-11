@@ -200,6 +200,11 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   `residual_paths_rewritten`. Markdown, plain text, CSV and TSV are still screened as text,
   and deny-list patterns are still counted on the final text. A YAML document whose comments
   hold something to screen is serialized rather than kept.
+- The capsule screen redacts a phone-shaped number only with a cue (an international
+  prefix, a parenthesised area code that is not a year, or a telephone or fax label shortly
+  before it). The earlier rule redacted any three digit groups separated by a space, a dot
+  or a hyphen, which replaced masses, axis ticks and parts of identifiers in the packs;
+  right after a label, groupings the earlier shape missed (`04 92 07 61 00`) are now covered.
 - The path rewrite and the residual path check share one rule: a root marker followed by at
   least one path character, with `/home/`, `/tmp/` and `/private/` counted only where an
   absolute path starts. `/home/` is new in the rule: a home directory quoted from a paper was

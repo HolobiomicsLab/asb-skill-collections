@@ -54,8 +54,14 @@ private repository (web, raw or SSH form, with or without `.git` and a trailing
 path) then becomes the bare `owner/name`, counted as `private_urls_rewritten`;
 other fields, such as a commit hash, are untouched. The private repositories
 are the pipeline and every `repository` of `collections.yaml`, read by
-`pack_capsules.private_repositories`, which the plan also uses. Emails and
-phone-shaped values then use the release-gate rules. Build-machine paths
+`pack_capsules.private_repositories`, which the plan also uses. Emails then
+use the release-gate rules. A phone-shaped number is redacted only with a
+cue: an international prefix (`+`), an area code of three to five digits in
+parentheses that is not a year, or a telephone or fax label (tel, tél,
+telephone, phone, fax) at most thirty characters before it on the same line;
+right after such a label any grouping of seven to fifteen digits counts.
+Digit groups without a cue are the numeric data of a paper (masses, axis
+ticks, page ranges, identifiers) and are kept. Build-machine paths
 become build locators and RO-Crates use the canonical release pruning rule.
 The optional deny list runs last.
 
