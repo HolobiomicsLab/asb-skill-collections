@@ -34,6 +34,15 @@ COMMIT_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 DIGEST_PATTERN = re.compile(r"^sha256:[0-9a-f]{64}$")
 DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 SUPERSEDED_KEYS = {"tag", "commit", "tree_digest", "version_doi", "released"}
+SHA256_PATTERN = re.compile(r"^[0-9a-f]{64}$")
+CAPSULES_COUNTS = (
+    "builds_packed", "builds_left_out", "builds_not_released", "capsules",
+    "benchmark_capsules", "archive_bytes",
+)
+CAPSULES_KEYS = {
+    "version_doi", "concept_doi", "record_id", "supplements", "archive_sha256",
+    "published", *CAPSULES_COUNTS,
+}
 
 
 def compute_tree_digest(repository: Path, release_path: str) -> str:
@@ -231,6 +240,7 @@ def validate_release(
         failures.append(f"{label}: invalid tree_digest {release.get('tree_digest')!r}")
     failures.extend(validate_counts(label, release))
     failures.extend(validate_superseded(label, release))
+    failures.extend(validate_capsules(label, release))
     failures.extend(validate_catalogue(label, release, entries))
     if checkout is not None:
         failures.extend(validate_checkout(label, release, checkout))
@@ -284,6 +294,42 @@ def validate_superseded(label: str, release: dict) -> list[str]:
         failures.append(f"{label}: superseded repeats the current tag {release.get('tag')!r}")
     if len(tags) != len(set(map(str, tags))):
         failures.append(f"{label}: superseded tags must be unique")
+    return failures
+
+
+def validate_capsules(label: str, release: dict) -> list[str]:
+    """Check the optional block of the published build-capsules record of a release.
+
+    `scripts/capsules_deposit.py record-doi` writes it. `supplements` names the
+    collection version DOI the record supplements: the row's DOI or a superseded one.
+    """
+    if "capsules" not in release:
+        return []
+    block = release["capsules"]
+    where = f"{label}: capsules"
+    if not isinstance(block, dict):
+        return [f"{where} must be a mapping"]
+    failures = []
+    if set(block) != CAPSULES_KEYS:
+        failures.append(f"{where} keys must be {', '.join(sorted(CAPSULES_KEYS))}")
+    for key in ("version_doi", "concept_doi", "supplements"):
+        if not DOI_PATTERN.fullmatch(str(block.get(key, ""))):
+            failures.append(f"{where}: invalid {key} {block.get(key)!r}")
+    if str(block.get("version_doi")).rsplit(".", 1)[-1] != str(block.get("record_id")):
+        failures.append(f"{where}: record_id {block.get('record_id')!r} is not the record of {block.get('version_doi')!r}")
+    supplemented = [release.get("version_doi")] + [
+        entry.get("version_doi") for entry in release.get("superseded") or [] if isinstance(entry, dict)
+    ]
+    if block.get("supplements") not in supplemented:
+        failures.append(f"{where}: supplements {block.get('supplements')!r} is not a version DOI of this row")
+    failures.extend(
+        f"{where}: invalid {key} {block.get(key)!r}" for key in CAPSULES_COUNTS
+        if not isinstance(block.get(key), int) or isinstance(block.get(key), bool) or block[key] < 0
+    )
+    if not SHA256_PATTERN.fullmatch(str(block.get("archive_sha256", ""))):
+        failures.append(f"{where}: invalid archive_sha256 {block.get('archive_sha256')!r}")
+    if not DATE_PATTERN.fullmatch(str(block.get("published", ""))):
+        failures.append(f"{where}: invalid published {block.get('published')!r}")
     return failures
 
 

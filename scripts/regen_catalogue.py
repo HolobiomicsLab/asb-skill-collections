@@ -41,6 +41,7 @@ CATALOGUE_CONTEXT = {
     "slug": "asb:slug",
     "leaf_dir": "asb:leafDir",
     "status": "asb:status",
+    "capsules_doi": "asb:capsulesDoi",
 }
 REGISTRY_ID = "https://w3id.org/holobiomicslab/asb-skill/registry"
 MARKETPLACE = pathlib.Path(".claude-plugin") / "marketplace.json"
@@ -148,6 +149,11 @@ def _release_entry(slug: str, release: dict, template: dict) -> dict:
         entry["doi"] = doi.strip()
     else:
         entry.pop("doi", None)
+    capsules_doi = (release.get("capsules") or {}).get("version_doi")
+    if is_minted_doi(capsules_doi):
+        entry["capsules_doi"] = capsules_doi.strip()
+    else:
+        entry.pop("capsules_doi", None)
     return entry
 
 

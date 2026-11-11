@@ -21,6 +21,7 @@ def arguments(out, **overrides):
         "with_indicium": False,
         "deny_patterns_file": None,
         "strict": False,
+        "pipeline_public": False,
     }
     values.update(overrides)
     return type("Arguments", (), values)()
