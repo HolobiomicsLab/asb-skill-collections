@@ -346,7 +346,7 @@ def test_generated_routers_carry_the_section(tmp_path: Path, helper: bool):
         section = " ".join(_section(text).split())
         for words in ROUTE_WORDS:
             assert words in section
-        assert "`fixture/v1` (release `fixture-v1.0.0`)" in section
+        assert "`fixture/v1` improves from use." in section and "release" not in section
         assert "post only on an explicit yes" in section
         assert "Never paste paths, credentials or sample names." in section
         assert "gh issue create --repo HolobiomicsLab/asb-skill-collections" in section
@@ -400,15 +400,25 @@ def test_a_stale_section_is_found_and_refreshed(tmp_path: Path):
     assert router_shape.main(["--check", str(unit)]) == 0
 
 
-def test_a_version_bump_does_not_turn_the_section_stale(tmp_path: Path):
+def test_a_version_bump_leaves_the_section_current(tmp_path: Path):
     unit = _unit(tmp_path)
     router_shape.write_routers(unit, rewrite=True)
+    rendered = _router(unit)
     plugin = unit / ".claude-plugin" / "plugin.json"
     meta = json.loads(plugin.read_text(encoding="utf-8"))
     plugin.write_text(json.dumps({**meta, "version": "1.0.1"}), encoding="utf-8")
     assert router_shape.router_contribution_findings(unit) == []
     router_shape.write_router(unit, 10)
-    assert "(release `fixture-v1.0.1`)" in _router(unit)
+    assert _section(_router(unit)) == _section(rendered)
+
+
+def test_the_helper_takes_the_release_a_unit_is_about_to_publish(tmp_path: Path):
+    unit = _unit(tmp_path)
+    router_shape.write_report_helper(unit)
+    (unit / ".zenodo.json").write_text(json.dumps({"version": "v1.1.0"}), encoding="utf-8")
+    result = _run_helper(unit, "skill", "--skill", "peak-align", "--symptom", "the flag changed")
+    assert result.returncode == 0, result.stderr
+    assert "fixture-v1.1.0" in result.stdout and "fixture-v1.0.0" not in result.stdout
 
 
 def test_scripts_only_ships_the_helper_only_when_asked(tmp_path: Path):

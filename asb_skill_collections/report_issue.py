@@ -843,17 +843,23 @@ COLLECTION_ROOT = Path(__file__).resolve().parent.parent
 def collection_identity(root: Path = COLLECTION_ROOT) -> dict[str, str]:
     """Collection label and release label of the unit this helper ships in.
 
-    Read from `.claude-plugin/plugin.json` beside `bin/`; empty when the helper
-    runs outside a collection (for example as `asbb report`).
+    The name comes from `.claude-plugin/plugin.json` beside `bin/`. The version
+    is the one of `.zenodo.json` when the unit has it: a release moves that
+    label before publication and the plugin version only after. Empty when the
+    helper runs outside a collection (for example as `asbb report`).
     """
-    try:
-        meta = json.loads((root / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return {"collection": "", "release": ""}
+    def read(relative: str) -> dict:
+        try:
+            document = json.loads((root / relative).read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return {}
+        return document if isinstance(document, dict) else {}
+
+    meta = read(".claude-plugin/plugin.json")
     name = str(meta.get("name") or "").strip()
-    version = str(meta.get("version") or "").strip()
     if not name:
         return {"collection": "", "release": ""}
+    version = str(read(".zenodo.json").get("version") or meta.get("version") or "").strip().lstrip("v")
     major = version.split(".", 1)[0]
     return {
         "collection": f"{name}/v{major}" if major.isdigit() else name,
@@ -951,6 +957,8 @@ def text_report(report: dict, address: dict) -> str:
         f"With gh and the user's yes: gh issue create --repo {REGISTRY} "
         "--title <title> --body-file <file with the body> "
         + " ".join(f"--label {label}" for label in report["labels"]),
+        "If GitHub refuses the labels (it reserves them to maintainers), run it again "
+        "without --label: the body names the route.",
         "Show this text to the user and post only on an explicit yes. Redaction cannot "
         "recognise a sensitive sample name: the user is the last check.",
     ]

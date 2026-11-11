@@ -145,11 +145,13 @@ reserved until the user has checked it."""
 
 # Addressed to the agent: the four routes of scripts/skill_feedback.py ROUTES, in
 # the same words, the moments to offer a report and the consent rule. Rendered
-# whole from the unit (collection, release, helper shipped or not), so a present
-# section is either current or stale; routers released without it stay valid.
+# whole from the unit (collection, helper shipped or not), so a present section
+# is either current or stale; routers released without it stay valid. It names
+# no release: a label written here would outlive the next release unchanged,
+# and the helper reads the release when it drafts a report.
 CONTRIBUTION_SECTION = """{heading}
 
-`{collection}`{release} improves from use. Offer a report yourself, once per
+`{collection}` improves from use. Offer a report yourself, once per
 problem, when a procedure failed or no longer matches the tool, the search
 returned nothing usable and the work was done unaided, the user names a
 method paper whose DOI the search does not find, the leaves had to be
@@ -189,35 +191,30 @@ REPORT_COMMAND = f'{PYTHON} "{ROOT_FROM_SKILL}/bin/{REPORT_HELPER_NAME}"'
 
 
 def unit_identity(unit: Path) -> dict:
-    """Collection and release labels of a unit, so its reports are attributable.
+    """Collection label of a unit, so its reports are attributable.
 
-    The collection is `<slug>/v<version>` from `collection.yaml`, else the plugin
-    name; the release is `<plugin name>-v<plugin version>`.
+    `<slug>/v<version>` from `collection.yaml`, else the plugin name.
     """
     meta = {}
     plugin = unit / ".claude-plugin" / "plugin.json"
     if plugin.is_file():
         meta = json.loads(plugin.read_text(encoding="utf-8"))
-    name = str(meta.get("name") or unit.name)
-    version = str(meta.get("version") or "")
-    collection = name
+    collection = str(meta.get("name") or unit.name)
     manifest = unit / "collection.yaml"
     if manifest.is_file():
         document = yaml.safe_load(manifest.read_text(encoding="utf-8")) or {}
         if document.get("slug") and document.get("version") is not None:
             collection = f"{document['slug']}/v{document['version']}"
-    return {"collection": collection, "release": f"{name}-v{version}" if version else ""}
+    return {"collection": collection}
 
 
 def contribution_section(contract: dict) -> str:
     """Render the report-and-contribute section of a unit's routers."""
     how = (CONTRIBUTION_WITH_HELPER if contract.get("has_report_helper")
            else CONTRIBUTION_WITHOUT_HELPER)
-    release = contract.get("release") or ""
     return CONTRIBUTION_SECTION.format(
         heading=CONTRIBUTION_HEADING,
         collection=contract.get("collection") or "this collection",
-        release=f" (release `{release}`)" if release else "",
         how=how.format(helper=REPORT_COMMAND, registry=REGISTRY, issues=REGISTRY_ISSUES),
     )
 
@@ -233,13 +230,12 @@ def contribution_status(text: str, contract: dict) -> str:
     if not match:
         return "absent"
     expected = contribution_section(contract).strip()
-    # The labels are compared apart from the text: a release stage that bumps
-    # the plugin version after the routers were rendered must not turn every
-    # router stale. The labels are refreshed with the section.
+    # The collection label is compared apart from the text: a stage that rewrites
+    # `collection.yaml` after the routers were rendered must not turn them stale.
     return "current" if _mask_identity(match.group().strip()) == _mask_identity(expected) else "stale"
 
 
-IDENTITY_SENTENCE = re.compile(r"^`[^`\n]*`(?: \(release `[^`\n]*`\))? improves from use\.", re.M)
+IDENTITY_SENTENCE = re.compile(r"^`[^`\n]*` improves from use\.", re.M)
 
 
 def _mask_identity(section: str) -> str:

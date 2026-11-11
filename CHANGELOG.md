@@ -29,7 +29,7 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   form drafted it), used by `scripts/make_improvement_report.py`, the templates and the site,
   and renders the paper and technical-fault routes. `scripts/router_shape.py` renders a
   `## Report and contribute` section in the router and the workflow router of a generated
-  collection, with its collection and release labels, and can ship `bin/report_issue.py`,
+  collection, naming the collection, and can ship `bin/report_issue.py`,
   a standard-library helper generated from `skill_feedback.py` and `pii_config.py`
   (`--sync-report-helper`) that prints the redacted report and a bounded prefilled address
   and never posts. `asbb report <route>` runs the same helper. An empty search names routes
