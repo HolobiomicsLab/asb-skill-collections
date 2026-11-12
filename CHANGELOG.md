@@ -201,6 +201,7 @@ This repository records two release surfaces, each noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- `CODE_OF_CONDUCT.md` names the reporting contact, replacing the template placeholder.
 - Correct the public release and maintenance documentation after the
   split-repository transition: direct deposit commands include their required
   checkout, DOI and manifest ownership is explicit, current and dated status
