@@ -1,7 +1,7 @@
 """Guards for the static site under docs-site/, which Pages serves as is.
 
 The site went unserved for months, so its defects were never seen: it listed
-three staged collections as released with a DOI of "TODO-zenodo". These
+three historical collections as released with a DOI of "TODO-zenodo". These
 checks hold the committed pages to what the site promises once Pages is
 enabled.
 """
@@ -36,7 +36,7 @@ def _build_search_index():
 
 
 # --------------------------------------------------------------------------- #
-# Release status (staged collections are labelled, not shown as released)     #
+# Search-index status (unreleased trees are staged, not shown as released)    #
 # --------------------------------------------------------------------------- #
 def test_indexer_status_follows_the_marketplace():
     released = released_collection_dirs(REPO)
@@ -72,6 +72,24 @@ def test_search_page_reads_the_per_domain_index():
     assert '"./search_index/"' in script and '"manifest.json"' in script
     assert "search_index.json" not in script
     assert "search_index.json" not in (SITE / "search.html").read_text(encoding="utf-8")
+
+
+def test_catalogue_pages_show_release_identity_lifecycle_and_four_counts():
+    app = (SITE / "app.js").read_text(encoding="utf-8")
+    browse = (SITE / "collections.js").read_text(encoding="utf-8")
+    index = (SITE / "index.html").read_text(encoding="utf-8")
+    for field in (
+        "release_label",
+        "skills_count",
+        "tools_count",
+        "papers_count",
+        "workflows_count",
+    ):
+        assert field in app
+        assert field in browse
+    assert 'c.status === "legacy"' in browse
+    assert '"legacy"' in app
+    assert "Legacy entries are historical majors" in index
 
 
 # --------------------------------------------------------------------------- #

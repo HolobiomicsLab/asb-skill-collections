@@ -58,13 +58,15 @@ function renderSummary() {
   };
   const stats = [
     ["Skills", n(rows && rows.skills.length, c.skills_count)],
-    ["Workflows", n(rows && rows.workflows.length, null)],
+    ["Workflows", n(rows && rows.workflows.length, c.workflows_count)],
     ["Tools", n(rows && rows.tools.length, c.tools_count)],
-    ["Papers", n(rows && rows.papers.length, null)],
+    ["Papers", n(rows && rows.papers.length, c.papers_count)],
   ];
-  const mismatch = rows && (rows.skills.length !== c.skills_count || rows.tools.length !== c.tools_count)
-    ? `<p class="error">The public index holds ${rows.skills.length} skills and ${rows.tools.length} tools; ` +
-      `the registry records ${c.skills_count} and ${c.tools_count}.</p>` : "";
+  const indexCounts = rows && [rows.skills.length, rows.tools.length, rows.papers.length, rows.workflows.length];
+  const registryCounts = [c.skills_count, c.tools_count, c.papers_count, c.workflows_count];
+  const mismatch = rows && indexCounts.some((count, i) => count !== registryCounts[i])
+    ? `<p class="error">The public index holds ${indexCounts.join(", ")}; ` +
+      `the registry records ${registryCounts.join(", ")} for skills, tools, papers and workflows.</p>` : "";
   const doi = c.doi
     ? `<a href="${doiURL(c.doi)}" target="_blank" rel="noopener">${siteEsc(c.doi)}</a>` : "none";
   const released = (c.released_at || "").slice(0, 10);
@@ -76,7 +78,7 @@ function renderSummary() {
        <div class="stat-row">
          ${stats.map(([k, v]) => `<div class="stat"><div class="stat-n">${siteEsc(v)}</div><div class="stat-k">${k}</div></div>`).join("")}
        </div>
-       <p class="muted">${siteEsc(c.title || c.label)} · version ${siteEsc(c.version)} · released ${siteEsc(released || "")} · version DOI ${doi}${capsules}</p>
+       <p class="muted">${siteEsc(c.title || c.label)} · release ${siteEsc(c.release_label || c.version)} · released ${siteEsc(released || "")} · version DOI ${doi}${capsules}</p>
        ${mismatch}
        <p class="muted">This page shows what the public index holds for each item. The full text of every
          skill, workflow and tool record is in the Zenodo record of the release (${doi}) and in the private
@@ -247,15 +249,15 @@ function renderNotBrowsable(entries) {
   const others = entries.filter(c => !(c.released && c.indexed));
   if (!others.length) { box.innerHTML = ""; return; }
   const items = others.map(c => {
-    const why = c.released
-      ? "an earlier release, not in the public index"
-      : "staged, not part of a release";
+    const why = c.status === "legacy"
+      ? "legacy, a historical major kept for the record"
+      : "an earlier release, not in the public index";
     const doi = c.doi ? ` · <a href="${doiURL(c.doi)}" target="_blank" rel="noopener">${siteEsc(c.doi)}</a>` : "";
     return `<li><code>${siteEsc(c.label)}</code>: ${why}${doi}</li>`;
   }).join("");
   box.innerHTML = `<details><summary class="muted">Not browsable here (${others.length})</summary>` +
     `<ul class="muted">${items}</ul>` +
-    `<p class="muted">Rows of staged trees that the public index holds appear in <a href="./search.html">Search</a> with a staged label.</p></details>`;
+    `<p class="muted">Rows of historical trees that the public index holds appear in <a href="./search.html">Search</a> with a staged label.</p></details>`;
 }
 
 async function init() {

@@ -12,7 +12,7 @@ from scripts.regen_catalogue import build_catalogue, is_minted_doi, main, write_
 REPO = pathlib.Path(__file__).resolve().parent.parent
 
 
-def _release(version, *, status=None, doi=None, leaf_dir="leaves"):
+def _release(version, *, status=None, doi=None, leaf_dir="leaves", tag=None):
     release = {
         "version": version,
         "path": f"collections/demo/v{version}",
@@ -26,6 +26,8 @@ def _release(version, *, status=None, doi=None, leaf_dir="leaves"):
     }
     if status:
         release["status"] = status
+    if tag:
+        release["tag"] = tag
     return release
 
 
@@ -46,10 +48,10 @@ def _template(slug, version, *, doi=None):
 def tmp_repo(tmp_path):
     manifest = {
         "domains": {
-            "zebra": {"releases": [_release(1)]},
+            "zebra": {"releases": [_release(1, tag="zebra-v1.0.1")]},
             "alpha": {
                 "releases": [
-                    _release(2, doi="10.5281/zenodo.22"),
+                    _release(2, doi="10.5281/zenodo.22", tag="alpha-v2.0.1"),
                     _release(1, status="legacy", doi="TODO-zenodo", leaf_dir="skills"),
                 ]
             },
@@ -81,7 +83,8 @@ def test_manifest_entries_have_required_fields_in_alphabetical_order(tmp_repo):
     ]
     required = {
         "@id", "title", "version", "slug", "skills_count", "tools_count",
-        "leaf_dir", "domain_topics", "lead_curators", "released_at", "status",
+        "papers_count", "workflows_count", "leaf_dir", "domain_topics",
+        "lead_curators", "released_at", "status",
     }
     for entry in entries:
         assert required <= entry.keys()
@@ -91,8 +94,12 @@ def test_manifest_entries_have_required_fields_in_alphabetical_order(tmp_repo):
 def test_status_leaf_directory_and_release_timestamps_come_from_manifest(tmp_repo):
     entries = build_catalogue(tmp_repo)["collections"]
     legacy, published, _ = entries
-    assert legacy["status"] == "staged"
+    assert legacy["status"] == "legacy"
     assert published["status"] == "released"
+    assert "tag" not in legacy
+    assert "release_label" not in legacy
+    assert published["tag"] == "alpha-v2.0.1"
+    assert published["release_label"] == "2.0.1"
     assert legacy["leaf_dir"] == "skills"
     assert published["leaf_dir"] == "leaves"
     assert legacy["released_at"] == "2026-02-01T00:00:00Z"
@@ -128,9 +135,52 @@ def test_catalogue_write_to_file(tmp_repo):
     assert json.loads(cli_output.read_text(encoding="utf-8"))["collections"]
 
 
+def test_tag_that_disagrees_with_major_is_refused(tmp_repo, capsys):
+    manifest = yaml.safe_load((tmp_repo / "collections.yaml").read_text(encoding="utf-8"))
+    manifest["domains"]["alpha"]["releases"][0]["tag"] = "alpha-v3.0.0"
+    (tmp_repo / "collections.yaml").write_text(
+        yaml.safe_dump(manifest), encoding="utf-8"
+    )
+
+    assert main(["--repo-root", str(tmp_repo)]) == 1
+    assert "alpha/v2: tag 'alpha-v3.0.0'" in capsys.readouterr().err
+
+
 def test_committed_catalogue_matches_manifest_regeneration():
     regenerated = build_catalogue(REPO)
     committed = json.loads((REPO / "catalogue.jsonld").read_text(encoding="utf-8"))
     regenerated.pop("generated_at")
     committed.pop("generated_at")
     assert committed == regenerated
+
+
+def test_committed_catalogue_carries_each_registry_release_identity_and_counts():
+    manifest = yaml.safe_load((REPO / "collections.yaml").read_text(encoding="utf-8"))
+    catalogue = json.loads((REPO / "catalogue.jsonld").read_text(encoding="utf-8"))
+    entries = {(entry["slug"], entry["version"]): entry for entry in catalogue["collections"]}
+    releases = [
+        (slug, release)
+        for slug, domain in manifest["domains"].items()
+        for release in domain["releases"]
+    ]
+    assert len(releases) == len(entries) == 14
+    for slug, release in releases:
+        entry = entries[(slug, str(release["version"]))]
+        assert entry["status"] == release.get("status", "released")
+        assert {
+            "skills_count": entry["skills_count"],
+            "tools_count": entry["tools_count"],
+            "papers_count": entry["papers_count"],
+            "workflows_count": entry["workflows_count"],
+        } == {
+            "skills_count": release["skills"],
+            "tools_count": release["tools"],
+            "papers_count": release["papers"],
+            "workflows_count": release["workflows"],
+        }
+        if release.get("tag"):
+            assert entry["tag"] == release["tag"]
+            assert entry["release_label"] == release["tag"].removeprefix(f"{slug}-v")
+        else:
+            assert "tag" not in entry
+            assert "release_label" not in entry

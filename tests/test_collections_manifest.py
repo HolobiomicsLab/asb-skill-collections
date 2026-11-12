@@ -80,6 +80,8 @@ def write_fixture(root: Path) -> tuple[Path, Path, Path]:
                         "doi": DOI,
                         "skills_count": 1,
                         "tools_count": 2,
+                        "workflows_count": 3,
+                        "papers_count": 4,
                     }
                 ]
             }
@@ -153,11 +155,22 @@ def test_wrong_checkout_count_fails_with_expected_line(
     assert f"astronomy/v1: checkout {key} expected 99 got {actual}" in result.stdout
 
 
-def test_catalogue_count_disagreement_fails_without_checkout(tmp_path: Path) -> None:
+@pytest.mark.parametrize(
+    ("field", "expected"),
+    [
+        ("skills_count", 1),
+        ("tools_count", 2),
+        ("workflows_count", 3),
+        ("papers_count", 4),
+    ],
+)
+def test_catalogue_count_disagreement_fails_without_checkout(
+    tmp_path: Path, field: str, expected: int
+) -> None:
     """Catalogue validation also runs when no source checkout is supplied."""
     manifest, catalogue, checkout = write_fixture(tmp_path)
     document = json.loads(catalogue.read_text(encoding="utf-8"))
-    document["collections"][0]["skills_count"] = 99
+    document["collections"][0][field] = 99
     catalogue.write_text(json.dumps(document), encoding="utf-8")
 
     result = subprocess.run(
@@ -169,7 +182,7 @@ def test_catalogue_count_disagreement_fails_without_checkout(tmp_path: Path) -> 
     )
 
     assert result.returncode == 1
-    assert "astronomy/v1: catalogue skills_count 99 != 1" in result.stdout
+    assert f"astronomy/v1: catalogue {field} 99 != {expected}" in result.stdout
     assert checkout.is_dir()
 
 

@@ -40,9 +40,8 @@ function makeTable(headers, rows) {
   return el("table", {}, thead, tbody);
 }
 
-// The catalogue marks each collection "released" (served by the plugin
-// marketplace) or "staged" (in the repository, not part of a release). An
-// entry without a status is treated as staged.
+// The catalogue copies the registry lifecycle: a current release is "released"
+// and a historical major kept for the record is "legacy".
 function isReleased(c) {
   return c.status === "released";
 }
@@ -50,7 +49,7 @@ function isReleased(c) {
 function statusBadge(c) {
   return isReleased(c)
     ? el("span", { class: "badge badge-released" }, "released")
-    : el("span", { class: "badge badge-staged" }, "staged");
+    : el("span", { class: "badge badge-staged" }, "legacy");
 }
 
 async function renderCatalogue() {
@@ -82,21 +81,23 @@ async function renderCatalogue() {
         : ["not released"];
       return [
         // The @id (a w3id IRI) resolves to a tree that left this repository; a
-        // released collection links to its Browse page, a staged one is plain text.
+        // released collection links to its Browse page, a legacy one is plain text.
         isReleased(c)
           ? [el("a", { href: `./collections.html?c=${encodeURIComponent(c.slug)}&v=${encodeURIComponent(c.version)}` }, c.title || c.slug)]
           : c.title || c.slug,
-        c.version || "",
+        c.release_label || c.version || "",
         [statusBadge(c)],
         String(c.skills_count || 0),
         String(c.tools_count || 0),
+        String(c.papers_count || 0),
+        String(c.workflows_count || 0),
         topics,
         doiLink,
         released,
       ];
     });
     section.appendChild(makeTable(
-      ["Collection", "Version", "Status", "Skills", "Tools", "EDAM Topics", "DOI", "Released"],
+      ["Collection", "Release", "Status", "Skills", "Tools", "Papers", "Workflows", "EDAM Topics", "DOI", "Released"],
       rows
     ));
     section.querySelector(".loading")?.remove();
@@ -164,15 +165,17 @@ async function renderBanner() {
     const cols = (data.collections || []).filter(c => isReleased(c) && c.released_at);
     if (!cols.length) return;
     const newest = cols.reduce((a, b) => (a.released_at > b.released_at ? a : b));
-    const id = `${newest.slug}-v${newest.version}-${(newest.released_at || "").substring(0, 10)}`;
+    const releaseLabel = newest.release_label || newest.version;
+    const id = `${newest.slug}-v${releaseLabel}-${(newest.released_at || "").substring(0, 10)}`;
     if (localStorage.getItem(`asb-banner-${id}`)) return;
     const date = (newest.released_at || "").substring(0, 10);
     box.className = "banner";
     box.appendChild(el("span", {},
-      `🆕 Newest release: ${newest.title || newest.slug} (v${newest.version}) — `,
+      `Newest release: ${newest.title || newest.slug} (v${releaseLabel}) - `,
       el("strong", {}, `${newest.skills_count || 0} skills`), ", ",
-      `${newest.tools_count || 0} tools, released ${date}. `,
-      el("a", { href: `./collections.html?c=${newest.slug}&v=${newest.version}` }, "Browse →")
+      `${newest.tools_count || 0} tools, ${newest.papers_count || 0} papers, `,
+      `${newest.workflows_count || 0} workflows, released ${date}. `,
+      el("a", { href: `./collections.html?c=${newest.slug}&v=${newest.version}` }, "Browse")
     ));
     const close = el("button", { class: "banner-x", title: "Dismiss" }, "✕");
     close.addEventListener("click", () => { localStorage.setItem(`asb-banner-${id}`, "1"); box.remove(); });

@@ -65,6 +65,8 @@ def _write_fixture(tmp_path: Path, published_nulls: bool = False) -> tuple[Path,
                 "version": str(version),
                 "skills_count": 1,
                 "tools_count": 1,
+                "workflows_count": 1,
+                "papers_count": 1,
             }
         )
         if version == 2 and not published_nulls:
@@ -129,7 +131,12 @@ def test_legacy_checkout_verifies_tree_digest(tmp_path: Path) -> None:
     manifest.write_text(yaml.safe_dump(document), encoding="utf-8")
     entries = json.loads(catalogue.read_text(encoding="utf-8"))
     for entry in entries["collections"]:
-        entry.update(skills_count=0, tools_count=0)
+        entry.update(
+            skills_count=0,
+            tools_count=0,
+            workflows_count=0,
+            papers_count=0,
+        )
     catalogue.write_text(json.dumps(entries), encoding="utf-8")
     assert _run(manifest, catalogue, checkout).returncode == 0
     (checkout / "collections" / "demo" / "v1" / "new.txt").write_text("changed", encoding="utf-8")
