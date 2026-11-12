@@ -267,6 +267,8 @@ and the other receipts are in the domain repository under `receipts/<cut-id>/`.
 
 Local build-capsule archives and record metadata are packed and screened by
 [`scripts/pack_capsules.py`](docs/capsules-record.md), without deposit or upload.
+What their evaluation definitions contain, counted per domain, and what does
+not exist is in [`docs/evaluation-definitions.md`](docs/evaluation-definitions.md).
 
 ## How it was generated
 
