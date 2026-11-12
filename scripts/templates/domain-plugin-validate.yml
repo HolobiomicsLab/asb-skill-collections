@@ -53,7 +53,13 @@ jobs:
               parts = text.split("---", 2)
               if len(parts) < 3:
                   continue
-              frontmatter = yaml.safe_load(parts[1]) or {}
+              try:
+                  frontmatter = yaml.safe_load(parts[1]) or {}
+              except yaml.YAMLError:
+                  print(f"{skill}: unreadable frontmatter, skipped", file=sys.stderr)
+                  continue
+              if not isinstance(frontmatter, dict):
+                  continue
               claims = frontmatter.get("claims") or []
               metadata = frontmatter.get("metadata") or {}
               if not claims and isinstance(metadata, dict):
