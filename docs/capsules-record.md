@@ -197,6 +197,16 @@ packed. Any other build in the view is not staged, zipped or described; its
 slug is listed under `not_released` in `MANIFEST.json`, with
 `not_released_count`, and the pack `README.md` states the number.
 
+## Counts across domains
+
+`scripts/render_evaluation_card.py --packs <pack root> --out docs/evaluation-definitions.md`
+recomputes [`evaluation-definitions.md`](evaluation-definitions.md) from the
+`MANIFEST.json`, `capsules.jsonl` and `benchmark-manifest.json` of the ten
+packs. It refuses a pack whose listing disagrees with its capsule table, and a
+missing domain unless `--allow-missing` is given, in which case the card says
+which domains it lacks. Run it again after any repack, and with `--deposited`
+once the records are published.
+
 ## From a pack to a published record
 
 `scripts/capsules_deposit.py` takes a pack to a Zenodo record. Every step but
