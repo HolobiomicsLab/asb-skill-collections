@@ -22,6 +22,7 @@ def _manifest(root: Path, skills: int = 7) -> None:
                                 "path": "collections/demo/v2",
                                 "released": "2026-02-03T04:05:06Z",
                                 "version_doi": "10.5281/zenodo.22",
+                                "tag": "demo-v2.0.1",
                                 "skills": skills,
                                 "tools": 3,
                                 "workflows": 0,
@@ -76,10 +77,12 @@ def test_manifest_releases_have_current_schema_and_statuses(tmp_path: Path) -> N
     assert main(["--repo-root", str(tmp_path), "--output", str(output)]) == 0
     entries = build_catalogue(tmp_path)["collections"]
     assert [entry["version"] for entry in entries] == ["1", "2"]
-    assert entries[0]["status"] == "staged"
+    assert entries[0]["status"] == "legacy"
     assert entries[0]["leaf_dir"] == "skills"
     assert "doi" not in entries[0]
     assert entries[1]["status"] == "released"
+    assert entries[1]["release_label"] == "2.0.1"
+    assert entries[1]["tag"] == "demo-v2.0.1"
     assert entries[1]["leaf_dir"] == "leaves"
     assert entries[1]["doi"] == "10.5281/zenodo.22"
     assert entries[1]["released_at"] == "2026-02-03T04:05:06Z"
@@ -92,6 +95,8 @@ def test_manifest_releases_have_current_schema_and_statuses(tmp_path: Path) -> N
             "slug",
             "skills_count",
             "tools_count",
+            "papers_count",
+            "workflows_count",
             "leaf_dir",
             "domain_topics",
             "released_at",

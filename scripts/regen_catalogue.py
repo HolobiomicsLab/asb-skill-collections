@@ -36,9 +36,13 @@ CATALOGUE_CONTEXT = {
     "lead_curators": {"@id": "asb:leadCurators", "@container": "@set"},
     "skills_count": {"@id": "asb:skillsCount", "@type": "xsd:integer"},
     "tools_count": {"@id": "asb:toolsCount", "@type": "xsd:integer"},
+    "papers_count": {"@id": "asb:papersCount", "@type": "xsd:integer"},
+    "workflows_count": {"@id": "asb:workflowsCount", "@type": "xsd:integer"},
     "generated_at": {"@id": "asb:generatedAt", "@type": "xsd:dateTime"},
     "released_at": {"@id": "asb:releasedAt", "@type": "xsd:dateTime"},
     "slug": "asb:slug",
+    "release_label": "asb:releaseLabel",
+    "tag": "asb:tag",
     "leaf_dir": "asb:leafDir",
     "status": "asb:status",
     "capsules_doi": "asb:capsulesDoi",
@@ -46,6 +50,7 @@ CATALOGUE_CONTEXT = {
 REGISTRY_ID = "https://w3id.org/holobiomicslab/asb-skill/registry"
 MARKETPLACE = pathlib.Path(".claude-plugin") / "marketplace.json"
 RELEASED = "released"
+LEGACY = "legacy"
 STAGED = "staged"
 MINTED_DOI = re.compile(r"^10\.\d{4,9}/\S+$")
 
@@ -98,7 +103,7 @@ def manifest_release_dirs(repo_root: pathlib.Path) -> set[str]:
 def collection_status(
     rel_dir: str, released_dirs: set[str], manifest_dirs: set[str] = frozenset()
 ) -> str:
-    """Classify a legacy path without using it for catalogue discovery."""
+    """Classify search-index availability, separate from catalogue lifecycle."""
     return RELEASED if rel_dir in released_dirs | manifest_dirs else STAGED
 
 
@@ -116,6 +121,10 @@ def _template_entries(catalogue_path: pathlib.Path) -> dict[tuple[str, str], dic
 
 def _release_entry(slug: str, release: dict, template: dict) -> dict:
     version = str(release["version"])
+    label = f"{slug}/v{version}"
+    status = release.get("status", RELEASED)
+    if status not in {RELEASED, LEGACY}:
+        raise ValueError(f"{label}: invalid status {status!r}")
     entry = dict(template)
     entry["@id"] = template.get(
         "@id",
@@ -127,9 +136,25 @@ def _release_entry(slug: str, release: dict, template: dict) -> dict:
         slug=slug,
         skills_count=release["skills"],
         tools_count=release["tools"],
+        papers_count=release["papers"],
+        workflows_count=release["workflows"],
         leaf_dir=release.get("leaf_dir", "leaves"),
-        status=STAGED if release.get("status") == "legacy" else RELEASED,
+        status=status,
     )
+    tag = release.get("tag")
+    if tag is None:
+        entry.pop("tag", None)
+        entry.pop("release_label", None)
+    else:
+        expected = f"{slug}-v{version}"
+        if not isinstance(tag, str) or not (
+            tag == expected or tag.startswith(f"{expected}.")
+        ):
+            raise ValueError(
+                f"{label}: tag {tag!r} must start with {expected!r} followed by its release suffix"
+            )
+        entry["tag"] = tag
+        entry["release_label"] = tag.removeprefix(f"{slug}-v")
     entry.setdefault("domain_topics", [])
     entry.setdefault("lead_curators", [])
     if release.get("released") is not None:
@@ -184,7 +209,7 @@ def build_catalogue(
         "name": "ASB Skill Collection Registry",
         "description": (
             "Auto-generated registry of the ASB Skill Collections in the domain "
-            "repositories. Each entry's status says whether it is released or staged."
+            "repositories. Each entry's status says whether it is released or legacy."
         ),
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "collections": entries,
@@ -242,6 +267,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         manifest = require_collections_manifest(repo_root)
         failures = verify_checkouts(manifest, checkouts)
+        catalogue = build_catalogue(repo_root)
     except (OSError, ValueError, TypeError, json.JSONDecodeError, yaml.YAMLError) as error:
         print(f"catalogue: {error}", file=sys.stderr)
         return 1
@@ -251,7 +277,6 @@ def main(argv: list[str] | None = None) -> int:
     output_path = pathlib.Path(arguments.output)
     if not output_path.is_absolute():
         output_path = repo_root / output_path
-    catalogue = build_catalogue(repo_root)
     write_catalogue(catalogue, output_path)
     count = len(catalogue["collections"])
     print(f"catalogue.jsonld written to {output_path} ({count} collections)")

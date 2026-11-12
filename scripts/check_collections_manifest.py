@@ -17,7 +17,7 @@ import yaml
 
 SCHEMA = "asb-collections-manifest/1"
 COUNTS = ("skills", "tools", "workflows", "papers")
-CATALOGUE_COUNTS = {"skills": "skills_count", "tools": "tools_count"}
+CATALOGUE_COUNTS = {count: f"{count}_count" for count in COUNTS}
 REQUIRED_RELEASE_KEYS = {
     "version",
     "path",

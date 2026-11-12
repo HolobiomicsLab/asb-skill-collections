@@ -10,8 +10,8 @@ fonts.
 
 | File | What it reads | What it shows |
 | ---- | ------------- | ------------- |
-| `index.html` (+ `app.js`) | `catalogue.jsonld` and `leaderboard/career.jsonld` from this repository's raw files on `main` | Registry of collections with status, counts and version DOI (a released collection links to its Browse page), new-release banner, contributor leaderboard |
-| `collections.html` (+ `site-data.js`, `collections.js`) | `catalogue.jsonld` (raw), `search_index/manifest.json`, `search_index/<domain>.json` | Skills, workflows and tools of one released collection, with a text filter and an EDAM topic filter on skills; registry counts and version DOI |
+| `index.html` (+ `app.js`) | `catalogue.jsonld` and `leaderboard/career.jsonld` from this repository's raw files on `main` | Registry of collections with release label, released or legacy status, four counts and version DOI (a released collection links to its Browse page), new-release banner, contributor leaderboard |
+| `collections.html` (+ `site-data.js`, `collections.js`) | `catalogue.jsonld` (raw), `search_index/manifest.json`, `search_index/<domain>.json` | Skills, workflows and tools of one released collection, with a text filter and an EDAM topic filter on skills; release label, four registry counts and version DOI |
 | `corpus.html` (+ `site-data.js`, `corpus.js`) | `search_index/manifest.json`, `search_index/<domain>.json` | Source papers of one domain, filtered by collection, status, access type and text |
 | `paper.html` (+ `site-data.js`, `paper.js`) | `search_index/manifest.json`, `search_index/<domain>.json`, `catalogue.jsonld` (raw) | One paper and the skills that cite it; request-review and flag buttons |
 | `search.html` (+ `search.js`) | `search_index/manifest.json`, `search_index/<domain>.json` | Full-text search across papers, skills, workflows and tools of the selected domains (lunr.js) |
@@ -39,7 +39,7 @@ serves it once to every page. All paths are relative, so the same code works
 on `localhost` and under `/asb-skill-collections/` on GitHub Pages.
 
 Browse offers the released collections that the index holds. Registry entries
-it cannot show (a staged tree, or an earlier release that the index does not
+it cannot show (a legacy major, or an earlier release that the index does not
 hold, such as `metabolomics/v2`) are listed as not browsable here, with their
 DOI when they have one. Search labels the rows of staged trees, links them to
 their source paper page, and links rows of released collections to Browse
