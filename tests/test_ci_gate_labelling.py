@@ -110,3 +110,20 @@ def test_gate9_decision_logic_offline(tmp_path, monkeypatch):
         )
         assert result.returncode == expected_status, result.stdout + result.stderr
         assert message in result.stdout
+
+
+def test_gate9_skips_unreadable_frontmatter(tmp_path, monkeypatch):
+    bin_dir = _write_verifier_stub(tmp_path)
+    monkeypatch.setenv("PATH", f"{bin_dir}:{os.environ['PATH']}")
+    monkeypatch.setenv("RUNNER_TEMP", str(tmp_path))
+    skill = tmp_path / "collections" / "example" / "v1" / "skills" / "broken" / "SKILL.md"
+    skill.parent.mkdir(parents=True)
+    skill.write_text("---\nname: 'unterminated\n---\n", encoding="utf-8")
+    result = subprocess.run(
+        ["bash", "-c", _gate9_script()], cwd=tmp_path,
+        env={**os.environ, "VERIFY_CLAIMS_OUTPUT": "stub must not run", "VERIFY_CLAIMS_STATUS": "99"},
+        capture_output=True, text=True, check=False,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert "unreadable frontmatter, skipped" in result.stderr
+    assert "nothing to verify" in result.stdout
