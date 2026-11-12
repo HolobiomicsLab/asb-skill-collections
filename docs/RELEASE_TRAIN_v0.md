@@ -375,7 +375,7 @@ The release-gate reviews (gates 13, 14 in the SPEC: independent co-reviewer and 
 | 5 | Description discipline lint | PR, push-main, tag | ✓ | ✓ |
 | 6 | EDAM IRI resolution | PR, push-main, tag | ✓ | ✓ |
 | 8 | RO-Crate validation (RO-Crate 1.1, per released capsule) | PR, push-main, tag | ✓ | ✓ — fails on any capsule whose crate is missing, names a file the capsule does not hold, omits one it holds, carries an absolute path or claims an unchecked profile; fails too when it finds no released capsule |
-| 9 | indicium round-trip (verify-claims CLI) | PR, push-main, tag | ✓ | warn-only (indicium-adapters not yet on PyPI) |
+| 9 | indicium round-trip (verify-claims CLI) | PR, push-main, tag | ✓ | blocks when claims are declared but none resolves; no claims passes with an explicit notice |
 | 10 | Plugin manifest validation (.claude-plugin/marketplace.json) | PR, push-main, tag | ✓ | ✓ |
 | 3, 4, 7 | PII/dual-use gate (FAIL on clinical IDs, WARN else) | TBD | ✗ | n/a |
 | 11 | License compliance (TDM audit) | TBD | ✗ | n/a |

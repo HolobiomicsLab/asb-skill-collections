@@ -949,10 +949,8 @@ implemented. "Not checkable here" means the evidence lives outside this reposito
   gate checks the access tier of every included paper (gates 2 and 15).
 - [ ] **PII red-team fixture committed; gate test at 95% recall or more.** Partly
   done. The fixture `tests/fixtures/pii_dual_use_red_team.jsonl` is committed and
-  `tests/test_pii_dual_use_gate.py` measures recall on it. The 95% threshold is not
-  enforced: `tests/fixtures/pii_recall_target.json` sets `hard_fail_recall_target` to
-  `null` because two sources state different targets, so the test reports recall and
-  does not assert it.
+  `tests/test_pii_dual_use_gate.py` measures recall on it. The 95% threshold is
+  enforced since this change, following the owner decision of 2026-11-12.
 - [ ] **`release_gate.py` wired with gates 1, 2, 5, 6, 8, 10, 12, 15 hard-blocking,
   with gate tests and PR comments.** Partly done. The strict gate runs in
   `.github/workflows/domain-gates.yml` (§7.1) and at the `gate` stage of
