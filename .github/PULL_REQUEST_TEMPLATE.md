@@ -14,7 +14,6 @@ it into the domain repository.
 - [ ] New collection (`staged-collections/<slug>/v<N>/`)
 - [ ] Review attestation (`collections/<slug>/v<N>/reviews/<doi>.yaml`)
 - [ ] Curator candidacy (`candidates/<handle>.yaml`)
-- [ ] Leaderboard result (`collections/<slug>/v<N>/benchmark/leaderboard.jsonld`)
 - [ ] Governance / docs update
 - [ ] CI / tooling update
 
