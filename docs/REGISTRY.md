@@ -728,7 +728,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 | **Description discipline** | `validate.yml` gate 5 | PR | every commit |
 | **EDAM IRI resolution** | `validate.yml` gate 6 | PR | every commit |
 | **RO-Crate validity** | `validate.yml` gate 8 | PR — every released capsule's crate, held to RO-Crate 1.1 | every commit |
-| **indicium round-trip** | `validate.yml` gate 9 | PR | every commit (warn-only if indicium-adapters unavailable) |
+| **indicium round-trip** | domain `plugin-validate.yml` gate 9 | PR | every commit; blocks when claims are declared but none resolves |
 | **Marketplace.json schema** | `validate.yml` gate 10 | PR | every commit |
 | **Release gate** | `release_domain.py gate` + owner sign-off | before the DOI pull request | per release |
 | **Open-access requirement** | release-gate + marketplace curation | marketplace entry | at maintainer sign-off |
@@ -782,16 +782,16 @@ The DOI resolution sample is nonblocking and needs no secret. When
 <receipts_path>/gate_report.json` recomputes the saved receipt without writing.
 
 The release gate has no embedding-model dependency. The old S6 model cache is
-therefore omitted. The separate plugin caller pins Claude Code and validates
-`.claude-plugin/marketplace.json` plus each local plugin source with `claude
-plugin validate --strict`.
+therefore omitted. The separate plugin caller runs enforced claim verification,
+pins Claude Code and validates `.claude-plugin/marketplace.json` plus each local
+plugin source with `claude plugin validate --strict`.
 
 Use `scripts/run_domain_gates.sh <tooling-root> <content-root>
 <collection_path> [receipts_path] [--strict]` before pushing. It uses advisory
 release-gate mode by default and performs no DOI network request. Local runs do
 not establish hosted Actions permissions, live plugin validation or human
-review. LinkML, RO-Crate and Indicium checks stay outside this reusable
-workflow until their package and source prerequisites are maintained.
+review. LinkML and RO-Crate checks stay outside this reusable workflow until
+their package and source prerequisites are maintained.
 
 ## 7. Grounded Current State (2026-06-14)
 
@@ -824,7 +824,7 @@ workflow until their package and source prerequisites are maintained.
 ### 7.3 Known issues
 
 - **Double-fire bug:** `release.yml` and `mirror-to-hf.yml` both trigger on `*-v[0-9]*` tags. `mirror-to-hf.yml` should become dispatch-only. (Not fixed in this doc; flagged for a separate step.)
-- **indicium-adapters availability:** Gate 9 (verify-claims) skips gracefully if the package is not published yet. Expected to resolve during Phase 1.
+- **indicium-adapters availability:** Gate 9 installs a compatible 0.6 release and fails if the verifier cannot be installed.
 - **OPEN_ACCESS_POLICY.md** — resolved: authored at [`governance/OPEN_ACCESS_POLICY.md`](../governance/OPEN_ACCESS_POLICY.md) (commit `5f0ad0e6a`); `governance/CONTENT_POLICY.md` followed in `ce0d53854`.
 
 ---

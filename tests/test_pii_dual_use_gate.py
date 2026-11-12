@@ -3,13 +3,7 @@
 CONTENT_POLICY.md §6 (line 295) requires the gate to catch the HARD_FAIL category
 with high recall on a red-team fixture before any release. This harness runs the
 *real* gate (`release_gate.check_pii_dual_use`) over `fixtures/pii_dual_use_red_team.jsonl`,
-reports measured recall + precision, and asserts recall >= the target.
-
-**The target is human-owned and currently unreconciled** (CONTENT_POLICY=0.95 vs
-asbb-v0=0.80 — the `pii-recall-target` gate item). Until a single number is written
-into `fixtures/pii_recall_target.json`, the recall assertion is skipped (but recall is
-still measured and reported, and precision on benign controls is always enforced). No
-threshold is hardcoded here.
+reports measured recall + precision, and asserts recall >= the owner-set target.
 
 The fixture is synthetic and benign-by-construction: the HARD_FAIL rows only carry the
 *structure* the regexes key on (a fake MRN, a reserved-domain email, a generic
@@ -32,7 +26,7 @@ TARGET_CFG = pathlib.Path(__file__).parent / "fixtures" / "pii_recall_target.jso
 
 
 def _rows():
-    return [json.loads(l) for l in FIXTURE.read_text().splitlines() if l.strip()]
+    return [json.loads(line) for line in FIXTURE.read_text().splitlines() if line.strip()]
 
 
 def _build_collection(tmp_path, rows):
@@ -79,8 +73,7 @@ def test_benign_controls_do_not_hard_fail(tmp_path):
 
 
 def test_hard_fail_recall(tmp_path, capsys):
-    """Recall: measure the fraction of HARD_FAIL red-team rows the gate catches.
-    Assert against the target only when a human has reconciled it."""
+    """Recall: require the gate to catch the owner-set fraction of HARD_FAIL rows."""
     rows = _rows()
     positives = [r for r in rows if r["should_flag"]]
     assert positives, "fixture has no positive (should_flag) rows"
@@ -95,12 +88,7 @@ def test_hard_fail_recall(tmp_path, capsys):
               f"(recall={recall:.3f}); missed={missed or 'none'}")
 
     target = _load_target()
-    if target is None:
-        pytest.skip(
-            f"recall={recall:.3f} measured, but the target is unreconciled "
-            "(CONTENT_POLICY=0.95 vs asbb-v0=0.80). Set hard_fail_recall_target in "
-            "tests/fixtures/pii_recall_target.json to activate this gate — see pii-recall-target."
-        )
+    assert isinstance(target, (int, float)), "hard_fail_recall_target must be numeric"
     assert recall >= target, (
         f"recall {recall:.3f} < target {target}; missed HARD_FAIL rows: {missed}"
     )

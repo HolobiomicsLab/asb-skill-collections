@@ -1,4 +1,7 @@
-name: Domain plugin manifests
+# Enforced gates:
+# 9. Indicium claim verification
+# 10. Plugin manifest validation
+name: Domain claim and plugin validation
 
 on:
   pull_request:
@@ -10,8 +13,113 @@ permissions:
   contents: read
 
 jobs:
+  claim-verification:
+    name: "Gate 9: Indicium claim verification (enforced)"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the domain repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install the claim verifier
+        run: python3 -m pip install "indicium-adapters[asb]>=0.6,<0.7"
+
+      - name: "Gate 9: verify declared claims"
+        shell: bash
+        run: |
+          set -euo pipefail
+          gate9_tmp=$(mktemp -d)
+          trap 'rm -rf -- "$gate9_tmp"' EXIT
+          checked=0
+          failed=0
+
+          for collection_dir in collections/*/v* staged-collections/*/v*; do
+            [ -d "$collection_dir" ] || continue
+            checked=$((checked + 1))
+            declared_claims=$(python3 - "$collection_dir" <<'PY'
+          import pathlib
+          import sys
+
+          import yaml
+
+          root = pathlib.Path(sys.argv[1])
+          count = 0
+          for skill in root.rglob("SKILL.md"):
+              text = skill.read_text(encoding="utf-8")
+              parts = text.split("---", 2)
+              if len(parts) < 3:
+                  continue
+              frontmatter = yaml.safe_load(parts[1]) or {}
+              claims = frontmatter.get("claims") or []
+              metadata = frontmatter.get("metadata") or {}
+              if not claims and isinstance(metadata, dict):
+                  claims = metadata.get("claims") or []
+              if not isinstance(claims, list):
+                  raise SystemExit(f"{skill}: claims must be a list")
+              count += len(claims)
+          print(count)
+          PY
+            )
+
+            if [ "$declared_claims" -eq 0 ]; then
+              echo "PASS: $collection_dir: nothing to verify (no claims declared)."
+              continue
+            fi
+
+            graph_file="$gate9_tmp/graph-$checked.ttl"
+            python3 - "$collection_dir" "$graph_file" <<'PY'
+          import pathlib
+          import sys
+
+          from rdflib import Graph
+
+          root = pathlib.Path(sys.argv[1])
+          output = pathlib.Path(sys.argv[2])
+          graph = Graph()
+          indicium = root / "indicium"
+          if indicium.is_dir():
+              for source in sorted(indicium.rglob("*")):
+                  if source.suffix == ".ttl":
+                      graph.parse(source, format="turtle")
+                  elif source.suffix in {".json", ".jsonld"}:
+                      graph.parse(source, format="json-ld")
+          graph.serialize(destination=output, format="turtle")
+          PY
+
+            set +e
+            verify_output=$(verify-claims \
+              --collection "$collection_dir" \
+              --indicium-graph "$graph_file" \
+              --format json)
+            verify_status=$?
+            set -e
+            printf '%s\n' "$verify_output"
+
+            if [ "$verify_status" -ne 0 ] && [ "$verify_status" -ne 1 ]; then
+              echo "::error::Gate 9 could not verify $collection_dir (exit $verify_status)."
+              failed=$((failed + 1))
+              continue
+            fi
+
+            resolved_count=$(printf '%s' "$verify_output" | python3 -c \
+              'import json, sys; print(int(json.load(sys.stdin)["resolved_count"]))')
+            if [ "$resolved_count" -eq 0 ]; then
+              echo "::error::Gate 9: $collection_dir declares $declared_claims claim(s), but none resolved."
+              failed=$((failed + 1))
+            else
+              echo "PASS: $collection_dir resolved $resolved_count of $declared_claims declared claim(s)."
+            fi
+          done
+
+          echo "Gate 9 checked $checked collection(s); failures: $failed."
+          [ "$failed" -eq 0 ]
+
   plugin-manifest:
-    name: Plugin manifests validate
+    name: "Gate 10: Plugin manifests validate"
     runs-on: ubuntu-latest
     env:
       CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"

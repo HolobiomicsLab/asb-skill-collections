@@ -30,11 +30,10 @@ jobs:
         run: |
           pip install --upgrade pip
           # numpy backs scripts/skill_map.py; without it that suite silently skips.
-          pip install pyyaml jsonschema requests pytest numpy
+          pip install pyyaml jsonschema requests pytest numpy rdflib
           pip install linkml linkml-runtime || echo "WARNING: linkml install failed"
           pip install rocrate || echo "WARNING: rocrate install failed"
-          # indicium-adapters (the verify-claims CLI of gate 9) is not installed:
-          # the name is not registered on PyPI. See gate 9.
+          # Gate 9 installs its pinned verifier in the domain repository pipeline.
           # scripts/same_paper_pairs.py (S6) embeds every cut output with the
           # pinned local model BAAI/bge-small-en-v1.5 (Decision 7 thresholds were
           # calibrated on it). Its tests and the driver tests run the real script,
