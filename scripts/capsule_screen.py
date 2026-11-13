@@ -79,7 +79,13 @@ ORDINARY_ROOT = r"(?:(?<![\w.~}-])|(?<=(?<![\w-])-[A-Za-z]))/(?:home|root|tmp)/"
 DRIVE_ROOT = r"(?<![\w+.-])[A-Za-z]:[\\/](?i:Users|Documents and Settings)[\\/]"
 MACHINE_ROOT = rf"(?:{DISTINCTIVE_ROOT}|{ORDINARY_ROOT}|{DRIVE_ROOT})"
 FILE_SCHEME = r"(?<![\w+.-])file:"
-PATH_RE = re.compile(rf"(?:{FILE_SCHEME}(?://)?)?{MACHINE_ROOT}{PATH_CHARACTER}+")
+# A local file URI ("file:///opt/conda/conda-bld/x/work") names a path of the build
+# machine whatever its root, so it is rewritten like one. It stops before a backtick, an
+# asterisk or a backslash, which close the mention in Markdown or shell quoting, and it
+# needs a word character: "file:///." and "file:///*" name no path.
+FILE_URI_CHARACTER = r"""[^\s"'<>()\[\]{},`*\\]"""
+FILE_URI_PATH = rf"{FILE_SCHEME}///{FILE_URI_CHARACTER}*[\w~]"
+PATH_RE = re.compile(rf"(?:{FILE_SCHEME}(?://)?)?{MACHINE_ROOT}{PATH_CHARACTER}+|{FILE_URI_PATH}")
 SPACED_USER_PATH_RE = re.compile(
     r"(?:file://)?/Users/\s*<\s*user\s*name\s*>\s*/[^\s\"'<>()\[\]{},]+",
     re.IGNORECASE,
@@ -87,11 +93,26 @@ SPACED_USER_PATH_RE = re.compile(
 # The residual check is wider than the rewrite, so what the rewrite cannot handle
 # leaves the build out instead of passing: any root marker counts unless the mention
 # ends there ("in the /tmp/ directory", "D:/ ") or a placeholder follows
-# ("/tmp/<name>"). A bare scheme in prose ("served from file:// needs a flag") names
-# no path either, so a file URI counts only when something follows it.
+# ("/tmp/<name>"). A bare scheme in prose ("served from file:// needs a flag", "the
+# `file://` scheme") names no path either, so a file URI counts only when a path or a
+# host follows it.
+#
+# A placeholder after the root is generic text, not a machine: an angle-bracket
+# placeholder, a template field ("/tmp/{task_id}", "/tmp/{{task_id}}") and the
+# placeholder for the user name of a home directory ("/home/[USER]/", "C:\Users\[$UserName]\",
+# '/Users/"username"/'). Any other bracketed word ("/Users/[example]/") may be a real
+# name and still leaves the build out.
 MENTION_END = r"""[)\]}"'`.,;:!?*]*(?:\s|\Z)"""
+TEMPLATE_FIELD = r"\{{1,2}\$?\w+\}{1,2}"
+USER_PLACEHOLDER = r"""(?i:[\[("'%][$%]?(?:your[_-]?)?user(?:[_-]?name)?[\])"'%](?=[/\\\s"']|\Z))"""
+PLACEHOLDER_AFTER_ROOT = rf"<|{TEMPLATE_FIELD}|{USER_PLACEHOLDER}"
+FILE_SCHEME_RESIDUAL = (
+    rf"{FILE_SCHEME}(?:///(?={FILE_URI_CHARACTER}*[\w~])"
+    r"""|//(?=[^\s"'<>()\[\]{},.;:`*!?/\\])"""
+    r"""|/(?!/)(?=[^\s"'<>()\[\]{},.;:]))"""
+)
 RESIDUAL_PATH_RE = re.compile(
-    rf"{FILE_SCHEME}(?://|/(?!/))(?=[^\s\"'<>()\[\]{{}},.;:])|{MACHINE_ROOT}(?!{MENTION_END})(?!<)"
+    rf"{FILE_SCHEME_RESIDUAL}|{MACHINE_ROOT}(?!{MENTION_END})(?!{PLACEHOLDER_AFTER_ROOT})"
 )
 # Characters a URL path can hold inside JSON, YAML or Markdown text; a
 # backslash is excluded so a JSON escape is never cut in half.
