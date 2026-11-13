@@ -168,6 +168,49 @@ def test_a_bare_file_scheme_in_prose_is_not_a_residual_path():
     assert hosted.failures == ["workflow.yaml: residual_paths_rewritten"]
 
 
+@pytest.mark.parametrize("text", [
+    "Improved handling of local `file://` repositories in `install()`.",
+    "Browsers restrict **file://** pages.",
+    r"d.get(\'file://\' + os.path.abspath(page))",
+    "an empty location is written file:///. in the example",
+])
+def test_a_file_scheme_closed_by_markup_or_quoting_is_not_a_residual_path(text):
+    for value, name in ((text, "evidence/p.md"), (json.dumps({"v": text}), "ledger/p.json")):
+        result = screen.screen_text(value, name, context(), screen.QuoteBudget())
+        assert json.loads(result.text)["v"] == text if name.endswith(".json") else result.text == text
+        assert not result.failures
+
+
+@pytest.mark.parametrize(("text", "locator"), [
+    ("pyfaidx @ file:///opt/conda/conda-bld/pyfaidx_1728570107633/work Pygments", "urn:asb:build:work"),
+    ("##reference=file:///data/ref/ref.fasta", "urn:asb:build:ref.fasta"),
+    ('location="file:///C:/converters/ADH071030_002">', "urn:asb:build:ADH071030_002"),
+])
+def test_a_local_file_uri_is_rewritten_whatever_its_root(text, locator):
+    for value, name in ((text, "evidence/p.txt"), (json.dumps({"v": text}), "ledger/p.json")):
+        result = screen.screen_text(value, name, context(), screen.QuoteBudget())
+        assert locator in result.text
+        assert "file:///" not in result.text and "/opt/" not in result.text and "/data/" not in result.text
+        assert result.counts["paths_rewritten"] == 1
+        assert not result.failures
+
+
+@pytest.mark.parametrize("text", [
+    "directory=/home/{USER_NAME}/{PATH_TO_FOLDER}/daemon",
+    "sam=f'/tmp/{{ds}}_{{dec}}.sam'",
+    'outdir = "/tmp/{task_id}_sirius"',
+    "sras are downloaded to /home/[USER]/ncbi/public/sra/ by default",
+    r"move the folder to C:\Users\[$UserName]\AppData\Local\R\win-library\ to install",
+    'the folder "C:/Users/"username"/AppData/Roaming/" in windows, "/Users/"username"/Library/" on macOS',
+])
+def test_a_generic_placeholder_after_a_root_is_not_a_machine_path(text):
+    for value, name in ((text, "evidence/p.md"), (json.dumps({"v": text}), "ledger/p.json")):
+        result = screen.screen_text(value, name, context(), screen.QuoteBudget())
+        assert json.loads(result.text)["v"] == text if name.endswith(".json") else result.text == text
+        assert result.counts["paths_rewritten"] == 0
+        assert not result.failures
+
+
 def test_a_descriptor_written_as_a_plain_file_is_repaired(tmp_path):
     from scripts.release_capsule_truth import crate_problems
 
@@ -322,6 +365,7 @@ def test_machine_paths_are_rewritten_in_text_and_in_json(path):
     "/tmp/,secret",
     'cp /tmp/"private file"/x out',
     "/Users/[example]/secret",
+    "/home/[alice]/secret",
     "/Users/person@example.org/out.txt",
 ])
 def test_a_root_marker_the_rewrite_cannot_handle_leaves_the_build_out(text):

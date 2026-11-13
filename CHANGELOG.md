@@ -234,6 +234,14 @@ This repository records two release surfaces, each noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- The capsule screen no longer leaves a build out for a mention that names no machine. A file scheme
+  closed by a backtick, an asterisk or a backslash (a bare "`file://`" in a release note, a quoted
+  `'file://'` in a script), a template field after a root (`/tmp/{task_id}`, `/tmp/{{ds}}`,
+  `/home/{USER_NAME}/`) and the placeholder for a user name (`/home/[USER]/`, `C:\Users\[$UserName]\`)
+  are text, not paths. A local file URI of any root (`file:///opt/conda/conda-bld/x/work`) is now
+  rewritten to a build locator like the paths of a home directory. Any other bracketed word after a
+  home root (`/Users/[example]/`) still leaves the build out. The packs of 13 November 2026, the first
+  to ship the anchor text of permissively licensed papers, left 94 builds out for these mentions.
 - `CODE_OF_CONDUCT.md` names the reporting contact, replacing the template placeholder.
 - Correct the public release and maintenance documentation after the
   split-repository transition: direct deposit commands include their required
