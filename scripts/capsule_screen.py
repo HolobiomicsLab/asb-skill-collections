@@ -7,12 +7,14 @@ import json
 import re
 from collections import Counter
 from dataclasses import dataclass, field
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
 import yaml
 
-from scripts.pii_config import PII_CONFIG, _is_notation_not_email
+from scripts.pii_config import (PII_CONFIG, _is_git_ssh_clone, _is_notation_not_email, _is_placeholder_email,
+                                _is_r_slot_access)
 from scripts.release_capsule_truth import _build_locator, prune_crate
 
 QUOTE_KEYS = {"source_excerpt", "evidence_quote", "quote", "quoted_text", "verbatim", "snippet",
@@ -44,6 +46,12 @@ QUOTE_CAP = 300
 DOI_QUOTE_CAP = 1500
 REDACTED_QUOTE = "[redacted-quote]"
 EMAIL_RE = re.compile(PII_CONFIG["email_regex"], re.IGNORECASE)
+TLD_FILE = Path(__file__).with_name("data") / "iana_tlds.txt"
+# Last labels the shared check keeps as R slot notation (`object@meta.data`) although the root zone also holds
+# them as top-level domains. An address that ends in one of these is left alone; any other root-zone label is
+# an address.
+SLOT_LAST_LABELS = frozenset({"data", "name"})
+GLUED_LAST_LABEL = re.compile(r"([a-z]{2,})(?=[A-Z])")
 PHONE_RE = re.compile(
     r"(?<!\w)(?:\+\d{1,3}[ .-]?)?(?:\(\d{2,4}\)[ .-]?)?"
     r"\d{2,4}[ .-]\d{3,4}[ .-]\d{3,4}(?:[ .-]\d{2,4})?(?!\w)"
@@ -438,11 +446,33 @@ def access_class_for(access: dict[str, Any]) -> str:
     return {"gold-oa": "gold", "gold_oa": "gold", "oa": "gold"}.get(value, value)
 
 
+@lru_cache(maxsize=1)
+def root_zone_labels() -> frozenset[str]:
+    """Top-level domains an address can end in, read from the IANA root zone file next to the screen."""
+    lines = TLD_FILE.read_text(encoding="utf-8").splitlines()
+    return frozenset(line.strip() for line in lines if line.strip() and not line.startswith("#")) - SLOT_LAST_LABELS
+
+
+def is_kept_for_its_slot_shape_only(value: str, match: re.Match) -> bool:
+    """True when the shared check keeps a token only because it reads as R slot notation, while its last label is
+    a top-level domain, alone or run into the word that follows an address in extracted text (`.deYutong`)."""
+    local, _, domain = value.partition("@")
+    if not _is_r_slot_access(local, domain):
+        return False
+    if _is_git_ssh_clone(value, local, match) or _is_placeholder_email(local):
+        return False
+    if local.lower() in {token.lower() for token in PII_CONFIG["email_notation_localparts"]}:
+        return False
+    last_label = domain.rsplit(".", 1)[-1]
+    glued = GLUED_LAST_LABEL.match(last_label)
+    return last_label.lower() in root_zone_labels() or bool(glued and glued.group(1) in root_zone_labels())
+
+
 def redact_pii(text: str, context: ScreenContext, counts: Counter) -> str:
     """Redact non-allowlisted emails and phone-shaped numbers."""
     def email_replacement(match: re.Match) -> str:
         value = match.group(0)
-        if _is_notation_not_email(value, match):
+        if _is_notation_not_email(value, match) and not is_kept_for_its_slot_shape_only(value, match):
             return value
         if value.lower() in context.email_allowlist:
             return value

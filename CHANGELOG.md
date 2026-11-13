@@ -236,6 +236,16 @@ This repository records two release surfaces, each noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- The capsule screen now redacts an address whose top-level domain is not on the short list of the
+  shared PII check. The check keeps a token shaped like R slot notation (`object@meta.data`) when its
+  last label is neither two letters nor one of 35 listed generic domains, so an address at `.cat`, `.club`
+  or any of the other generic domains the list lacked stayed in the text, and so did an address that
+  text extraction had run into the next word (`name@stud.example-uni.deJane Roe`). The screen now
+  reads the IANA root zone from `scripts/data/iana_tlds.txt` and treats a last label found there, alone
+  or followed by a capital letter, as an address; `data` and `name`, which are also slot names, stay
+  excluded. `git@host:` clone URLs, template local parts and the mass-spectrometry notation tokens are
+  unchanged, and so is the shared check used by the release gate and the report helper. Found by the
+  leak scan of the 13 November 2026 packs: seven addresses of named people in the astronomy pack.
 - The capsule screen no longer leaves a build out for a mention that names no machine. A file scheme
   closed by a backtick, an asterisk or a backslash (a bare "`file://`" in a release note, a quoted
   `'file://'` in a script), a template field after a root (`/tmp/{task_id}`, `/tmp/{{ds}}`,

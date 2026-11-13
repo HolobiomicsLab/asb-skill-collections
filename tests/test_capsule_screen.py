@@ -441,3 +441,37 @@ def test_a_document_with_its_own_redaction_field_of_the_wrong_type_fails_instead
     source = json.dumps({"_screen_redactions": "text", "quote": "source words"})
     result = screen.screen_text(source, "evidence/claim.json", context("closed", "publisher"), screen.QuoteBudget())
     assert "evidence/claim.json: parse_AttributeError" in result.failures
+
+
+@pytest.mark.parametrize("text", [
+    "Email: jane.roe@inst.example.cat 2 Institute of Space Studies",
+    "Contact: jroe@lab.example.club for the data",
+    "Email:j.roe@stud.example-uni.deJane Roe Affiliation: Department of Physics",
+    "Mastodon @tool@host.example.club",
+    "write to a.person@group.example.science",
+])
+def test_an_address_at_a_root_zone_domain_is_redacted_whatever_follows_it(text):
+    """The R slot exception must not keep an address because its top-level domain is not on a short list."""
+    result = screen.screen_text(text, "anchor_corpus/article.txt", context(), screen.QuoteBudget())
+    assert "[redacted-email]" in result.text
+    assert result.counts["emails_redacted"] == 1
+
+
+@pytest.mark.parametrize("text", [
+    "metadata <- seurat_obj@meta.data",
+    "name <- pbmc@project.name",
+    "idents <- obj@active.ident",
+    "git clone git@github.example.club:group/project.git",
+    "template: your.name@lab.example.club",
+    "peak@xxx.xx",
+])
+def test_slot_notation_and_documented_templates_are_still_left_alone(text):
+    result = screen.screen_text(text, "anchor_corpus/repo.txt", context(), screen.QuoteBudget())
+    assert result.text == text
+    assert result.counts["emails_redacted"] == 0
+
+
+def test_the_root_zone_file_holds_the_generic_labels_the_short_list_missed_and_not_the_slot_ones():
+    labels = screen.root_zone_labels()
+    assert {"cat", "club", "com", "de", "science", "tools"} <= labels
+    assert not labels & screen.SLOT_LAST_LABELS
