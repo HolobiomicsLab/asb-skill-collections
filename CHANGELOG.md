@@ -236,6 +236,12 @@ This repository records two release surfaces, each noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- The capsule screen now redacts an address whose domain goes on after the token the expression found. When
+  extraction splits the end of a domain (`name@med.uni-example. de`), the expression stops at the hyphen on
+  `name@med.uni`, whose last label `uni` looked like an R slot, so the address of a corresponding author
+  stayed in the text of a paper. A hyphen and a letter right after such a token now mark an address, except
+  after `data` or `name`, which keep `obj@scale.data-1` as code. Found by the leak scan of the 13 November
+  2026 transcriptomics builds (sixteen lines in one build).
 - The capsule screen now redacts a telephone number written with a space after the plus sign. A number
   after a telephone or fax label was redacted only when the plus touched the country code, so the
   letter-head form `Phone: + 44 (0)1865 000000` of a journal editor stayed in the text of a paper while

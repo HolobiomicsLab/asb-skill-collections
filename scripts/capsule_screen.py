@@ -52,6 +52,7 @@ TLD_FILE = Path(__file__).with_name("data") / "iana_tlds.txt"
 # an address.
 SLOT_LAST_LABELS = frozenset({"data", "name"})
 GLUED_LAST_LABEL = re.compile(r"([a-z]{2,})(?=[A-Z])")
+CONTINUED_DOMAIN = re.compile(r"-[A-Za-z0-9]")
 PHONE_RE = re.compile(
     r"(?<!\w)(?:\+\d{1,3}[ .-]?)?(?:\(\d{2,4}\)[ .-]?)?"
     r"\d{2,4}[ .-]\d{3,4}[ .-]\d{3,4}(?:[ .-]\d{2,4})?(?!\w)"
@@ -456,7 +457,8 @@ def root_zone_labels() -> frozenset[str]:
 
 def is_kept_for_its_slot_shape_only(value: str, match: re.Match) -> bool:
     """True when the shared check keeps a token only because it reads as R slot notation, while its last label is
-    a top-level domain, alone or run into the word that follows an address in extracted text (`.deYutong`)."""
+    a top-level domain, alone or run into the word that follows an address in extracted text (`.deYutong`), or the
+    domain goes on after the token with a hyphen."""
     local, _, domain = value.partition("@")
     if not _is_r_slot_access(local, domain):
         return False
@@ -466,7 +468,11 @@ def is_kept_for_its_slot_shape_only(value: str, match: re.Match) -> bool:
         return False
     last_label = domain.rsplit(".", 1)[-1]
     glued = GLUED_LAST_LABEL.match(last_label)
-    return last_label.lower() in root_zone_labels() or bool(glued and glued.group(1) in root_zone_labels())
+    if last_label.lower() in root_zone_labels() or bool(glued and glued.group(1) in root_zone_labels()):
+        return True
+    # The expression stops at a hyphen when the end of the domain is broken by extraction ("@med.uni-example. de"):
+    # a hyphen and a letter right after the token mean the domain goes on, which a slot name never does.
+    return last_label.lower() not in SLOT_LAST_LABELS and bool(CONTINUED_DOMAIN.match(match.string, match.end()))
 
 
 def redact_pii(text: str, context: ScreenContext, counts: Counter) -> str:
