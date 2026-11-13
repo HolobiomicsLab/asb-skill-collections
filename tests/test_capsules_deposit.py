@@ -494,7 +494,7 @@ def test_plan_writes_a_public_record_readme_from_the_plan_counts(tmp_path, packe
     readme = (tmp_path / "plan" / "upload" / "README.md").read_text()
     assert "`asb-synthetic-v1-builds-001.zip` to `asb-synthetic-v1-builds-001.zip`: 1 shard archives" in readme
     assert "`SHA256SUMS`" in readme and "`member`" in readme and "`shard`" in readme
-    assert pack_capsules.GRADE_STATEMENT in readme and "Capsules per grade: bronze 2" in readme
+    assert pack_capsules.READINESS_STATEMENT in readme and "Capsules per readiness level: documented 2" in readme
     assert "Local screened archive set" not in readme
     assert "No deposit, upload" not in readme
     assert "`zenodo/metadata.json`" not in readme and "`hf/README.md`" not in readme

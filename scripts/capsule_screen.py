@@ -134,6 +134,126 @@ def is_text_member(name: str, data: bytes) -> bool:
     return True
 
 
+OVERLAP_RUN = 160
+OVERLAP_MARKER = "[trimmed-overlap]"
+OVERLAP_REASON = "article_overlap"
+
+
+def normalise_with_map(text: str) -> tuple[str, list[int]]:
+    """Lowercase and collapse whitespace, returning each output character's source index."""
+    chars: list[str] = []
+    index: list[int] = []
+    space_at = None
+    for position, character in enumerate(text):
+        if character.isspace():
+            if chars and space_at is None:
+                space_at = position
+            continue
+        if space_at is not None:
+            chars.append(" ")
+            index.append(space_at)
+            space_at = None
+        for lowered in character.lower():
+            chars.append(lowered)
+            index.append(position)
+    return "".join(chars), index
+
+
+class ArticleIndex:
+    """Every OVERLAP_RUN-character window of a normalised article, held as hashes only.
+
+    The article text itself is not kept: only window hashes, which find a copied
+    run in a shipped string without carrying the text further.
+    """
+
+    def __init__(self, article: str, run: int = OVERLAP_RUN):
+        normalised, _ = normalise_with_map(article)
+        self.run = run
+        self.windows = {hash(normalised[start:start + run]) for start in range(len(normalised) - run + 1)}
+
+    def runs(self, text: str) -> list[tuple[int, int]]:
+        """Return the source-character spans of `text` covered by windows of the article,
+        merged where they touch or overlap."""
+        if len(text) < self.run:
+            return []
+        normalised, index = normalise_with_map(text)
+        spans: list[list[int]] = []
+        for start in range(len(normalised) - self.run + 1):
+            # A window never opens on a space, and windows merge only where they
+            # overlap, so two separate copies joined by whitespace stay two runs.
+            if normalised[start] == " " or hash(normalised[start:start + self.run]) not in self.windows:
+                continue
+            end = start + self.run
+            if spans and start < spans[-1][1]:
+                spans[-1][1] = max(spans[-1][1], end)
+            else:
+                spans.append([start, end])
+        # A run ends after the source character of its last normalised character; the
+        # whitespace at its edges stays, so the marker keeps the surrounding spacing.
+        result = []
+        for start, end in spans:
+            first, last = index[start], index[end - 1] + 1
+            while first < last and text[first].isspace():
+                first += 1
+            while last > first and text[last - 1].isspace():
+                last -= 1
+            # A run counts OVERLAP_RUN characters of text, never a whitespace edge.
+            if len(normalise_with_map(text[first:last])[0]) >= self.run:
+                result.append((first, last))
+        return result
+
+
+def trim_overlap(text: str, context: "ScreenContext", counts: Counter, marker=None):
+    """Cut each run copied from the article; return the text and the removed spans' anchors.
+
+    `marker`, given an anchor, returns the replacement; by default OVERLAP_MARKER.
+    """
+    if context.article is None:
+        return text, []
+    runs = context.article.runs(text)
+    if not runs:
+        return text, []
+    parts, previous, removed = [], 0, []
+    for start, end in runs:
+        span = text[start:end]
+        anchor = {"doi": context.doi, "length": len(span), "offsets": {"start": start, "end": end},
+                  "sha256": hashlib.sha256(span.encode("utf-8")).hexdigest(),
+                  "redacted_reason": OVERLAP_REASON}
+        parts += [text[previous:start], marker(anchor) if marker else OVERLAP_MARKER]
+        removed.append(anchor)
+        counts["overlap_runs_trimmed"] += 1
+        counts["overlap_characters_trimmed"] += len(span)
+        previous = end
+    parts.append(text[previous:])
+    return "".join(parts), removed
+
+
+def trim_overlap_document(text: str, relative_path: str, context: "ScreenContext", counts: Counter) -> str:
+    """Trim copied runs from a Markdown or plain-text member outside its quotation fields.
+
+    Markdown keeps an `asb-redaction` comment after each marker; other text, where a
+    comment could break the syntax, carries the length and digest in the marker.
+    """
+    if context.article is None:
+        return text
+    protected = [(span.start, span.end) for span in _markdown_quotes(text, relative_path)] \
+        if source_text_kind(relative_path) else []
+    markdown = Path(relative_path).suffix.lower() == ".md"
+    parts, previous = [], 0
+    for start, end in sorted(protected) + [(len(text), len(text))]:
+        offset = previous
+
+        def marker(anchor, offset=offset):
+            anchor["location"] = f"{relative_path}#offset_{offset + anchor['offsets']['start']}"
+            if markdown:
+                return OVERLAP_MARKER + " <!-- asb-redaction " + json.dumps(anchor, sort_keys=True) + " -->"
+            return f"[trimmed-overlap length={anchor['length']} sha256={anchor['sha256']}]"
+        segment, _ = trim_overlap(text[previous:start], context, counts, marker)
+        parts += [segment, text[start:end]]
+        previous = end
+    return "".join(parts)
+
+
 def empty_counts() -> Counter:
     """Return a fresh counter with the stable screen receipt keys."""
     return Counter({
@@ -146,6 +266,8 @@ def empty_counts() -> Counter:
         "crates_pruned": 0,
         "deny_hits": 0,
         "failures": 0,
+        "overlap_runs_trimmed": 0,
+        "overlap_characters_trimmed": 0,
     })
 
 
@@ -228,6 +350,8 @@ class ScreenContext:
     email_role: re.Pattern | None = None
     deny_patterns: tuple[str, ...] = ()
     private_repositories: tuple[str, ...] = ()
+    # The article of a paper whose text is not kept in full; runs copied from it are trimmed.
+    article: "ArticleIndex | None" = None
 
     @property
     def retention(self) -> str:
@@ -457,6 +581,8 @@ def screen_text(
     failures: list[str] = []
     screened = None
     try:
+        if suffix not in {".json", ".jsonld", ".jsonl", ".yaml", ".yml"}:
+            text = trim_overlap_document(text, relative_path, context, counts)
         if suffix in {".json", ".jsonld"}:
             payload = json.loads(text)
             if Path(relative_path).name == "ro-crate-metadata.json" and capsule_dir is not None:
@@ -585,6 +711,12 @@ def _screen_json(value, location, context, budget, counts, quotes, source, point
                 anchor["doi"] = screen_string(anchor["doi"], context, counts)
                 anchors.append(anchor)
             return retained
+        value, removed = trim_overlap(value, context, counts)
+        for anchor in removed:
+            anchor["location"] = f"{location}#{pointer}"
+            anchor["doi"] = screen_string(anchor["doi"], context, counts)
+            if anchors is not None:
+                anchors.append(anchor)
         return screen_string(value, context, counts)
     return value
 
