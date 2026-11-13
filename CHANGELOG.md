@@ -236,6 +236,11 @@ This repository records two release surfaces, each noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- The capsule screen now redacts a telephone number written with a space after the plus sign. A number
+  after a telephone or fax label was redacted only when the plus touched the country code, so the
+  letter-head form `Phone: + 44 (0)1865 000000` of a journal editor stayed in the text of a paper while
+  the fax number beside it was removed. Found by the leak scan of the 13 November 2026 metabolomics
+  builds (eight lines in one build).
 - The capsule screen now redacts an address whose top-level domain is not on the short list of the
   shared PII check. The check keeps a token shaped like R slot notation (`object@meta.data`) when its
   last label is neither two letters nor one of 35 listed generic domains, so an address at `.cat`, `.club`

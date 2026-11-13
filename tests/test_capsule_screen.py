@@ -92,6 +92,7 @@ def test_pii_rules_keep_notation_role_addresses_and_redact_phone():
     "J. Sep. Sci. 44 (12) 2345-2356",
     "the phone line is described below\nvalues 100 200 300 400",
     "a telephone survey of 1200 households, then 100 200 300",
+    "a phone + 12 kDa adduct shift of 1.2 to 3.4",
 ])
 def test_digit_groups_without_a_phone_cue_are_numeric_data(text):
     for value, name in ((text, "evidence/note.txt"), (json.dumps({"v": text}), "ledger/note.json")):
@@ -110,6 +111,8 @@ def test_digit_groups_without_a_phone_cue_are_numeric_data(text):
     ("Fax 0044 20 7946 0958", 1),
     ("Telephone number: 0123456789", 1),
     ("Phone: 555 123 4567, 555 987 6543", 2),
+    ("Senior Editor, Journal Name. Phone: + 44 (0)1865 000000 Fax: + 44 (0)1865 000001", 2),
+    ("Tel + 33 1 23 45 67 89", 1),
 ])
 def test_a_phone_number_with_a_cue_is_redacted(text, expected):
     for value, name in ((text, "evidence/note.txt"), (json.dumps({"v": text}), "ledger/note.json")):
