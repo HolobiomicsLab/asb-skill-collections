@@ -8,9 +8,10 @@ Five subcommands, in the order a maintainer runs them:
               copy the build zips unchanged after checking each one against
               MANIFEST.json. Builds whose paper is not an included paper of the
               released corpus are dropped. Never writes into the source pack.
-  archive     write one deterministic zip per record holding the build zips,
-              stored without recompression, and the descriptive files.
-  plan        offline: build the archive, check the pack, and write
+  archive     write the record's shard archives from the pack's per-build zips
+              (`hf/builds/`), each holding its build zips stored without
+              recompression, and check them against MANIFEST.json.
+  plan        offline: build the shards, check the pack, and write
               deposit-plan.json with the metadata, the files and the refusals.
   create      on the owner's terminal only: create a first-release draft as a
               new Zenodo record from a plan. Never publishes.
@@ -51,8 +52,12 @@ PLAN_SCHEMA = "asb-capsules-deposit-plan/1"
 PLAN_FILE = "deposit-plan.json"
 UPLOAD_DIR = "upload"
 # Uploaded beside the archive so a reader can browse them on the record page.
-BROWSABLE_FILES = ("README.md", "MANIFEST.json", "capsules.jsonl", "SCREEN.json", "benchmark-manifest.json")
-DESCRIPTIVE_FILES = BROWSABLE_FILES + ("zenodo/metadata.json", "hf/README.md", "capsules.parquet")
+BROWSABLE_FILES = pack_capsules.ZENODO_RECEIPTS
+DESCRIPTIVE_FILES = BROWSABLE_FILES + ("zenodo/metadata.json", "hf/README.md", "capsules.parquet") + tuple(
+    f"hf/{stem}" for _, stem, _, _ in pack_capsules.HF_CONFIGS)
+CHECKSUM_FILE = "SHA256SUMS"
+# Zenodo accepts at most 100 files per record.
+ZENODO_MAX_FILES = 100
 LOCAL_PATH_MARKERS = ("/Users/", "/Volumes/", "/private/")
 CHUNK_BYTES = 1024 * 1024
 FIRST_SHOWN = 3
@@ -65,14 +70,14 @@ class CapsulesError(RuntimeError):
 
 
 @dataclass(frozen=True)
-class BuiltArchive:
-    """The record archive: its path, digests, size and member count."""
+class BuiltShard:
+    """One shard archive of the record: its path, digests, size and build zips."""
 
     path: Path
     sha256: str
     md5: str
     size: int
-    members: int
+    builds: tuple[str, ...]
 
 
 def read_json(path: Path):
@@ -101,10 +106,16 @@ def zipped_entries(manifest: dict) -> list[dict]:
     return [entry for entry in manifest["builds"] if entry.get("sha256")]
 
 
+def build_zip(pack: Path, entry: dict) -> Path:
+    """Return the per-build zip of a manifest entry in the pack's HuggingFace layout."""
+    return pack / "hf" / entry["zip_member"]
+
+
 def build_set_problems(pack: Path, manifest: dict) -> list[str]:
     """Compare the zips on disk with the manifest by name and size, without reading them."""
     declared = {entry["zip_member"]: entry for entry in zipped_entries(manifest)}
-    present = {f"builds/{path.name}": path for path in (pack / "builds").glob("*.zip")} if (pack / "builds").is_dir() else {}
+    builds = pack / "hf" / "builds"
+    present = {f"builds/{path.name}": path for path in builds.glob("*.zip")} if builds.is_dir() else {}
     problems = [f"{name}: zip absent from MANIFEST.json" for name in sorted(set(present) - set(declared))]
     problems += [f"{name}: listed in MANIFEST.json, zip missing" for name in sorted(set(declared) - set(present))]
     for name in sorted(set(declared) & set(present)):
@@ -116,7 +127,7 @@ def build_set_problems(pack: Path, manifest: dict) -> list[str]:
 
 def verified_bytes(pack: Path, entry: dict) -> bytes:
     """Read one build zip and refuse it when its sha256 differs from the manifest."""
-    data = (pack / entry["zip_member"]).read_bytes()
+    data = build_zip(pack, entry).read_bytes()
     if hashlib.sha256(data).hexdigest() != entry["sha256"]:
         raise CapsulesError(f"{entry['zip_member']}: sha256 differs from MANIFEST.json")
     return data
@@ -144,6 +155,7 @@ def refresh_args(args, loaded: dict, manifest: dict, screen: dict, not_released:
         strict=bool(screen.get("strict")), not_released=not_released,
         pipeline_public=pipeline_public(manifest),
         capsules_doi=args.capsules_doi,
+        shard_size=(manifest.get("layout") or {}).get("shard_size") or pack_capsules.SHARD_SIZE,
     )
 
 
@@ -201,7 +213,7 @@ def run_refresh(args) -> int:
                                               pack_capsules.released_names(loaded["corpus"]))
     out.mkdir(parents=True, exist_ok=True)
     for entry in (entry for entry in kept if entry.get("sha256")):
-        copy_verified(args.pack / entry["zip_member"], out / entry["zip_member"], entry)
+        copy_verified(build_zip(args.pack, entry), build_zip(out, entry), entry)
     screen = read_json(args.pack / "SCREEN.json")
     pack_capsules.write_records(refresh_args(args, loaded, manifest, screen, not_released), loaded, kept, rows)
     packed_rows = pack_capsules.packed_capsule_rows(kept, rows)
@@ -213,57 +225,89 @@ def run_refresh(args) -> int:
 
 # archive ---------------------------------------------------------------------
 
-def archive_name(manifest: dict) -> str:
-    """Return the record archive's file name."""
-    return f"asb-{manifest['domain']}-v{manifest['collection_version']}-build-capsules.zip"
+def manifest_shards(manifest: dict) -> list[dict]:
+    """Return the shard entries of MANIFEST.json; a pack without them predates sharding."""
+    layout = manifest.get("layout")
+    if not isinstance(layout, dict) or not isinstance(layout.get("shards"), list):
+        raise CapsulesError("MANIFEST.json has no shard layout; run a full pack")
+    return layout["shards"]
 
 
-def build_archive(pack: Path, out: Path, inspect=None) -> BuiltArchive:
-    """Write the record archive, verifying each build zip against the manifest.
+def shard_set_problems(manifest: dict) -> list[str]:
+    """Require the shards to hold every packed build exactly once."""
+    shards = manifest_shards(manifest)
+    held = [slug for shard in shards for slug in shard.get("builds") or []]
+    packed = sorted(entry["build_slug"] for entry in zipped_entries(manifest))
+    problems = [f"MANIFEST.json: build {slug} is in more than one shard" for slug in sorted({s for s in held if held.count(s) > 1})]
+    problems += [f"MANIFEST.json: packed build {slug} is in no shard" for slug in sorted(set(packed) - set(held))]
+    problems += [f"MANIFEST.json: shard build {slug} has no zip" for slug in sorted(set(held) - set(packed))]
+    return problems
 
-    Build zips are stored without recompression; the descriptive files are
-    deflated. Members are sorted with fixed timestamps and modes. `inspect`, when
-    given, receives (member name, bytes) for each build zip.
+
+def build_shards(pack: Path, out: Path, inspect=None) -> list[BuiltShard]:
+    """Write the record's shards, verifying each build zip and each shard against the manifest.
+
+    The shards are written by the packer's own shard writer, so they are the bytes
+    the pack wrote under `zenodo/`. `inspect`, when given, receives (member name,
+    bytes) for each build zip.
     """
     manifest = read_json(pack / "MANIFEST.json")
-    problems = build_set_problems(pack, manifest)
+    problems = build_set_problems(pack, manifest) + shard_set_problems(manifest)
     if problems:
         raise CapsulesError("; ".join(problems))
-    members = {name: None for name in DESCRIPTIVE_FILES if (pack / name).is_file()}
-    members.update({entry["zip_member"]: entry for entry in zipped_entries(manifest)})
+    entries = {entry["build_slug"]: entry for entry in zipped_entries(manifest)}
     out.mkdir(parents=True, exist_ok=True)
-    target = out / archive_name(manifest)
-    partial = target.with_suffix(".partial")
-    try:
-        write_members(pack, partial, members, inspect)
-    except BaseException:
-        partial.unlink(missing_ok=True)
-        raise
-    partial.replace(target)
-    sha, md5, size = file_digests(target)
-    return BuiltArchive(target, sha, md5, size, len(members))
-
-
-def write_members(pack: Path, target: Path, members: dict, inspect) -> None:
-    """Write the sorted members; an entry dict marks a build zip to verify and store."""
-    with zipfile.ZipFile(target, "w") as archive:
-        for name in sorted(members):
-            info = zenodo_deposit._zip_info(name, pack / name)
-            entry = members[name]
-            if entry is None:
-                archive.writestr(info, (pack / name).read_bytes(), compresslevel=9)
-                continue
-            data = verified_bytes(pack, entry)
+    built = []
+    for shard in manifest_shards(manifest):
+        members = {}
+        for slug in shard["builds"]:
+            data = verified_bytes(pack, entries[slug])
             if inspect is not None:
-                inspect(name, data)
-            info.compress_type = zipfile.ZIP_STORED
-            archive.writestr(info, data)
+                inspect(entries[slug]["zip_member"], data)
+            members[entries[slug]["zip_member"]] = data
+        target = out / shard["name"]
+        partial = target.with_suffix(".partial")
+        try:
+            pack_capsules.write_shard(partial, members)
+        except BaseException:
+            partial.unlink(missing_ok=True)
+            raise
+        partial.replace(target)
+        sha, md5, size = file_digests(target)
+        if shard.get("sha256") and (sha, size) != (shard["sha256"], shard["bytes"]):
+            target.unlink()
+            raise CapsulesError(f"{shard['name']}: rebuilt shard differs from MANIFEST.json")
+        built.append(BuiltShard(target, sha, md5, size, tuple(shard["builds"])))
+    return built
+
+
+def pack_shard_problems(pack: Path, manifest: dict) -> list[str]:
+    """Compare the shards the pack wrote under zenodo/ with MANIFEST.json."""
+    try:
+        shards = manifest_shards(manifest)
+    except CapsulesError as error:
+        return [str(error)]
+    declared = {shard["name"]: shard for shard in shards}
+    present = {path.name for path in (pack / "zenodo").glob("*.zip")} if (pack / "zenodo").is_dir() else set()
+    problems = [f"zenodo/{name}: shard absent from MANIFEST.json" for name in sorted(present - set(declared))]
+    problems += [f"zenodo/{name}: listed in MANIFEST.json, shard missing" for name in sorted(set(declared) - present)]
+    for name in sorted(set(declared) & present):
+        sha, _, size = file_digests(pack / "zenodo" / name)
+        if (sha, size) != (declared[name].get("sha256"), declared[name].get("bytes")):
+            problems.append(f"zenodo/{name}: size or sha256 differs from MANIFEST.json")
+    return problems
+
+
+def checksum_text(shards: list[BuiltShard]) -> str:
+    """Return the SHA256SUMS listing of the shards, one `<sha256>  <name>` line each."""
+    return "".join(f"{shard.sha256}  {shard.path.name}\n" for shard in sorted(shards, key=lambda shard: shard.path.name))
 
 
 def run_archive(args) -> int:
-    """Build the record archive and print its digest."""
-    built = build_archive(args.pack, outside(args.out, args.pack))
-    print(f"{built.path}\nsha256 {built.sha256}\nmd5 {built.md5}\nsize {built.size} bytes\nmembers {built.members}")
+    """Write the record's shards and print their digests."""
+    built = build_shards(args.pack, outside(args.out, args.pack))
+    for shard in built:
+        print(f"{shard.path}\nsha256 {shard.sha256}\nmd5 {shard.md5}\nsize {shard.size} bytes\nbuilds {len(shard.builds)}")
     return 0
 
 
@@ -391,14 +435,18 @@ def pack_refusals(args, pack: dict, loaded: dict) -> list[str]:
     refusals += holdings_problems(pack["manifest"], pack["rows"], pack["benchmark"])
     refusals += doi_problems(pack["manifest"], pack["metadata"], current)
     refusals += metadata_problems(pack["metadata"], args.tooling_root)
+    refusals += pack_shard_problems(args.pack, pack["manifest"])
     return refusals + descriptive_problems(args.pack, pack["url_pattern"])
 
 
-def upload_files(args, built: BuiltArchive | None, record_readme: str) -> list[dict]:
-    """Copy the browsable files beside the archive and describe every upload."""
+def upload_files(args, built: list[BuiltShard], record_readme: str) -> list[dict]:
+    """Copy the browsable files beside the shards and describe every upload."""
     upload = args.out / UPLOAD_DIR
     upload.mkdir(parents=True, exist_ok=True)
-    paths = [built.path] if built else []
+    paths = [shard.path for shard in built]
+    if built:
+        (upload / CHECKSUM_FILE).write_text(checksum_text(built), encoding="utf-8")
+        paths.append(upload / CHECKSUM_FILE)
     for name in BROWSABLE_FILES:
         if name == "README.md":
             (upload / name).write_text(record_readme, encoding="utf-8")
@@ -460,8 +508,11 @@ def screen_failure_classes(manifest: dict) -> dict[str, int]:
     return dict(sorted(classes.items()))
 
 
-def make_record_readme(manifest: dict, counts: dict, archive: str, screen: dict) -> str:
+def make_record_readme(manifest: dict, counts: dict, shards: list[str], screen: dict) -> str:
     """Render the public README uploaded beside the archive."""
+    shard_line = (f"`{shards[0]}` to `{shards[-1]}`: {len(shards)} shard archives, each holding screened build zips under `builds/`."
+                  if shards else "No shard archive.")
+    grades = ", ".join(f"{grade} {count}" for grade, count in (manifest.get("grade_counts") or {}).items())
     failure_lines = "\n".join(
         f"- {count} build{'s' if count != 1 else ''}: {label}."
         for label, count in screen_failure_classes(manifest).items()
@@ -472,14 +523,23 @@ This record supplements the ASB {manifest['domain']} v{manifest['collection_vers
 
 ## Files on this record
 
-- `{archive}`: the archive, with one screened zip per build under `builds/`.
+- {shard_line}
+- `{CHECKSUM_FILE}`: the sha256 of each shard archive.
 - `README.md`: this record guide.
 - `MANIFEST.json`: every considered build, including screen failures, and the archive counts and checksums.
 - `capsules.jsonl`: one row per capsule held by the record.
 - `SCREEN.json`: content-screen counts and failures.
 - `benchmark-manifest.json`: the {counts['benchmark_capsules']} capsules whose evaluation definition is structurally complete.
 
-Inside `{archive}`, each row of `capsules.jsonl` maps `build_slug` to `builds/<build_slug>.zip`. Open that nested zip and use the row's `capsule_id` to find the capsule under `capsules/<capsule_id>/`, including its evaluation, evidence, inputs, provenance and pruned RO-Crate.
+Each row of `capsules.jsonl` names its shard archive in `shard` and the path of its build zip inside that shard in `member` (`builds/<build_slug>.zip`). Download that shard, open the nested build zip and use the row's `capsule_id` to find the capsule under `capsules/<capsule_id>/`, including its evaluation, evidence, inputs, task card, scripts, tables, figures, outputs, nanopublications, provenance and pruned RO-Crate. The build zip also holds the build's provenance: ledger, manifests, task cards, ASTRA files, workflow exports, reports, scores, certification, the indicium graph, the anchor-corpus hashes and `{pack_capsules.ANCHOR_RECIPE}`. {pack_capsules.ANCHOR_RECIPE_STATEMENT}
+
+This Zenodo record is the archival copy. The same build zips, one file per build, and per-grade tables are meant for a HuggingFace dataset, the day-to-day access point.
+
+## Grades
+
+{pack_capsules.GRADE_STATEMENT}
+
+Capsules per grade: {grades}.
 
 {pack_capsules.EVALUATION_LISTING_STATEMENT}
 
@@ -498,7 +558,7 @@ Screen failure classes count builds and may overlap:
 
 {failure_lines}
 
-The screen names private repository URLs without linking them and redacts email addresses and telephone numbers. It replaces build-machine paths and home directories with portable locators. It keeps, caps or removes the text quoted from each paper according to the paper's access class and licence, and leaves an anchor (length and digest) where text was removed. See `SCREEN.json` for the measured counts and per-build failures.
+Anchor-corpus text and figure or table files extracted from a paper ship only when the paper's quoted text is kept in full; otherwise their hashes ship (`anchor_recipe.json`, `withheld_files.json`). The screen names private repository URLs without linking them and redacts email addresses and telephone numbers. It replaces build-machine paths and home directories with portable locators. It keeps, caps or removes the text quoted from each paper according to the paper's access class and licence, and leaves an anchor (length and digest) where text was removed. See `SCREEN.json` for the measured counts and per-build failures.
 
 ## `SCREEN.json` counters
 
@@ -539,16 +599,20 @@ def make_plan(args) -> dict:
     refusals = pack_refusals(args, pack, loaded)
     zip_findings = []
     try:
-        built = build_archive(args.pack, args.out / UPLOAD_DIR,
-                              lambda name, data: zip_findings.extend(build_zip_findings(name, data, pack["url_pattern"])))
+        built = build_shards(args.pack, args.out / UPLOAD_DIR,
+                             lambda name, data: zip_findings.extend(build_zip_findings(name, data, pack["url_pattern"])))
     except CapsulesError as error:
-        built = None
+        built = []
         refusals.append(f"archive: {error}")
     metadata = dict(pack["metadata"], publication_date=args.date)
     counts = plan_counts(pack["manifest"], pack["rows"], pack["benchmark"])
-    archive = built.path.name if built else archive_name(pack["manifest"])
-    record_readme = make_record_readme(pack["manifest"], counts, archive, pack["screen"])
+    shard_names = [shard.path.name for shard in built] or [
+        shard["name"] for shard in (pack["manifest"].get("layout") or {}).get("shards") or []]
+    record_readme = make_record_readme(pack["manifest"], counts, shard_names, pack["screen"])
     refusals += text_problems("upload/README.md", record_readme, pack["url_pattern"], True)
+    files = upload_files(args, built, record_readme)
+    if len(files) > ZENODO_MAX_FILES:
+        refusals.append(f"upload: {len(files)} files, over Zenodo's limit of {ZENODO_MAX_FILES} per record")
     return {
         "schema": PLAN_SCHEMA,
         "domain": pack["manifest"]["domain"],
@@ -556,11 +620,21 @@ def make_plan(args) -> dict:
         "collection_version_doi": pack_capsules.collection_version_doi(loaded),
         "publication_date": args.date,
         "metadata": metadata,
-        "archive": {"name": built.path.name, "bytes": built.size, "sha256": built.sha256, "members": built.members} if built else None,
-        "files": upload_files(args, built, record_readme),
+        "archive": archive_summary(built, args.out / UPLOAD_DIR) if built else None,
+        "files": files,
         "counts": counts,
         "refusals": refusals + grouped_zip_problems(zip_findings),
     }
+
+
+def archive_summary(built: list[BuiltShard], upload: Path) -> dict:
+    """Summarise the shards: their total size, and the sha256 of the SHA256SUMS listing,
+    which the registry records as the archive digest."""
+    sha, _, _ = file_digests(upload / CHECKSUM_FILE)
+    return {"name": CHECKSUM_FILE, "bytes": sum(shard.size for shard in built), "sha256": sha,
+            "members": len(built),
+            "shards": [{"name": shard.path.name, "bytes": shard.size, "sha256": shard.sha256,
+                        "builds": len(shard.builds)} for shard in built]}
 
 
 def describe_plan(plan: dict) -> str:
@@ -568,6 +642,8 @@ def describe_plan(plan: dict) -> str:
     lines = [f"record: ASB {plan['domain']} v{plan['collection_version']} build capsules, supplementing {plan['collection_version_doi']}",
              "metadata:", json.dumps(plan["metadata"], indent=2, ensure_ascii=False), "files:"]
     lines += [f"  {item['name']}  {item['bytes']} bytes  sha256 {item['sha256']}  md5 {item['md5']}" for item in plan["files"]]
+    lines.append(f"total: {len(plan['files'])} files, {sum(item['bytes'] for item in plan['files'])} bytes "
+                 f"(Zenodo limit {ZENODO_MAX_FILES} files)")
     lines += [f"{key}: {value}" for key, value in plan["counts"].items()]
     lines += [f"refused: {refusal}" for refusal in plan["refusals"]] or ["refusals: none"]
     return "\n".join(lines)

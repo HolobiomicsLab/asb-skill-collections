@@ -132,7 +132,7 @@ def test_pack_leaves_out_builds_of_papers_not_in_the_released_corpus(tmp_path):
     assert manifest["not_released_count"] == 1
     assert "extra" not in {build["build_slug"] for build in manifest["builds"]}
     assert "extra" not in {row["build_slug"] for row in rows}
-    assert not (out / "builds" / "extra.zip").exists()
+    assert not (out / "hf" / "builds" / "extra.zip").exists()
     assert "not an included paper of the released corpus: 1" in (out / "README.md").read_text()
 
 
@@ -177,7 +177,7 @@ def view_with_urls(tmp_path):
 
 
 def build_member(pack_dir, slug, member):
-    with zipfile.ZipFile(pack_dir / "builds" / f"{slug}.zip") as zipped:
+    with zipfile.ZipFile(pack_dir / "hf" / "builds" / f"{slug}.zip") as zipped:
         return zipped.read(member).decode()
 
 
@@ -271,12 +271,12 @@ def test_refresh_drops_builds_of_papers_no_longer_released(tmp_path):
     view = view_with_extra(tmp_path)
     wide = collection_copy(tmp_path, name="wide", extra_paper="build__coll_extra")
     old = pack(tmp_path / "old", view=view, collection=wide)
-    assert (old / "builds" / "extra.zip").is_file()
+    assert (old / "hf" / "builds" / "extra.zip").is_file()
     narrow = collection_copy(tmp_path, name="collection")
     full = pack(tmp_path / "full", view=view, collection=narrow)
     assert refresh(old, narrow, tmp_path / "refreshed") == 0
     refreshed = tmp_path / "refreshed"
-    assert not (refreshed / "builds" / "extra.zip").exists()
+    assert not (refreshed / "hf" / "builds" / "extra.zip").exists()
     assert json.loads((refreshed / "MANIFEST.json").read_text())["not_released"] == ["extra"]
     assert digests(refreshed) == digests(full)
 
@@ -301,7 +301,7 @@ def test_refresh_drops_capsule_rows_of_builds_without_a_zip(tmp_path):
 
 
 def test_refresh_refuses_a_zip_whose_digest_differs(tmp_path, packed, capsys):
-    target = packed / "builds" / "open.zip"
+    target = packed / "hf" / "builds" / "open.zip"
     data = bytearray(target.read_bytes())
     data[-1] ^= 1
     target.write_bytes(bytes(data))
@@ -325,24 +325,23 @@ def archive(pack_dir, out):
 def test_archive_is_deterministic_and_stores_build_zips_unchanged(tmp_path, packed):
     assert archive(packed, tmp_path / "a") == 0
     assert archive(packed, tmp_path / "b") == 0
-    name = "asb-synthetic-v1-build-capsules.zip"
+    name = "asb-synthetic-v1-builds-001.zip"
+    assert sorted(path.name for path in (tmp_path / "a").iterdir()) == [name]
     assert (tmp_path / "a" / name).read_bytes() == (tmp_path / "b" / name).read_bytes()
+    # The shard the pack wrote under zenodo/ is the same file.
+    assert (tmp_path / "a" / name).read_bytes() == (packed / "zenodo" / name).read_bytes()
     with zipfile.ZipFile(tmp_path / "a" / name) as zipped:
         names = zipped.namelist()
-        assert names == sorted(names)
+        assert names == sorted(names) == [f"builds/{slug}.zip" for slug in ("closed", "open", "open_capped", "preprint")]
         assert all(info.date_time == zenodo_deposit.ZIP_EPOCH for info in zipped.infolist())
-        builds = [info for info in zipped.infolist() if info.filename.startswith("builds/")]
-        assert len(builds) == 4
-        assert all(info.compress_type == zipfile.ZIP_STORED for info in builds)
-        assert all(zipped.read(info) == (packed / info.filename).read_bytes() for info in builds)
-        assert {"MANIFEST.json", "README.md", "capsules.jsonl", "SCREEN.json", "benchmark-manifest.json",
-                "zenodo/metadata.json", "hf/README.md"} <= set(names)
+        assert all(info.compress_type == zipfile.ZIP_STORED for info in zipped.infolist())
+        assert all(zipped.read(info) == (packed / "hf" / info.filename).read_bytes() for info in zipped.infolist())
 
 
 @pytest.mark.parametrize("damage, message", [
-    (lambda pack: shutil.copy(pack / "builds" / "open.zip", pack / "builds" / "stray.zip"), "builds/stray.zip: zip absent from MANIFEST.json"),
-    (lambda pack: (pack / "builds" / "open.zip").write_bytes(b"short"), "builds/open.zip: 5 bytes on disk"),
-    (lambda pack: (pack / "builds" / "open.zip").unlink(), "builds/open.zip: listed in MANIFEST.json, zip missing"),
+    (lambda pack: shutil.copy(pack / "hf" / "builds" / "open.zip", pack / "hf" / "builds" / "stray.zip"), "builds/stray.zip: zip absent from MANIFEST.json"),
+    (lambda pack: (pack / "hf" / "builds" / "open.zip").write_bytes(b"short"), "builds/open.zip: 5 bytes on disk"),
+    (lambda pack: (pack / "hf" / "builds" / "open.zip").unlink(), "builds/open.zip: listed in MANIFEST.json, zip missing"),
 ])
 def test_archive_refuses_a_pack_whose_zips_disagree_with_the_manifest(tmp_path, packed, capsys, damage, message):
     damage(packed)
@@ -352,7 +351,7 @@ def test_archive_refuses_a_pack_whose_zips_disagree_with_the_manifest(tmp_path, 
 
 
 def test_archive_refuses_a_zip_with_the_wrong_digest_and_leaves_no_partial(tmp_path, packed, capsys):
-    target = packed / "builds" / "open.zip"
+    target = packed / "hf" / "builds" / "open.zip"
     data = bytearray(target.read_bytes())
     data[-1] ^= 1
     target.write_bytes(bytes(data))
@@ -369,7 +368,11 @@ def test_plan_lists_metadata_files_and_digests_without_any_request(tmp_path, pac
     assert written["refusals"] == []
     assert written["metadata"]["publication_date"] == LATER
     names = [item["name"] for item in written["files"]]
-    assert names == ["asb-synthetic-v1-build-capsules.zip", *capsules_deposit.BROWSABLE_FILES]
+    assert names == ["asb-synthetic-v1-builds-001.zip", capsules_deposit.CHECKSUM_FILE, *capsules_deposit.BROWSABLE_FILES]
+    sums = (tmp_path / "plan" / "upload" / capsules_deposit.CHECKSUM_FILE).read_text()
+    assert sums == f"{written['files'][0]['sha256']}  asb-synthetic-v1-builds-001.zip\n"
+    assert written["archive"]["sha256"] == hashlib.sha256(sums.encode()).hexdigest()
+    assert written["archive"]["members"] == 1 and written["archive"]["bytes"] == written["files"][0]["bytes"]
     for item in written["files"]:
         data = (tmp_path / "plan" / item["path"]).read_bytes()
         assert item["md5"] == hashlib.md5(data).hexdigest()
@@ -377,7 +380,10 @@ def test_plan_lists_metadata_files_and_digests_without_any_request(tmp_path, pac
         assert item["bytes"] == len(data)
     assert written["counts"] == {"builds_packed": 4, "builds_left_out": 0, "builds_not_released": 0,
                                  "capsules": 6, "capsules_left_out": 0, "benchmark_capsules": 4}
-    assert "refusals: none" in capsys.readouterr().out
+    output = capsys.readouterr().out
+    assert "refusals: none" in output
+    total = sum(item["bytes"] for item in written["files"])
+    assert f"total: 7 files, {total} bytes (Zenodo limit 100 files)" in output
     assert "/Users/" not in json.dumps(written) and str(tmp_path) not in json.dumps(written)
 
 
@@ -398,7 +404,7 @@ def test_plan_refuses_a_deny_hit_on_a_build_with_a_zip(tmp_path, packed):
 
 
 def test_plan_refuses_a_manifest_and_zip_disagreement(tmp_path, packed):
-    (packed / "builds" / "open.zip").unlink()
+    (packed / "hf" / "builds" / "open.zip").unlink()
     assert "archive: builds/open.zip: listed in MANIFEST.json, zip missing" in refusals_of(tmp_path, packed)
 
 
@@ -442,7 +448,7 @@ def test_plan_refuses_a_link_to_a_private_domain_repository(tmp_path, packed):
 
 
 def test_plan_refuses_a_private_link_inside_a_build_zip(tmp_path, packed):
-    target = packed / "builds" / "open.zip"
+    target = packed / "hf" / "builds" / "open.zip"
     with zipfile.ZipFile(target, "a") as zipped:
         zipped.writestr("notes.md", f"built by https://{PIPELINE_LINK}\n")
     data = target.read_bytes()
@@ -473,7 +479,7 @@ def test_plan_refuses_capsule_rows_of_a_build_the_manifest_does_not_list(tmp_pat
 
 
 def test_plan_refuses_tables_that_name_a_build_without_a_zip(tmp_path, packed):
-    (packed / "builds" / "open.zip").unlink()
+    (packed / "hf" / "builds" / "open.zip").unlink()
     edit_json(packed / "MANIFEST.json", lambda manifest: next(
         entry for entry in manifest["builds"] if entry["build_slug"] == "open").update(bytes=0, sha256=None))
     refusals = refusals_of(tmp_path, packed)
@@ -486,8 +492,9 @@ def test_plan_writes_a_public_record_readme_from_the_plan_counts(tmp_path, packe
     status, written = plan(tmp_path, packed)
     assert status == 0, written["refusals"]
     readme = (tmp_path / "plan" / "upload" / "README.md").read_text()
-    archive = written["archive"]["name"]
-    assert f"`{archive}`: the archive" in readme
+    assert "`asb-synthetic-v1-builds-001.zip` to `asb-synthetic-v1-builds-001.zip`: 1 shard archives" in readme
+    assert "`SHA256SUMS`" in readme and "`member`" in readme and "`shard`" in readme
+    assert pack_capsules.GRADE_STATEMENT in readme and "Capsules per grade: bronze 2" in readme
     assert "Local screened archive set" not in readme
     assert "No deposit, upload" not in readme
     assert "`zenodo/metadata.json`" not in readme and "`hf/README.md`" not in readme
@@ -697,3 +704,36 @@ def test_the_record_readme_names_failure_classes_in_reader_words():
         "another screen failure": 1,
         "content withheld by the maintainers": 1,
     }
+
+
+# shards ----------------------------------------------------------------------
+
+def test_plan_refuses_more_files_than_zenodo_accepts(tmp_path, packed, monkeypatch):
+    monkeypatch.setattr(capsules_deposit, "ZENODO_MAX_FILES", 6)
+    assert "upload: 7 files, over Zenodo's limit of 6 per record" in refusals_of(tmp_path, packed)
+
+
+def test_plan_uploads_every_shard_and_refuses_a_changed_pack_shard(tmp_path):
+    sharded = pack(tmp_path / "pack", shard_size=2)
+    status, written = plan(tmp_path, sharded)
+    assert status == 0, written["refusals"]
+    names = [item["name"] for item in written["files"]]
+    assert names[:3] == ["asb-synthetic-v1-builds-001.zip", "asb-synthetic-v1-builds-002.zip", capsules_deposit.CHECKSUM_FILE]
+    for item in written["files"][:2]:
+        assert (tmp_path / "plan" / item["path"]).read_bytes() == (sharded / "zenodo" / item["name"]).read_bytes()
+    assert written["archive"]["members"] == 2
+    target = sharded / "zenodo" / "asb-synthetic-v1-builds-002.zip"
+    target.write_bytes(target.read_bytes() + b"x")
+    refusals = refusals_of(tmp_path, sharded, out=tmp_path / "plan2", tooling=tmp_path / "tooling")
+    assert "zenodo/asb-synthetic-v1-builds-002.zip: size or sha256 differs from MANIFEST.json" in refusals
+
+
+def test_plan_refuses_a_pack_without_a_shard_layout(tmp_path, packed):
+    edit_json(packed / "MANIFEST.json", lambda manifest: manifest.pop("layout"))
+    assert "MANIFEST.json has no shard layout; run a full pack" in refusals_of(tmp_path, packed)
+
+
+def test_refresh_rewrites_the_same_shards(tmp_path):
+    sharded = pack(tmp_path / "pack", shard_size=3)
+    assert refresh(sharded, FIXTURE / "collection", tmp_path / "refreshed") == 0
+    assert digests(tmp_path / "refreshed") == digests(sharded)

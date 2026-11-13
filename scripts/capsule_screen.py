@@ -15,8 +15,31 @@ import yaml
 from scripts.pii_config import PII_CONFIG, _is_notation_not_email
 from scripts.release_capsule_truth import _build_locator, prune_crate
 
-QUOTE_KEYS = {"source_excerpt", "evidence_quote", "quote", "quoted_text", "verbatim", "snippet"}
+QUOTE_KEYS = {"source_excerpt", "evidence_quote", "quote", "quoted_text", "verbatim", "snippet",
+              # Task cards and the entity spine of a build carry the paper span a
+              # finding or an entity rests on under these names.
+              "evidence_span", "finding_evidence_span",
+              # Certification reports restate a data-availability span of the paper.
+              "open_data_evidence"}
+# A text-quote selector (W3C Web Annotation) below a quote property holds paper
+# text in its exact, prefix and suffix parts, as ASTRA files write it.
+QUOTE_SELECTOR_KEYS = {"exact", "prefix", "suffix"}
+# A nanopublication's provenance names the paper sentence a claim was extracted
+# from as the description of the activity that generated the assertion.
+GENERATION_DESCRIPTION = ("wasgeneratedby", "description")
+# Every string below these keys is paper text: the entity spine's section texts, and
+# the evidence of a reproducibility score's open-data component.
+SOURCE_TEXT_CONTAINERS = {"section_text"}
+EVIDENCE_PARENTS = {"open_data"}
+# List items whose `text` is retrieved or quoted paper text.
+PASSAGE_LISTS = {"passages_used", "substring_hits", "evidence_snippets"}
 TEXT_SUFFIXES = {".json", ".jsonl", ".jsonld", ".md", ".txt", ".yaml", ".yml", ".csv", ".tsv"}
+# Members that cannot hold text: never decoded, never screened as text. Any other
+# member that decodes as UTF-8 (a Snakefile, main.nf, a CWL file, a shell script,
+# deps.lock) is screened as plain text.
+BINARY_SUFFIXES = {".png", ".jpg", ".jpeg", ".gif", ".tif", ".tiff", ".bmp", ".webp", ".pdf",
+                   ".zip", ".gz", ".bz2", ".xz", ".tar", ".parquet", ".npy", ".npz", ".h5",
+                   ".hdf5", ".pkl", ".mzml", ".raw"}
 QUOTE_CAP = 300
 DOI_QUOTE_CAP = 1500
 REDACTED_QUOTE = "[redacted-quote]"
@@ -96,6 +119,21 @@ def allows_verbatim_sharing(licence: str) -> bool:
     return bool(re.fullmatch(r"(?:cc-by(?:-nc)?(?:-nd|-sa)?|cc0)(?:-\d+(?:\.\d+)*)?|public-domain", value))
 
 
+def is_text_member(name: str, data: bytes) -> bool:
+    """Tell whether a member is screened as text: a known text suffix, or UTF-8 bytes
+    without a NUL byte and without a known binary suffix."""
+    suffix = Path(name).suffix.lower()
+    if suffix in TEXT_SUFFIXES:
+        return True
+    if suffix in BINARY_SUFFIXES or b"\0" in data:
+        return False
+    try:
+        data.decode("utf-8")
+    except UnicodeDecodeError:
+        return False
+    return True
+
+
 def empty_counts() -> Counter:
     """Return a fresh counter with the stable screen receipt keys."""
     return Counter({
@@ -143,7 +181,21 @@ def source_text_kind(relative_path: str, path: tuple = ()) -> str | None:
             field_path = field_path[:-1]
         if field_path and field_path[-1] in QUOTE_KEYS:
             return "quote"
-        if (len(field_path) >= 3 and field_path[-3] in {"passages_used", "substring_hits"}
+        if len(field_path) >= 2 and field_path[-2] in QUOTE_KEYS and field_path[-1] in QUOTE_SELECTOR_KEYS:
+            return "quote"
+        if tuple(field_path[-2:]) == GENERATION_DESCRIPTION:
+            return "quote"
+        if len(field_path) >= 2 and field_path[-2] in EVIDENCE_PARENTS and field_path[-1] == "evidence":
+            return "quote"
+        # The screen's own redaction anchors, written beside the removed text, are not paper text.
+        if SOURCE_TEXT_CONTAINERS.intersection(name for name in field_path if isinstance(name, str)) \
+                and "_screen_redactions" not in field_path:
+            return "quote"
+        # A nanopublication describes its assertion and the activity that produced it
+        # with the paper sentence the claim was extracted from.
+        if "nanopubs" in Path(relative_path).parts[:-1] and field_path and field_path[-1] == "description":
+            return "quote"
+        if (len(field_path) >= 3 and field_path[-3] in PASSAGE_LISTS
                 and isinstance(field_path[-2], int) and field_path[-1] == "text"):
             return "passage"
         return None
@@ -153,6 +205,10 @@ def source_text_kind(relative_path: str, path: tuple = ()) -> str | None:
             return "snippets"
         if member.parts[-2:] == ("inputs", "dataset_preview.md"):
             return "previews"
+        if "cards" in member.parts[:-1] or member.name == "task_card.md":
+            return "card_snippets"
+        if member.parts[-2:] == ("astra", "provenance.myst.md"):
+            return "provenance_evidence"
         if {"evidence", "ledger"}.intersection(member.parts):
             return "blockquotes"
     return None
@@ -587,6 +643,7 @@ class MarkdownQuote:
     value: str
     pointer: str
     blockquote: bool = False
+    inline: bool = False
 
 
 def _markdown_quotes(text: str, relative_path: str):
@@ -637,6 +694,31 @@ def _markdown_quotes(text: str, relative_path: str):
                 end -= 1
             value = re.sub(r"<!-- asb-redaction [^\n]* -->", "", text[start:end]).strip()
             yield MarkdownQuote(start, end, "" if value == REDACTED_QUOTE else value, f"paper_preview_{index}")
+    elif kind == "card_snippets":
+        # A task card's "Evidence Snippets" entries end with the paper span in single
+        # quotes: "- `ev_001` from `agent` (mode): [section] claim: 'span'". The span
+        # starts at the first ": '" of the entry, so a colon inside it widens it.
+        section = re.search(r"(?m)^##[ \t]+Evidence Snippets[ \t]*$", text)
+        if section is None:
+            return
+        following = re.search(r"(?m)^#{1,2}[ \t]", text[section.end():])
+        end_of_section = section.end() + following.start() if following else len(text)
+        entries = re.finditer(r"(?m)^[ \t]*[-*][ \t]+`ev_[^`\n]+`[^\n]*?: '(?P<span>[^\n]*)'[ \t]*$",
+                              text[section.end():end_of_section])
+        for index, match in enumerate(entries, 1):
+            start, end = section.end() + match.start("span"), section.end() + match.end("span")
+            value = re.sub(r"\s*<!-- asb-redaction [^\n]* -->", "", text[start:end]).strip()
+            yield MarkdownQuote(start, end, "" if value == REDACTED_QUOTE else value, f"card_snippet_{index}",
+                                inline=True)
+    elif kind == "provenance_evidence":
+        # An ASTRA provenance page cites each claim's paper span in double quotes:
+        # "  - evidence: doi `10.x/y` <U+2014> "span"" (an em dash before the span).
+        entries = re.finditer(r'(?m)^[ \t]*[-*][ \t]+evidence:[^\n]*?\u2014 "(?P<span>[^\n]*)"[ \t]*$', text)
+        for index, match in enumerate(entries, 1):
+            start, end = match.start("span"), match.end("span")
+            value = re.sub(r"\s*<!-- asb-redaction [^\n]* -->", "", text[start:end]).strip()
+            yield MarkdownQuote(start, end, "" if value == REDACTED_QUOTE else value, f"provenance_evidence_{index}",
+                                inline=True)
     elif kind == "blockquotes":
         for index, match in enumerate(re.finditer(r"(?m)^(?:[ \t]*>[^\n]*(?:\n|$))+", text), 1):
             end = match.end() - int(match.group().endswith("\n"))
@@ -659,7 +741,8 @@ def _screen_markdown(text, location, context, budget, counts, quotes) -> str:
             if anchor:
                 anchor["line"] = text.count("\n", 0, span.start) + 1
                 anchor["offsets"] = {"start": span.start, "end": span.end}
-                replacement += "\n<!-- asb-redaction " + json.dumps(anchor, sort_keys=True) + " -->"
+                separator = " " if span.inline else "\n"
+                replacement += separator + "<!-- asb-redaction " + json.dumps(anchor, sort_keys=True) + " -->"
             parts.append(replacement)
         previous = span.end
     parts.append(text[previous:])
