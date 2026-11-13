@@ -20,7 +20,9 @@ Brand folder per repository:
 | `asb-mark.svg` | mark only, 256 x 256 square | light | yes | yes |
 | `asb-mark-dark.svg` | mark only, 256 x 256 square | dark | yes | yes |
 | `asb-wordmark.svg` | wordmark only | light | yes | yes |
-| `favicon.svg` | simplified mark on a 32 x 32 grid | follows the browser scheme | yes | yes |
+| `favicon.svg` | ecosystem browser-tab icon, 32 x 32 grid | any | yes | yes |
+| `favicon.ico` | same icon, 16, 32 and 48 px | any | yes | yes |
+| `apple-touch-icon.png` | same icon, 180 x 180 px | any | yes | yes |
 | `asb-logo-512.png` | `asb-logo.svg` at 512 x 98 px, transparent | light | yes | yes |
 | `asb-collections-lockup.svg` | mark, "ASB Skill Collections", subtitle "AgenticScienceBuilder" | light | yes | no |
 | `asb-collections-lockup-dark.svg` | same | dark | yes | no |
@@ -35,7 +37,8 @@ Which file where:
 | Slides or bars on navy or black | `asb-logo-dark.svg`, `asb-mark-dark.svg` |
 | Avatar, social card, square slot | `asb-mark.svg` or `asb-mark-dark.svg` |
 | Name already set in text nearby | `asb-mark.svg` |
-| Browser tab, 16 to 32 px | `favicon.svg` |
+| Browser tab, 16 to 48 px | `favicon.svg`, with `favicon.ico` as fallback |
+| Home-screen icon | `apple-touch-icon.png` |
 | Tools that refuse SVG | `asb-logo-512.png` |
 
 All SVGs have a `viewBox`, no embedded raster, no external font and no external reference. The wordmark is drawn as outlines from IBM Plex Sans Medium (SIL Open Font License 1.1), so the logo looks the same without the font installed. Each SVG carries a `<title>` and a `<desc>`.
@@ -93,7 +96,7 @@ Contrast (WCAG 2):
 - Strokes: 7 units for the mast, cat-head and jib chords; 5 units for the lattice, jib web, ties, hoist cable and sling; 7 units for the load glyphs. Round caps and joins.
 - The load hangs under the hook: hook and platform share the same centre line.
 - In the lockups the cap height of the wordmark is centred on the mark. The gap between mark and wordmark is 44 units, about one fifth of the mark height.
-- `favicon.svg` is a separate drawing on a 32-unit grid with solid shapes. It is not the mark scaled down.
+- `favicon.svg`, `favicon.ico` and `apple-touch-icon.png` are a separate drawing, not the crane mark scaled down. The browser-tab icon comes from the ecosystem icon family generated in `holobiomicslab_brand`; do not redraw it here.
 
 ## Clear space and minimum size
 
