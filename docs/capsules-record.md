@@ -49,8 +49,9 @@ importable code never reads the clock.
   the packer refuses a layout over 90 files (raise `--shard-size`) or over
   Zenodo's 50 GB per record. `zenodo/metadata.json` is the deposit metadata.
 - `hf/README.md` and one table per dataset configuration: `capsules.jsonl`
-  (every row), `silver_plus.jsonl` (silver, gold, platinum), `gold_plus.jsonl`
-  (gold, platinum) and `benchmark.jsonl` (the rows of
+  (every row), `validated_plus.jsonl` (readiness validated, evaluable or
+  executable), `evaluable_plus.jsonl` (evaluable or executable) and
+  `benchmark.jsonl` (the rows of
   `benchmark-manifest.json`); Parquet copies only when `pyarrow` is installed.
   Zenodo is the archival record; HuggingFace is the day-to-day access point.
   The packer writes these files locally and uploads nothing.
@@ -58,7 +59,7 @@ importable code never reads the clock.
   sizes and hashes, access, validation, evaluation and per-build screen data.
   `layout` lists the shards (name, builds, size, sha256), the shard size and
   the record's file count; each packed build entry carries `shard` and
-  `member`; `grade_counts` counts capsules per grade.
+  `member`; `readiness_counts` counts capsules per readiness level.
   `build_count` is every considered build; `builds_packed` and
   `builds_left_out` partition it. `capsule_count` is the capsules in packed
   builds and therefore in the record; `capsules_left_out` is the capsules of
@@ -112,6 +113,27 @@ for any other build they are replaced by `withheld_files.json`, which gives
 each file's name, sha256 and size (`paper_files_withheld` in `SCREEN.json`).
 Image files that ship are not screened: their pixels cannot be read.
 
+For the same builds, text copied from the article outside the quotation fields
+is trimmed. The packer reads the paper's main article from the source build
+(the `main_article` of `package_index.json` inside `synthesized_package/`, or
+`synthesized_package/article_fulltext.md`) at pack time only; the article is
+never shipped or logged, and the screen keeps only hashes of its windows. Both
+texts are compared lowercased with whitespace collapsed. In every screened
+member (ledger, RO-Crate, `workflow.yaml`, `indicium.jsonld`, entity spine,
+ASTRA files, nanopublications, task cards and the rest), each run of at least
+160 such characters that matches the article is replaced by
+`[trimmed-overlap]`: in a JSON, JSON Lines, JSON-LD or YAML string with an
+anchor in `_screen_redactions` (location, length, sha256, reason
+`article_overlap`), in Markdown with an `asb-redaction` comment, and in other
+text with the length and sha256 inside the marker. Mapping keys and quotation
+fields, which follow the quote rule, are not trimmed; runs whose 160-character
+windows only touch across whitespace stay separate, so a shorter copy next to a
+run is kept. `SCREEN.json` counts `overlap_runs_trimmed` and
+`overlap_characters_trimmed`. A build of such a paper whose article cannot be
+found fails the screen (`missing:article_text`) rather than ship untrimmed.
+Runs shorter than 160 characters (a restated fact, a formula, a method name)
+are kept.
+
 Every build zip holds `anchor_recipe.json`: the DOI, the anchor corpus's
 `source_kind` and partitions, the per-partition sha256 copied from
 `anchor_corpus/manifest.json`, the anchor repository (full name, default
@@ -122,25 +144,29 @@ rebuilt corpus is verifiable by hash but not guaranteed identical. The recipe
 names the pipeline but gives no rebuild command while the pipeline repository
 is private.
 
-## Grades
+## Readiness
 
-Each row of `capsules.jsonl` carries `grade`, computed from its own fields, and
-`reproducibility_tier`, read from the capsule's `task_card.json` (null when
+Each row of `capsules.jsonl` carries `readiness`, computed from its own fields,
+and `reproducibility_tier`, read from the capsule's `task_card.json` (null when
 absent):
 
-- `bronze`: `validation_state` is `present`, whatever the evaluation;
-- `silver`: `validation_state` is `clean` or `strict` and `eval_state` is
+- `documented`: `validation_state` is `present`, whatever the evaluation;
+- `validated`: `validation_state` is `clean` or `strict` and `eval_state` is
   `partial`;
-- `gold`: `validation_state` is `clean` or `strict` and `eval_state` is
+- `evaluable`: `validation_state` is `clean` or `strict` and `eval_state` is
   `complete`;
-- `platinum`: gold, at least one input in `eval.json`, every input with a
-  sha256 and a download hint, and `reproducibility_tier` `certified`.
+- `executable`: evaluable, at least one input in `eval.json`, every input with
+  a sha256 and a download hint, and `reproducibility_tier` `certified`.
 
-No capsule has been executed under a workflow engine: the task cards sampled on
-13 November 2026 are `type-checked` or `manual-only`, none `certified`, so
-platinum is empty. On the ten packs of 11 November 2026 the rule gives bronze
-4,260, silver 5,893, gold 278 and platinum 0. Expert review is a separate axis,
-still being designed, and is not part of the grade.
+Readiness is not the maturity scale: every capsule here is at most Iron (a
+documented task with structural checks), no reference solution or execution
+ships, and Bronze, Silver and Gold are assigned only through the maturity
+criteria and their records, Gold requiring expert review. No capsule has been
+executed under a workflow engine: the task cards sampled on 13 November 2026
+are `type-checked` or `manual-only`, none `certified`, so `executable` is
+empty. On the ten packs of 11 November 2026 the rule gives documented 4,260,
+validated 5,893, evaluable 278 and executable 0. Expert review is a separate
+axis, still being designed, and is not part of readiness.
 
 The generated README field dictionary defines every capsule and benchmark row
 field, validation state, evaluation state and screen counter. Validation counts

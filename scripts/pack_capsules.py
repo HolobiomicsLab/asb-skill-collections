@@ -67,19 +67,24 @@ ZENODO_MAX_BYTES = 50 * 10**9
 ZENODO_RECEIPTS = ("README.md", "MANIFEST.json", "capsules.jsonl", "SCREEN.json", "benchmark-manifest.json")
 HF_CONFIGS = (
     ("capsules", "capsules.jsonl", "every capsule row", None),
-    ("silver_plus", "silver_plus.jsonl", "capsules graded silver, gold or platinum", {"silver", "gold", "platinum"}),
-    ("gold_plus", "gold_plus.jsonl", "capsules graded gold or platinum", {"gold", "platinum"}),
+    ("validated_plus", "validated_plus.jsonl", "capsules whose readiness is validated, evaluable or executable",
+     {"validated", "evaluable", "executable"}),
+    ("evaluable_plus", "evaluable_plus.jsonl", "capsules whose readiness is evaluable or executable",
+     {"evaluable", "executable"}),
     ("benchmark", "benchmark.jsonl", "the rows of benchmark-manifest.json", None),
 )
-GRADES = ("bronze", "silver", "gold", "platinum")
-GRADE_STATEMENT = (
-    "Grades are computed from fields of each row. bronze: validation present. silver: validation "
-    "clean or strict, evaluation partial. gold: validation clean or strict, evaluation complete. "
-    "platinum: gold, every input of eval.json carries a sha256 and a download hint (at least one input), "
-    "and the task card's reproducibility tier is certified. No capsule has been executed under a "
-    "workflow engine: the task cards sampled on 13 November 2026 are type-checked or manual-only, "
-    "none certified. "
-    "Expert review is a separate axis, still being designed, and is not part of the grade."
+READINESS_LEVELS = ("documented", "validated", "evaluable", "executable")
+READINESS_STATEMENT = (
+    "Readiness is computed from fields of each row. documented: validation present. validated: "
+    "validation clean or strict, evaluation partial. evaluable: validation clean or strict, evaluation "
+    "complete. executable: evaluable, every input of eval.json carries a sha256 and a download hint "
+    "(at least one input), and the task card's reproducibility tier is certified. No capsule has been "
+    "executed under a workflow engine: the task cards sampled on 13 November 2026 are type-checked or "
+    "manual-only, none certified. "
+    "Readiness is not the maturity scale: every capsule here is at most Iron (a documented task with "
+    "structural checks), no reference solution or execution ships, and Bronze, Silver and Gold are "
+    "assigned only through the maturity criteria and their records, Gold requiring expert review. "
+    "Expert review is a separate axis, still being designed, and is not part of readiness."
 )
 EVAL_KEYS = {"task_id", "inputs", "expected_outputs", "checks"}
 PIPELINE_NAME = "AgenticScienceBuilder"
@@ -103,8 +108,9 @@ EVALUATION_LISTING_STATEMENT = (
 CAPSULE_FIELD_DEFINITIONS = {
     "access_class": ("category", "Source-paper access class used by the quotation screen."),
     "build_slug": ("identifier", "Build archive stem; its payload is builds/<build_slug>.zip."),
-    "grade": ("bronze, silver, gold or platinum", "Grade computed from validation_state, eval_state, input readiness and reproducibility_tier; see the grade rule."),
+
     "member": ("path", "Path of the build archive inside its shard, and under hf/ in the per-build layout."),
+    "readiness": ("documented, validated, evaluable or executable", "Readiness computed from validation_state, eval_state, input readiness and reproducibility_tier; not the maturity scale. See the readiness rule."),
     "reproducibility_tier": ("tier or null", "reproducibility_tier of the capsule's task_card.json; null when absent."),
     "shard": ("file name", "Zenodo shard archive that holds the build archive."),
     "capsule_id": ("identifier", "Capsule directory name inside the build archive."),
@@ -148,6 +154,8 @@ SCREEN_COUNTER_DEFINITIONS = {
     "emails_redacted": "email addresses redacted",
     "failures": "screen failures",
     "paper_files_withheld": "figure or table files extracted from a paper whose licence does not allow verbatim sharing, replaced by an index entry",
+    "overlap_characters_trimmed": "characters of those runs",
+    "overlap_runs_trimmed": "runs of at least 160 characters copied from the article of a paper whose text is not kept in full, cut from strings outside the quotation fields and replaced by a marker and an anchor",
     "paths_rewritten": "machine paths replaced with portable locators",
     "phones_redacted": "telephone numbers redacted",
     "private_urls_rewritten": "private repository URLs reduced to unlinked names",
@@ -509,9 +517,17 @@ def private_repositories(registry: Path = REGISTRY, pipeline_public: bool = Fals
     return tuple(sorted(names))
 
 
-def screen_build(root: Path, paper: dict, collection_meta: dict, options: dict) -> tuple[dict, dict]:
-    """Screen every staged text file and return counts and per-capsule quotes."""
+def screen_build(root: Path, paper: dict, collection_meta: dict, options: dict,
+                 article: str | None = None) -> tuple[dict, dict]:
+    """Screen every staged text file and return counts and per-capsule quotes.
+
+    `article`, the paper's article text, is given for a paper whose text is not kept
+    in full: runs of at least `capsule_screen.OVERLAP_RUN` characters copied from it
+    are trimmed from every shipped string outside the quotation fields.
+    """
     context = capsule_screen.context_for(paper.get("doi") or "", paper.get("access") or {})
+    if article is not None and context.retention != "full":
+        context.article = capsule_screen.ArticleIndex(article)
     context.email_allowlist, context.email_role = _build_email_allowlist(collection_meta)
     context.deny_patterns = options["deny_patterns"]
     context.private_repositories = options["private_repositories"]
@@ -652,6 +668,27 @@ def zip_build(root: Path, target: Path) -> dict:
     return {"bytes": target.stat().st_size, "sha256": digest(target)}
 
 
+def article_text(source: Path) -> str | None:
+    """Read the paper's main article from the source build, for trimming only; never shipped.
+
+    The package index names it (role `main_article`) inside `synthesized_package/`;
+    without an index, `synthesized_package/article_fulltext.md` is read.
+    """
+    package = source / "synthesized_package"
+    relative = "article_fulltext.md"
+    try:
+        index = json.loads((source / "package_index.json").read_text(encoding="utf-8"))
+        relative = next(entry["relative_path"] for entry in index.get("files") or []
+                        if isinstance(entry, dict) and entry.get("role") == "main_article")
+    except (OSError, ValueError, AttributeError, StopIteration, KeyError):
+        pass
+    path = package / relative
+    if not path.is_file() or package.resolve() not in path.resolve().parents:
+        return None
+    text = path.read_text(encoding="utf-8", errors="replace")
+    return text if text.strip() else None
+
+
 def paper_text_shared(paper: dict) -> bool:
     """Tell whether the paper's text is shared verbatim: the screen's rule for keeping
     quoted text in full (`capsule_screen.context_for`), applied unchanged."""
@@ -667,7 +704,11 @@ def pack_one(source: Path, stage_parent: Path, out: Path, paper: dict, collectio
     permissive = paper_text_shared(paper)
     missing, capsules, facts = stage_build(source, stage_root, options["with_indicium"], permissive,
                                            paper.get("doi"), options.get("pipeline_public", False))
-    screen, quotes = screen_build(stage_root, paper, collection_meta, options)
+    article = None if permissive else article_text(source)
+    if not permissive and article is None:
+        missing.append("article_text")
+    screen, quotes = screen_build(stage_root, paper, collection_meta, options, article)
+    del article
     screen["counts"]["paper_files_withheld"] = facts["paper_files_withheld"]
     screen["counts"] = dict(sorted(screen["counts"].items()))
     screen["anchor_text_shipped"] = facts["anchor_text_shipped"]
@@ -729,7 +770,7 @@ def capsule_rows(root, build_slug, paper, capsules, quotes) -> list[dict]:
             "quotes_after_screen": quotes.get(capsule.name, {}),
             "reproducibility_tier": tier,
         })
-        rows[-1]["grade"] = capsule_grade(rows[-1])
+        rows[-1]["readiness"] = capsule_readiness(rows[-1])
     return rows
 
 
@@ -742,31 +783,31 @@ def reproducibility_tier(path: Path) -> str | None:
     return value if isinstance(value, str) else None
 
 
-def capsule_grade(row: dict) -> str | None:
-    """Grade one capsule row from its own fields; None when validation or evaluation is invalid.
+def capsule_readiness(row: dict) -> str | None:
+    """Readiness of one capsule row from its own fields; None when validation or evaluation is invalid.
 
-    bronze: validation present. silver: validation clean or strict, evaluation partial.
-    gold: validation clean or strict, evaluation complete. platinum: gold, at least one
-    input in eval.json, every input with a sha256 and a download hint, and a certified
-    reproducibility tier.
+    documented: validation present. validated: validation clean or strict, evaluation
+    partial. evaluable: validation clean or strict, evaluation complete. executable:
+    evaluable, at least one input in eval.json, every input with a sha256 and a download
+    hint, and a certified reproducibility tier. Readiness is not the maturity scale.
     """
     validation, evaluation = row["validation_state"], row["eval_state"]
     if "invalid" in (validation, evaluation):
         return None
     if validation not in ("clean", "strict"):
-        return "bronze"
+        return "documented"
     if evaluation != "complete":
-        return "silver"
+        return "validated"
     inputs = row.get("eval_input_assets") or 0
     ready = inputs > 0 and row.get("eval_input_assets_with_hash") == inputs \
         and row.get("eval_input_assets_with_download_hint") == inputs
-    return "platinum" if ready and row.get("reproducibility_tier") == "certified" else "gold"
+    return "executable" if ready and row.get("reproducibility_tier") == "certified" else "evaluable"
 
 
-def grade_counts(rows: list[dict]) -> dict:
-    """Count rows per grade, every grade listed."""
-    counts = Counter(row.get("grade") for row in rows)
-    return {grade: counts.get(grade, 0) for grade in GRADES}
+def readiness_counts(rows: list[dict]) -> dict:
+    """Count rows per readiness level, every level listed."""
+    counts = Counter(row.get("readiness") for row in rows)
+    return {level: counts.get(level, 0) for level in READINESS_LEVELS}
 
 
 def aggregate_validation(rows: list[dict]) -> str:
@@ -807,7 +848,7 @@ def make_manifest(args, collection, builds, rows, layout: dict) -> dict:
             "pipeline_public": args.pipeline_public,
         },
         "layout": layout,
-        "grade_counts": grade_counts(rows),
+        "readiness_counts": readiness_counts(rows),
         "build_count": len(builds),
         "builds_packed": sum(bool(build.get("sha256")) for build in builds),
         "builds_left_out": sum(not build.get("sha256") for build in builds),
@@ -895,7 +936,7 @@ def make_hf_card(collection, citation, manifest, args) -> str:
     table = tables["capsules"]
     configs = "\n".join(f'  - config_name: {name}\n    data_files: "{tables[name]}"' for name, _, _, _ in HF_CONFIGS)
     config_lines = "\n".join(f"- `{name}` (`{tables[name]}`): {meaning}." for name, _, meaning, _ in HF_CONFIGS)
-    grades = ", ".join(f"{grade} {count}" for grade, count in manifest["grade_counts"].items())
+    levels = ", ".join(f"{level} {count}" for level, count in manifest["readiness_counts"].items())
     public_citation = {key: value for key, value in citation.items() if key not in PRIVATE_CITATION_KEYS}
     pipeline = PIPELINE_URL if args.pipeline_public else f"{PIPELINE_NAME} (private repository)"
     capsules_doi = normalize_doi(getattr(args, "capsules_doi", None))
@@ -924,11 +965,11 @@ Zenodo is the archival record of these capsules: it holds the same build zips gr
 
 {config_lines}
 
-## Grades
+## Readiness
 
-{GRADE_STATEMENT}
+{READINESS_STATEMENT}
 
-Capsules per grade: {grades}.
+Capsules per readiness level: {levels}.
 
 ## Layout
 
@@ -1021,11 +1062,11 @@ Builds left out because their paper is not an included paper of the released cor
 
 {EVALUATION_LISTING_STATEMENT}
 
-## Grades
+## Readiness
 
-{GRADE_STATEMENT}
+{READINESS_STATEMENT}
 
-Capsules per grade: {", ".join(f"{grade} {count}" for grade, count in manifest['grade_counts'].items())}.
+Capsules per readiness level: {", ".join(f"{level} {count}" for level, count in manifest['readiness_counts'].items())}.
 
 In each capsule's `artifact_provenance.json`, `{ARTIFACT_MEMBERSHIP_FIELD}` says whether the named full-build artifact is present in the shipped capsule.
 
@@ -1077,7 +1118,7 @@ def write_records(args, loaded: dict, builds: list[dict], rows: list[dict]) -> N
     write_shards(args.out, builds, layout)
     check_zenodo_layout(layout)
     for row in rows:
-        row["grade"] = capsule_grade(row)
+        row["readiness"] = capsule_readiness(row)
     manifest = make_manifest(args, collection, builds, rows, layout)
     screen = make_screen(builds, args.strict)
     write_json(args.out / "MANIFEST.json", manifest)
@@ -1106,9 +1147,9 @@ def write_rows(path: Path, rows: list[dict]) -> None:
 
 def write_hf_tables(hf: Path, rows: list[dict], benchmark_rows: list[dict]) -> None:
     """Write one data file per HuggingFace configuration, and Parquet copies when available."""
-    for name, stem, _, grades in HF_CONFIGS:
+    for name, stem, _, levels in HF_CONFIGS:
         selected = benchmark_rows if name == "benchmark" else \
-            [row for row in rows if grades is None or row.get("grade") in grades]
+            [row for row in rows if levels is None or row.get("readiness") in levels]
         write_rows(hf / stem, selected)
         maybe_write_parquet(selected, hf / Path(stem).with_suffix(".parquet").name)
 
@@ -1253,7 +1294,7 @@ def run(args) -> int:
     layout = json.loads((args.out / "MANIFEST.json").read_text(encoding="utf-8"))["layout"]
     print(json.dumps({"builds": len(builds), "capsules": len(packed_rows), "capsules_left_out": left_out,
                       "not_released": len(args.not_released), "shards": len(layout["shards"]),
-                      "zenodo_files": layout["zenodo_files"], "grade_counts": grade_counts(packed_rows),
+                      "zenodo_files": layout["zenodo_files"], "readiness_counts": readiness_counts(packed_rows),
                       "wall_seconds_by_build": timings}))
     return int(args.strict and failed)
 

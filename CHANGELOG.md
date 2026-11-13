@@ -31,11 +31,18 @@ This repository records two release surfaces, each noted per release:
 - Zenodo shards: packed build zips are grouped by slug into `zenodo/` shard archives
   (`--shard-size`, default 40) so a record stays at or below 90 files; `capsules.jsonl` and
   `MANIFEST.json` gain `shard` and `member`. The unsharded per-build zips move to `hf/builds/`
-  with the dataset card, which declares `capsules`, `silver_plus`, `gold_plus` and `benchmark`
+  with the dataset card, which declares `capsules`, `validated_plus`, `evaluable_plus` and `benchmark`
   configurations. `scripts/capsules_deposit.py` uploads the shards with a `SHA256SUMS` listing
   and refuses more than 100 files.
-- `grade` (bronze, silver, gold, platinum) and `reproducibility_tier` on every capsule row, with
-  per-grade counts in `MANIFEST.json`; expert review is not part of the grade.
+- `readiness` (documented, validated, evaluable, executable) and `reproducibility_tier` on every
+  capsule row, with per-level counts in `MANIFEST.json`. Readiness is not the maturity scale
+  (Iron, Bronze, Silver, Gold): every capsule is at most Iron, and expert review is not part of
+  readiness.
+- Overlap trim: for papers whose text is not kept in full, every run of at least 160
+  characters (lowercased, whitespace collapsed) copied from the paper's article is cut from
+  the shipped strings outside the quotation fields, with an anchor; `SCREEN.json` counts
+  `overlap_runs_trimmed` and `overlap_characters_trimmed`, and a build whose article text
+  cannot be found fails with `missing:article_text`. The article is read at pack time only.
 - Enforce the 95 percent HARD_FAIL PII recall target while retaining the accepted
   space-separated numeric-identifier gap.
 - Enforce domain claim verification when claims are declared but none resolves;

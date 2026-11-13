@@ -478,6 +478,7 @@ def plan_counts(manifest: dict, rows: list[dict], benchmark: dict) -> dict:
 
 # Screen failure strings, by the marker they carry, in the words of a reader of the record.
 FAILURE_CLASSES = (
+    ("missing:article_text", "the paper's article text, needed to trim passages copied from it, was not found"),
     ("missing:", "a capsule lacks a required member, such as its ledger"),
     ("invalid_validation_or_eval", "invalid evaluation or validation metadata"),
     ("residual_deny_hits", "content withheld by the maintainers"),
@@ -512,7 +513,7 @@ def make_record_readme(manifest: dict, counts: dict, shards: list[str], screen: 
     """Render the public README uploaded beside the archive."""
     shard_line = (f"`{shards[0]}` to `{shards[-1]}`: {len(shards)} shard archives, each holding screened build zips under `builds/`."
                   if shards else "No shard archive.")
-    grades = ", ".join(f"{grade} {count}" for grade, count in (manifest.get("grade_counts") or {}).items())
+    levels = ", ".join(f"{level} {count}" for level, count in (manifest.get("readiness_counts") or {}).items())
     failure_lines = "\n".join(
         f"- {count} build{'s' if count != 1 else ''}: {label}."
         for label, count in screen_failure_classes(manifest).items()
@@ -533,13 +534,13 @@ This record supplements the ASB {manifest['domain']} v{manifest['collection_vers
 
 Each row of `capsules.jsonl` names its shard archive in `shard` and the path of its build zip inside that shard in `member` (`builds/<build_slug>.zip`). Download that shard, open the nested build zip and use the row's `capsule_id` to find the capsule under `capsules/<capsule_id>/`, including its evaluation, evidence, inputs, task card, scripts, tables, figures, outputs, nanopublications, provenance and pruned RO-Crate. The build zip also holds the build's provenance: ledger, manifests, task cards, ASTRA files, workflow exports, reports, scores, certification, the indicium graph, the anchor-corpus hashes and `{pack_capsules.ANCHOR_RECIPE}`. {pack_capsules.ANCHOR_RECIPE_STATEMENT}
 
-This Zenodo record is the archival copy. The same build zips, one file per build, and per-grade tables are meant for a HuggingFace dataset, the day-to-day access point.
+This Zenodo record is the archival copy. The same build zips, one file per build, and per-readiness tables are meant for a HuggingFace dataset, the day-to-day access point.
 
-## Grades
+## Readiness
 
-{pack_capsules.GRADE_STATEMENT}
+{pack_capsules.READINESS_STATEMENT}
 
-Capsules per grade: {grades}.
+Capsules per readiness level: {levels}.
 
 {pack_capsules.EVALUATION_LISTING_STATEMENT}
 
