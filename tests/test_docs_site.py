@@ -258,7 +258,7 @@ def test_no_font_cdn_anywhere_in_the_site():
 # uses; they must stay byte-identical to the brand kit.
 BRAND_KIT = REPO / "assets" / "brand"
 SITE_BRAND = SITE / "brand"
-SITE_BRAND_FILES = ("favicon.svg", "asb-mark.svg")
+SITE_BRAND_FILES = ("favicon.svg", "favicon.ico", "apple-touch-icon.png", "asb-mark.svg")
 
 
 @pytest.mark.parametrize("name", SITE_BRAND_FILES)
@@ -270,4 +270,6 @@ def test_site_brand_files_match_the_kit(name):
 def test_page_carries_favicon_and_mark(page):
     refs = {(tag, ref) for _line, tag, ref in page_refs(page)}
     assert ("link", "brand/favicon.svg") in refs, f"{page.name}: no favicon link"
+    assert ("link", "brand/favicon.ico") in refs, f"{page.name}: no ICO favicon link"
+    assert ("link", "brand/apple-touch-icon.png") in refs, f"{page.name}: no apple-touch-icon link"
     assert ("img", "brand/asb-mark.svg") in refs, f"{page.name}: no brand mark"
