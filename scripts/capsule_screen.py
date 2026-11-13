@@ -63,9 +63,10 @@ PHONE_RE = re.compile(
 PHONE_LABEL = r"(?<![^\W\d_])(?:t[eé]l(?:[eé]phone|efon|efax)?|phone|fax)(?![^\W\d_])"
 PHONE_LABEL_BEFORE_RE = re.compile(PHONE_LABEL + r"[^\n]{0,30}\Z", re.IGNORECASE)
 # Right after a label any grouping counts ("04 92 07 61 00"), within the digit
-# count of a telephone number.
+# count of a telephone number. A plus sign may stand apart from the country code
+# ("Phone: + 44 (0)1865 000000", as letter heads print it).
 LABELLED_PHONE_RE = re.compile(
-    PHONE_LABEL + r"\.?[ \t]*(?:(?:number|no|nr|n°|#)\.?)?[ \t]*[:=]?[ \t]*(\+?\(?\d[\d ().\-/]{5,22}\d)",
+    PHONE_LABEL + r"\.?[ \t]*(?:(?:number|no|nr|n°|#)\.?)?[ \t]*[:=]?[ \t]*((?:\+[ \t]?)?\(?\d[\d ().\-/]{5,22}\d)",
     re.IGNORECASE,
 )
 PHONE_DIGITS = range(7, 16)
