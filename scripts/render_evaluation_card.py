@@ -22,6 +22,7 @@ from pathlib import Path
 DOMAINS = ("agentic-ai", "astronomy", "epigenomics", "genomics", "metabarcoding", "metabolomics", "metagenomics",
            "multi-omics", "proteomics", "transcriptomics")
 MACHINE_KINDS_NOTE = "every kind other than `expert_review`"
+READINESS = ("documented", "validated", "evaluable", "executable")
 COLUMNS = (
     ("builds", "Builds"), ("left_out", "Builds left out"), ("capsules", "Capsules"), ("complete", "Complete"),
     ("partial", "Partial"), ("checks", "Checks"), ("expert", "Expert review"), ("machine", "Machine"),
@@ -35,8 +36,8 @@ def read_rows(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
-def domain_counts(pack: Path) -> tuple[dict, Counter, Counter, dict]:
-    """Count one domain's pack: table row, check kinds, claim-grounding labels, and its provenance fields."""
+def domain_counts(pack: Path) -> tuple[dict, Counter, Counter, dict, Counter]:
+    """Count one domain's pack: table row, check kinds, claim-grounding labels, provenance fields and readiness."""
     manifest = json.loads((pack / "MANIFEST.json").read_text(encoding="utf-8"))
     listing = json.loads((pack / "benchmark-manifest.json").read_text(encoding="utf-8"))
     capsules = read_rows(pack / "capsules.jsonl")
@@ -57,12 +58,18 @@ def domain_counts(pack: Path) -> tuple[dict, Counter, Counter, dict]:
         "hinted": totals["input_assets_with_download_hint"],
     }
     grounding = Counter(row_["validation_state"] for row_ in capsules)
+    if any("readiness" not in row_ for row_ in capsules):
+        raise SystemExit(f"{pack.name}: capsules.jsonl has no readiness column; repack with the current tooling")
+    readiness = Counter(row_["readiness"] for row_ in capsules)
+    unknown = set(readiness) - set(READINESS)
+    if unknown:
+        raise SystemExit(f"{pack.name}: readiness values outside {', '.join(READINESS)}: {sorted(unknown)}")
     provenance = {key: manifest[key] for key in ("tooling_commit", "collection_version_doi", "generation_date")}
-    return row, kinds, grounding, provenance
+    return row, kinds, grounding, provenance, readiness
 
 
 def render(rows: dict[str, dict], kinds: Counter, grounding: Counter, provenance: dict[str, dict],
-           missing: list[str], deposited: bool) -> str:
+           missing: list[str], deposited: bool, readiness: dict[str, Counter]) -> str:
     """Return the card as Markdown."""
     tooling = {item["tooling_commit"] for item in provenance.values()}
     dates = sorted({item["generation_date"] for item in provenance.values()})
@@ -110,6 +117,26 @@ def render(rows: dict[str, dict], kinds: Counter, grounding: Counter, provenance
     for domain, row in rows.items():
         lines.append(f"| {domain} | " + " | ".join(f"{row[key]:,}" for key, _ in COLUMNS) + " |")
     lines.append("| **Total** | " + " | ".join(f"**{total[key]:,}**" for key, _ in COLUMNS) + " |")
+    ready_total = Counter()
+    for counts in readiness.values():
+        ready_total.update(counts)
+    lines += [
+        "",
+        "## Readiness",
+        "",
+        "The `readiness` column of `capsules.jsonl` sorts every capsule by what its files contain. It is computed",
+        "from the validation label, the evaluation state and the inputs; it is not a validation and not a maturity",
+        "grade. **documented**: a validation file is present. **validated**: validation is `clean` or `strict` and the",
+        "evaluation definition is partial. **evaluable**: validation is `clean` or `strict` and the evaluation",
+        "definition is complete. **executable**: evaluable, with at least one input, every input carrying a content",
+        "hash and a download hint, and a certified reproducibility tier.",
+        "",
+        "| Domain | " + " | ".join(READINESS) + " |",
+        "| --- |" + " ---: |" * len(READINESS),
+    ]
+    for domain, counts in readiness.items():
+        lines.append(f"| {domain} | " + " | ".join(f"{counts[level]:,}" for level in READINESS) + " |")
+    lines.append("| **Total** | " + " | ".join(f"**{ready_total[level]:,}**" for level in READINESS) + " |")
     lines += [
         "",
         "## How to read them",
@@ -134,6 +161,17 @@ def render(rows: dict[str, dict], kinds: Counter, grounding: Counter, provenance
         "its source. They are not a validation of the evaluation definition, and they were not reviewed by a person.",
         "Over all capsules: "
         + ", ".join(f"`{label}` {grounding[label]:,}" for label in ("present", "clean", "strict")) + ".",
+        "",
+        "## Using the capsules in an evaluation",
+        "",
+        "- Treat a capsule as a task statement with a rubric. Most checks are rubrics for a human reader or a judge",
+        "  model; a program can decide only the few of the other kinds counted above.",
+        "- Score a file-existence check on what an attempt produced, not on a workspace that already holds the",
+        "  inputs: an input file whose name fits the expected output satisfies the check without any work.",
+        "- Inputs are named, not pinned. If you supply a code repository as an input, read it first: a repository",
+        "  can hold the article's own results, which turns a reproduction into a lookup.",
+        "- A capsule's guide, claims and excerpts can answer the task it poses. Build the statement given to an",
+        "  attempt from the question, the objective, the tools and pointers to the inputs only.",
         "",
         "## What does not exist",
         "",
@@ -161,19 +199,19 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--deposited", action="store_true", help="say that the records are deposited, not only prepared")
     args = parser.parse_args(argv)
     rows, provenance, missing = {}, {}, []
-    kinds, grounding = Counter(), Counter()
+    kinds, grounding, readiness = Counter(), Counter(), {}
     for domain in DOMAINS:
         pack = args.packs / domain
         if not (pack / "MANIFEST.json").exists():
             missing.append(domain)
             continue
-        rows[domain], domain_kinds, domain_grounding, provenance[domain] = domain_counts(pack)
+        rows[domain], domain_kinds, domain_grounding, provenance[domain], readiness[domain] = domain_counts(pack)
         kinds.update(domain_kinds)
         grounding.update(domain_grounding)
     if missing and not args.allow_missing:
         print(f"not packed: {', '.join(missing)}", file=sys.stderr)
         return 1
-    args.out.write_text(render(rows, kinds, grounding, provenance, missing, args.deposited), encoding="utf-8")
+    args.out.write_text(render(rows, kinds, grounding, provenance, missing, args.deposited, readiness), encoding="utf-8")
     print(f"wrote {args.out} ({len(rows)} domains)")
     return 0
 
