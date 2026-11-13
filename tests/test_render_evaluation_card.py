@@ -22,7 +22,11 @@ def write_pack(root: Path, domain: str, states: list[str], kinds: dict[str, int]
         "builds_packed": 2, "builds_left_out": 1, "capsule_count": len(states), "tooling_commit": "a" * 40,
         "collection_version_doi": f"10.5281/zenodo.{domain}", "generation_date": "2026-11-11",
     }), encoding="utf-8")
-    rows = [{"eval_state": state, "validation_state": "clean" if state == "complete" else "present"} for state in states]
+    rows = [
+        {"eval_state": state, "validation_state": "clean" if state == "complete" else "present",
+         "readiness": "evaluable" if state == "complete" else "documented"}
+        for state in states
+    ]
     (pack / "capsules.jsonl").write_text("".join(json.dumps(row) + "\n" for row in rows), encoding="utf-8")
     (pack / "benchmark-manifest.json").write_text(json.dumps({
         "capsule_count": complete if listed is None else listed,
@@ -51,6 +55,10 @@ def test_card_states_definitions_only_and_adds_up(tmp_path):
     assert "30 of their 40 checks (75.0 %)" in text
     assert "`script_runs` 10" in text
     assert "`present` 20, `clean` 10, `strict` 0" in text
+    assert "| proteomics | 2 | 0 | 1 | 0 |" in text
+    assert "| **Total** | **20** | **0** | **10** | **0** |" in text
+    assert "## Using the capsules in an evaluation" in text
+    assert "not on a workspace that already holds the" in text
     assert "Incomplete card" not in text
 
 
@@ -96,3 +104,25 @@ def test_deposited_records_are_said_deposited(tmp_path):
     text = out.read_text(encoding="utf-8")
     assert "The capsules records are deposited" in text
     assert "not deposited" not in text
+
+
+def test_pack_without_readiness_column_is_refused(tmp_path):
+    write_pack(tmp_path / "packs", "proteomics", ["complete"], {"expert_review": 1})
+    capsules = tmp_path / "packs" / "proteomics" / "capsules.jsonl"
+    rows = [json.loads(line) for line in capsules.read_text(encoding="utf-8").splitlines()]
+    for row in rows:
+        del row["readiness"]
+    capsules.write_text("".join(json.dumps(row) + "\n" for row in rows), encoding="utf-8")
+
+    with pytest.raises(SystemExit, match="no readiness column"):
+        card.main(["--packs", str(tmp_path / "packs"), "--out", str(tmp_path / "card.md"), "--allow-missing"])
+
+
+def test_unknown_readiness_value_is_refused(tmp_path):
+    write_pack(tmp_path / "packs", "proteomics", ["complete"], {"expert_review": 1})
+    capsules = tmp_path / "packs" / "proteomics" / "capsules.jsonl"
+    capsules.write_text(json.dumps({"eval_state": "complete", "validation_state": "clean", "readiness": "gold"}) + "\n",
+                        encoding="utf-8")
+
+    with pytest.raises(SystemExit, match="readiness values outside"):
+        card.main(["--packs", str(tmp_path / "packs"), "--out", str(tmp_path / "card.md"), "--allow-missing"])

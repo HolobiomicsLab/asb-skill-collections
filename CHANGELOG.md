@@ -16,6 +16,12 @@ This repository records two release surfaces, each noted per release:
 ## [Unreleased]
 
 ### Added
+- Evaluation card (`scripts/render_evaluation_card.py`): a readiness table per domain, read from the `readiness`
+  column of the packs (a pack without the column, or with a value outside documented, validated, evaluable and
+  executable, is refused), and a short section on using the capsules in an evaluation: rubrics need a reader or a
+  judge, existence checks are scored on what an attempt produced and not on a workspace that holds the inputs,
+  inputs are named and not pinned, and a supplied repository can hold the article's results. The card in `docs/`
+  is regenerated from the final packs before deposit.
 - Provenance members in the build-capsule packs (`scripts/pack_capsules.py`): each build zip
   now holds the build's task cards, ASTRA files, workflow exports, reports, scores,
   certification, enrichment, dependency lock, package index, entity spine, the indicium
