@@ -291,7 +291,7 @@ embeddings, each build recorded in `build_manifest.json`.
 | `asb-skills-<domain>` | one repository per other domain, with `<domain checkout>/collections/<domain>/<version>/`, `<domain checkout>/packs/<domain>/<technique>/`, `<domain checkout>/staged-collections/<domain>/` and receipts; each release deposited on Zenodo | private |
 | `indicium` | public standard for a typed scientific claim bound to its evidence; PyPI package `indicium-standard` 2.0.0 | public |
 | `indicium-adapters` | public core API for domain adapters; PyPI package 0.6.0 | public |
-| `indicium-adapters-<domain>` | per-domain adapters that enrich indicium claims with ontology terms | private |
+| `indicium-adapters-<domain>` | per-domain adapters that enrich indicium claims with ontology terms; one repository for each of the ten domains | public |
 | `asb-schema` | public schemas for ASB task cards, capsules and collections; PyPI package 0.4.0 | public |
 | [Perspicacite-AI](https://github.com/HolobiomicsLab/Perspicacite-AI) | literature RAG engine used for grounding | public |
 | [Mimosa-AI](https://github.com/HolobiomicsLab/Mimosa-AI) | multi-agent framework for autonomous scientific research | public |
