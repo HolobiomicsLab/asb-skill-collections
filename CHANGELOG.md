@@ -16,6 +16,26 @@ This repository records two release surfaces, each noted per release:
 ## [Unreleased]
 
 ### Added
+- Provenance members in the build-capsule packs (`scripts/pack_capsules.py`): each build zip
+  now holds the build's task cards, ASTRA files, workflow exports, reports, scores,
+  certification, enrichment, dependency lock, package index, entity spine, the indicium
+  graph (default; `--no-indicium` leaves it out), the anchor-corpus hashes and results, and a
+  generated `anchor_recipe.json`; each capsule holds its scripts, tables, figures, outputs,
+  nanopublications, task card, resources, resolved inputs, metadata and rubric. All of it goes
+  through the content screen. Anchor-corpus text and figure or table files extracted from a
+  paper ship only when the paper's quoted text is kept in full; otherwise their hashes ship.
+- The screen recognises the paper spans these members carry (task-card evidence snippets and
+  spans, text-quote selectors, nanopublication descriptions, ASTRA provenance evidence,
+  open-data evidence, section texts), screens any UTF-8 member whatever its suffix, and the
+  packer removes host names from certification reports.
+- Zenodo shards: packed build zips are grouped by slug into `zenodo/` shard archives
+  (`--shard-size`, default 40) so a record stays at or below 90 files; `capsules.jsonl` and
+  `MANIFEST.json` gain `shard` and `member`. The unsharded per-build zips move to `hf/builds/`
+  with the dataset card, which declares `capsules`, `silver_plus`, `gold_plus` and `benchmark`
+  configurations. `scripts/capsules_deposit.py` uploads the shards with a `SHA256SUMS` listing
+  and refuses more than 100 files.
+- `grade` (bronze, silver, gold, platinum) and `reproducibility_tier` on every capsule row, with
+  per-grade counts in `MANIFEST.json`; expert review is not part of the grade.
 - Enforce the 95 percent HARD_FAIL PII recall target while retaining the accepted
   space-separated numeric-identifier gap.
 - Enforce domain claim verification when claims are declared but none resolves;

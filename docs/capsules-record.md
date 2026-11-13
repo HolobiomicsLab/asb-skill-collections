@@ -28,32 +28,119 @@ python scripts/pack_capsules.py \
   --strict
 ```
 
-Use `--limit N` for the first N builds in sorted order, `--with-indicium` to
-add build knowledge graphs, and `--deny-patterns-file` for runtime-only
+Use `--limit N` for the first N builds in sorted order, `--no-indicium` to
+leave the build knowledge graph (`indicium.jsonld`, shipped by default since
+13 November 2026) out, `--shard-size N` for the number of build zips per
+Zenodo shard (default 40), and `--deny-patterns-file` for runtime-only
 literal, case-insensitive strings. Deny strings are never printed or written
 to receipts. The release date and tooling commit are explicit receipt values;
 importable code never reads the clock.
 
 ## Archive layout
 
-- `builds/<build-slug>.zip`: one sorted, fixed-timestamp archive per passing
-  build. It contains the slim-plus capsule set, build ledger and manifests.
+- `hf/builds/<build-slug>.zip`: one sorted, fixed-timestamp archive per passing
+  build (the HuggingFace layout, unsharded). Its members are listed below.
+- `zenodo/asb-<domain>-v<N>-builds-<NNN>.zip`: the Zenodo shards. Packed builds,
+  sorted by slug, are grouped `--shard-size` at a time (default 40); each shard
+  stores its build zips without recompression under `builds/<build-slug>.zip`,
+  sorted, with fixed timestamps and modes, so the same build zips give the same
+  shard bytes. The record holds the shards and five receipts (`README.md`,
+  `MANIFEST.json`, `capsules.jsonl`, `SCREEN.json`, `benchmark-manifest.json`);
+  the packer refuses a layout over 90 files (raise `--shard-size`) or over
+  Zenodo's 50 GB per record. `zenodo/metadata.json` is the deposit metadata.
+- `hf/README.md` and one table per dataset configuration: `capsules.jsonl`
+  (every row), `silver_plus.jsonl` (silver, gold, platinum), `gold_plus.jsonl`
+  (gold, platinum) and `benchmark.jsonl` (the rows of
+  `benchmark-manifest.json`); Parquet copies only when `pyarrow` is installed.
+  Zenodo is the archival record; HuggingFace is the day-to-day access point.
+  The packer writes these files locally and uploads nothing.
 - `MANIFEST.json`: `asb-capsules-manifest/1`, including source digests, archive
   sizes and hashes, access, validation, evaluation and per-build screen data.
+  `layout` lists the shards (name, builds, size, sha256), the shard size and
+  the record's file count; each packed build entry carries `shard` and
+  `member`; `grade_counts` counts capsules per grade.
   `build_count` is every considered build; `builds_packed` and
   `builds_left_out` partition it. `capsule_count` is the capsules in packed
   builds and therefore in the record; `capsules_left_out` is the capsules of
   builds the screen left out. `not_released_count` is separate because those
   builds were excluded before screening.
 - `capsules.jsonl`: one row per capsule in a packed build. Its `license` is the
-  source paper's licence. A Parquet copy with the same rows is optional only
-  when `pyarrow` is already installed.
+  source paper's licence. `shard` names the shard archive that holds the
+  capsule's build zip and `member` the path of that zip inside the shard (and
+  under `hf/`), so one capsule is found by downloading one shard. A Parquet copy
+  with the same rows is optional only when `pyarrow` is already installed.
 - `SCREEN.json`: `asb-capsules-screen/1`, with totals and per-build failures.
 - `benchmark-manifest.json`: capsules whose evaluation definition is
   structurally complete, without a second payload copy. It does not promise
   that they are runnable, their inputs are retrievable, or their checks are
   machine-scorable; its rows and totals expose those readiness measures.
-- `zenodo/metadata.json` and `hf/README.md`: local record descriptions.
+## Members of a build zip
+
+Every member below is copied when the source build holds it and then screened
+like the capsules (see the screen order). A missing optional member is not a
+failure; a missing ledger, build manifest, workflow, validation assertions,
+`indicium.jsonld` (unless `--no-indicium`), or a capsule's `eval.json`,
+`validation.json`, ledger, evaluation, evidence, inputs, provenance or crate is.
+
+- Build: `ledger/`, `build_manifest.json` (Git `branch` and `is_dirty`
+  removed), `workflow.yaml`, `validation_assertions.jsonld`, `indicium.jsonld`,
+  `cards/` (task cards), `astra/`, `exports/` (CWL, Nextflow, Snakemake),
+  `run_summary.md`, `validation_summary.md`, `build_fidelity.json`,
+  `workflow_score.json`, `reproducibility_score.json`, `certification/` and
+  `certification_report.json` (the `host` and `hostname` keys removed),
+  `external_enrichment.json`, `repo_relationship.json`, `data_accessions.json`,
+  `deps.lock`, `package_index.json`, `entity_spine.json`,
+  `anchor_corpus/manifest.json`, `anchor_corpus/anchor_results.json`, and the
+  generated `anchor_recipe.json`.
+- Capsule: `ledger/`, `evaluation/`, `evidence/`, `inputs/`,
+  `artifact_provenance.json`, the pruned `ro-crate-metadata.json`, `eval.json`,
+  `validation.json`, `scripts/`, `tables/`, `figures/`, `outputs/`,
+  `nanopubs/`, `resolved_inputs.json`, `resources.json`, `task_card.json`,
+  `task_card.md`, `metadata.json` and `rubric.json`. The RO-Crate is pruned
+  against this member list, and `included_in_capsule` in
+  `artifact_provenance.json` is computed after every member is in place.
+
+### Text of the paper outside quotation fields
+
+The anchor corpus text (`anchor_corpus/article.txt`, `repo.txt`,
+`enrichment_docs.txt`: the article text, the tool repository's README and API
+surface, and the enrichment documents) ships only for builds whose quoted text
+is kept in full, by the same rule (`context_for`, `full` retention: Creative
+Commons, CC0, public domain, or a reuse grant). The files in a capsule's
+`figures/` and `tables/` other than `index.json` are extracted from the paper:
+for any other build they are replaced by `withheld_files.json`, which gives
+each file's name, sha256 and size (`paper_files_withheld` in `SCREEN.json`).
+Image files that ship are not screened: their pixels cannot be read.
+
+Every build zip holds `anchor_recipe.json`: the DOI, the anchor corpus's
+`source_kind` and partitions, the per-partition sha256 copied from
+`anchor_corpus/manifest.json`, the anchor repository (full name, default
+branch, `pushed_at` and SPDX licence, read from `external_enrichment.json` for
+the repository `repo_relationship.json` names), whether the text ships, and
+this statement: existing builds did not pin the repository commit, so a
+rebuilt corpus is verifiable by hash but not guaranteed identical. The recipe
+names the pipeline but gives no rebuild command while the pipeline repository
+is private.
+
+## Grades
+
+Each row of `capsules.jsonl` carries `grade`, computed from its own fields, and
+`reproducibility_tier`, read from the capsule's `task_card.json` (null when
+absent):
+
+- `bronze`: `validation_state` is `present`, whatever the evaluation;
+- `silver`: `validation_state` is `clean` or `strict` and `eval_state` is
+  `partial`;
+- `gold`: `validation_state` is `clean` or `strict` and `eval_state` is
+  `complete`;
+- `platinum`: gold, at least one input in `eval.json`, every input with a
+  sha256 and a download hint, and `reproducibility_tier` `certified`.
+
+No capsule has been executed under a workflow engine: the task cards sampled on
+13 November 2026 are `type-checked` or `manual-only`, none `certified`, so
+platinum is empty. On the ten packs of 11 November 2026 the rule gives bronze
+4,260, silver 5,893, gold 278 and platinum 0. Expert review is a separate axis,
+still being designed, and is not part of the grade.
 
 The generated README field dictionary defines every capsule and benchmark row
 field, validation state, evaluation state and screen counter. Validation counts
@@ -65,7 +152,10 @@ tools retain their own licences.
 ## Screen order
 
 Every staged JSON, JSONL, JSON-LD, Markdown, YAML and plain-text member is
-screened before zipping. Quoted text follows one of three regimes, recorded
+screened before zipping, and so is any other member that decodes as UTF-8
+without a NUL byte (a `Snakefile`, `main.nf`, a CWL file, a shell script,
+`deps.lock`), as plain text. Members with an image, archive or other binary
+suffix are not screened as text. Quoted text follows one of three regimes, recorded
 per build as `quote_retention` in `MANIFEST.json` and `SCREEN.json`. Open
 sources under a Creative Commons licence of any version (BY, BY-SA, BY-NC,
 BY-ND and their combinations), CC0, public domain, or an explicit reuse grant
@@ -86,9 +176,14 @@ offsets, original length, digest and reason (`dropped`).
 screen and its output check. Structured properties resolve to their local
 name without case distinctions, so `asbval:evidence_quote` and an expanded JSON-LD property name follow
 the same rule as `evidence_quote`. The quote properties are `source_excerpt`,
-`evidence_quote`, `quote`, `quoted_text`, `verbatim` and `snippet`, including
-lists and JSON-LD `@value` objects. Retrieved source passages are the `text`
-fields of `passages_used[]` and `substring_hits[]`. A bare `text` or `value`
+`evidence_quote`, `quote`, `quoted_text`, `verbatim`, `snippet`,
+`evidence_span`, `finding_evidence_span` and `open_data_evidence`, including
+lists and JSON-LD `@value` objects. The `exact`, `prefix` and `suffix` of a
+text-quote selector under a quote property, the `evidence` of an `open_data`
+component, every string below `section_text`, the `description` of a
+`wasGeneratedBy` activity, and every `description` in a capsule's
+`nanopubs/` are source text too. Retrieved source passages are the `text`
+fields of `passages_used[]`, `substring_hits[]` and `evidence_snippets[]`. A bare `text` or `value`
 elsewhere is not enough: generated claims, validator notes, summaries,
 prompts and evaluation strategies keep their text. A claim's
 `substring_in_paper` flag validates its source excerpt, not the generated
@@ -96,7 +191,11 @@ claim text, so it does not widen this rule.
 
 In `evidence/source_snippets.md`, each `## ev_<number>` entry's plain body is
 a source field. Its heading and `Source`/`Reason` metadata stay present. An
-unstructured source-snippet member is treated as one field. Other evidence
+unstructured source-snippet member is treated as one field. In a task card's
+Markdown (`cards/*.md`, `task_card.md`), the single-quoted span that ends each
+`Evidence Snippets` entry is a source field, from its first `: '`. In
+`astra/provenance.myst.md`, the double-quoted span of each `evidence:` line is
+one. Other evidence
 and ledger Markdown uses blockquotes. In `inputs/dataset_preview.md`, the
 fenced payloads labelled `paper.md` or `article_fulltext.md` are source fields;
 internal Markdown fences do not end a preview wrapper. Other dataset and
@@ -233,7 +332,7 @@ rewrite the private source build.
    The descriptive files are rewritten by the code the packer uses, so they
    are what a full pack with the same inputs would write. Each build zip is
    copied unchanged after its size and sha256 are checked against
-   `MANIFEST.json`. Builds whose paper is no longer an included paper of the
+   `MANIFEST.json`, and the shards are rewritten with the pack's shard size. Builds whose paper is no longer an included paper of the
    corpus are dropped and listed under `not_released`. The source pack is never
    written. The screen is not rerun: a change of the collection's roles,
    access records or private repositories needs a full pack, and the pack's
@@ -250,14 +349,16 @@ rewrite the private source build.
      --collection <released-collection-root> --out <plan-dir> --date YYYY-MM-DD
    ```
 
-   It writes `<plan-dir>/upload/asb-<domain>-v<N>-build-capsules.zip` and
-   `<plan-dir>/deposit-plan.json`, and prints the metadata, the files with
-   size, sha256 and md5, and the refusals. Zenodo accepts at most 100 files
-   per record by default, so the build zips travel inside one archive: stored
-   without recompression, sorted, with fixed timestamps and modes, beside the
-   descriptive files. `README.md`, `MANIFEST.json`, `capsules.jsonl`,
-   `SCREEN.json` and `benchmark-manifest.json` are also uploaded on their own
-   so they can be read on the record page. The pack's `README.md` remains a
+   It rewrites the shards into `<plan-dir>/upload/` from `hf/builds/`,
+   checking every build zip against `MANIFEST.json` and every shard against
+   the size and sha256 the manifest records, writes `SHA256SUMS` (one
+   `<sha256>  <shard>` line per shard) and `<plan-dir>/deposit-plan.json`, and
+   prints the metadata, the files with size, sha256 and md5, the total of files
+   and bytes, and the refusals. Zenodo accepts at most 100 files per record
+   by default: the plan refuses more. `README.md`, `MANIFEST.json`,
+   `capsules.jsonl`, `SCREEN.json` and `benchmark-manifest.json` are uploaded
+   beside the shards so they can be read on the record page. `archive`
+   writes the same shards into another directory. The pack's `README.md` remains a
    local guide. The uploaded `README.md` is generated by `plan` from the same
    manifest, screen and benchmark counts: it names the record archive and its
    nested layout, explains exclusions and screening, states quotation rights
@@ -266,6 +367,11 @@ rewrite the private source build.
    each refusal when:
    - a build with a zip shows a screen failure or a deny hit in `SCREEN.json`;
    - a zip is absent from `MANIFEST.json`, or its size or sha256 differs;
+   - a shard under `zenodo/` is absent from `MANIFEST.json`, missing, or
+     differs in size or sha256; a packed build is in no shard or in two; or the
+     manifest has no shard layout (a pack made before sharding: run a full
+     pack);
+   - the upload would hold more than 100 files;
    - a zip or a capsule row belongs to a build that is not an included paper
      of the collection, a row names a build the manifest does not list, or
      `capsules.jsonl` or the benchmark listing names a build without a zip;
@@ -291,7 +397,7 @@ rewrite the private source build.
    ```
 
    It refuses a plan with refusals and a stale plan (a file whose size, sha256
-   or md5 no longer matches). It creates a new record, uploads the six files,
+   or md5 no longer matches). It creates a new record, uploads the shards, `SHA256SUMS` and the five receipts,
    checks the size and md5 Zenodo stores for each, sets the metadata, and
    prints the draft address. It never publishes. As soon as the draft exists
    it writes `draft.json` (`draft-sandbox.json` with `--sandbox`) beside the
@@ -312,7 +418,8 @@ rewrite the private source build.
    It writes a `capsules` block on the released version's row of
    `collections.yaml` (version and concept DOI, record id, the version DOI the
    record supplements, builds packed, left out and not released, capsules,
-   benchmark capsules, archive size and sha256, and the publication date:
+   benchmark capsules, archive size and sha256 (the total size of the shards
+   and the sha256 of `SHA256SUMS`), and the publication date:
    `--published`, by default the plan's date), adds the
    capsules DOI to that domain's version DOI cell in the `README.md`
    collections table, regenerates `catalogue.jsonld` (the documentation site

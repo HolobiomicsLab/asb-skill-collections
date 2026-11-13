@@ -1,10 +1,11 @@
 import hashlib
+import io
 import json
 import shutil
 import zipfile
 from pathlib import Path
 
-from scripts import pack_capsules, zenodo_deposit
+from scripts import capsule_screen, pack_capsules, zenodo_deposit
 
 FIXTURE = Path(__file__).parent / "fixtures" / "capsules"
 DATE = "2026-11-09"
@@ -75,7 +76,7 @@ def test_packs_screened_archives_receipts_metadata_and_benchmark(tmp_path):
     assert "capsules.jsonl" in (out / "hf" / "README.md").read_text()
     archive_texts = []
     for build in manifest["builds"]:
-        archive = out / build["zip_member"]
+        archive = out / "hf" / build["zip_member"]
         assert archive.is_file()
         with zipfile.ZipFile(archive) as zipped:
             assert zipped.namelist() == sorted(zipped.namelist())
@@ -114,7 +115,8 @@ def test_strict_deny_failure_writes_receipts_but_no_archives(tmp_path):
     deny = tmp_path / "deny.txt"
     deny.write_text("quoted synthetic evidence\n")
     assert pack_capsules.run(arguments(out, deny_patterns_file=deny, strict=True)) == 1
-    assert not (out / "builds").exists()
+    assert not (out / "hf" / "builds").exists()
+    assert not list((out / "zenodo").glob("*.zip"))
     screen_text = (out / "SCREEN.json").read_text()
     assert json.loads(screen_text)["totals"]["deny_hits"] == 4
     assert "synthetic-partner" not in screen_text
@@ -125,7 +127,7 @@ def test_with_indicium_is_explicitly_recorded(tmp_path):
     pack_capsules.run(arguments(out, with_indicium=True, strict=True))
     manifest = json.loads((out / "MANIFEST.json").read_text())
     assert manifest["inclusion_policy"]["with_indicium"] is True
-    archive = out / manifest["builds"][0]["zip_member"]
+    archive = out / "hf" / manifest["builds"][0]["zip_member"]
     with zipfile.ZipFile(archive) as zipped:
         assert "indicium.jsonld" in zipped.namelist()
 
@@ -242,3 +244,288 @@ def test_failing_build_stays_in_receipt_but_not_record_tables_or_counts(tmp_path
     assert "open" not in {row["build_slug"] for row in benchmark["capsules"]}
     assert "open" not in {build["build_slug"] for build in benchmark["builds"]}
     assert "Builds considered: 4. Builds packed: 3. Builds left out by the screen: 1." in (out / "README.md").read_text()
+
+
+# provenance members, shards, grades and dataset configurations -------------
+
+PNG = b"\x89PNG\r\n\x1a\n" + bytes(range(256))
+PAPER_SPAN = "The final version of our synthetic database contains 1996 predicted structures"
+
+
+def write(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if isinstance(value, bytes):
+        path.write_bytes(value)
+    elif isinstance(value, str):
+        path.write_text(value)
+    else:
+        path.write_text(json.dumps(value))
+
+
+def add_provenance(build, capsule_name, doi):
+    """Give one fixture build every new member type, each carrying something to screen."""
+    write(build / "cards" / "task_001.json", {"task_id": "task_001", "finding_evidence_span": PAPER_SPAN,
+                                               "evidence_snippets": [{"snippet_id": "ev_001", "text": f"[results] claim: '{PAPER_SPAN}'"}],
+                                               "reproducibility_tier": "type-checked"})
+    write(build / "cards" / "task_001.md",
+          "# Card\n\n## Evidence Snippets\n"
+          f"- `ev_001` from `agent` (traced): [results] A generated claim: '{PAPER_SPAN}'\n\n"
+          "## Evaluation Strategy\n- count rows\n")
+    write(build / "astra" / "provenance.myst.md", "Source package: `/Users/someone/outputs/wave/coll_x/synthesized_package`\n"
+          f"- task_001 \u00b7 `claim_001` \u2014 A generated claim.\n  - evidence: doi `{doi}` \u2014 \"{PAPER_SPAN}\"\n")
+    write(build / "astra" / "astra.yaml", {"findings": [{"quote": {"exact": PAPER_SPAN, "prefix": "then"}}]})
+    write(build / "exports" / "nextflow" / "w" / "main.nf", "// emitted by person@example.org from /Users/someone/run\n")
+    write(build / "exports" / "snakemake" / "w" / "Snakefile", "rule a:\n    shell: 'cd /Users/someone/run'\n")
+    write(build / "deps.lock", "-e file:///Users/someone/git/pipeline\nrequests==2.0\n")
+    write(build / "certification_report.json", {"host": "machine.local", "run_dir": "/Users/someone/outputs/w/coll_x",
+                                                "status": "ok"})
+    write(build / "run_summary.md", "Run in /Users/someone/outputs/w/coll_x\n")
+    for name in ("validation_summary.md",):
+        write(build / name, "summary\n")
+    write(build / "reproducibility_score.json", {"tasks": [{"open_data": {"evidence": PAPER_SPAN, "value": True}}]})
+    for name in ("build_fidelity.json", "workflow_score.json", "data_accessions.json", "package_index.json"):
+        write(build / name, {"name": name})
+    write(build / "entity_spine.json", {"entities": {"e": {"evidence": [{"evidence_span": PAPER_SPAN}]}},
+                                        "section_text": {"methods": PAPER_SPAN}})
+    write(build / "external_enrichment.json", {"github_repos": [
+        {"full_name": "example/other", "default_branch": "dev", "license_spdx": "GPL-3.0", "pushed_at": "2025-01-01T00:00:00Z"},
+        {"full_name": "example/tool", "default_branch": "main", "license_spdx": "MIT", "pushed_at": "2026-01-01T00:00:00Z"},
+    ]})
+    write(build / "repo_relationship.json", {"repo": "example/tool", "doi": doi, "signals": [{"snippet": PAPER_SPAN}]})
+    write(build / "anchor_corpus" / "manifest.json", {"hashes": {"article": "sha256:" + "a" * 64, "repo": "sha256:" + "b" * 64},
+                                                      "source_kind": "github", "partitions": ["article", "repo"]})
+    write(build / "anchor_corpus" / "anchor_results.json", {"artifacts": [{"artifact_id": "f1", "status": "exact"}]})
+    for name in ("article.txt", "repo.txt", "enrichment_docs.txt"):
+        write(build / "anchor_corpus" / name, f"{PAPER_SPAN}\n")
+    write(build / "certification" / "20260101T000000Z" / "report.json", {"hostname": "machine.local", "ok": True})
+    capsule = build / "capsules" / capsule_name
+    write(capsule / "scripts" / "run.sh", "#!/bin/sh\ncd /Users/someone/outputs/w\n")
+    write(capsule / "tables" / "index.json", [{"name": "table1.csv"}])
+    write(capsule / "tables" / "table1.csv", "a,b\n1,2\n")
+    write(capsule / "figures" / "index.json", [{"name": "fig1.png"}])
+    write(capsule / "figures" / "fig1.png", PNG)
+    write(capsule / "outputs" / "generated_outputs_placeholder.md", "placeholder\n")
+    write(capsule / "nanopubs" / "claim_001.jsonld", {"@graph": [
+        {"@graph": [{"rdfs:label": "A generated claim.", "dct:description": PAPER_SPAN}]},
+        {"@graph": [{"prov:wasGeneratedBy": {"dct:description": PAPER_SPAN}}]}]})
+    write(capsule / "task_card.json", {"reproducibility_tier": "type-checked", "finding_evidence_span": PAPER_SPAN})
+    write(capsule / "task_card.md", f"## Evidence Snippets\n- `ev_001` from `agent` (traced): [abstract] claim: '{PAPER_SPAN}'\n")
+    for name in ("metadata.json", "rubric.json", "resources.json", "resolved_inputs.json"):
+        write(capsule / name, {"name": name})
+    write(capsule / "artifact_provenance.json", {"artifacts": [{"path": "figures/fig1.png"}, {"path": "scripts/run.sh"}]})
+
+
+def provenance_view(tmp_path):
+    view = tmp_path / "view"
+    shutil.copytree(FIXTURE / "view", view, symlinks=True)
+    add_provenance(view / "build__coll_open", "10_1234_example_open__task_001", "10.1234/example.open")
+    add_provenance(view / "build__coll_closed", "10_1234_example_closed__task_001", "10.1234/example.closed")
+    return view
+
+
+def members(out, slug):
+    with zipfile.ZipFile(out / "hf" / "builds" / f"{slug}.zip") as zipped:
+        return {name: zipped.read(name) for name in zipped.namelist()}
+
+
+NEW_BUILD_MEMBERS = {
+    "cards/task_001.json", "cards/task_001.md", "astra/provenance.myst.md", "astra/astra.yaml",
+    "exports/nextflow/w/main.nf", "exports/snakemake/w/Snakefile", "deps.lock", "certification_report.json",
+    "run_summary.md", "validation_summary.md", "build_fidelity.json", "workflow_score.json",
+    "reproducibility_score.json", "data_accessions.json", "package_index.json", "entity_spine.json",
+    "external_enrichment.json", "repo_relationship.json", "anchor_corpus/manifest.json",
+    "anchor_corpus/anchor_results.json", "certification/20260101T000000Z/report.json", "anchor_recipe.json",
+    "indicium.jsonld",
+}
+NEW_CAPSULE_MEMBERS = {
+    "scripts/run.sh", "tables/index.json", "figures/index.json", "outputs/generated_outputs_placeholder.md",
+    "nanopubs/claim_001.jsonld", "task_card.json", "task_card.md", "metadata.json", "rubric.json",
+    "resources.json", "resolved_inputs.json",
+}
+
+
+def test_provenance_members_are_packed_and_screened(tmp_path):
+    out = tmp_path / "out"
+    assert pack_capsules.run(arguments(out, view=provenance_view(tmp_path), with_indicium=True, strict=True)) == 0
+    for slug, capsule in (("open", "10_1234_example_open__task_001"), ("closed", "10_1234_example_closed__task_001")):
+        files = members(out, slug)
+        assert NEW_BUILD_MEMBERS <= set(files), NEW_BUILD_MEMBERS - set(files)
+        assert {f"capsules/{capsule}/{name}" for name in NEW_CAPSULE_MEMBERS} <= set(files)
+        text = "\n".join(data.decode() for name, data in files.items() if not name.endswith(".png"))
+        assert "/Users/" not in text and "person@example.org" not in text and "machine.local" not in text
+        assert '"host"' not in files["certification_report.json"].decode()
+    screen = json.loads((out / "SCREEN.json").read_text())
+    counts = {build["build_slug"]: build["counts"] for build in screen["builds"]}
+    assert counts["open"]["paths_rewritten"] >= 7 and counts["open"]["emails_redacted"] >= 1
+    manifest = json.loads((out / "MANIFEST.json").read_text())
+    open_entry = next(build for build in manifest["builds"] if build["build_slug"] == "open")
+    assert {"deps.lock", "astra/astra.yaml", "anchor_corpus/article.txt"} <= set(open_entry["input_sha256"])
+    closed_entry = next(build for build in manifest["builds"] if build["build_slug"] == "closed")
+    assert "anchor_corpus/article.txt" not in closed_entry["input_sha256"]
+
+
+def test_permissive_paper_ships_anchor_text_and_figures_others_ship_hashes(tmp_path):
+    out = tmp_path / "out"
+    assert pack_capsules.run(arguments(out, view=provenance_view(tmp_path), strict=True)) == 0
+    opened, closed = members(out, "open"), members(out, "closed")
+    capsule_open, capsule_closed = "capsules/10_1234_example_open__task_001", "capsules/10_1234_example_closed__task_001"
+    assert {"anchor_corpus/article.txt", "anchor_corpus/repo.txt", "anchor_corpus/enrichment_docs.txt"} <= set(opened)
+    assert opened[f"{capsule_open}/figures/fig1.png"] == PNG
+    assert f"{capsule_open}/tables/table1.csv" in opened
+    assert not any(name.startswith("anchor_corpus/") and name.endswith(".txt") for name in closed)
+    assert f"{capsule_closed}/figures/fig1.png" not in closed and f"{capsule_closed}/tables/table1.csv" not in closed
+    withheld = json.loads(closed[f"{capsule_closed}/figures/withheld_files.json"])
+    assert withheld["files"] == [{"name": "fig1.png", "sha256": hashlib.sha256(PNG).hexdigest(), "bytes": len(PNG)}]
+    assert json.loads(closed[f"{capsule_closed}/tables/withheld_files.json"])["files"][0]["name"] == "table1.csv"
+    provenance = json.loads(closed[f"{capsule_closed}/artifact_provenance.json"])
+    assert [entry["included_in_capsule"] for entry in provenance["artifacts"]] == [False, True]
+    assert [entry["included_in_capsule"] for entry in json.loads(opened[f"{capsule_open}/artifact_provenance.json"])["artifacts"]] == [True, True]
+    crate = json.loads(closed[f"{capsule_closed}/ro-crate-metadata.json"])
+    described = {entity["@id"] for entity in crate["@graph"]}
+    assert "figures/withheld_files.json" in described and "figures/fig1.png" not in described
+    recipes = {slug: json.loads(files["anchor_recipe.json"]) for slug, files in (("open", opened), ("closed", closed))}
+    for slug, shipped in (("open", True), ("closed", False)):
+        recipe = recipes[slug]
+        assert recipe["text_shipped"] is shipped and recipe["commit_pinned"] is False
+        assert recipe["partition_sha256"] == {"article": "sha256:" + "a" * 64, "repo": "sha256:" + "b" * 64}
+        assert recipe["repository"] == {"full_name": "example/tool", "default_branch": "main",
+                                        "pushed_at": "2026-01-01T00:00:00Z", "license_spdx": "MIT"}
+        assert recipe["statement"] == pack_capsules.ANCHOR_RECIPE_STATEMENT
+        assert "github.com" not in json.dumps(recipe)
+    assert recipes["closed"]["doi"] == "10.1234/example.closed"
+    screen = {build["build_slug"]: build for build in json.loads((out / "SCREEN.json").read_text())["builds"]}
+    assert screen["closed"]["counts"]["paper_files_withheld"] == 2 and screen["open"]["counts"]["paper_files_withheld"] == 0
+    assert screen["closed"]["anchor_text_shipped"] is False and screen["open"]["anchor_text_shipped"] is True
+    # The closed paper's spans are dropped in every new member type.
+    assert json.loads(closed["cards/task_001.json"])["finding_evidence_span"] == ""
+    assert PAPER_SPAN not in "\n".join(data.decode() for name, data in closed.items() if not name.endswith(".png"))
+    assert "[redacted-quote]" in closed["cards/task_001.md"].decode()
+    assert "[redacted-quote]" in closed["astra/provenance.myst.md"].decode()
+    assert json.loads(closed["cards/task_001.json"])["evidence_snippets"][0]["text"] == ""
+    assert PAPER_SPAN in opened["cards/task_001.md"].decode()
+
+
+def bypass(text, relative_path, context, budget, capsule_dir=None):
+    return capsule_screen.ScreenResult(text, capsule_screen.empty_counts(), capsule_screen.empty_quotes(), [])
+
+
+def test_a_leak_in_a_new_member_type_leaves_the_build_out(tmp_path, monkeypatch):
+    view = provenance_view(tmp_path)
+    (view / "build__coll_open" / "exports" / "nextflow" / "w" / "main.nf").write_text('path "/Users/"x\n')
+    out = tmp_path / "out"
+    assert pack_capsules.run(arguments(out, view=view, strict=True)) == 1
+    failures = {build["build_slug"]: build["failures"] for build in json.loads((out / "SCREEN.json").read_text())["builds"]}
+    assert "exports/nextflow/w/main.nf: residual_paths_rewritten" in failures["open"]
+    monkeypatch.setattr(capsule_screen, "screen_text", bypass)
+    out = tmp_path / "bypassed"
+    assert pack_capsules.run(arguments(out, view=provenance_view(tmp_path / "again"), strict=False)) == 0
+    failures = {build["build_slug"]: build["failures"] for build in json.loads((out / "SCREEN.json").read_text())["builds"]}
+    for member in ("cards/task_001.md", "cards/task_001.json", "entity_spine.json", "astra/astra.yaml",
+                   "astra/provenance.myst.md", "reproducibility_score.json",
+                   "capsules/10_1234_example_closed__task_001/nanopubs/claim_001.jsonld",
+                   "capsules/10_1234_example_closed__task_001/task_card.md"):
+        assert f"{member}: residual_source_text" in failures["closed"], member
+
+
+def test_new_member_text_is_found_by_content_not_suffix():
+    assert capsule_screen.is_text_member("exports/snakemake/w/Snakefile", b"rule a:\n")
+    assert capsule_screen.is_text_member("deps.lock", b"requests==2\n")
+    assert not capsule_screen.is_text_member("figures/fig1.png", b"text")
+    assert not capsule_screen.is_text_member("blob", b"\x00\x01")
+    assert not capsule_screen.is_text_member("blob", b"\xff\xfe")
+
+
+def test_shards_group_sorted_builds_and_rows_locate_their_capsule(tmp_path):
+    out = tmp_path / "out"
+    assert pack_capsules.run(arguments(out, shard_size=3, strict=True)) == 0
+    manifest = json.loads((out / "MANIFEST.json").read_text())
+    layout = manifest["layout"]
+    assert [shard["name"] for shard in layout["shards"]] == ["asb-synthetic-v1-builds-001.zip", "asb-synthetic-v1-builds-002.zip"]
+    assert [shard["builds"] for shard in layout["shards"]] == [["closed", "open", "open_capped"], ["preprint"]]
+    assert layout["zenodo_files"] == 2 + len(pack_capsules.ZENODO_RECEIPTS)
+    assert sorted(path.name for path in (out / "zenodo").glob("*.zip")) == [shard["name"] for shard in layout["shards"]]
+    for shard in layout["shards"]:
+        assert hashlib.sha256((out / "zenodo" / shard["name"]).read_bytes()).hexdigest() == shard["sha256"]
+    rows = [json.loads(line) for line in (out / "capsules.jsonl").read_text().splitlines()]
+    for row in rows:
+        with zipfile.ZipFile(out / "zenodo" / row["shard"]) as shard:
+            inner = shard.read(row["member"])
+        assert inner == (out / "hf" / row["member"]).read_bytes()
+        with zipfile.ZipFile(io.BytesIO(inner)) as build:
+            assert f"capsules/{row['capsule_id']}/eval.json" in build.namelist()
+    entries = {build["build_slug"]: build for build in manifest["builds"]}
+    assert entries["preprint"]["shard"] == "asb-synthetic-v1-builds-002.zip"
+    assert entries["preprint"]["member"] == "builds/preprint.zip"
+
+
+def test_a_record_over_the_file_budget_is_refused(tmp_path, monkeypatch):
+    monkeypatch.setattr(pack_capsules, "ZENODO_FILE_BUDGET", 8)
+    try:
+        pack_capsules.run(arguments(tmp_path / "out", shard_size=1, strict=True))
+    except ValueError as error:
+        assert "9 files (4 shards and 5 receipts), over the budget of 8; raise --shard-size" in str(error)
+    else:
+        raise AssertionError("an over-budget layout was accepted")
+    assert not list((tmp_path / "out" / "zenodo").glob("*.zip")) if (tmp_path / "out" / "zenodo").exists() else True
+
+
+def grade_row(validation, evaluation, inputs=0, hashed=0, hinted=0, tier=None):
+    return {"validation_state": validation, "eval_state": evaluation, "eval_input_assets": inputs,
+            "eval_input_assets_with_hash": hashed, "eval_input_assets_with_download_hint": hinted,
+            "reproducibility_tier": tier}
+
+
+def test_grade_rule():
+    grade = pack_capsules.capsule_grade
+    assert grade(grade_row("present", "complete", 1, 1, 1, "certified")) == "bronze"
+    assert grade(grade_row("present", "partial")) == "bronze"
+    assert grade(grade_row("clean", "partial")) == "silver"
+    assert grade(grade_row("strict", "partial", 1, 1, 1, "certified")) == "silver"
+    assert grade(grade_row("strict", "complete")) == "gold"
+    assert grade(grade_row("clean", "complete", 2, 2, 2, "type-checked")) == "gold"
+    assert grade(grade_row("clean", "complete", 2, 2, 1, "certified")) == "gold"
+    assert grade(grade_row("clean", "complete", 0, 0, 0, "certified")) == "gold"
+    assert grade(grade_row("clean", "complete", 2, 2, 2, "certified")) == "platinum"
+    assert grade(grade_row("strict", "invalid")) is None
+
+
+def test_a_certified_capsule_with_ready_inputs_is_platinum_and_configs_filter_by_grade(tmp_path):
+    view = tmp_path / "view"
+    shutil.copytree(FIXTURE / "view", view, symlinks=True)
+    capsule = view / "build__coll_open" / "capsules" / "10_1234_example_open__task_001"
+    evaluation = json.loads((capsule / "eval.json").read_text())
+    evaluation["inputs"] = [{"name": "a", "sha256": "c" * 64, "download_hint": "registry:a"}]
+    write(capsule / "eval.json", evaluation)
+    write(capsule / "task_card.json", {"reproducibility_tier": "certified"})
+    out = tmp_path / "out"
+    assert pack_capsules.run(arguments(out, view=view, strict=True)) == 0
+    rows = [json.loads(line) for line in (out / "capsules.jsonl").read_text().splitlines()]
+    grades = {row["capsule_id"]: row["grade"] for row in rows}
+    assert grades["10_1234_example_open__task_001"] == "platinum"
+    tiers = {row["capsule_id"]: row["reproducibility_tier"] for row in rows}
+    assert tiers["10_1234_example_open__task_001"] == "certified" and tiers["10_1234_example_open__task_002"] is None
+    manifest = json.loads((out / "MANIFEST.json").read_text())
+    assert manifest["grade_counts"] == {"bronze": 2, "silver": 0, "gold": 3, "platinum": 1}
+    hf = out / "hf"
+    def table(name):
+        return [json.loads(line) for line in (hf / name).read_text().splitlines()]
+    assert table("capsules.jsonl") == rows
+    assert {row["grade"] for row in table("gold_plus.jsonl")} == {"gold", "platinum"} and len(table("gold_plus.jsonl")) == 4
+    assert len(table("silver_plus.jsonl")) == 4
+    benchmark = json.loads((out / "benchmark-manifest.json").read_text())
+    assert table("benchmark.jsonl") == benchmark["capsules"]
+    card = (hf / "README.md").read_text()
+    for name, stem, _, _ in pack_capsules.HF_CONFIGS:
+        assert f"config_name: {name}\n    data_files: \"{stem}\"" in card
+    assert "Zenodo is the archival record" in card and pack_capsules.GRADE_STATEMENT in card
+    assert "bronze 2, silver 0, gold 3, platinum 1" in card
+    readme = (out / "README.md").read_text()
+    assert pack_capsules.GRADE_STATEMENT in readme and "Expert review is a separate axis" in readme
+    assert "No capsule has been executed under a workflow engine" in pack_capsules.GRADE_STATEMENT
+
+
+def test_indicium_ships_by_default_with_an_escape():
+    base = ["--view", str(FIXTURE / "view"), "--collection", str(FIXTURE / "collection"), "--out", "x", "--date", DATE]
+    assert pack_capsules.parse_args(base).with_indicium is True
+    assert pack_capsules.parse_args(base + ["--no-indicium"]).with_indicium is False
+    assert pack_capsules.parse_args(base).shard_size == pack_capsules.SHARD_SIZE == 40

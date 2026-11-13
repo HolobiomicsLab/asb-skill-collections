@@ -172,7 +172,7 @@ def test_record_and_pack_guides_share_the_dictionary_and_licence_layers(tmp_path
         [json.loads(line) for line in (packed / "capsules.jsonl").read_text().splitlines()],
         json.loads((packed / "benchmark-manifest.json").read_text()),
     )
-    record = capsules_deposit.make_record_readme(manifest, counts, "record.zip", screen)
+    record = capsules_deposit.make_record_readme(manifest, counts, ["asb-synthetic-v1-builds-001.zip"], screen)
     local = (packed / "README.md").read_text()
 
     assert pack_capsules.render_field_dictionary() in record
