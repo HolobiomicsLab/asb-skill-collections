@@ -452,6 +452,7 @@ def test_a_document_with_its_own_redaction_field_of_the_wrong_type_fails_instead
     "Email:j.roe@stud.example-uni.deJane Roe Affiliation: Department of Physics",
     "Mastodon @tool@host.example.club",
     "write to a.person@group.example.science",
+    "Correspondence j.roe@med.uni-sample. de In brief Roe et al. develop a method",
 ])
 def test_an_address_at_a_root_zone_domain_is_redacted_whatever_follows_it(text):
     """The R slot exception must not keep an address because its top-level domain is not on a short list."""
@@ -466,6 +467,7 @@ def test_an_address_at_a_root_zone_domain_is_redacted_whatever_follows_it(text):
     "idents <- obj@active.ident",
     "git clone git@github.example.club:group/project.git",
     "template: your.name@lab.example.club",
+    "scaled <- obj@scale.data-1",
     "peak@xxx.xx",
 ])
 def test_slot_notation_and_documented_templates_are_still_left_alone(text):
