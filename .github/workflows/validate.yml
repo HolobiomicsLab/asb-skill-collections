@@ -117,7 +117,7 @@ jobs:
         run: python scripts/render_collection_landings.py --check
 
   # -- docs-site/search_index/ is current -------------------------------------
-  # Private domain checkouts are unavailable here, so CI reads none: every
+  # CI does not check out the domain repositories and reads none: every
   # registry domain must have an index file whose sha256 and size match
   # search_index/manifest.json and whose registry_digest matches that domain's
   # rows in collections.yaml. A change to one domain leaves the others valid.

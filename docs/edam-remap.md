@@ -72,7 +72,7 @@ the audit's narrower implementation removed 1,042.
 
 ## Metabolomics v3.0.1 procedure
 
-Work on a branch of the private domain repository `asb-skills-metabolomics`.
+Work on a branch of the domain repository `asb-skills-metabolomics`.
 The tooling command never commits or publishes content.
 
 1. Run the T2 dry run against the domain collection and retain its receipt.

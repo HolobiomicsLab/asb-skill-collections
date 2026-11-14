@@ -150,6 +150,10 @@ This repository records two release surfaces, each noted per release:
   byte-identical.
 
 ### Changed
+- The ten `asb-skills-<domain>` content repositories are public. The README, `AGENTS.md`, `CLAUDE.md`, the
+  install, contribution and registry documents, the documentation site and the generated collection landing
+  pages no longer call them private or ask for read access to install; the Zenodo archive and the
+  contribution route through this registry's issue forms are unchanged. The pipeline repository stays private.
 - The ten `indicium-adapters-<domain>` repositories are public (13 November 2026); the repository table of
   the README says so.
 - The generated public catalogue and documentation site now copy each registry row's released or legacy lifecycle, full tag-derived release label and skill, tool, paper and workflow counts.

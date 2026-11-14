@@ -72,9 +72,9 @@ author; it grows only through the steps above. Opting out at any time:
 
 ## How to start
 
-1. Pick a released domain from the registry. The domain repositories are private:
-   obtain repository access from the maintainers, or read the Zenodo record of the
-   release. Install instructions are in the [README](../README.md#install).
+1. Pick a released domain from the registry. Its collection is in the domain
+   repository `asb-skills-<domain>` and in the Zenodo record of the release.
+   Install instructions are in the [README](../README.md#install).
 2. Use the skills on a real question; note what is wrong or missing.
 3. Review or correct (above), one pull request per skill or per fix.
 4. Register your ORCID in `contributors.jsonld` with the pull request.

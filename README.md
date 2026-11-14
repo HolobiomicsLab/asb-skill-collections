@@ -35,7 +35,7 @@ Dagstuhl Seminar **Computational Metabolomics**
 The registry [`collections.yaml`](collections.yaml) records the released
 collections of ten domains. Each release is deposited on Zenodo and pinned to its
 domain repository `asb-skills-<domain>`, commit and tree digest. The domain
-repositories are private; the Zenodo record of each release carries the full
+repositories are public, and the Zenodo record of each release carries the full
 collection. This repository holds the tooling and the registry.
 
 | Domain | Release | Skills | Tools | Workflows | Papers | Version DOI |
@@ -66,7 +66,7 @@ pipelines. The release is deposited as
 LC-MS/MS, with LC-MS, GC-MS, mass-spectrometry imaging, ion mobility and
 lipidomics, some NMR, and multi-omics, statistics and pathway tools.
 
-The collection is released from the private domain repository
+The collection is released from the domain repository
 `asb-skills-metabolomics`. The marketplace of this repository serves the v3
 collection and the v2-derived technique packs from that domain repository.
 
@@ -95,8 +95,8 @@ collection and the v2-derived technique packs from that domain repository.
 
 The other released domains install the same way under their domain name, for
 example `/plugin install genomics@asb-skill-collections`. Each marketplace entry
-points at its private domain repository, so installation needs read access to
-that repository. The nine domains released on 2026-11-09 were installed this
+points at its domain repository, which is public, so installation needs no read
+access. The nine domains released on 2026-11-09 were installed this
 way on 2026-11-10, with Claude Code and with Codex CLI; the `metabolomics`
 entry was last installed before its source moved to the domain repository
 ([docs/STATUS.md](docs/STATUS.md)).
@@ -108,10 +108,9 @@ codex plugin marketplace add HolobiomicsLab/asb-skill-collections
 codex plugin add <domain>@asb-skill-collections
 ```
 
-The access requirement is the same. Without access to the private domain
-repositories, neither route works: download the Zenodo record of the release
-(version DOIs in the [Releases](#releases) table) and read it as described in
-[AGENTS.md](AGENTS.md).
+The same holds for Codex: no read access is needed. The Zenodo record of the
+release (version DOIs in the [Releases](#releases) table) is the archive route;
+read it as described in [AGENTS.md](AGENTS.md).
 
 **Install `asbb` from this public registry checkout** (it is not published on
 PyPI):
@@ -130,8 +129,8 @@ asbb fetch <slugs> --collection metabolomics/v3 --dest <directory>
 ```
 
 `fetch` reads [`collections.yaml`](collections.yaml) and downloads the selected
-leaves from the domain repository at the pinned commit. Set `GITHUB_TOKEN` while
-that repository is private.
+leaves from the domain repository at the pinned commit. `GITHUB_TOKEN` is
+optional; when set, it is sent with every request.
 
 **A derived selection from a domain checkout** (`asbb install`):
 
@@ -287,8 +286,8 @@ embeddings, each build recorded in `build_manifest.json`.
 |---|---|---|
 | asb-skill-collections (this one) | `asb_skill_collections` tooling, `scripts/`, tests, governance, registry, catalogue and docs-site | public |
 | `AgenticScienceBuilder` | the pipeline that generates the collections | private |
-| `asb-skills-metabolomics` | `<domain checkout>/collections/metabolomics/<version>/`, `<domain checkout>/packs/metabolomics/<technique>/`, `<domain checkout>/staged-collections/metabolomics/` and receipts; v3 deposited on Zenodo | private |
-| `asb-skills-<domain>` | one repository per other domain, with `<domain checkout>/collections/<domain>/<version>/`, `<domain checkout>/packs/<domain>/<technique>/`, `<domain checkout>/staged-collections/<domain>/` and receipts; each release deposited on Zenodo | private |
+| `asb-skills-metabolomics` | `<domain checkout>/collections/metabolomics/<version>/`, `<domain checkout>/packs/metabolomics/<technique>/`, `<domain checkout>/staged-collections/metabolomics/` and receipts; v3 deposited on Zenodo | public |
+| `asb-skills-<domain>` | one repository per other domain, with `<domain checkout>/collections/<domain>/<version>/`, `<domain checkout>/packs/<domain>/<technique>/`, `<domain checkout>/staged-collections/<domain>/` and receipts; each release deposited on Zenodo | public |
 | `indicium` | public standard for a typed scientific claim bound to its evidence; PyPI package `indicium-standard` 2.0.0 | public |
 | `indicium-adapters` | public core API for domain adapters; PyPI package 0.6.0 | public |
 | `indicium-adapters-<domain>` | per-domain adapters that enrich indicium claims with ontology terms; one repository for each of the ten domains | public |
@@ -302,7 +301,7 @@ repositories exist for metabolomics and nine further domains
 (agentic AI, astronomy, epigenomics, genomics, metabarcoding, metagenomics, multi-omics,
 proteomics, transcriptomics). Each domain has a release recorded in the
 registry and deposited on Zenodo, and is released from its own domain
-repository; the domain repositories are private. The legacy epigenomics,
+repository, which is public. The legacy epigenomics,
 transcriptomics and metabolomics v1 trees are recorded in the registry and are
 not part of any release.
 
@@ -380,8 +379,8 @@ Met a problem while using a skill? Four routes, each an issue on the
 
 `asbb report <route>` drafts any of the four with the collection and the skill
 filled in, redacts paths and credentials, and prints the text and a prefilled
-address; it never posts. The domain repositories are private: contributions go
-through issues here, and a maintainer carries them into the domain repository.
+address; it never posts. Contributions go through issues here, and a maintainer
+carries them into the domain repository.
 
 ## Contributing
 
@@ -392,7 +391,7 @@ through issues here, and a maintainer carries them into the domain repository.
 - **Add papers to a collection.** See the contributor proposal rail and the
   maintainer build, view, cut and candidate rail in
   [Adding papers to a collection](docs/adding-papers.md). Released collections
-  are listed in [`collections.yaml`](collections.yaml); each lives in a private
+  are listed in [`collections.yaml`](collections.yaml); each lives in a
   domain repository `asb-skills-<domain>`. Domain content and candidates
   belong in the corresponding `asb-skills-<domain>` checkout; this repository
   holds tooling, governance and the registry.

@@ -9,7 +9,7 @@ handful of those skills. This page describes four ways to take less.
 |---|---|---|---|
 | Technique pack | `asbb install --repo <domain checkout> <pack>` | domain | every skill tagged with one technique, for example the 2,617 LC-MS skills |
 | Selection | `asbb install --repo <domain checkout> --skills ...`, `--skills-file ...` or `--query ...` | domain | exactly the skills you name or the top hits of a search, installed as a pack |
-| Fetch | `asbb fetch <slugs> --collection <slug>/vN --dest <dir>` | no | leaves from the manifest-named private domain repository (read access needed) at its release commit, with provenance |
+| Fetch | `asbb fetch <slugs> --collection <slug>/vN --dest <dir>` | no | leaves from the manifest-named domain repository at its release commit, with provenance |
 | Claude Code marketplace | `/plugin install <collection-or-pack>@asb-skill-collections` | no | a named collection or one of its published technique packs |
 
 A pack and a selection are the same thing built from a different membership
@@ -44,15 +44,15 @@ installation selects a published unit by name; it does not accept an arbitrary
 slug list or query. Use `asbb install` for a derived selection, or `asbb fetch`
 for leaf files without an installed router.
 
-The entries point at the private domain repositories `asb-skills-<domain>`
-(`asb-skills-metabolomics` for the plugins above), so installation needs read
-access to them. The full `metabolomics` plugin serves v3; the eight packs are
-v2-derived. Codex CLI installs from the same marketplace file
+The entries point at the domain repositories `asb-skills-<domain>`
+(`asb-skills-metabolomics` for the plugins above), which are public, so
+installation needs no read access. The full `metabolomics` plugin serves v3; the
+eight packs are v2-derived. Codex CLI installs from the same marketplace file
 (`codex plugin marketplace add HolobiomicsLab/asb-skill-collections`, then
-`codex plugin add <domain>@asb-skill-collections`) with the same access
-requirement. Without access, use the Zenodo record of the release (version DOIs
-in the README table) and read it directly. `asbb fetch` needs the same access,
-through `GITHUB_TOKEN`.
+`codex plugin add <domain>@asb-skill-collections`), also without read access.
+The Zenodo record of the release (version DOIs in the README table) is the
+archive route: read it directly. `asbb fetch` reads the same repositories;
+`GITHUB_TOKEN` is optional.
 
 All figures on this page were measured on 2026-10-30 from a checkout of `main`
 at `e80767838` plus this change, with `HOME` pointed at a temporary directory.
@@ -80,7 +80,7 @@ the filtered indexes 14,797 bytes.
 
 The installer reads a local domain checkout. Use Python 3.12 or later with
 PyYAML in a virtual environment. Clone this master for the `asbb` tooling, and
-obtain `asb-skills-metabolomics` separately while read access is available.
+obtain `asb-skills-metabolomics` separately.
 Run the commands from the master checkout:
 
 ```bash

@@ -150,7 +150,7 @@ def test_check_reports_missing_stale_and_unexpected_pages(tmp_path: Path, capsys
     assert unexpected.read_text(encoding="utf-8") == "unexpected\n"
 
 
-def test_no_page_links_a_private_content_repository() -> None:
+def test_no_page_links_a_content_repository() -> None:
     manifest, marketplace = real_inputs()
 
     pages = landings.expected_landings(manifest, marketplace)
@@ -169,7 +169,8 @@ def test_legacy_page_is_explicit_and_points_to_the_current_major() -> None:
     assert "No release tag was minted for this version." in page
     assert "None: this version has no public archive." in page
     assert "This version has no public archive. Use the current major, [v2](../v2/README.md)." in page
-    assert "It has no public copy." in page
+    assert "It has no Zenodo archive." in page
+    assert "private" not in page
     assert "PENDING" not in page
 
 
@@ -199,14 +200,17 @@ def test_a_collection_readme_is_never_replaced_or_removed(tmp_path: Path, capsys
     assert stray.read_text(encoding="utf-8") == "hand-written\n"
 
 
-def test_install_commands_say_that_the_marketplace_source_is_private() -> None:
+def test_install_commands_say_that_the_marketplace_source_is_public() -> None:
     manifest, marketplace = real_inputs()
     page = landings.expected_landings(manifest, marketplace)[
         Path("collections/proteomics/v1/README.md")
     ]
 
     assert "/plugin install proteomics@asb-skill-collections" in page
-    assert "these commands need read access to it" in page
+    assert "installs from the public domain repository" in page
+    assert "these commands need no read access" in page
+    assert "private" not in page
+    assert "read access to it" not in page
 
 
 def test_install_commands_require_an_exact_marketplace_source_path() -> None:

@@ -5,7 +5,7 @@ generation pipeline. A maintainer can build papers independently, then periodica
 make a new collection cut from all retained builds. A proposal is reviewed and held
 for that next cut. It is not inserted directly into a released collection.
 
-Released collections are listed in `collections.yaml`. Each lives in a private
+Released collections are listed in `collections.yaml`. Each lives in a
 domain repository `asb-skills-<domain>`; for example, metabolomics v3 is in
 `asb-skills-metabolomics`. Each domain's content, proposals, candidates and
 landing belong in its `asb-skills-<domain>` checkout. This repository holds the
@@ -26,9 +26,8 @@ Open an issue with the template **3. A paper is not referenced: propose it**
 (`3-propose-paper.md`) on this public repository, use the
 [paper form](https://holobiomicslab.github.io/asb-skill-collections/propose.html)
 of the site or `asbb report paper`, which write the same fields, or use
-`/propose-skill` in a checkout that provides that command. The domain
-repositories are private, so a maintainer stages the proposal in the domain
-repository. Give a DOI or public link, the target
+`/propose-skill` in a checkout that provides that command. A maintainer
+stages the proposal in the domain repository. Give a DOI or public link, the target
 collection and one or two sentences on why it matters. A curator resolves the
 metadata and stages the paper in a `wave-*.yaml` file under
 `<domain checkout>/collections/<domain>/proposals/` with `status: hold`.

@@ -5,9 +5,10 @@ measurements as historical evidence rather than presenting them as current
 verification.
 
 Step 2 of the per-domain split was completed on 2026-11-08: this master is the
-registry and tooling repository; released content is in the private domain
+registry and tooling repository; released content is in the domain
 repositories. `collections.yaml` pins repository, commit and tree digest for
-each published release.
+each published release. The domain repositories are public; entries below that
+call them private were written while they were.
 
 ## Current state on 2026-11-11
 
@@ -318,7 +319,7 @@ repositories to their bare names. The path is described in [`capsules-record.md`
 
 Current repository state: every collection identifier has a generated landing
 page at `collections/<domain>/v<N>/README.md`. The page reports the registry row
-and public archive without linking the private content repository. The redirect
+and public archive without linking the content repository. The redirect
 rule at w3id.org is unchanged: it always pointed at this path, which held nothing
 between the move of the content to the domain repositories and the addition of
 these pages. Measured 2026-11-11: the fourteen collection identifiers of

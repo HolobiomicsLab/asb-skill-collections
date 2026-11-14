@@ -24,7 +24,7 @@ The complete public archive is the Zenodo record [10.5281/zenodo.20794027](https
 
 ## Where the content lives
 
-The content of this version is kept in the private repository `asb-skills-metabolomics`. Its public copy is the Zenodo record named above. This registry holds the tooling and the release records, not the content.
+The content of this version is kept in the public repository `asb-skills-metabolomics`. Its archive is the Zenodo record named above. This registry holds the tooling and the release records, not the content.
 
 ## Registry and contribution
 

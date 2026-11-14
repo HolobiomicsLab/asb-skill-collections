@@ -1,7 +1,7 @@
 # CLAUDE.md: ASB skill collections
 
 The registry `collections.yaml` lists the released collections of ten domains,
-each in a private domain repository `asb-skills-<domain>`. The examples below use
+each in a domain repository `asb-skills-<domain>`. The examples below use
 metabolomics v3 (release `metabolomics-v3.0.2`, 11,830 skills over 1,989 tools)
 in `asb-skills-metabolomics`. This master repository holds the tooling,
 governance and registry, not released content.
@@ -15,8 +15,8 @@ governance and registry, not released content.
 
 Other released domains install the same way under their domain name, for
 example `/plugin install genomics@asb-skill-collections`. The marketplace
-entries point at the private domain repositories, so installation needs read
-access to them. The nine domains released on 2026-11-09 were installed this way
+entries point at the domain repositories, which are public, so installation
+needs no read access. The nine domains released on 2026-11-09 were installed this way
 on 2026-11-10; the `metabolomics` entry was last installed before its source
 moved. Routes and dates: [`docs/STATUS.md`](docs/STATUS.md).
 
@@ -46,7 +46,7 @@ Search, apply, ground. Full protocol in [`AGENTS.md`](AGENTS.md) and
 
 [`collections.yaml`](collections.yaml) is the release registry. It pins each
 domain repository, commit and tree digest, and the Zenodo DOIs of every
-release. The domain repositories are private.
+release. The domain repositories are public.
 
 ## Report and contribute
 
@@ -64,5 +64,5 @@ Draft with `asbb report <skill|missing|paper|fault>` (or `bin/report_issue.py`
 where a collection ships it), show the exact title, labels and body, and post
 only on an explicit yes, with `gh issue create --repo HolobiomicsLab/asb-skill-collections`
 or the printed address. Never paste paths, credentials or sample names. Reports
-go to this public registry; the domain repositories are private and a
-maintainer carries reports into them. Detail in [`AGENTS.md`](AGENTS.md).
+go to this public registry, and a maintainer carries reports into the
+domain repository. Detail in [`AGENTS.md`](AGENTS.md).
