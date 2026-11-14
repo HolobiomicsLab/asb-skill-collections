@@ -54,6 +54,15 @@ SLOT_LAST_LABELS = frozenset({"data", "name"})
 # Last labels of a machine name on a private network, which are not in the root zone: `login@host-name.local` is
 # the user and the machine of someone's terminal prompt, never an R slot.
 HOST_LAST_LABELS = frozenset({"local", "lan", "localdomain", "internal", "intranet", "home", "corp"})
+# An address written to defeat harvesters: `name[at]host.org`, `name (at) lab.example.edu`, `name {at} host [dot] org`. The
+# same allowlist and role rule as for a plain address decide whether it stays.
+_OBFUSCATED_SEPARATOR = r"(?:[ \t]?(?:\[dot\]|\(dot\)|\{dot\})[ \t]?|\.)"
+OBFUSCATED_EMAIL_RE = re.compile(
+    r"(?<![\w.+-])([\w.+-]{2,})[ \t]?(?:\[at\]|\(at\)|\{at\})[ \t]?"
+    rf"([\w-]+(?:{_OBFUSCATED_SEPARATOR}[\w-]+)*{_OBFUSCATED_SEPARATOR}[A-Za-z]{{2,}})(?![\w])",
+    re.IGNORECASE,
+)
+OBFUSCATED_DOT_RE = re.compile(r"[ \t]?(?:\[dot\]|\(dot\)|\{dot\})[ \t]?", re.IGNORECASE)
 GLUED_LAST_LABEL = re.compile(r"([a-z]{2,})(?=[A-Z])")
 CONTINUED_DOMAIN = re.compile(r"-[A-Za-z0-9]")
 PHONE_RE = re.compile(
@@ -76,6 +85,10 @@ LABELLED_PHONE_RE = re.compile(
     re.IGNORECASE,
 )
 PHONE_DIGITS = range(7, 16)
+# An international prefix is a cue on its own, whatever the grouping that follows ("P: +43 1-4277-12345 M: +43 (0)664.1234567",
+# a contact line with one-letter labels). A space or a hyphen must follow the country code: "+1.234567" is a number.
+INTERNATIONAL_PHONE_RE = re.compile(r"(?<![\w.])\+\d{1,3}[ \-](?:\(\d{1,4}\)[ .\-]?)?\d[\d .\-]{5,16}\d(?!\w)")
+INTERNATIONAL_PHONE_DIGITS = range(9, 16)
 # An area code in parentheses has three to five digits and is not a year; shorter
 # ones are issue numbers of a reference list.
 AREA_CODE = r"\((?!(?:19|20)\d\d\))\d{3,5}\)"
@@ -497,6 +510,15 @@ def redact_pii(text: str, context: ScreenContext, counts: Counter) -> str:
 
     text = EMAIL_RE.sub(email_replacement, text)
 
+    def obfuscated_replacement(match: re.Match) -> str:
+        address = f"{match.group(1)}@{OBFUSCATED_DOT_RE.sub('.', match.group(2))}"
+        if address.lower() in context.email_allowlist or (context.email_role and context.email_role.fullmatch(address)):
+            return match.group(0)
+        counts["emails_redacted"] += 1
+        return "[redacted-email]"
+
+    text = OBFUSCATED_EMAIL_RE.sub(obfuscated_replacement, text)
+
     def labelled_replacement(match: re.Match) -> str:
         number = match.group(1)
         if sum(character.isdigit() for character in number) not in PHONE_DIGITS:
@@ -514,7 +536,14 @@ def redact_pii(text: str, context: ScreenContext, counts: Counter) -> str:
         counts["phones_redacted"] += 1
         return "[redacted-phone]"
 
+    def international_replacement(match: re.Match) -> str:
+        if sum(character.isdigit() for character in match.group(0)) not in INTERNATIONAL_PHONE_DIGITS:
+            return match.group(0)
+        counts["phones_redacted"] += 1
+        return "[redacted-phone]"
+
     text = LABELLED_PHONE_RE.sub(labelled_replacement, text)
+    text = INTERNATIONAL_PHONE_RE.sub(international_replacement, text)
     text = AREA_CODE_PHONE_RE.sub(area_code_replacement, text)
     return PHONE_RE.sub(phone_replacement, text)
 
