@@ -115,6 +115,8 @@ def test_digit_groups_without_a_phone_cue_are_numeric_data(text):
     ("Tel + 33 1 23 45 67 89", 1),
     ("Name: [Jane Roe]; Tel: [886-2-12345678]; Fax: [886-2-12345679]; Email: [x]", 2),
     ("Phone: \"+33 4 92 07 61 00\"", 1),
+    ("Academia Road, Taipei, Taiwan. (Fax) 886-2-12345678; (Tel) 886-2-12345679; (E-mail) x", 2),
+    ("Contact [Tel.] 04 92 07 61 00 and {Fax} +33 4 92 07 61 01", 2),
     ("Währinger str. ten, Vienna, Austria P: +43 1-4277-12345 M: +43 (0)664.12345678 E: x", 2),
 ])
 def test_a_phone_number_with_a_cue_is_redacted(text, expected):

@@ -236,6 +236,11 @@ This repository records two release surfaces, each noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- The capsule screen now redacts a telephone or fax number whose label is in brackets
+  (`(Tel) 886-2-12345679`, `(Fax) 886-2-12345678`, the address line of an article): the labelled-number expression
+  stopped at the closing bracket, and the number, in the Taiwanese grouping with a one-digit area code, matches no
+  other phone expression, so the corresponding address stayed in the text of one build (20 lines in the packs
+  repacked on 14 November 2026). Found by the leak scan, which counts a telephone since the same day.
 - The capsule screen now redacts a telephone or fax number written in brackets after its label
   (`Tel: [886-2-12345678]`, as a journal page prints the correspondence block of an article): the labelled-number
   expression skipped the opening bracket, so the numbers of two corresponding authors stayed in the text of one
