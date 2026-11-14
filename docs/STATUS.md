@@ -10,6 +10,15 @@ repositories. `collections.yaml` pins repository, commit and tree digest for
 each published release. The domain repositories are public; entries below that
 call them private were written while they were.
 
+## Update on 2026-11-14
+
+- The ten collections are published again, as new versions of the Zenodo record of each: `v1.1.0` for the
+  seven v1 domains, `v2.1.0` for epigenomics and transcriptomics, and `v3.1.0` for metabolomics. Their version
+  DOIs (`10.5281/zenodo.24224624` to `10.5281/zenodo.24224655`), commits and tree digests are in `collections.yaml`;
+  the earlier `v1.0.1`, `v2.0.1` and `v3.0.2` rows are listed there as superseded.
+- The ten domain repositories `asb-skills-<domain>` are public. The marketplace entries use `https://` sources, so
+  `/plugin install` needs no SSH key.
+
 ## Current state on 2026-11-11
 
 - Ten collections are published: `v1.0.1` for seven v1 domains, `v2.0.1` for

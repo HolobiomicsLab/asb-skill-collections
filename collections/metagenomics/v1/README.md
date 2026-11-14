@@ -6,10 +6,10 @@ The identifier `https://w3id.org/holobiomicslab/asb-skill/collection/metagenomic
 
 | State | Value |
 |---|---|
-| Release label | `v1.0.1` |
-| Version DOI | [10.5281/zenodo.24122106](https://doi.org/10.5281/zenodo.24122106) |
+| Release label | `v1.1.0` |
+| Version DOI | [10.5281/zenodo.24224628](https://doi.org/10.5281/zenodo.24224628) |
 | Concept DOI (all archived versions) | [10.5281/zenodo.24093086](https://doi.org/10.5281/zenodo.24093086) |
-| Release date | 2026-11-10 |
+| Release date | 2026-11-14 |
 | Skills | 2,754 |
 | Tools | 717 |
 | Workflows | 2 |
@@ -34,7 +34,7 @@ codex plugin add metagenomics@asb-skill-collections
 
 The marketplace entry installs from the public domain repository, so these commands need no read access.
 
-The complete public archive is the Zenodo record [10.5281/zenodo.24122106](https://doi.org/10.5281/zenodo.24122106).
+The complete public archive is the Zenodo record [10.5281/zenodo.24224628](https://doi.org/10.5281/zenodo.24224628).
 
 ## Where the content lives
 
@@ -45,6 +45,7 @@ The content of this version is kept in the public repository `asb-skills-metagen
 | Tag | Version DOI | Release date |
 |---|---|---|
 | `metagenomics-v1.0.0` | [10.5281/zenodo.24093087](https://doi.org/10.5281/zenodo.24093087) | 2026-11-09 |
+| `metagenomics-v1.0.1` | [10.5281/zenodo.24122106](https://doi.org/10.5281/zenodo.24122106) | 2026-11-10 |
 
 ## Registry and contribution
 
