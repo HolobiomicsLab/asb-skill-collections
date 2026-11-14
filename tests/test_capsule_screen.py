@@ -495,6 +495,7 @@ def test_a_login_at_a_private_network_host_is_redacted(text):
     "write to j.roe (at) uni-example.de",
     "mail jroe {at} lab.example.ac.uk",
     "jroe[at]host [dot] example [dot] com",
+    "send bugs to jane[dot]roe[at]uni-example[dot]fr",
 ])
 def test_an_address_written_to_defeat_harvesters_is_redacted(text):
     result = screen.screen_text(text, "anchor_corpus/enrichment_docs.txt", context(), screen.QuoteBudget())

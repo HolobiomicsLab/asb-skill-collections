@@ -58,7 +58,7 @@ HOST_LAST_LABELS = frozenset({"local", "lan", "localdomain", "internal", "intran
 # same allowlist and role rule as for a plain address decide whether it stays.
 _OBFUSCATED_SEPARATOR = r"(?:[ \t]?(?:\[dot\]|\(dot\)|\{dot\})[ \t]?|\.)"
 OBFUSCATED_EMAIL_RE = re.compile(
-    r"(?<![\w.+-])([\w.+-]{2,})[ \t]?(?:\[at\]|\(at\)|\{at\})[ \t]?"
+    r"(?<![\w.+-])((?:[\w+-]|\.|\[dot\]|\(dot\)|\{dot\}){2,})[ \t]?(?:\[at\]|\(at\)|\{at\})[ \t]?"
     rf"([\w-]+(?:{_OBFUSCATED_SEPARATOR}[\w-]+)*{_OBFUSCATED_SEPARATOR}[A-Za-z]{{2,}})(?![\w])",
     re.IGNORECASE,
 )
@@ -511,7 +511,7 @@ def redact_pii(text: str, context: ScreenContext, counts: Counter) -> str:
     text = EMAIL_RE.sub(email_replacement, text)
 
     def obfuscated_replacement(match: re.Match) -> str:
-        address = f"{match.group(1)}@{OBFUSCATED_DOT_RE.sub('.', match.group(2))}"
+        address = f"{OBFUSCATED_DOT_RE.sub('.', match.group(1))}@{OBFUSCATED_DOT_RE.sub('.', match.group(2))}"
         if address.lower() in context.email_allowlist or (context.email_role and context.email_role.fullmatch(address)):
             return match.group(0)
         counts["emails_redacted"] += 1
