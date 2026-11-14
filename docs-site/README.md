@@ -19,7 +19,7 @@ fonts.
 | `propose.html` (+ `propose.js`) | nothing | Form to propose a paper for one of the released collections, submitted as a pre-filled GitHub issue in the fields of the intake parser |
 
 The collection trees (each `SKILL.md`, tool record, `corpus.yaml` and machine
-index) are in the private domain repositories `HolobiomicsLab/asb-skills-<domain>`
+index) are in the domain repositories `HolobiomicsLab/asb-skills-<domain>`
 and in the Zenodo record of each release. No page requests them and no page
 links to a domain repository. What a page shows of an item is what the public
 index holds: name, description, summary, EDAM topics and source DOIs of a skill;
@@ -27,8 +27,7 @@ name, description, summary and stage count of a workflow; name, slug, licence,
 code repositories cited by the source paper and evidence text of a tool; DOI,
 title, status, access type and collection of a paper. Each page that shows
 items says that the full text is in the Zenodo record of the release (the
-version DOI from the registry) and in the private domain repository for people
-with access.
+version DOI from the registry) and in the domain repository.
 
 A domain file is downloaded only for the domain on screen. Browse and Paper
 load the domain of the collection or paper asked for, Corpus and Browse
@@ -137,7 +136,7 @@ registered and any `--checkout` passed to it.
 
 ### Checking the committed index
 
-The domain repositories are private, so CI cannot rebuild the index. The
+CI does not check out the domain repositories, so it cannot rebuild the index. The
 `search-index` job in `.github/workflows/validate.yml` runs
 
 ```bash

@@ -1,13 +1,13 @@
 # GitHub Copilot: ASB skill collections
 
 The registry in `collections.yaml` lists the released collections of ten
-domains, each in a private domain repository `HolobiomicsLab/asb-skills-<domain>`
+domains, each in a domain repository `HolobiomicsLab/asb-skills-<domain>`
 and derived from published method papers (journal articles and preprints). The
 metabolomics release is **v3** (11,830 skills over 1,989 tools) in
 `HolobiomicsLab/asb-skills-metabolomics`.
 
 **Read [`AGENTS.md`](../AGENTS.md) for the full install + use protocol.** `<domain checkout>`
-is a checkout of the private domain repository (or the extracted Zenodo record of a release). In short:
+is a checkout of the domain repository (or the extracted Zenodo record of a release). In short:
 
 - **Skills** are plain Markdown at `<domain checkout>/collections/metabolomics/v3/leaves/<slug>/SKILL.md`
   (YAML frontmatter + body). Only the router `skills/_router/SKILL.md` sits under
@@ -31,5 +31,5 @@ When a skill is wrong, missing, a paper is not referenced, or something
 technical failed, offer the user a report once per problem, show the exact
 text, and file it only on an explicit yes, as an issue on the public registry
 (`asbb report <skill|missing|paper|fault>` drafts it). The four routes and the
-rules are in [`AGENTS.md`](../AGENTS.md#report-and-contribute); the domain
-repositories are private, so no report goes there.
+rules are in [`AGENTS.md`](../AGENTS.md#report-and-contribute); reports go to
+the public registry, and a maintainer carries them into the domain repository.

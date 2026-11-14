@@ -1,6 +1,6 @@
 # Issue chooser. The four contribution routes come first (templates 1 to 4,
-# ordered by file name); the domain repositories are private, so every route
-# lands on this public registry.
+# ordered by file name); every route lands on this public registry, and a
+# maintainer carries accepted changes into the domain repository.
 blank_issues_enabled: true
 contact_links:
   - name: Contribute from the web site

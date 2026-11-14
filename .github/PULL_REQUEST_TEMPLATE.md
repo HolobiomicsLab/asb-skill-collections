@@ -2,9 +2,9 @@
 
 <!-- One sentence: what does this PR add or change? -->
 
-Paths below are paths in the domain checkout (`asb-skills-<domain>`, private)
+Paths below are paths in the domain checkout (`asb-skills-<domain>`)
 unless they name a file of this tooling repository. Pull requests on a domain
-repository are opened by maintainers; a contributor without access opens an
+repository are opened by maintainers; a contributor opens an
 issue on this public repository instead (see the four routes in
 [.github/CONTRIBUTING.md](CONTRIBUTING.md#four-routes)), and a maintainer carries
 it into the domain repository.

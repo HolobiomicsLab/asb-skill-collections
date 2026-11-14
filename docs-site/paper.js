@@ -3,7 +3,7 @@
  * ?doi=<doi>&collection=<slug>/v<N> (or ?collection=<slug>, or the older
  * ?collection=<slug>&version=<N>). The paper row and its skills come from
  * search_index/<slug>.json, the release DOI from catalogue.jsonld, both through
- * site-data.js. Nothing is read from the private domain repositories.
+ * site-data.js. Nothing is read from the domain repositories.
  */
 
 function getParam(name) {
@@ -81,9 +81,9 @@ function fail(message) {
   const fullText = entry && entry.doi
     ? siteEl("p", { class: "hint" }, "The full text of each skill is in the Zenodo record of the release (",
         siteEl("a", { href: doiURL(entry.doi), target: "_blank", rel: "noopener" }, entry.doi),
-        `) and in the private domain repository ${domainRepoName(slug)} for people with access.`)
+        `) and in the domain repository ${domainRepoName(slug)}.`)
     : siteEl("p", { class: "hint" },
-        `The full text of each skill is in the private domain repository ${domainRepoName(slug)} for people with access` +
+        `The full text of each skill is in the domain repository ${domainRepoName(slug)}` +
         (status[label] === "staged" ? "; this staged tree is not part of a release." : "."));
   if (skills.length) {
     const ul = siteEl("ul", { class: "skill-list" });

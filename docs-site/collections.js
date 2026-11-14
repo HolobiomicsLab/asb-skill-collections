@@ -1,7 +1,7 @@
 // collections.js: per-collection browser for skills, workflows (super-skills) and tools.
 // Reads the release registry (catalogue.jsonld) and the public search index of the
 // collection's domain (search_index/<domain>.json) through site-data.js. The skill
-// and tool files themselves are in the private domain repository and in the Zenodo
+// and tool files themselves are in the domain repository and in the Zenodo
 // record of the release; this page shows what the public index holds.
 const MAX_RENDER = 60; // cap rendered cards; refine the filter to narrow
 const TABS = ["skills", "workflows", "tools"];
@@ -81,8 +81,8 @@ function renderSummary() {
        <p class="muted">${siteEsc(c.title || c.label)} · release ${siteEsc(c.release_label || c.version)} · released ${siteEsc(released || "")} · version DOI ${doi}${capsules}</p>
        ${mismatch}
        <p class="muted">This page shows what the public index holds for each item. The full text of every
-         skill, workflow and tool record is in the Zenodo record of the release (${doi}) and in the private
-         domain repository <code>${siteEsc(domainRepoName(c.slug))}</code> for people with access.</p>
+         skill, workflow and tool record is in the Zenodo record of the release (${doi}) and in the
+         domain repository <code>${siteEsc(domainRepoName(c.slug))}</code>.</p>
        <div id="summary-chart"></div>
      </div>`;
   if (rows) {

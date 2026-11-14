@@ -38,7 +38,7 @@ Each collection identifier, such as
 `https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v3`, redirects
 to `collections/<domain>/v<N>/` in this public registry, where GitHub displays
 the generated `README.md`. That page summarizes the manifest row and points to
-the public archive without linking the private domain repository.
+the Zenodo archive and names the domain repository without linking it.
 
 `python scripts/render_collection_landings.py` generates one landing page per
 release row in `collections.yaml`, using marketplace entries only for install
@@ -70,8 +70,8 @@ Users discover and install collections via the Claude Code `/plugin install` com
 Use `plugins[].name` from `.claude-plugin/marketplace.json`, such as
 `metabolomics` or `metabolomics-lc-ms`. Its `source` is a `git-subdir` object
 that names the domain repository and the versioned collection or pack path;
-installation needs read access while that repository is private. The plugin
-host handles installation and discovery.
+installation needs no read access, because the domain repositories are public.
+The plugin host handles installation and discovery.
 Release tags such as `<slug>-v<N>` are separate from install names. Native host
 storage and grounding setup are not performed by the local materializer below.
 

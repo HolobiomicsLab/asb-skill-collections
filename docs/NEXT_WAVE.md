@@ -85,7 +85,7 @@ candidate and land it for review by following
 Candidate and landed leaves stay under the domain checkout, for example
 `<domain checkout>/collections/<domain>/<version>/leaves/`.
 
-Released collections are listed in `collections.yaml`. Each lives in a private
+Released collections are listed in `collections.yaml`. Each lives in a
 domain repository `asb-skills-<domain>`; for example, metabolomics v3 is in
 `asb-skills-metabolomics`. New domain content belongs in the corresponding `asb-skills-<domain>` checkout;
 this repository holds the tooling, governance and registry.
