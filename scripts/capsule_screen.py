@@ -78,9 +78,10 @@ PHONE_LABEL_BEFORE_RE = re.compile(PHONE_LABEL + r"[^\n]{0,30}\Z", re.IGNORECASE
 # Right after a label any grouping counts ("04 92 07 61 00"), within the digit
 # count of a telephone number. A plus sign may stand apart from the country code
 # ("Phone: + 44 (0)1865 000000", as letter heads print it). The value may sit in an opening bracket or
-# quotation mark, as a correspondence block extracted from a journal page prints it ("Tel: [886-2-12345678]").
+# quotation mark, as a correspondence block extracted from a journal page prints it ("Tel: [886-2-12345678]"). The label
+# itself may be in brackets ("(Tel) 886-2-12345678", the address line of an article).
 LABELLED_PHONE_RE = re.compile(
-    PHONE_LABEL + r"\.?[ \t]*(?:(?:number|no|nr|n°|#)\.?)?[ \t]*[:=]?[ \t]*[\[{<\"'“‘]?[ \t]*"
+    PHONE_LABEL + r"\.?[)\]}>]?[ \t]*(?:(?:number|no|nr|n°|#)\.?)?[ \t]*[:=]?[ \t]*[\[{<\"'“‘]?[ \t]*"
     r"((?:\+[ \t]?)?\(?\d[\d ().\-/]{5,22}\d)",
     re.IGNORECASE,
 )
