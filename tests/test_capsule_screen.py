@@ -113,6 +113,9 @@ def test_digit_groups_without_a_phone_cue_are_numeric_data(text):
     ("Phone: 555 123 4567, 555 987 6543", 2),
     ("Senior Editor, Journal Name. Phone: + 44 (0)1865 000000 Fax: + 44 (0)1865 000001", 2),
     ("Tel + 33 1 23 45 67 89", 1),
+    ("Name: [Jane Roe]; Tel: [886-2-12345678]; Fax: [886-2-12345679]; Email: [x]", 2),
+    ("Phone: \"+33 4 92 07 61 00\"", 1),
+    ("Währinger str. ten, Vienna, Austria P: +43 1-4277-12345 M: +43 (0)664.12345678 E: x", 2),
 ])
 def test_a_phone_number_with_a_cue_is_redacted(text, expected):
     for value, name in ((text, "evidence/note.txt"), (json.dumps({"v": text}), "ledger/note.json")):
@@ -474,6 +477,54 @@ def test_slot_notation_and_documented_templates_are_still_left_alone(text):
     result = screen.screen_text(text, "anchor_corpus/repo.txt", context(), screen.QuoteBudget())
     assert result.text == text
     assert result.counts["emails_redacted"] == 0
+
+
+@pytest.mark.parametrize("text", [
+    "(base) jroe@janes-macbook-pro.local ~ %",
+    "ssh jroe@build-box.lan failed",
+    "host jroe@node01.localdomain",
+])
+def test_a_login_at_a_private_network_host_is_redacted(text):
+    result = screen.screen_text(text, "anchor_corpus/repo.txt", context(), screen.QuoteBudget())
+    assert "[redacted-email]" in result.text
+    assert result.counts["emails_redacted"] == 1
+
+
+@pytest.mark.parametrize("text", [
+    "contact: jroe[at]example.org for details",
+    "write to j.roe (at) uni-example.de",
+    "mail jroe {at} lab.example.ac.uk",
+    "jroe[at]host [dot] example [dot] com",
+    "send bugs to jane[dot]roe[at]uni-example[dot]fr",
+])
+def test_an_address_written_to_defeat_harvesters_is_redacted(text):
+    result = screen.screen_text(text, "anchor_corpus/enrichment_docs.txt", context(), screen.QuoteBudget())
+    assert "[redacted-email]" in result.text
+    assert result.counts["emails_redacted"] == 1
+    assert "[at]" not in result.text and "(at)" not in result.text and "{at}" not in result.text
+
+
+@pytest.mark.parametrize("text", [
+    "info[at]lab.example.org",
+    "the list items[at] the start and then. Another sentence",
+    "a variable x[at]y and jroe[at]host. The next sentence",
+])
+def test_a_role_address_or_a_non_address_with_an_at_marker_is_left_alone(text):
+    result = screen.screen_text(text, "anchor_corpus/enrichment_docs.txt", context(), screen.QuoteBudget())
+    assert result.text == text
+    assert result.counts["emails_redacted"] == 0
+
+
+@pytest.mark.parametrize("text", [
+    "Tel [1] and Fax [2] are listed in Table 1",
+    "see fax [12, 13] and phone [1-3]",
+    "a log fold change of +1.23456789 and an adduct shift of +12 kDa",
+    "the [M+2H]2+ ion at 123.4567 and 98.7654",
+])
+def test_reference_lists_and_signed_numeric_data_are_not_phone_numbers(text):
+    result = screen.screen_text(text, "anchor_corpus/article.txt", context(), screen.QuoteBudget())
+    assert result.text == text
+    assert result.counts["phones_redacted"] == 0
 
 
 def test_the_root_zone_file_holds_the_generic_labels_the_short_list_missed_and_not_the_slot_ones():
