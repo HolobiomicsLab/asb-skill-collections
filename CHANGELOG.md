@@ -15,6 +15,13 @@ This repository records two release surfaces, each noted per release:
 
 ## [Unreleased]
 
+### Released
+- The ten skill collections, deposited on 2026-11-14 as new versions of their Zenodo records and tagged in the
+  public domain repositories: `<domain>-v1.1.0` (agentic-ai, astronomy, genomics, metabarcoding, metagenomics,
+  multi-omics, proteomics), `<domain>-v2.1.0` (epigenomics, transcriptomics) and `metabolomics-v3.1.0`. Version
+  DOIs, commits and tree digests are in `collections.yaml`; the registry README, the landing pages, the search
+  index, the catalogue and the marketplace pins follow them.
+
 ### Added
 - Evaluation card (`scripts/render_evaluation_card.py`): a readiness table per domain, read from the `readiness`
   column of the packs (a pack without the column, or with a value outside documented, validated, evaluable and

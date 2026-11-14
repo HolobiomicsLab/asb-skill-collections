@@ -6,10 +6,10 @@ The identifier `https://w3id.org/holobiomicslab/asb-skill/collection/astronomy/v
 
 | State | Value |
 |---|---|
-| Release label | `v1.0.1` |
-| Version DOI | [10.5281/zenodo.24122111](https://doi.org/10.5281/zenodo.24122111) |
+| Release label | `v1.1.0` |
+| Version DOI | [10.5281/zenodo.24224641](https://doi.org/10.5281/zenodo.24224641) |
 | Concept DOI (all archived versions) | [10.5281/zenodo.24093094](https://doi.org/10.5281/zenodo.24093094) |
-| Release date | 2026-11-10 |
+| Release date | 2026-11-14 |
 | Skills | 1,671 |
 | Tools | 415 |
 | Workflows | 2 |
@@ -34,7 +34,7 @@ codex plugin add astronomy@asb-skill-collections
 
 The marketplace entry installs from the public domain repository, so these commands need no read access.
 
-The complete public archive is the Zenodo record [10.5281/zenodo.24122111](https://doi.org/10.5281/zenodo.24122111).
+The complete public archive is the Zenodo record [10.5281/zenodo.24224641](https://doi.org/10.5281/zenodo.24224641).
 
 ## Where the content lives
 
@@ -45,6 +45,7 @@ The content of this version is kept in the public repository `asb-skills-astrono
 | Tag | Version DOI | Release date |
 |---|---|---|
 | `astronomy-v1.0.0` | [10.5281/zenodo.24093095](https://doi.org/10.5281/zenodo.24093095) | 2026-11-09 |
+| `astronomy-v1.0.1` | [10.5281/zenodo.24122111](https://doi.org/10.5281/zenodo.24122111) | 2026-11-10 |
 
 ## Registry and contribution
 

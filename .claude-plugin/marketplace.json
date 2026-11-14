@@ -14,10 +14,10 @@
         "url": "https://github.com/HolobiomicsLab/asb-skills-metabolomics.git",
         "path": "collections/metabolomics/v3",
         "ref": "main",
-        "sha": "2e18fc03570be2538c86ea953cc15522cf6c726f"
+        "sha": "286a838e6f2fabcd8effbe6b54b60024d3383758"
       },
       "description": "ASB Metabolomics. Computational metabolomics (predominantly LC-MS/MS; also LC-MS, GC-MS, NMR, mass-spectrometry imaging, ion mobility, lipidomics, multi-omics): spectral library matching, molecular networking, formula/structure annotation (SIRIUS), preprocessing, normalization, and statistics: 11,830 evidence-grounded skills over 1,989 tools, each derived from a method paper (journal article or preprint) and its code. Router-shaped: one skill is advertised (the router); the corpus ships as data and is retrieved on demand, so installing costs negligible context. It carries the grounding map `kb_bundle.json`, but not the Perspicacité grounding binder.",
-      "version": "3.0.2",
+      "version": "3.1.0",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"
@@ -234,10 +234,10 @@
         "url": "https://github.com/HolobiomicsLab/asb-skills-epigenomics.git",
         "path": "collections/epigenomics/v2",
         "ref": "main",
-        "sha": "6bd2c2ac8469fbee0b0e1947a011808c005f8ca6"
+        "sha": "2d7e6d594dc53f7bd83fa038277d857963c4f5e6"
       },
       "description": "ASB Epigenomics Skill Collection v2: 2,295 evidence-grounded skills over 532 tools.",
-      "version": "2.0.1",
+      "version": "2.1.0",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"
@@ -258,10 +258,10 @@
         "url": "https://github.com/HolobiomicsLab/asb-skills-transcriptomics.git",
         "path": "collections/transcriptomics/v2",
         "ref": "main",
-        "sha": "376cec1aa0fe229906f8b5feddd3ed2957aeaa04"
+        "sha": "1ccfe23ed072e08aaca892993e65ac1e6058bca0"
       },
       "description": "ASB Transcriptomics Skill Collection v2: 11,256 evidence-grounded skills over 2,086 tools.",
-      "version": "2.0.1",
+      "version": "2.1.0",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"
@@ -282,10 +282,10 @@
         "url": "https://github.com/HolobiomicsLab/asb-skills-proteomics.git",
         "path": "collections/proteomics/v1",
         "ref": "main",
-        "sha": "74acd4b064e2cf78950ef69d21c418ac3de3962f"
+        "sha": "0ef2f44152cebeed3809b47ff277569d42f09ed3"
       },
       "description": "ASB Proteomics Skill Collection v1: 558 evidence-grounded skills over 163 tools.",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"
@@ -306,10 +306,10 @@
         "url": "https://github.com/HolobiomicsLab/asb-skills-genomics.git",
         "path": "collections/genomics/v1",
         "ref": "main",
-        "sha": "ecb4600de771570d5551d0db40b15b67eb1e9a7e"
+        "sha": "68ab7788040bd0d6a7520b1919dc2da6f2246f76"
       },
       "description": "ASB Genomics Skill Collection v1: 3,246 evidence-grounded skills over 867 tools.",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"
@@ -330,10 +330,10 @@
         "url": "https://github.com/HolobiomicsLab/asb-skills-metagenomics.git",
         "path": "collections/metagenomics/v1",
         "ref": "main",
-        "sha": "753b0268288cebf077c97e627c4ab32b167a95b4"
+        "sha": "bfa133c7f9328f73cd23312e686e8d35c68fc2a5"
       },
       "description": "ASB Metagenomics Skill Collection v1: 2,754 evidence-grounded skills over 717 tools.",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"
@@ -354,10 +354,10 @@
         "url": "https://github.com/HolobiomicsLab/asb-skills-metabarcoding.git",
         "path": "collections/metabarcoding/v1",
         "ref": "main",
-        "sha": "31778695bfb16089141b59538788a4d278d4e5d8"
+        "sha": "2576012c4d1e9526f067f54e7e8ef76341fc631e"
       },
       "description": "ASB Metabarcoding Skill Collection v1: 803 evidence-grounded skills over 203 tools.",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"
@@ -378,10 +378,10 @@
         "url": "https://github.com/HolobiomicsLab/asb-skills-multi-omics.git",
         "path": "collections/multi-omics/v1",
         "ref": "main",
-        "sha": "4a7edac40c08a3219e68fe2d8debcc0751fd1aea"
+        "sha": "89caca63be35c8f36e6cf7bc3533771aa4e3cff8"
       },
       "description": "ASB Multi-Omics Skill Collection v1: 787 evidence-grounded skills over 211 tools.",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"
@@ -402,10 +402,10 @@
         "url": "https://github.com/HolobiomicsLab/asb-skills-astronomy.git",
         "path": "collections/astronomy/v1",
         "ref": "main",
-        "sha": "b83d6a1558b28865552cd757666138e9ca7025de"
+        "sha": "78b10b4108d807fd82cc9eb60551d694825d3b5e"
       },
       "description": "ASB Astronomy and astrophysics Skill Collection v1: 1,671 evidence-grounded skills over 415 tools.",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"
@@ -426,10 +426,10 @@
         "url": "https://github.com/HolobiomicsLab/asb-skills-agentic-ai.git",
         "path": "collections/agentic-ai/v1",
         "ref": "main",
-        "sha": "0bbd43c258e8f8a7259e97e0a2607b1be0f9b6fa"
+        "sha": "9511fea102918912cd6e133a68e8905856cfbef3"
       },
       "description": "ASB Agentic AI Skill Collection v1: 668 evidence-grounded skills over 215 tools.",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "author": {
         "name": "Holobiomics Lab",
         "url": "https://github.com/HolobiomicsLab"

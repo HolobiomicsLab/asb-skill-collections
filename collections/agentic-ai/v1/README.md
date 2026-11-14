@@ -6,10 +6,10 @@ The identifier `https://w3id.org/holobiomicslab/asb-skill/collection/agentic-ai/
 
 | State | Value |
 |---|---|
-| Release label | `v1.0.1` |
-| Version DOI | [10.5281/zenodo.24122112](https://doi.org/10.5281/zenodo.24122112) |
+| Release label | `v1.1.0` |
+| Version DOI | [10.5281/zenodo.24224644](https://doi.org/10.5281/zenodo.24224644) |
 | Concept DOI (all archived versions) | [10.5281/zenodo.24093109](https://doi.org/10.5281/zenodo.24093109) |
-| Release date | 2026-11-10 |
+| Release date | 2026-11-14 |
 | Skills | 668 |
 | Tools | 215 |
 | Workflows | 2 |
@@ -34,7 +34,7 @@ codex plugin add agentic-ai@asb-skill-collections
 
 The marketplace entry installs from the public domain repository, so these commands need no read access.
 
-The complete public archive is the Zenodo record [10.5281/zenodo.24122112](https://doi.org/10.5281/zenodo.24122112).
+The complete public archive is the Zenodo record [10.5281/zenodo.24224644](https://doi.org/10.5281/zenodo.24224644).
 
 ## Where the content lives
 
@@ -45,6 +45,7 @@ The content of this version is kept in the public repository `asb-skills-agentic
 | Tag | Version DOI | Release date |
 |---|---|---|
 | `agentic-ai-v1.0.0` | [10.5281/zenodo.24093110](https://doi.org/10.5281/zenodo.24093110) | 2026-11-09 |
+| `agentic-ai-v1.0.1` | [10.5281/zenodo.24122112](https://doi.org/10.5281/zenodo.24122112) | 2026-11-10 |
 
 ## Registry and contribution
 
