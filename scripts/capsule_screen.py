@@ -51,6 +51,9 @@ TLD_FILE = Path(__file__).with_name("data") / "iana_tlds.txt"
 # them as top-level domains. An address that ends in one of these is left alone; any other root-zone label is
 # an address.
 SLOT_LAST_LABELS = frozenset({"data", "name"})
+# Last labels of a machine name on a private network, which are not in the root zone: `login@host-name.local` is
+# the user and the machine of someone's terminal prompt, never an R slot.
+HOST_LAST_LABELS = frozenset({"local", "lan", "localdomain", "internal", "intranet", "home", "corp"})
 GLUED_LAST_LABEL = re.compile(r"([a-z]{2,})(?=[A-Z])")
 CONTINUED_DOMAIN = re.compile(r"-[A-Za-z0-9]")
 PHONE_RE = re.compile(
@@ -65,9 +68,11 @@ PHONE_LABEL = r"(?<![^\W\d_])(?:t[eé]l(?:[eé]phone|efon|efax)?|phone|fax)(?![^
 PHONE_LABEL_BEFORE_RE = re.compile(PHONE_LABEL + r"[^\n]{0,30}\Z", re.IGNORECASE)
 # Right after a label any grouping counts ("04 92 07 61 00"), within the digit
 # count of a telephone number. A plus sign may stand apart from the country code
-# ("Phone: + 44 (0)1865 000000", as letter heads print it).
+# ("Phone: + 44 (0)1865 000000", as letter heads print it). The value may sit in an opening bracket or
+# quotation mark, as a correspondence block extracted from a journal page prints it ("Tel: [886-2-12345678]").
 LABELLED_PHONE_RE = re.compile(
-    PHONE_LABEL + r"\.?[ \t]*(?:(?:number|no|nr|n°|#)\.?)?[ \t]*[:=]?[ \t]*((?:\+[ \t]?)?\(?\d[\d ().\-/]{5,22}\d)",
+    PHONE_LABEL + r"\.?[ \t]*(?:(?:number|no|nr|n°|#)\.?)?[ \t]*[:=]?[ \t]*[\[{<\"'“‘]?[ \t]*"
+    r"((?:\+[ \t]?)?\(?\d[\d ().\-/]{5,22}\d)",
     re.IGNORECASE,
 )
 PHONE_DIGITS = range(7, 16)
@@ -468,7 +473,9 @@ def is_kept_for_its_slot_shape_only(value: str, match: re.Match) -> bool:
         return False
     last_label = domain.rsplit(".", 1)[-1]
     glued = GLUED_LAST_LABEL.match(last_label)
-    if last_label.lower() in root_zone_labels() or bool(glued and glued.group(1) in root_zone_labels()):
+    if last_label.lower() in root_zone_labels() or last_label.lower() in HOST_LAST_LABELS:
+        return True
+    if glued and glued.group(1) in root_zone_labels():
         return True
     # The expression stops at a hyphen when the end of the domain is broken by extraction ("@med.uni-example. de"):
     # a hyphen and a letter right after the token mean the domain goes on, which a slot name never does.

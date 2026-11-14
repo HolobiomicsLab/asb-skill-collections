@@ -113,6 +113,8 @@ def test_digit_groups_without_a_phone_cue_are_numeric_data(text):
     ("Phone: 555 123 4567, 555 987 6543", 2),
     ("Senior Editor, Journal Name. Phone: + 44 (0)1865 000000 Fax: + 44 (0)1865 000001", 2),
     ("Tel + 33 1 23 45 67 89", 1),
+    ("Name: [Jane Roe]; Tel: [886-2-12345678]; Fax: [886-2-12345679]; Email: [x]", 2),
+    ("Phone: \"+33 4 92 07 61 00\"", 1),
 ])
 def test_a_phone_number_with_a_cue_is_redacted(text, expected):
     for value, name in ((text, "evidence/note.txt"), (json.dumps({"v": text}), "ledger/note.json")):
@@ -474,6 +476,27 @@ def test_slot_notation_and_documented_templates_are_still_left_alone(text):
     result = screen.screen_text(text, "anchor_corpus/repo.txt", context(), screen.QuoteBudget())
     assert result.text == text
     assert result.counts["emails_redacted"] == 0
+
+
+@pytest.mark.parametrize("text", [
+    "(base) jroe@janes-macbook-pro.local ~ %",
+    "ssh jroe@build-box.lan failed",
+    "host jroe@node01.localdomain",
+])
+def test_a_login_at_a_private_network_host_is_redacted(text):
+    result = screen.screen_text(text, "anchor_corpus/repo.txt", context(), screen.QuoteBudget())
+    assert "[redacted-email]" in result.text
+    assert result.counts["emails_redacted"] == 1
+
+
+@pytest.mark.parametrize("text", [
+    "Tel [1] and Fax [2] are listed in Table 1",
+    "see fax [12, 13] and phone [1-3]",
+])
+def test_a_label_before_a_bracketed_reference_list_is_not_a_phone_number(text):
+    result = screen.screen_text(text, "anchor_corpus/article.txt", context(), screen.QuoteBudget())
+    assert result.text == text
+    assert result.counts["phones_redacted"] == 0
 
 
 def test_the_root_zone_file_holds_the_generic_labels_the_short_list_missed_and_not_the_slot_ones():

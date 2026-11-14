@@ -236,6 +236,12 @@ This repository records two release surfaces, each noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- The capsule screen now redacts a telephone or fax number written in brackets after its label
+  (`Tel: [886-2-12345678]`, as a journal page prints the correspondence block of an article): the labelled-number
+  expression skipped the opening bracket, so the numbers of two corresponding authors stayed in the text of one
+  build (41 lines). It also redacts `login@host.local` (and `.lan`, `.localdomain`, `.internal`, `.intranet`, `.home`,
+  `.corp`), the user and machine of a terminal prompt in a notebook output, which read as an R slot because these
+  labels are not in the root zone. Found by the leak scan and a wide scan of the 14 November 2026 packs.
 - The capsule screen now redacts an address whose domain goes on after the token the expression found. When
   extraction splits the end of a domain (`name@med.uni-example. de`), the expression stops at the hyphen on
   `name@med.uni`, whose last label `uni` looked like an R slot, so the address of a corresponding author
