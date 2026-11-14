@@ -48,7 +48,7 @@ scripts/regen_catalogue.py              @lfnothias
 # Lead Curator of a collection is co-owner of that collection's directory.
 # Update these lines as collections are added + Lead Curators confirmed.
 # ----------------------------------------------------------------------------
-# Released content is held in the private domain repositories (asb-skills-<domain>),
+# Released content is held in the domain repositories (asb-skills-<domain>),
 # each with its own CODEOWNERS; this repository holds no collection tree.
 
 # ----------------------------------------------------------------------------

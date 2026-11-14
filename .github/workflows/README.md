@@ -84,9 +84,9 @@ make the run incomplete and fail the job rather than reporting a clean sweep.
 
 ## Issue intake
 
-The intake workflow runs only in the private domain repository. A reader
-without access to it files a proposal as an issue on this public repository,
-and a maintainer stages it in the domain repository. The workflow acts only
+The intake workflow runs only in the domain repository. A reader files a
+proposal as an issue on this public repository, and a maintainer stages it in
+the domain repository. The workflow acts only
 on issues of the domain repository that carry both `propose` and `paper-intake`.
 
 `scripts/templates/domain-intake.yml` runs in each `asb-skills-<domain>`

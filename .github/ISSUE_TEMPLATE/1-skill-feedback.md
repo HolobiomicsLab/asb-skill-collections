@@ -58,8 +58,8 @@ but it cannot recognise every sensitive sample name. You are the last check.
 <!--
 Why bother: this collection is grounded in the published literature and given
 away under CC-BY. It gets better only when people who use it say what broke.
-A maintainer triages the report here and carries the fix into the private
-domain repository; the revised skill ships in a later release. If you can
+A maintainer triages the report here and carries the fix into the domain
+repository; the revised skill ships in a later release. If you can
 write the fix yourself, propose it (propose-skill.md); governance/AUTHORSHIP.md
 records authored skills as credit toward the reviewer tier.
 -->

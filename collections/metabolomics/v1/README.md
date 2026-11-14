@@ -24,7 +24,7 @@ This version has no public archive. Use the current major, [v3](../v3/README.md)
 
 ## Where the content lives
 
-The content of this version is kept in the private repository `asb-skills-metabolomics`. It has no public copy. This registry holds the tooling and the release records, not the content.
+The content of this version is kept in the public repository `asb-skills-metabolomics`. It has no Zenodo archive. This registry holds the tooling and the release records, not the content.
 
 ## Registry and contribution
 

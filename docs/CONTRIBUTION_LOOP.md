@@ -36,9 +36,9 @@ it is route 4. GitHub applies labels from an address only for people with
 triage access; the issue template's own labels and the title prefix carry the
 route for the others.
 
-The domain repositories are private. A member of the public cannot open an
-issue or a pull request there, so every route lands on the public registry and a
-maintainer carries the report into the domain repository.
+Every route lands on this public registry's issue tracker, through the issue
+forms or a draft made with `asbb report` or `bin/report_issue.py`. A maintainer
+carries each accepted report into the domain repository.
 
 ## What ships
 
@@ -90,7 +90,7 @@ rest were folded in or deferred:
 
 ## For maintainers
 
-Released collections are listed in `collections.yaml`. Each lives in a private
+Released collections are listed in `collections.yaml`. Each lives in a
 domain repository `asb-skills-<domain>`; for example, metabolomics v3 is in
 `asb-skills-metabolomics`. Domain content belongs in the corresponding
 `asb-skills-<domain>` checkout, while this repository holds tooling, governance

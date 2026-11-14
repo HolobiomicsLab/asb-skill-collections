@@ -21,10 +21,9 @@ Agents draft these reports with the router of a collection, `asbb report` or
 `scripts/skill_feedback.py`: they show you the exact text and post only on your
 explicit yes. Nothing is sent otherwise.
 
-Released collections live in private domain repositories `asb-skills-<domain>`
-(registry: `collections.yaml`). A member of the public cannot open an issue or a
-pull request there, so every contribution goes through an issue on this public
-repository, and a maintainer carries it into the domain repository. This
+Released collections live in domain repositories `asb-skills-<domain>`
+(registry: `collections.yaml`). Every contribution goes through an issue on this
+public repository, and a maintainer carries it into the domain repository. This
 repository holds the tooling, governance and registry. Every `collections/…` and
 `staged-collections/…` path below is a path in the domain checkout.
 

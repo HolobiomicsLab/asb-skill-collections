@@ -5,7 +5,7 @@
  *     files on the main branch (titles, versions, status, counts, version DOIs);
  *   - the search index served next to the pages, search_index/manifest.json and
  *     search_index/<domain>.json (skills, workflows, tools and papers).
- * The collection trees themselves live in private domain repositories
+ * The collection trees themselves live in the domain repositories
  * (HolobiomicsLab/asb-skills-<domain>); no page requests anything from them.
  * A domain file is fetched with the same URL as search.js, so the browser cache
  * serves it once to every page.
@@ -54,7 +54,7 @@ function parseLabel(label) {
   return m ? { slug: m[1], version: m[2] || null } : { slug: "", version: null };
 }
 
-/** Private domain repository of a domain, named in text only, never linked. */
+/** Domain repository of a domain, named in text only, never linked. */
 function domainRepoName(slug) {
   return `${SITE_REPO.split("/")[0]}/asb-skills-${slug}`;
 }

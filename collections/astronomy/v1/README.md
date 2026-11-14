@@ -32,13 +32,13 @@ codex plugin marketplace add HolobiomicsLab/asb-skill-collections
 codex plugin add astronomy@asb-skill-collections
 ```
 
-The marketplace entry points at a private repository, so these commands need read access to it. The archive below is public.
+The marketplace entry installs from the public domain repository, so these commands need no read access.
 
 The complete public archive is the Zenodo record [10.5281/zenodo.24122111](https://doi.org/10.5281/zenodo.24122111).
 
 ## Where the content lives
 
-The content of this version is kept in the private repository `asb-skills-astronomy`. Its public copy is the Zenodo record named above. This registry holds the tooling and the release records, not the content.
+The content of this version is kept in the public repository `asb-skills-astronomy`. Its archive is the Zenodo record named above. This registry holds the tooling and the release records, not the content.
 
 ## Earlier releases of this major
 

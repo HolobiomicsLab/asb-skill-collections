@@ -2,7 +2,7 @@
 
 Instructions for coding and research agents to install and use the ASB skill
 collections. The registry `collections.yaml` lists the released collections of
-ten domains; each is released from a private domain repository
+ten domains; each is released from a domain repository
 `asb-skills-<domain>`. The worked examples use metabolomics v3: 11,830 skills
 over 1,989 tools, released as `metabolomics-v3.0.2` in `asb-skills-metabolomics`.
 This master repository holds the tooling, governance, documentation and release
@@ -40,8 +40,8 @@ registry, not the released content.
 
 Other released domains install the same way under their domain name, for
 example `/plugin install genomics@asb-skill-collections`. Each marketplace entry
-points at its private domain repository; installation needs read access to that
-repository. The nine
+points at its domain repository, which is public; installation needs no read
+access. The nine
 domains released on 2026-11-09 were installed this way on 2026-11-10; the
 `metabolomics` entry was last installed before its source moved to the domain
 repository (routes and dates: [`docs/STATUS.md`](docs/STATUS.md)).
@@ -62,8 +62,8 @@ codex plugin marketplace add HolobiomicsLab/asb-skill-collections
 codex plugin add metabolomics@asb-skill-collections
 ```
 
-The same marketplace serves Codex, under the same domain names and with the
-same read access to the private domain repository.
+The same marketplace serves Codex, under the same domain names, from the same
+public domain repository.
 
 ### Fetch chosen leaves with `asbb`
 
@@ -72,8 +72,8 @@ asbb fetch <slugs> --collection metabolomics/v3 --dest <directory>
 ```
 
 `asbb fetch` reads `collections.yaml` and downloads leaves from the domain
-repository at the pinned commit. Set `GITHUB_TOKEN` while that repository is
-private.
+repository at the pinned commit. `GITHUB_TOKEN` is optional; when set, it is
+sent with every request.
 
 ### Install a selection from a domain checkout
 
@@ -86,8 +86,8 @@ A selection installed this way ships the grounding binder in its own `bin/`.
 
 ### Zenodo archive and direct consumption
 
-Readers without access to the domain repositories use the release archives.
-The complete metabolomics v3 release (`metabolomics-v3.0.2`) is at
+The release archives are the other route to a collection, next to the domain
+repositories. The complete metabolomics v3 release (`metabolomics-v3.0.2`) is at
 [10.5281/zenodo.24122117](https://doi.org/10.5281/zenodo.24122117); the earlier
 v3 deposits are [10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587) (v3.0.1) and
 [10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446) (v3.0.0), and v2 is at
@@ -218,7 +218,7 @@ all rights reserved until checked. See
   release receipts are in the domain repository under `receipts/<cut-id>/`,
   not inside the collection.
 - [`collections.yaml`](collections.yaml) is the release registry. It records
-  the releases of ten domains, each in its private repository
+  the releases of ten domains, each in its repository
   `asb-skills-<domain>`, and the legacy v1 trees of metabolomics, epigenomics
   and transcriptomics.
 
@@ -244,7 +244,7 @@ collection ships it. For routes 1 and 2 only,
 helper redacts and prints a prefilled address, and none posts. With `gh`
 and the user's yes, file with
 `gh issue create --repo HolobiomicsLab/asb-skill-collections`; otherwise give the
-user the address. Every route lands on the public registry's issue tracker: the
-domain repositories are private, and a maintainer carries each report into them.
+user the address. Every route lands on the public registry's issue tracker, and a
+maintainer carries each report into the domain repository.
 Routes, templates and triage: [`.github/CONTRIBUTING.md`](.github/CONTRIBUTING.md)
 and [`docs/CONTRIBUTION_LOOP.md`](docs/CONTRIBUTION_LOOP.md).

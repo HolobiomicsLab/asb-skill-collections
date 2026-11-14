@@ -9,7 +9,7 @@
  * No backend. No build step. lunr is served from docs-site/vendor/ (see search.html).
  * Result links stay on this site: a skill, workflow or tool of a released
  * collection opens the Browse page filtered to it, a paper opens paper.html.
- * The SKILL.md files are in private domain repositories and are never linked.
+ * The SKILL.md files are in the domain repositories and are never linked.
  */
 
 const INDEX_BASE = "./search_index/";
