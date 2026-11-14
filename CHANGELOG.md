@@ -240,6 +240,7 @@ This repository records two release surfaces, each noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- Marketplace sources are written with the https clone address (`https://github.com/<owner>/<repo>.git`) and `scripts/sync_marketplace.py` checks and writes it. A plugin whose `git-subdir` source named an `owner/repo` shorthand was cloned over SSH only, so installing a collection failed for anyone without a GitHub SSH key (checked with Claude Code 2.1, SSH disabled: the marketplace is added over https, the plugin clone failed; with the full address it installs).
 - The capsule screen now redacts a telephone or fax number whose label is in brackets
   (`(Tel) 886-2-12345679`, `(Fax) 886-2-12345678`, the address line of an article): the labelled-number expression
   stopped at the closing bracket, and the number, in the Taiwanese grouping with a one-digit area code, matches no

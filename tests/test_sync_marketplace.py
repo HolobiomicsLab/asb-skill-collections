@@ -19,6 +19,7 @@ spec.loader.exec_module(sm)
 SHA_A = "a" * 40
 SHA_B = "b" * 40
 SHA_C = "c" * 40
+GH = "https://github.com/"  # the clone address of a marketplace source (an owner/repo shorthand is cloned over SSH only)
 
 
 def registry(**overrides):
@@ -56,11 +57,11 @@ def entry(name, url, path, sha, version, description="Existing description."):
 
 def marketplace(with_proteomics=False, sha=SHA_A, version="3.0.0"):
     plugins = [
-        entry("metabolomics", "Org/asb-skills-metabolomics", "collections/metabolomics/v3", sha, version),
-        entry("metabolomics-nmr", "Org/asb-skills-metabolomics", "packs/metabolomics/nmr", SHA_C, "0.1.0"),
+        entry("metabolomics", GH + "Org/asb-skills-metabolomics.git", "collections/metabolomics/v3", sha, version),
+        entry("metabolomics-nmr", GH + "Org/asb-skills-metabolomics.git", "packs/metabolomics/nmr", SHA_C, "0.1.0"),
     ]
     if with_proteomics:
-        plugins.append(entry("proteomics", "Org/asb-skills-proteomics", "collections/proteomics/v1", SHA_B, "1.0.0"))
+        plugins.append(entry("proteomics", GH + "Org/asb-skills-proteomics.git", "collections/proteomics/v1", SHA_B, "1.0.0"))
     return {"name": "m", "description": "d", "owner": {"name": "o"}, "plugins": plugins}
 
 
@@ -118,7 +119,7 @@ def test_pack_with_different_sha_never_fails(files):
 def test_older_release_path_is_not_governed(files, capsys):
     market = marketplace()
     market["plugins"].append(
-        entry("old", "Org/asb-skills-metabolomics", "collections/metabolomics/v2", SHA_C, "0.0.1")
+        entry("old", GH + "Org/asb-skills-metabolomics.git", "collections/metabolomics/v2", SHA_C, "0.0.1")
     )
     args, _, _ = files(market)
     assert sm.main(["--check", *args]) == 0
@@ -147,7 +148,7 @@ def test_write_adds_entry_with_description_option(files):
     data = json.loads(m.read_text(encoding="utf-8"))
     added = data["plugins"][-1]
     assert added == entry(
-        "proteomics", "Org/asb-skills-proteomics", "collections/proteomics/v1", SHA_B, "1.0.0",
+        "proteomics", GH + "Org/asb-skills-proteomics.git", "collections/proteomics/v1", SHA_B, "1.0.0",
         "ASB Proteomics: test.",
     ) | {"keywords": ["proteomics", "agentic-science", "skills"]}
     assert sm.main(["--check", "--require-all", *args]) == 0
@@ -221,3 +222,31 @@ def test_committed_marketplace_round_trips_byte_identically():
     path = ROOT / ".claude-plugin" / "marketplace.json"
     text = path.read_text(encoding="utf-8")
     assert sm.dump(json.loads(text)) == text
+
+
+def test_shorthand_source_is_a_disagreement_and_write_makes_it_https(files, capsys):
+    market = marketplace()
+    market["plugins"][0]["source"]["url"] = "Org/asb-skills-metabolomics"
+    market["plugins"][1]["source"]["url"] = "Org/asb-skills-metabolomics"
+    args, path, _ = files(market)
+    assert sm.main(["--check", *args]) == 1
+    assert "is not the https clone address" in capsys.readouterr().out
+    assert sm.main(["--write", "--existing-only", *args]) == 0
+    written = json.loads(path.read_text(encoding="utf-8"))
+    assert [p["source"]["url"] for p in written["plugins"]] == [GH + "Org/asb-skills-metabolomics.git"] * 2
+    assert sm.main(["--check", *args]) == 0
+
+
+def test_new_entry_uses_the_https_clone_address():
+    release = {"slug": "proteomics", "repository": "Org/asb-skills-proteomics", "path": "collections/proteomics/v1",
+               "tag": "proteomics-v1.0.0", "commit": SHA_B}
+    assert sm.new_entry(release, "d")["source"]["url"] == GH + "Org/asb-skills-proteomics.git"
+
+
+@pytest.mark.parametrize("address", [
+    "Org/asb-skills-x", "https://github.com/Org/asb-skills-x", "https://github.com/Org/asb-skills-x.git",
+    "git@github.com:Org/asb-skills-x.git",
+])
+def test_repository_id_reads_every_spelling(address):
+    assert sm.repository_id(address) == "Org/asb-skills-x"
+    assert sm.source_url(address) == GH + "Org/asb-skills-x.git"
