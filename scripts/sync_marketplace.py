@@ -5,7 +5,8 @@ release. A marketplace plugin whose git-subdir source points at a registry
 domain repository and at the path of that domain's latest published release is
 "governed": its sha must equal the release commit and its version must equal
 the release label (the tag without the "<domain>-v" prefix). Other entries,
-such as technique packs, are never judged and never changed.
+such as technique packs, are never judged on sha or version. Every git-subdir
+source is written with the https clone address (see source_url).
 
 Exit codes: 0 clean, 1 a disagreement, 2 usage or unreadable input.
 """
@@ -27,6 +28,26 @@ DEFAULT_MANIFEST = ROOT / "collections.yaml"
 AUTHOR = {"name": "Holobiomics Lab", "url": "https://github.com/HolobiomicsLab"}
 REGISTRY_URL = "https://github.com/HolobiomicsLab/asb-skill-collections"
 LICENSE = "CC-BY-4.0"
+
+
+def repository_id(url: str) -> str:
+    """The `owner/repo` of a GitHub repository given as `owner/repo`, an https URL or an SSH address."""
+    text = url.strip()
+    for prefix in ("https://github.com/", "http://github.com/", "ssh://git@github.com/", "git@github.com:"):
+        if text.startswith(prefix):
+            text = text[len(prefix):]
+            break
+    return text.removesuffix(".git").strip("/")
+
+
+def source_url(repository: str) -> str:
+    """The clone address of a marketplace source.
+
+    An `owner/repo` shorthand is cloned over SSH only, which fails for anyone without a GitHub SSH
+    key (checked with Claude Code 2.1: marketplace add falls back to https, the plugin clone does not).
+    The https address works anonymously on a public repository.
+    """
+    return f"https://github.com/{repository_id(repository)}.git"
 
 
 class InputError(Exception):
@@ -86,7 +107,10 @@ def governing(plugin: dict, latest: dict[str, dict]) -> dict | None:
     if not isinstance(source, dict) or source.get("source") != "git-subdir":
         return None
     for release in latest.values():
-        if source.get("url") == release["repository"] and source.get("path") == release["path"]:
+        url = source.get("url")
+        if (isinstance(url, str) and release["repository"]
+                and repository_id(url) == repository_id(release["repository"])
+                and source.get("path") == release["path"]):
             return release
     return None
 
@@ -99,6 +123,12 @@ def compare(marketplace: dict, latest: dict[str, dict], require_all: bool):
     for plugin in marketplace["plugins"]:
         name = plugin.get("name", "?")
         release = governing(plugin, latest)
+        source = plugin.get("source")
+        if isinstance(source, dict) and source.get("source") == "git-subdir" and isinstance(source.get("url"), str):
+            if source["url"] != source_url(source["url"]):
+                failed = True
+                lines.append(f"{name}: DISAGREES, source url {source['url']!r} is not the https clone address "
+                             f"{source_url(source['url'])!r}")
         if release is None:
             lines.append(f"{name}: not governed by the registry")
             continue
@@ -164,7 +194,7 @@ def new_entry(release: dict, description: str) -> dict[str, Any]:
         "name": slug,
         "source": {
             "source": "git-subdir",
-            "url": release["repository"],
+            "url": source_url(release["repository"]),
             "path": release["path"],
             "ref": "main",
             "sha": release["commit"],
@@ -187,6 +217,9 @@ def apply_write(marketplace, latest, texts, checkouts, existing_only=False):
     notes: list[str] = []
     seen: set[str] = set()
     for plugin in marketplace["plugins"]:
+        source = plugin.get("source")
+        if isinstance(source, dict) and source.get("source") == "git-subdir" and isinstance(source.get("url"), str):
+            source["url"] = source_url(source["url"])
         release = governing(plugin, latest)
         if release is None:
             continue

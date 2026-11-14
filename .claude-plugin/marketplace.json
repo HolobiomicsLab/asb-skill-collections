@@ -11,7 +11,7 @@
       "name": "metabolomics",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metabolomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metabolomics.git",
         "path": "collections/metabolomics/v3",
         "ref": "main",
         "sha": "2e18fc03570be2538c86ea953cc15522cf6c726f"
@@ -39,7 +39,7 @@
       "name": "metabolomics-ce-ms",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metabolomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metabolomics.git",
         "path": "packs/metabolomics/ce-ms",
         "ref": "main",
         "sha": "a415c366c03d7fb68eecafb2df611323910e9129"
@@ -63,7 +63,7 @@
       "name": "metabolomics-direct-infusion",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metabolomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metabolomics.git",
         "path": "packs/metabolomics/direct-infusion",
         "ref": "main",
         "sha": "a415c366c03d7fb68eecafb2df611323910e9129"
@@ -87,7 +87,7 @@
       "name": "metabolomics-gc-ms",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metabolomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metabolomics.git",
         "path": "packs/metabolomics/gc-ms",
         "ref": "main",
         "sha": "a415c366c03d7fb68eecafb2df611323910e9129"
@@ -111,7 +111,7 @@
       "name": "metabolomics-ion-mobility",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metabolomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metabolomics.git",
         "path": "packs/metabolomics/ion-mobility",
         "ref": "main",
         "sha": "a415c366c03d7fb68eecafb2df611323910e9129"
@@ -135,7 +135,7 @@
       "name": "metabolomics-lc-ms",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metabolomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metabolomics.git",
         "path": "packs/metabolomics/lc-ms",
         "ref": "main",
         "sha": "a415c366c03d7fb68eecafb2df611323910e9129"
@@ -159,7 +159,7 @@
       "name": "metabolomics-ms-generic",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metabolomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metabolomics.git",
         "path": "packs/metabolomics/ms-generic",
         "ref": "main",
         "sha": "a415c366c03d7fb68eecafb2df611323910e9129"
@@ -183,7 +183,7 @@
       "name": "metabolomics-ms-imaging",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metabolomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metabolomics.git",
         "path": "packs/metabolomics/ms-imaging",
         "ref": "main",
         "sha": "a415c366c03d7fb68eecafb2df611323910e9129"
@@ -207,7 +207,7 @@
       "name": "metabolomics-nmr",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metabolomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metabolomics.git",
         "path": "packs/metabolomics/nmr",
         "ref": "main",
         "sha": "a415c366c03d7fb68eecafb2df611323910e9129"
@@ -231,7 +231,7 @@
       "name": "epigenomics",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-epigenomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-epigenomics.git",
         "path": "collections/epigenomics/v2",
         "ref": "main",
         "sha": "6bd2c2ac8469fbee0b0e1947a011808c005f8ca6"
@@ -255,7 +255,7 @@
       "name": "transcriptomics",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-transcriptomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-transcriptomics.git",
         "path": "collections/transcriptomics/v2",
         "ref": "main",
         "sha": "376cec1aa0fe229906f8b5feddd3ed2957aeaa04"
@@ -279,7 +279,7 @@
       "name": "proteomics",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-proteomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-proteomics.git",
         "path": "collections/proteomics/v1",
         "ref": "main",
         "sha": "74acd4b064e2cf78950ef69d21c418ac3de3962f"
@@ -303,7 +303,7 @@
       "name": "genomics",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-genomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-genomics.git",
         "path": "collections/genomics/v1",
         "ref": "main",
         "sha": "ecb4600de771570d5551d0db40b15b67eb1e9a7e"
@@ -327,7 +327,7 @@
       "name": "metagenomics",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metagenomics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metagenomics.git",
         "path": "collections/metagenomics/v1",
         "ref": "main",
         "sha": "753b0268288cebf077c97e627c4ab32b167a95b4"
@@ -351,7 +351,7 @@
       "name": "metabarcoding",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-metabarcoding",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-metabarcoding.git",
         "path": "collections/metabarcoding/v1",
         "ref": "main",
         "sha": "31778695bfb16089141b59538788a4d278d4e5d8"
@@ -375,7 +375,7 @@
       "name": "multi-omics",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-multi-omics",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-multi-omics.git",
         "path": "collections/multi-omics/v1",
         "ref": "main",
         "sha": "4a7edac40c08a3219e68fe2d8debcc0751fd1aea"
@@ -399,7 +399,7 @@
       "name": "astronomy",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-astronomy",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-astronomy.git",
         "path": "collections/astronomy/v1",
         "ref": "main",
         "sha": "b83d6a1558b28865552cd757666138e9ca7025de"
@@ -423,7 +423,7 @@
       "name": "agentic-ai",
       "source": {
         "source": "git-subdir",
-        "url": "HolobiomicsLab/asb-skills-agentic-ai",
+        "url": "https://github.com/HolobiomicsLab/asb-skills-agentic-ai.git",
         "path": "collections/agentic-ai/v1",
         "ref": "main",
         "sha": "0bbd43c258e8f8a7259e97e0a2607b1be0f9b6fa"

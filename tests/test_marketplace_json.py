@@ -12,7 +12,8 @@ import pytest
 ROOT = pathlib.Path(__file__).parent.parent
 FIXTURE = ROOT / "tests" / "fixtures" / "marketplace_fixture.json"
 SHA = re.compile(r"^[0-9a-f]{40}$")
-REPOSITORY = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
+# The https clone address: an owner/repo shorthand is cloned over SSH only and fails without a GitHub key.
+REPOSITORY = re.compile(r"^https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\.git$")
 
 
 def _source_is_valid(source, root: pathlib.Path) -> bool:
