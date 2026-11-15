@@ -112,6 +112,18 @@ The same holds for Codex: no read access is needed. The Zenodo record of the
 release (version DOIs in the [Releases](#releases) table) is the archive route;
 read it as described in [AGENTS.md](AGENTS.md).
 
+**OpenCode and Mistral Vibe** have no marketplace route; the managed install
+serves them, each exercised once on 2026-11-16 ([docs/STATUS.md](docs/STATUS.md)):
+
+```bash
+asbb install --repo <domain checkout> <unit> --runtime agents           # OpenCode reads ~/.agents/skills
+asbb install --repo <domain checkout> <unit> --dest "${VIBE_HOME:-$HOME/.vibe}/skills"  # Mistral Vibe
+```
+
+OpenCode registers every `SKILL.md` below an installed unit as a skill. Hide
+them and keep the routers with
+`"permission": {"skill": {"*": "deny", "*-router": "allow"}}` in `opencode.json`.
+
 **Install `asbb` from this public registry checkout** (it is not published on
 PyPI):
 
@@ -170,7 +182,11 @@ size is claimed here.
 | a selection, `asbb install --repo <domain checkout> --skills a,b,c --collection metabolomics/v2 --runtime agents` | chosen slugs | 10 in the example | 188 KiB |
 | a fetch, `asbb fetch a,b --collection metabolomics/v2 --dest DIR` | chosen slugs | 10 in the example | 112 KiB |
 
-The eight packs install by name with `/plugin install <name>@asb-skill-collections`.
+The eight packs install by name with `/plugin install <name>@asb-skill-collections`
+(installed on 2026-11-16 with Claude Code and with Codex CLI). Their routers
+still print `python bin/search_skills.py`, relative to the pack root: run
+`python3 "<pack root>/bin/search_skills.py"` instead, as in
+[Use](#use-search-apply-ground).
 Their sizes are `du -sk` of the v2 units measured before the domain split. The
 selection and fetch rows are the 10-skill example of
 [docs/partial-install.md](docs/partial-install.md#sizes), and a fetch also
@@ -409,7 +425,7 @@ carries them into the domain repository.
 
 - Step 2 of the per-domain split is complete: this master is the registry and tooling repository; released content is in the domain repositories.
 - The marketplace installs were measured again on 2026-11-15 on the ten current releases; the managed-install measurements predate the new marketplace sources. See [docs/STATUS.md](docs/STATUS.md) for their scope and dates.
-- Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI and the dataset mirror. The build-capsules records are deposited on Zenodo, one per domain (DOIs in the collections table and under `capsules` in `collections.yaml`). The evaluation material is definitions only: no validated benchmark, reference results or agent-performance leaderboard exists. The [documentation site](https://holobiomicslab.github.io/asb-skill-collections/) is live.
+- Pending or experimental: the eight packs (they install; their routers print the older search command), the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI and the dataset mirror. The build-capsules records are deposited on Zenodo, one per domain (DOIs in the collections table and under `capsules` in `collections.yaml`). The evaluation material is definitions only: no validated benchmark, reference results or agent-performance leaderboard exists. The [documentation site](https://holobiomicslab.github.io/asb-skill-collections/) is live.
 - The `w3id.org/holobiomicslab/` and `w3id.org/asb` identifiers resolve. Dates, measurements and detail per surface: [docs/STATUS.md](docs/STATUS.md).
 
 ## Acknowledgements
