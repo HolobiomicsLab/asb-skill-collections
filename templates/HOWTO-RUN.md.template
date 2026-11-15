@@ -58,8 +58,7 @@ See `benchmark/claims/HOWTO-EVAL.md` for metric definitions (MRR, NDCG, recall@k
    https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=submit-agent-result.md
 4. A maintainer will review your PR and merge it to `benchmark/leaderboard.jsonld`.
 
-Your result will appear on the live HuggingFace Space leaderboard:
-https://huggingface.co/spaces/HolobiomicsLab/asb-{{COLLECTION_SLUG}}-v{{COLLECTION_VERSION}}-leaderboard
+No leaderboard is published yet. When one exists, the registry README names it.
 
 ## 5. Cite
 

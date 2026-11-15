@@ -82,7 +82,8 @@ The tooling command never commits or publishes content.
    populated EDAM fields in `tools_index.json`. Other file bytes are preserved.
 4. Update the prose counts in `USAGE.md` by hand from `top_five` in the receipt.
 5. Regenerate the release receipt through the release procedure. Switch the
-   domain EDAM gate to `--edam-strict` after v3.0.1 has landed.
+   domain EDAM gate to `--edam-strict` once the collection resolves cleanly
+   (metabolomics does from v3.0.1).
 
 ```bash
 python scripts/remap_edam.py \

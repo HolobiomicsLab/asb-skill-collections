@@ -32,7 +32,7 @@ No contributor self-merges; CI checks structure; a maintainer judges fit.
 
 1. **Open submission.** Anyone may propose a skill. The contributor runs the
    `propose-skill` command
-   (`collections/metabolomics/v2/commands/propose-skill.md` in the private repository
+   (`collections/metabolomics/v2/commands/propose-skill.md` in the repository
    `asb-skills-metabolomics`; the v3 collection ships no `commands/` directory),
    which normalizes the local skill, matches it against the collection to suggest
    `related_skills` + `tools_used`, warns about near-duplicates, best-effort grounds

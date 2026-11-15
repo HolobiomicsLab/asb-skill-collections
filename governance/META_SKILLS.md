@@ -50,7 +50,7 @@ sub-skills by their actual slug; it never fabricates stages, slugs, tools, or DO
 
 - **`synthetic`** — *auto-derived from other skills.* A super-skill synthesized by
   the `synthesize-meta-skill` command
-  (`collections/metabolomics/v2/commands/synthesize-meta-skill.md` in the private repository
+  (`collections/metabolomics/v2/commands/synthesize-meta-skill.md` in the repository
   `asb-skills-metabolomics`; the v3 collection ships no `commands/` directory) lands here: the clustering + frontmatter assembly + staging are
   deterministic (`scripts/synthesize_meta_skill.py`), the identify-the-pipeline and
   body-writing are agentic. Invariant: `metadata.synthesized_from` non-empty.

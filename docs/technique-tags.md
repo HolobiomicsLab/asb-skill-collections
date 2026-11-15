@@ -52,5 +52,5 @@ collection content and regenerate its receipt through the release process. The
 tagger does not commit, publish, or modify release records itself.
 
 The related `scripts/domain_content_gates.py` EDAM check is advisory for
-vocabulary resolution by default; pass `--edam-strict` after metabolomics
-v3.0.1 lands. See `docs/edam-remap.md`.
+vocabulary resolution by default; pass `--edam-strict` once the collection
+resolves cleanly, as metabolomics does from v3.0.1. See `docs/edam-remap.md`.

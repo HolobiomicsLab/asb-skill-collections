@@ -19,7 +19,7 @@ call them private were written while they were.
 - The ten domain repositories `asb-skills-<domain>` are public. The marketplace entries use `https://` sources, so
   `/plugin install` needs no SSH key.
 
-## Current state on 2026-11-11
+## State on 2026-11-11 (superseded by the update of 2026-11-14)
 
 - Ten collections are published: `v1.0.1` for seven v1 domains, `v2.0.1` for
   epigenomics and transcriptomics, and `v3.0.2` for metabolomics. Their version
