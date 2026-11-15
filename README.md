@@ -224,7 +224,8 @@ between "the skill says about 5 ppm" and "the paper specifies 5 ppm"), ground th
 skill against its source paper. Grounding is optional. Every released collection
 ships the grounding map `kb_bundle.json`; the binder is
 [`scripts/perspicacite_kb_bind.py`](scripts/perspicacite_kb_bind.py) in this
-repository, and a selection built with `asbb install` carries a copy. It uses
+repository; the Zenodo archive of a collection carries a copy under `scripts/`,
+and a selection built with `asbb install` carries one. It uses
 [Perspicacité](https://github.com/HolobiomicsLab/Perspicacite-AI),
 Holobiomics Lab's local-first literature RAG engine, with two backends:
 
@@ -260,8 +261,9 @@ Full guide: `<domain checkout>/collections/metabolomics/v3/USAGE.md`, section 5.
 | `CITATION.cff` | citation |
 
 These files are relative to `<domain checkout>/collections/metabolomics/v3/`;
-the other released collections have the same layout. No released collection
-ships the grounding binder or a `commands/` directory. The release-gate report
+the other released collections have the same layout. No collection tree
+ships the grounding binder or a `commands/` directory; the Zenodo archive adds
+the binder under `scripts/`. The release-gate report
 and the other receipts are in the domain repository under `receipts/<cut-id>/`.
 
 Local build-capsule archives and record metadata are packed and screened by
