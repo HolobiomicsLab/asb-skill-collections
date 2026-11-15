@@ -168,6 +168,9 @@ This repository records two release surfaces, each noted per release:
   byte-identical.
 
 ### Changed
+- The README and `docs/STATUS.md` report the install checks of 2026-11-16: the eight metabolomics technique packs
+  with Claude Code and Codex CLI, and the managed install under OpenCode 1.19.5 and Mistral Vibe 3.1.2, with the
+  OpenCode setting that keeps only the routers visible.
 - The install statements of the README, `AGENTS.md`, `CLAUDE.md` and `docs/STATUS.md` now report the marketplace
   install of the ten current releases, measured on 2026-11-15 with Claude Code 2.1.325 and Codex CLI 0.154.0:
   twenty installs, each equal to its registered commit file for file, with the tree digest of `collections.yaml`.
