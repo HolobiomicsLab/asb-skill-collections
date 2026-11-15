@@ -288,8 +288,8 @@ import hashlib
 import re
 import urllib.parse
 
-# The public registry. The domain repositories are private, so every route lands
-# here and a maintainer carries the report into the domain repository.
+# The public registry. Every route lands here and a maintainer carries the report
+# into the domain repository.
 REGISTRY = "HolobiomicsLab/asb-skill-collections"
 ISSUES_URL = f"https://github.com/{REGISTRY}/issues"
 
