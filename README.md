@@ -113,16 +113,18 @@ release (version DOIs in the [Releases](#releases) table) is the archive route;
 read it as described in [AGENTS.md](AGENTS.md).
 
 **OpenCode and Mistral Vibe** have no marketplace route; the managed install
-serves them, each exercised once on 2026-11-16 ([docs/STATUS.md](docs/STATUS.md)):
+serves them ([docs/STATUS.md](docs/STATUS.md)):
 
 ```bash
-asbb install --repo <domain checkout> <unit> --runtime agents           # OpenCode reads ~/.agents/skills
-asbb install --repo <domain checkout> <unit> --dest "${VIBE_HOME:-$HOME/.vibe}/skills"  # Mistral Vibe
+asbb install --repo <domain checkout> <unit> --runtime opencode   # ~/.config/opencode/skills
+asbb install --repo <domain checkout> <unit> --runtime vibe       # ~/.vibe/skills
 ```
 
-OpenCode registers every `SKILL.md` below an installed unit as a skill. Hide
-them and keep the routers with
-`"permission": {"skill": {"*": "deny", "*-router": "allow"}}` in `opencode.json`.
+Each host then lists the router only. OpenCode asks before it reads a file
+outside the project; the command prints the `external_directory` permission
+that lets it read the installed skills without a prompt. Do not use
+`--runtime agents` for OpenCode: in `~/.agents/skills` it registers every leaf
+as a skill.
 
 **Install `asbb` from this public registry checkout** (it is not published on
 PyPI):

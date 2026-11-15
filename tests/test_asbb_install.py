@@ -143,7 +143,7 @@ def test_rules_render_carries_description_and_body():
 def test_list_runtimes_lists_all_ids():
     from asb_skill_collections.asbb.targets import list_runtimes
     text = list_runtimes()
-    for rid in ("agents", "codex", "copilot", "gemini", "claude",
+    for rid in ("agents", "codex", "copilot", "gemini", "opencode", "vibe", "claude",
                 "cursor", "cline", "vscode-copilot"):
         assert rid in text
 
