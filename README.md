@@ -40,16 +40,16 @@ collection. This repository holds the tooling and the registry.
 
 | Domain | Release | Skills | Tools | Workflows | Papers | Version DOI |
 |---|---|---:|---:|---:|---:|---|
-| metabolomics | `metabolomics-v3.1.1` | 11,830 | 1,989 | 20 | 477 | [10.5281/zenodo.24255500](https://doi.org/10.5281/zenodo.24255500) |
-| agentic-ai | `agentic-ai-v1.1.1` | 668 | 215 | 2 | 29 | [10.5281/zenodo.24255476](https://doi.org/10.5281/zenodo.24255476) |
-| astronomy | `astronomy-v1.1.1` | 1,671 | 415 | 2 | 100 | [10.5281/zenodo.24255473](https://doi.org/10.5281/zenodo.24255473) |
-| epigenomics | `epigenomics-v2.1.1` | 2,295 | 532 | 2 | 92 | [10.5281/zenodo.24255488](https://doi.org/10.5281/zenodo.24255488) |
-| genomics | `genomics-v1.1.1` | 3,246 | 867 | 2 | 137 | [10.5281/zenodo.24255457](https://doi.org/10.5281/zenodo.24255457) |
-| metabarcoding | `metabarcoding-v1.1.1` | 803 | 203 | 2 | 29 | [10.5281/zenodo.24255467](https://doi.org/10.5281/zenodo.24255467) |
-| metagenomics | `metagenomics-v1.1.1` | 2,754 | 717 | 2 | 117 | [10.5281/zenodo.24255462](https://doi.org/10.5281/zenodo.24255462) |
-| multi-omics | `multi-omics-v1.1.1` | 787 | 211 | 2 | 29 | [10.5281/zenodo.24255470](https://doi.org/10.5281/zenodo.24255470) |
-| proteomics | `proteomics-v1.1.1` | 558 | 163 | 2 | 28 | [10.5281/zenodo.24255450](https://doi.org/10.5281/zenodo.24255450) |
-| transcriptomics | `transcriptomics-v2.1.1` | 11,256 | 2,086 | 2 | 450 | [10.5281/zenodo.24255483](https://doi.org/10.5281/zenodo.24255483) |
+| metabolomics | `metabolomics-v3.1.1` | 11,830 | 1,989 | 20 | 477 | [10.5281/zenodo.24255500](https://doi.org/10.5281/zenodo.24255500) (build capsules: [10.5281/zenodo.24261776](https://doi.org/10.5281/zenodo.24261776)) |
+| agentic-ai | `agentic-ai-v1.1.1` | 668 | 215 | 2 | 29 | [10.5281/zenodo.24255476](https://doi.org/10.5281/zenodo.24255476) (build capsules: [10.5281/zenodo.24261734](https://doi.org/10.5281/zenodo.24261734)) |
+| astronomy | `astronomy-v1.1.1` | 1,671 | 415 | 2 | 100 | [10.5281/zenodo.24255473](https://doi.org/10.5281/zenodo.24255473) (build capsules: [10.5281/zenodo.24261817](https://doi.org/10.5281/zenodo.24261817)) |
+| epigenomics | `epigenomics-v2.1.1` | 2,295 | 532 | 2 | 92 | [10.5281/zenodo.24255488](https://doi.org/10.5281/zenodo.24255488) (build capsules: [10.5281/zenodo.24261763](https://doi.org/10.5281/zenodo.24261763)) |
+| genomics | `genomics-v1.1.1` | 3,246 | 867 | 2 | 137 | [10.5281/zenodo.24255457](https://doi.org/10.5281/zenodo.24255457) (build capsules: [10.5281/zenodo.24261677](https://doi.org/10.5281/zenodo.24261677)) |
+| metabarcoding | `metabarcoding-v1.1.1` | 803 | 203 | 2 | 29 | [10.5281/zenodo.24255467](https://doi.org/10.5281/zenodo.24255467) (build capsules: [10.5281/zenodo.24261708](https://doi.org/10.5281/zenodo.24261708)) |
+| metagenomics | `metagenomics-v1.1.1` | 2,754 | 717 | 2 | 117 | [10.5281/zenodo.24255462](https://doi.org/10.5281/zenodo.24255462) (build capsules: [10.5281/zenodo.24261697](https://doi.org/10.5281/zenodo.24261697)) |
+| multi-omics | `multi-omics-v1.1.1` | 787 | 211 | 2 | 29 | [10.5281/zenodo.24255470](https://doi.org/10.5281/zenodo.24255470) (build capsules: [10.5281/zenodo.24261710](https://doi.org/10.5281/zenodo.24261710)) |
+| proteomics | `proteomics-v1.1.1` | 558 | 163 | 2 | 28 | [10.5281/zenodo.24255450](https://doi.org/10.5281/zenodo.24255450) (build capsules: [10.5281/zenodo.24261664](https://doi.org/10.5281/zenodo.24261664)) |
+| transcriptomics | `transcriptomics-v2.1.1` | 11,256 | 2,086 | 2 | 450 | [10.5281/zenodo.24255483](https://doi.org/10.5281/zenodo.24255483) (build capsules: [10.5281/zenodo.24261744](https://doi.org/10.5281/zenodo.24261744)) |
 
 The concept DOI of each domain is in [`collections.yaml`](collections.yaml). The
 rest of this file uses metabolomics v3 as its worked example; `asbb fetch` and
@@ -75,8 +75,8 @@ collection and the v2-derived technique packs from that domain repository.
 | ASB-Skills | evidence-grounded procedural skills | released |
 | ASB-Workflows | composite end-to-end pipeline super-skills | released |
 | ASB-Tools | deduplicated software-tool records with EDAM terms and DOIs | released |
-| ASB-Evaluation definitions | definitions for per-paper tasks and claim-retrieval tests | not published; definitions only, with no validated benchmark, reference results or agent-performance leaderboard |
-| ASB-Capsules | raw per-paper pipeline outputs, for full traceability | later |
+| ASB-Evaluation definitions | definitions for per-paper tasks and claim-retrieval tests | deposited with the build capsules; definitions only, with no validated benchmark, reference results or agent-performance leaderboard |
+| ASB-Capsules | screened per-paper build outputs, for full traceability | deposited on Zenodo on 2026-11-15, one record per domain (DOIs in the table above) |
 
 <p align="center">
   <img src="assets/asb-overview.png" alt="ASB pipeline from research papers to skills, tools and planned evaluation definitions, with a feedback loop defined by the domain community" width="640">
@@ -409,7 +409,7 @@ carries them into the domain repository.
 
 - Step 2 of the per-domain split is complete: this master is the registry and tooling repository; released content is in the domain repositories.
 - The managed-install and Claude Code measurements predate the new marketplace sources; see [docs/STATUS.md](docs/STATUS.md) for their scope and dates.
-- Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI, the dataset mirror or a capsule record. The evaluation material is definitions only: no validated benchmark, reference results or agent-performance leaderboard exists. The [documentation site](https://holobiomicslab.github.io/asb-skill-collections/) is live.
+- Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI and the dataset mirror. The build-capsules records are deposited on Zenodo, one per domain (DOIs in the collections table and under `capsules` in `collections.yaml`). The evaluation material is definitions only: no validated benchmark, reference results or agent-performance leaderboard exists. The [documentation site](https://holobiomicslab.github.io/asb-skill-collections/) is live.
 - The `w3id.org/holobiomicslab/` and `w3id.org/asb` identifiers resolve. Dates, measurements and detail per surface: [docs/STATUS.md](docs/STATUS.md).
 
 ## Acknowledgements

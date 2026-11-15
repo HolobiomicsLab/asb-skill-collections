@@ -18,6 +18,11 @@ call them private were written while they were.
   routers and the report script no longer call the domain repositories private, the ten deposit metadata files
   carry the same related identifiers, and the astronomy collection has one title. Skills, indexes and the search
   selector are unchanged. The `v1.1.0`, `v2.1.0` and `v3.1.0` rows are listed as superseded in `collections.yaml`.
+- The build-capsules records are published, one Zenodo record per domain (`10.5281/zenodo.24261664` to
+  `10.5281/zenodo.24261817`), each supplementing the collection version of 2026-11-15. Together they hold 1,393
+  builds and their capsules; 9 builds are left out. Their DOIs and counts are under `capsules` in
+  `collections.yaml`, and the card [`evaluation-definitions.md`](evaluation-definitions.md) is generated from their
+  descriptive files. The evaluation material is definitions only: no validation of it exists.
 
 ## Update on 2026-11-14
 
@@ -75,7 +80,7 @@ Two kinds of historical entry appear below.
 | PyPI | not published, by design in v0 | n/a |
 | Documentation site (GitHub Pages) | HTTP 200 for the site root and `search.html`; not enabled at the earlier measurement | recorded external check, 2026-11-10 |
 | HuggingFace mirror and leaderboard | planned, not yet live | n/a |
-| Benchmark and capsules | no validated benchmark or capsule record published; the capsules deposit path (`scripts/capsules_deposit.py`: `refresh`, `archive`, `plan`, `create`, `record-doi`) exists and was rehearsed offline | rehearsal 2026-11-11 |
+| Benchmark and capsules | no validated benchmark published; ten build-capsules records are deposited on Zenodo, one per domain (DOIs under `capsules` in `collections.yaml`), and hold evaluation definitions only | public records read 2026-11-15 |
 | `w3id.org/holobiomicslab/` IRIs | resolve; the fourteen collection identifiers land on the generated pages under `collections/<domain>/v<N>/` | collection identifiers measured 2026-11-11; earlier checks below |
 | `w3id.org/asb` and `w3id.org/asb/validation` | resolve | since 2026-10-29 |
 | Zenodo DOI | metabolomics concept DOI 10.5281/zenodo.20794026 with versions `metabolomics-v0.1.0` (2026-06-22, v2), `metabolomics-v3.0.0` and `metabolomics-v3.0.1` (both superseded) and `metabolomics-v3.0.2`; nine further domain records, each with its concept and version DOI in `collections.yaml` | 2026-06-22 deposit measured 2026-10-30; later records are registry rows of 2026-11-09 |
@@ -332,6 +337,9 @@ Measured 2026-10-30: nothing.
 Measured 2026-11-11: no capsules record exists. The deposit path,
 `scripts/capsules_deposit.py`, was rehearsed offline on 2026-11-11; the screen rewrites the URLs of private
 repositories to their bare names. The path is described in [`capsules-record.md`](capsules-record.md).
+
+Measured 2026-11-15: ten capsules records are public on Zenodo, one per domain, read through the public API;
+file names, sizes and md5 match the deposit plans. No benchmark is validated.
 
 ## w3id identifiers
 
