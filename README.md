@@ -96,9 +96,9 @@ collection and the v2-derived technique packs from that domain repository.
 The other released domains install the same way under their domain name, for
 example `/plugin install genomics@asb-skill-collections`. Each marketplace entry
 points at its domain repository, which is public, so installation needs no read
-access. The nine domains released on 2026-11-09 were installed this
-way on 2026-11-10, with Claude Code and with Codex CLI; the `metabolomics`
-entry was last installed before its source moved to the domain repository
+access. The ten current releases were installed this way on 2026-11-15, with
+Claude Code and with Codex CLI, the domain repositories cloned with no
+credentials; each installed tree equals its registered commit file for file
 ([docs/STATUS.md](docs/STATUS.md)).
 
 **Codex CLI** reads the same marketplace file:
@@ -408,7 +408,7 @@ carries them into the domain repository.
 ## Status
 
 - Step 2 of the per-domain split is complete: this master is the registry and tooling repository; released content is in the domain repositories.
-- The managed-install and Claude Code measurements predate the new marketplace sources; see [docs/STATUS.md](docs/STATUS.md) for their scope and dates.
+- The marketplace installs were measured again on 2026-11-15 on the ten current releases; the managed-install measurements predate the new marketplace sources. See [docs/STATUS.md](docs/STATUS.md) for their scope and dates.
 - Pending or experimental: the other seven packs, the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI and the dataset mirror. The build-capsules records are deposited on Zenodo, one per domain (DOIs in the collections table and under `capsules` in `collections.yaml`). The evaluation material is definitions only: no validated benchmark, reference results or agent-performance leaderboard exists. The [documentation site](https://holobiomicslab.github.io/asb-skill-collections/) is live.
 - The `w3id.org/holobiomicslab/` and `w3id.org/asb` identifiers resolve. Dates, measurements and detail per surface: [docs/STATUS.md](docs/STATUS.md).
 

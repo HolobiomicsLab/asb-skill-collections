@@ -23,6 +23,21 @@ call them private were written while they were.
   builds and their capsules; 9 builds are left out. Their DOIs and counts are under `capsules` in
   `collections.yaml`, and the card [`evaluation-definitions.md`](evaluation-definitions.md) is generated from their
   descriptive files. The evaluation material is definitions only: no validation of it exists.
+- Marketplace install of the ten current releases, measured the same day in isolated configuration directories,
+  the domain repositories cloned over HTTPS with no credential helper and no token: Claude Code 2.1.325 (`claude plugin marketplace add`, then
+  `claude plugin install <domain>@asb-skill-collections`) and Codex CLI 0.154.0 (`codex plugin marketplace add`,
+  then `codex plugin add <domain>@asb-skill-collections`), ten exit 0 each, 2 to 32 s per domain. For each of the
+  twenty installs: the same files as the registered commit, the same git blob id for every file, the tree digest
+  of `collections.yaml`, the plugin version of the marketplace entry, a skills index with the registered count,
+  and one search with the bundled `bin/search_skills.py` run from another directory (exit 0). Claude Code clones
+  the marketplace repository over SSH first and falls back to HTTPS when no SSH identity is offered (measured on
+  a second run, which installed astronomy). In a
+  session, the proteomics router was exercised on one task in each harness: Claude Code with the installed tree
+  loaded through `--plugin-dir`, Codex CLI on the marketplace install itself. Both ran the router's search command
+  and read the leaf it returned. Codex CLI does not expand `${CLAUDE_SKILL_DIR}`; the router's instruction to
+  substitute the absolute path was followed. With the ten plugins enabled, Codex CLI reports that it shortens
+  skill descriptions to fit its context budget. Not measured: the eight technique packs, OpenCode, and a session
+  on any domain other than proteomics.
 
 ## Update on 2026-11-14
 
@@ -73,6 +88,7 @@ Two kinds of historical entry appear below.
 | Checkout CLI (`asbb search`, `get`, `--list-collections`) | verified | 2026-09-13, shared-selector behaviour at `777671bc3` |
 | Claude Code, public GitHub marketplace transport | verified at CLI level, in-session load not exercised | measured 2026-10-30, Claude Code 2.1.304, `main` at `e80767838`; 358 MB on disk |
 | Per-technique packs | `metabolomics-lc-ms` verified at CLI level, in-session load not exercised; the other seven experimental, not installed | measured 2026-10-30, Claude Code 2.1.304 and `--runtime agents`; 29 MB |
+| Marketplace install of the ten current releases (`v1.1.1`, `v2.1.1`, `metabolomics-v3.1.1`) | verified at CLI level, the domain repositories cloned with no credentials, each installed tree equal to its registered commit file for file; in a session the proteomics router was exercised once per harness | measured 2026-11-15: Claude Code 2.1.325 and Codex CLI 0.154.0, ten exit 0 each; detail in the update of 2026-11-15 above |
 | Marketplace install of the nine initial domains released on 2026-11-09 | verified at CLI level with repository access; in a session the router was exercised on collections loaded with `--plugin-dir`, not on a marketplace install; these checks predate the current patch versions | measured 2026-11-10: Claude Code 2.1.319 (`claude plugin install <domain>@asb-skill-collections`, nine exit 0, installed commit equal to the then-current registry commit) and Codex CLI 0.154.0 (`codex plugin add <domain>@asb-skill-collections`, nine exit 0); the `metabolomics` entry at `metabolomics-v3.0.1` was not re-installed |
 | Web UI uploads | experimental, not verified end to end | not exercised |
 | Runtime adapters other than `agents` | experimental | not launched |

@@ -168,6 +168,9 @@ This repository records two release surfaces, each noted per release:
   byte-identical.
 
 ### Changed
+- The install statements of the README, `AGENTS.md`, `CLAUDE.md` and `docs/STATUS.md` now report the marketplace
+  install of the ten current releases, measured on 2026-11-15 with Claude Code 2.1.325 and Codex CLI 0.154.0:
+  twenty installs, each equal to its registered commit file for file, with the tree digest of `collections.yaml`.
 - The ten `asb-skills-<domain>` content repositories are public. The README, `AGENTS.md`, `CLAUDE.md`, the
   install, contribution and registry documents, the documentation site and the generated collection landing
   pages no longer call them private or ask for read access to install; the Zenodo archive and the
