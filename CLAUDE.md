@@ -41,8 +41,9 @@ Search, apply, ground. Full protocol in [`AGENTS.md`](AGENTS.md) and
   root with a `python` executable.
 - Ground a skill against its source with this repository's binder:
   `python3 scripts/perspicacite_kb_bind.py query --collection "<collection root>" --skill <slug> --question "..."`.
-  The map is `kb_bundle.json`; tiers are `paper`, `si` and `repo`. No released
-  collection ships the binder; selections built with `asbb install` carry a copy.
+  The map is `kb_bundle.json`; tiers are `paper`, `si` and `repo`. No collection
+  tree ships the binder; the Zenodo archive of a collection carries a copy under
+  `scripts/`, and a selection built with `asbb install` carries one in `bin/`.
 
 [`collections.yaml`](collections.yaml) is the release registry. It pins each
 domain repository, commit and tree digest, and the Zenodo DOIs of every
