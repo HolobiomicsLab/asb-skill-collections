@@ -6,10 +6,10 @@ The identifier `https://w3id.org/holobiomicslab/asb-skill/collection/proteomics/
 
 | State | Value |
 |---|---|
-| Release label | `v1.1.0` |
-| Version DOI | [10.5281/zenodo.24224624](https://doi.org/10.5281/zenodo.24224624) |
+| Release label | `v1.1.1` |
+| Version DOI | [10.5281/zenodo.24255450](https://doi.org/10.5281/zenodo.24255450) |
 | Concept DOI (all archived versions) | [10.5281/zenodo.24093113](https://doi.org/10.5281/zenodo.24093113) |
-| Release date | 2026-11-14 |
+| Release date | 2026-11-15 |
 | Skills | 558 |
 | Tools | 163 |
 | Workflows | 2 |
@@ -34,7 +34,7 @@ codex plugin add proteomics@asb-skill-collections
 
 The marketplace entry installs from the public domain repository, so these commands need no read access.
 
-The complete public archive is the Zenodo record [10.5281/zenodo.24224624](https://doi.org/10.5281/zenodo.24224624).
+The complete public archive is the Zenodo record [10.5281/zenodo.24255450](https://doi.org/10.5281/zenodo.24255450).
 
 ## Where the content lives
 
@@ -46,6 +46,7 @@ The content of this version is kept in the public repository `asb-skills-proteom
 |---|---|---|
 | `proteomics-v1.0.0` | [10.5281/zenodo.24093114](https://doi.org/10.5281/zenodo.24093114) | 2026-11-09 |
 | `proteomics-v1.0.1` | [10.5281/zenodo.24122102](https://doi.org/10.5281/zenodo.24122102) | 2026-11-10 |
+| `proteomics-v1.1.0` | [10.5281/zenodo.24224624](https://doi.org/10.5281/zenodo.24224624) | 2026-11-14 |
 
 ## Registry and contribution
 

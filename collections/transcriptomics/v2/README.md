@@ -6,10 +6,10 @@ The identifier `https://w3id.org/holobiomicslab/asb-skill/collection/transcripto
 
 | State | Value |
 |---|---|
-| Release label | `v2.1.0` |
-| Version DOI | [10.5281/zenodo.24224649](https://doi.org/10.5281/zenodo.24224649) |
+| Release label | `v2.1.1` |
+| Version DOI | [10.5281/zenodo.24255483](https://doi.org/10.5281/zenodo.24255483) |
 | Concept DOI (all archived versions) | [10.5281/zenodo.24093099](https://doi.org/10.5281/zenodo.24093099) |
-| Release date | 2026-11-14 |
+| Release date | 2026-11-15 |
 | Skills | 11,256 |
 | Tools | 2,086 |
 | Workflows | 2 |
@@ -34,7 +34,7 @@ codex plugin add transcriptomics@asb-skill-collections
 
 The marketplace entry installs from the public domain repository, so these commands need no read access.
 
-The complete public archive is the Zenodo record [10.5281/zenodo.24224649](https://doi.org/10.5281/zenodo.24224649).
+The complete public archive is the Zenodo record [10.5281/zenodo.24255483](https://doi.org/10.5281/zenodo.24255483).
 
 ## Where the content lives
 
@@ -46,6 +46,7 @@ The content of this version is kept in the public repository `asb-skills-transcr
 |---|---|---|
 | `transcriptomics-v2.0.0` | [10.5281/zenodo.24093100](https://doi.org/10.5281/zenodo.24093100) | 2026-11-09 |
 | `transcriptomics-v2.0.1` | [10.5281/zenodo.24122113](https://doi.org/10.5281/zenodo.24122113) | 2026-11-10 |
+| `transcriptomics-v2.1.0` | [10.5281/zenodo.24224649](https://doi.org/10.5281/zenodo.24224649) | 2026-11-14 |
 
 ## Registry and contribution
 

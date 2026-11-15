@@ -2,7 +2,7 @@
 
 The registry `collections.yaml` lists the released collections of ten domains,
 each in a domain repository `asb-skills-<domain>`. The examples below use
-metabolomics v3 (release `metabolomics-v3.1.0`, 11,830 skills over 1,989 tools)
+metabolomics v3 (release `metabolomics-v3.1.1`, 11,830 skills over 1,989 tools)
 in `asb-skills-metabolomics`. This master repository holds the tooling,
 governance and registry, not released content.
 
@@ -30,7 +30,7 @@ Search, apply, ground. Full protocol in [`AGENTS.md`](AGENTS.md) and
 `<domain checkout>/collections/metabolomics/v3/USAGE.md`.
 
 - Obtain leaves through `asbb fetch --collection metabolomics/v3`, a domain
-  checkout or the [Zenodo archive](https://doi.org/10.5281/zenodo.24224655).
+  checkout or the [Zenodo archive](https://doi.org/10.5281/zenodo.24255500).
 - Search with the shipped script, from any directory:
   `python3 "<collection root>/bin/search_skills.py" --query "<task>" -k 10`
   (add `--target workflows` or `--target tools`). `<collection root>` is the
