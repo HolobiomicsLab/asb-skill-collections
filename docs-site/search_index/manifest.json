@@ -7,7 +7,7 @@
       "bytes": 1787005,
       "collections": [
         {
-          "commit": "9511fea102918912cd6e133a68e8905856cfbef3",
+          "commit": "c6453aa6a16c1f1f4dd74b759ed3ad3f6807cca5",
           "label": "agentic-ai/v1",
           "status": "released"
         }
@@ -20,14 +20,14 @@
       },
       "file": "agentic-ai.json",
       "include_superseded": false,
-      "registry_digest": "4352b41c2fd619072273c2be10b2a1aab91d6d775576b3a5178500b8dd2bfe6b",
-      "sha256": "8dbd3e64ef86836905763e12238122de25e79f4143cac8915787435eb966a9c2"
+      "registry_digest": "3299128cd3748e7698f59fc8670b4edd302ea869354df85b5c339f38f6e3580d",
+      "sha256": "7beb3813c8131dde6ed160d626a79325110427ea8c11c574c2d9b566b961341b"
     },
     "astronomy": {
       "bytes": 4525211,
       "collections": [
         {
-          "commit": "78b10b4108d807fd82cc9eb60551d694825d3b5e",
+          "commit": "f6f38cd2992624eb7f73e1c7074ba563fc4bad25",
           "label": "astronomy/v1",
           "status": "released"
         }
@@ -40,8 +40,8 @@
       },
       "file": "astronomy.json",
       "include_superseded": false,
-      "registry_digest": "70e030542c5ed517315f23e0bab8c986e8290fa70a975d9d3553b12a98125669",
-      "sha256": "e975d590a637f9c87eb8bd5a2783300082fc126438d7143c4cac57b45d9abb59"
+      "registry_digest": "b02cf4727409a8b837aafd72c5e1fbfdcaa9224d427a772dfbb99988f0675e1c",
+      "sha256": "35f40055d2505fbb7fde7613518ed386b3283646a5d3612faf7504ed526d8d3b"
     },
     "epigenomics": {
       "bytes": 6651764,
@@ -52,7 +52,7 @@
           "status": "staged"
         },
         {
-          "commit": "2d7e6d594dc53f7bd83fa038277d857963c4f5e6",
+          "commit": "a9238e0b99f024f9ae12c2b122758e8a895bfdf2",
           "label": "epigenomics/v2",
           "status": "released"
         }
@@ -65,14 +65,14 @@
       },
       "file": "epigenomics.json",
       "include_superseded": false,
-      "registry_digest": "2be2de9536b26e296f2d437515bcf0ede5062feab29ceb3f5f091a80e26137a9",
-      "sha256": "85191f95aa6f990f02d8d1b05ca2d70e83db2f4c5662e90f82b2962892073ef7"
+      "registry_digest": "9105b835553508e242462fd7d725e310140bf7130c721b790bbbe2b94bbe281d",
+      "sha256": "b57c20fae742d4786dd757ead5dfaad51182597b1ec186717832720b6f751acf"
     },
     "genomics": {
       "bytes": 8994205,
       "collections": [
         {
-          "commit": "68ab7788040bd0d6a7520b1919dc2da6f2246f76",
+          "commit": "391e5c87b721a581de86c30ff30d8189e0b792f4",
           "label": "genomics/v1",
           "status": "released"
         }
@@ -85,14 +85,14 @@
       },
       "file": "genomics.json",
       "include_superseded": false,
-      "registry_digest": "c838bd64fba1fc13e2d966f97a5f464d32d51a2410c4c5f52ce0caea8e26476a",
-      "sha256": "dba26dc8177f543c6774f567829d7fcb2665df1236abfa46151f29fe2c183cfe"
+      "registry_digest": "98f720d26dde359e552f5476de94d58d9827867bddab8ad6e11b9dd2f2bb7290",
+      "sha256": "b8546e16cd96e16484ec54bcd6fb3cdc4b89a85092a2f93ccb710c927ecdb7ab"
     },
     "metabarcoding": {
       "bytes": 2266062,
       "collections": [
         {
-          "commit": "2576012c4d1e9526f067f54e7e8ef76341fc631e",
+          "commit": "eb6088a7c7159175660104c308a7d1540d28b616",
           "label": "metabarcoding/v1",
           "status": "released"
         }
@@ -105,8 +105,8 @@
       },
       "file": "metabarcoding.json",
       "include_superseded": false,
-      "registry_digest": "9a357450d638710d3801646caa211071b7dd02a1d773b2d7cf9f2db2b7085fa3",
-      "sha256": "07f1a0169268af8a421410907e5c7ab59b0cc18da043a7d39412e1ab241471cc"
+      "registry_digest": "ed1455f02b3d27e29da08f86d534ec4a954d285df5377d390141c09ec5b36a55",
+      "sha256": "eb28dee537bd8383c80b24ce2367a0e466edee6f4be4092d3c85e1775a6a4391"
     },
     "metabolomics": {
       "bytes": 34956008,
@@ -117,7 +117,7 @@
           "status": "staged"
         },
         {
-          "commit": "286a838e6f2fabcd8effbe6b54b60024d3383758",
+          "commit": "0eb9942cad2ca1437ae7a89eb3e9775d2e130561",
           "label": "metabolomics/v3",
           "status": "released"
         }
@@ -130,14 +130,14 @@
       },
       "file": "metabolomics.json",
       "include_superseded": false,
-      "registry_digest": "c58cf471a5f2ad04f0ace2b66f198e37fb67394333bf04bf7f5398ea1094ba74",
-      "sha256": "db0021d9ef694e2fb9ee9f6b912ffc46386a5685bc7059c8a2dd6472cacb39ff"
+      "registry_digest": "3f23bd8a6d8f0ba2535f9f55630d89e1fc6afa8cf168e256758696dea99dee5a",
+      "sha256": "deb5b6c32eaee91ec02ad28be15d8a087951ac80a5e9619c7709ec74effa3f3a"
     },
     "metagenomics": {
       "bytes": 7679822,
       "collections": [
         {
-          "commit": "bfa133c7f9328f73cd23312e686e8d35c68fc2a5",
+          "commit": "f80de2b79644edf2777918d2728f9e6f5478ff9c",
           "label": "metagenomics/v1",
           "status": "released"
         }
@@ -150,14 +150,14 @@
       },
       "file": "metagenomics.json",
       "include_superseded": false,
-      "registry_digest": "25a3c46c19f3aa2b9b0bbc213ad64dd2a6d9df0c5ea0eebfa5bb9f6606f22248",
-      "sha256": "c95eac5a0225a5e750d75fc34539bf1dc4fde72247899ed61db569cbff7d79b2"
+      "registry_digest": "e1267c32e71d4d15c9faba42d2c77cff2912625281b76dac4754e48279f83a47",
+      "sha256": "d67778028d2ec72e8aae52bd8177d90b8ff48e747bd613a9228e12671998f91a"
     },
     "multi-omics": {
       "bytes": 2181696,
       "collections": [
         {
-          "commit": "89caca63be35c8f36e6cf7bc3533771aa4e3cff8",
+          "commit": "32b9bd591e1168b519c30e8c0b497c4631a32bb2",
           "label": "multi-omics/v1",
           "status": "released"
         }
@@ -170,14 +170,14 @@
       },
       "file": "multi-omics.json",
       "include_superseded": false,
-      "registry_digest": "44358a90852985208f055de1c2e84cab93b70a7fc60323398d9c01bb218c210a",
-      "sha256": "139b8f8a4514dc9b87477fe8be90147b0e421ca923c42d36ab3e4fbc6d649ac7"
+      "registry_digest": "5f654d370f4ded97b43888c2f3200783f7ef1b895635da6e5e4b79be3ae075df",
+      "sha256": "20b41aebfe4c2315b5c1e9a2f8eb09d2bbc3c50e0f45d4e1cb1aa207e92a5d2a"
     },
     "proteomics": {
       "bytes": 1499496,
       "collections": [
         {
-          "commit": "0ef2f44152cebeed3809b47ff277569d42f09ed3",
+          "commit": "7a93b0699c1c67042e5fd8dfc1159d8d5bce2f97",
           "label": "proteomics/v1",
           "status": "released"
         }
@@ -190,8 +190,8 @@
       },
       "file": "proteomics.json",
       "include_superseded": false,
-      "registry_digest": "d204edf6d6708117c2c367572c626bfcaa1675b6f123763a2ed7238207c3f075",
-      "sha256": "2d5366b7617b6bb082dc56d87a759fdc052563758a076871484a1e38e6eca9ab"
+      "registry_digest": "9a3c691007c0d26df1231228fc6afe558c96ee1cb9a3eaf53ed56f968c413fd0",
+      "sha256": "5d1e36c49a6b6dfabe808074c8689e7a74b41b93edf37bb9a29de4c29e78b2f0"
     },
     "transcriptomics": {
       "bytes": 31806651,
@@ -202,7 +202,7 @@
           "status": "staged"
         },
         {
-          "commit": "1ccfe23ed072e08aaca892993e65ac1e6058bca0",
+          "commit": "3d753ad4d9f5893d582bda2b514f701c60eee399",
           "label": "transcriptomics/v2",
           "status": "released"
         }
@@ -215,8 +215,8 @@
       },
       "file": "transcriptomics.json",
       "include_superseded": false,
-      "registry_digest": "e747c4ea460f1f1158cc4ce85e74aa5b921061cf8bd8ac72964997fd21ec9342",
-      "sha256": "61cd6b3012fb23dc5d2bd8f343e1cc53294f6b5561bcf6a06f153fb55bf615d6"
+      "registry_digest": "ec5bc45f614bb2d6bb5d7f7d2382d6def513e32e04f388c289f0fb14b39ba9ae",
+      "sha256": "b59341f2b58ed9ee745b0c8e38bd1030860f50508e7e7f7553affbd0e2c74a15"
     }
   },
   "schema_version": "1"

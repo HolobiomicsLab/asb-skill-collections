@@ -6,10 +6,10 @@ The identifier `https://w3id.org/holobiomicslab/asb-skill/collection/genomics/v1
 
 | State | Value |
 |---|---|
-| Release label | `v1.1.0` |
-| Version DOI | [10.5281/zenodo.24224625](https://doi.org/10.5281/zenodo.24224625) |
+| Release label | `v1.1.1` |
+| Version DOI | [10.5281/zenodo.24255457](https://doi.org/10.5281/zenodo.24255457) |
 | Concept DOI (all archived versions) | [10.5281/zenodo.24093084](https://doi.org/10.5281/zenodo.24093084) |
-| Release date | 2026-11-14 |
+| Release date | 2026-11-15 |
 | Skills | 3,246 |
 | Tools | 867 |
 | Workflows | 2 |
@@ -34,7 +34,7 @@ codex plugin add genomics@asb-skill-collections
 
 The marketplace entry installs from the public domain repository, so these commands need no read access.
 
-The complete public archive is the Zenodo record [10.5281/zenodo.24224625](https://doi.org/10.5281/zenodo.24224625).
+The complete public archive is the Zenodo record [10.5281/zenodo.24255457](https://doi.org/10.5281/zenodo.24255457).
 
 ## Where the content lives
 
@@ -46,6 +46,7 @@ The content of this version is kept in the public repository `asb-skills-genomic
 |---|---|---|
 | `genomics-v1.0.0` | [10.5281/zenodo.24093085](https://doi.org/10.5281/zenodo.24093085) | 2026-11-09 |
 | `genomics-v1.0.1` | [10.5281/zenodo.24122105](https://doi.org/10.5281/zenodo.24122105) | 2026-11-10 |
+| `genomics-v1.1.0` | [10.5281/zenodo.24224625](https://doi.org/10.5281/zenodo.24224625) | 2026-11-14 |
 
 ## Registry and contribution
 

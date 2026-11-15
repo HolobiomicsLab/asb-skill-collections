@@ -6,10 +6,10 @@ The identifier `https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics
 
 | State | Value |
 |---|---|
-| Release label | `v2.1.0` |
-| Version DOI | [10.5281/zenodo.24224653](https://doi.org/10.5281/zenodo.24224653) |
+| Release label | `v2.1.1` |
+| Version DOI | [10.5281/zenodo.24255488](https://doi.org/10.5281/zenodo.24255488) |
 | Concept DOI (all archived versions) | [10.5281/zenodo.24093106](https://doi.org/10.5281/zenodo.24093106) |
-| Release date | 2026-11-14 |
+| Release date | 2026-11-15 |
 | Skills | 2,295 |
 | Tools | 532 |
 | Workflows | 2 |
@@ -34,7 +34,7 @@ codex plugin add epigenomics@asb-skill-collections
 
 The marketplace entry installs from the public domain repository, so these commands need no read access.
 
-The complete public archive is the Zenodo record [10.5281/zenodo.24224653](https://doi.org/10.5281/zenodo.24224653).
+The complete public archive is the Zenodo record [10.5281/zenodo.24255488](https://doi.org/10.5281/zenodo.24255488).
 
 ## Where the content lives
 
@@ -46,6 +46,7 @@ The content of this version is kept in the public repository `asb-skills-epigeno
 |---|---|---|
 | `epigenomics-v2.0.0` | [10.5281/zenodo.24093107](https://doi.org/10.5281/zenodo.24093107) | 2026-11-09 |
 | `epigenomics-v2.0.1` | [10.5281/zenodo.24122116](https://doi.org/10.5281/zenodo.24122116) | 2026-11-10 |
+| `epigenomics-v2.1.0` | [10.5281/zenodo.24224653](https://doi.org/10.5281/zenodo.24224653) | 2026-11-14 |
 
 ## Registry and contribution
 

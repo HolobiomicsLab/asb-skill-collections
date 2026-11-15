@@ -6,10 +6,10 @@ The identifier `https://w3id.org/holobiomicslab/asb-skill/collection/metabolomic
 
 | State | Value |
 |---|---|
-| Release label | `v3.1.0` |
-| Version DOI | [10.5281/zenodo.24224655](https://doi.org/10.5281/zenodo.24224655) |
+| Release label | `v3.1.1` |
+| Version DOI | [10.5281/zenodo.24255500](https://doi.org/10.5281/zenodo.24255500) |
 | Concept DOI (all archived versions) | [10.5281/zenodo.20794026](https://doi.org/10.5281/zenodo.20794026) |
-| Release date | 2026-11-14 |
+| Release date | 2026-11-15 |
 | Skills | 11,830 |
 | Tools | 1,989 |
 | Workflows | 20 |
@@ -34,7 +34,7 @@ codex plugin add metabolomics@asb-skill-collections
 
 The marketplace entry installs from the public domain repository, so these commands need no read access.
 
-The complete public archive is the Zenodo record [10.5281/zenodo.24224655](https://doi.org/10.5281/zenodo.24224655).
+The complete public archive is the Zenodo record [10.5281/zenodo.24255500](https://doi.org/10.5281/zenodo.24255500).
 
 ## Where the content lives
 
@@ -47,6 +47,7 @@ The content of this version is kept in the public repository `asb-skills-metabol
 | `metabolomics-v3.0.0` | [10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446) | 2026-11-09 |
 | `metabolomics-v3.0.1` | [10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587) | 2026-11-09 |
 | `metabolomics-v3.0.2` | [10.5281/zenodo.24122117](https://doi.org/10.5281/zenodo.24122117) | 2026-11-10 |
+| `metabolomics-v3.1.0` | [10.5281/zenodo.24224655](https://doi.org/10.5281/zenodo.24224655) | 2026-11-14 |
 
 ## Registry and contribution
 

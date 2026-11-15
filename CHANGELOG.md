@@ -16,6 +16,12 @@ This repository records two release surfaces, each noted per release:
 ## [Unreleased]
 
 ### Released
+- The ten skill collections, deposited on 2026-11-15 as wording patch releases of their Zenodo records and tagged
+  in the domain repositories: `<domain>-v1.1.1` (agentic-ai, astronomy, genomics, metabarcoding, metagenomics,
+  multi-omics, proteomics), `<domain>-v2.1.1` (epigenomics, transcriptomics) and `metabolomics-v3.1.1`. The
+  routers and the report script no longer call the domain repositories private, the deposit metadata of the ten
+  records name the same related identifiers, and the astronomy collection has one title. No skill, index or
+  selector changes. The releases of 2026-11-14 are listed as superseded in `collections.yaml`.
 - The ten skill collections, deposited on 2026-11-14 as new versions of their Zenodo records and tagged in the
   public domain repositories: `<domain>-v1.1.0` (agentic-ai, astronomy, genomics, metabarcoding, metagenomics,
   multi-omics, proteomics), `<domain>-v2.1.0` (epigenomics, transcriptomics) and `metabolomics-v3.1.0`. Version

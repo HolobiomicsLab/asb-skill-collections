@@ -10,6 +10,15 @@ repositories. `collections.yaml` pins repository, commit and tree digest for
 each published release. The domain repositories are public; entries below that
 call them private were written while they were.
 
+## Update on 2026-11-15
+
+- Wording patch release of the ten collections: `v1.1.1` for the seven v1 domains, `v2.1.1` for epigenomics and
+  transcriptomics, `v3.1.1` for metabolomics, each a new version of the same Zenodo record (version DOIs
+  `10.5281/zenodo.24255450` to `10.5281/zenodo.24255500`). It changes texts only: the report section of the
+  routers and the report script no longer call the domain repositories private, the ten deposit metadata files
+  carry the same related identifiers, and the astronomy collection has one title. Skills, indexes and the search
+  selector are unchanged. The `v1.1.0`, `v2.1.0` and `v3.1.0` rows are listed as superseded in `collections.yaml`.
+
 ## Update on 2026-11-14
 
 - The ten collections are published again, as new versions of the Zenodo record of each: `v1.1.0` for the

@@ -4,7 +4,7 @@ Instructions for coding and research agents to install and use the ASB skill
 collections. The registry `collections.yaml` lists the released collections of
 ten domains; each is released from a domain repository
 `asb-skills-<domain>`. The worked examples use metabolomics v3: 11,830 skills
-over 1,989 tools, released as `metabolomics-v3.1.0` in `asb-skills-metabolomics`.
+over 1,989 tools, released as `metabolomics-v3.1.1` in `asb-skills-metabolomics`.
 This master repository holds the tooling, governance, documentation and release
 registry, not the released content.
 
@@ -87,9 +87,9 @@ A selection installed this way ships the grounding binder in its own `bin/`.
 ### Zenodo archive and direct consumption
 
 The release archives are the other route to a collection, next to the domain
-repositories. The complete metabolomics v3 release (`metabolomics-v3.1.0`) is at
-[10.5281/zenodo.24224655](https://doi.org/10.5281/zenodo.24224655); the earlier
-v3 deposits are [10.5281/zenodo.24122117](https://doi.org/10.5281/zenodo.24122117) (v3.0.2), [10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587) (v3.0.1) and
+repositories. The complete metabolomics v3 release (`metabolomics-v3.1.1`) is at
+[10.5281/zenodo.24255500](https://doi.org/10.5281/zenodo.24255500); the earlier
+v3 deposits are [10.5281/zenodo.24224655](https://doi.org/10.5281/zenodo.24224655) (v3.1.0), [10.5281/zenodo.24122117](https://doi.org/10.5281/zenodo.24122117) (v3.0.2), [10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587) (v3.0.1) and
 [10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446) (v3.0.0), and v2 is at
 [10.5281/zenodo.20794027](https://doi.org/10.5281/zenodo.20794027). The DOIs of
 the other domains are in `collections.yaml`.
