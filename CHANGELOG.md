@@ -16,6 +16,11 @@ This repository records two release surfaces, each noted per release:
 ## [Unreleased]
 
 ### Released
+- The build-capsules records, one Zenodo record per domain, published on 2026-11-15 (`10.5281/zenodo.24261664` to
+  `10.5281/zenodo.24261817`). Each supplements the collection version of the same day. Their DOIs and counts are
+  under `capsules` in `collections.yaml`, in the collections table of the README and in the catalogue; the
+  evaluation card is regenerated from the deposited descriptive files. The evaluation material stays
+  definitions only.
 - The ten skill collections, deposited on 2026-11-15 as wording patch releases of their Zenodo records and tagged
   in the domain repositories: `<domain>-v1.1.1` (agentic-ai, astronomy, genomics, metabarcoding, metagenomics,
   multi-omics, proteomics), `<domain>-v2.1.1` (epigenomics, transcriptomics) and `metabolomics-v3.1.1`. The

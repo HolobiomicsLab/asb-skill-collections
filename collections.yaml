@@ -40,6 +40,19 @@ domains:
             tree_digest: sha256:60615afbce3c259d3716c4f488611769c3161df3fec28ba84456b3c89bdf4d2f
             version_doi: 10.5281/zenodo.24224655
             released: 2026-11-14
+        capsules:
+          version_doi: 10.5281/zenodo.24261776
+          concept_doi: 10.5281/zenodo.24261775
+          record_id: '24261776'
+          supplements: 10.5281/zenodo.24255500
+          builds_packed: 387
+          builds_left_out: 4
+          builds_not_released: 0
+          capsules: 2714
+          benchmark_capsules: 190
+          archive_bytes: 413645857
+          archive_sha256: 1bf6323543d9b5e9229ea762b4904768b7c5e74f67c72455ba3757e8114bbd4e
+          published: 2026-11-15
       - version: 2
         path: collections/metabolomics/v2
         # The only master tag in this checkout is metabolomics-v0.1.0; v2 has no tag.
@@ -100,6 +113,19 @@ domains:
             tree_digest: sha256:8a7078b3c4c9a27612a61830059eaabf77634aec68de66e78fdbc96f5923883a
             version_doi: 10.5281/zenodo.24224653
             released: 2026-11-14
+        capsules:
+          version_doi: 10.5281/zenodo.24261763
+          concept_doi: 10.5281/zenodo.24261762
+          record_id: '24261763'
+          supplements: 10.5281/zenodo.24255488
+          builds_packed: 92
+          builds_left_out: 0
+          builds_not_released: 1
+          capsules: 666
+          benchmark_capsules: 21
+          archive_bytes: 108894936
+          archive_sha256: b3e7bdb64ae0cd3724de918bda1bbb3bdadb2a63e84cd586babc612c2fb11301
+          published: 2026-11-15
       - version: 1
         status: legacy
         leaf_dir: skills
@@ -147,6 +173,19 @@ domains:
             tree_digest: sha256:176ddf637aa5ad024a37767c86804f751c9a6d860f5f2106d6f7e4c2a51ee4af
             version_doi: 10.5281/zenodo.24224649
             released: 2026-11-14
+        capsules:
+          version_doi: 10.5281/zenodo.24261744
+          concept_doi: 10.5281/zenodo.24261743
+          record_id: '24261744'
+          supplements: 10.5281/zenodo.24255483
+          builds_packed: 447
+          builds_left_out: 3
+          builds_not_released: 2
+          capsules: 3301
+          benchmark_capsules: 99
+          archive_bytes: 574843410
+          archive_sha256: 4d8a9585fc3e6dfa7aedce5d847f1beebfc0c18f803ad7fdc710224f2a7d2a9f
+          published: 2026-11-15
       - version: 1
         status: legacy
         leaf_dir: skills
@@ -194,6 +233,19 @@ domains:
             tree_digest: sha256:3d315d47576d59c66cf2052ebb438a1cc3352cd515f52fffde49a786873f19e7
             version_doi: 10.5281/zenodo.24224624
             released: 2026-11-14
+        capsules:
+          version_doi: 10.5281/zenodo.24261664
+          concept_doi: 10.5281/zenodo.24261663
+          record_id: '24261664'
+          supplements: 10.5281/zenodo.24255450
+          builds_packed: 28
+          builds_left_out: 0
+          builds_not_released: 1
+          capsules: 179
+          benchmark_capsules: 3
+          archive_bytes: 23818295
+          archive_sha256: cc58ede7464e24d329f52e8e976387ddf125d4721b93d8f0428a565dd8690aab
+          published: 2026-11-15
   genomics:
     repository: HolobiomicsLab/asb-skills-genomics
     concept_doi: 10.5281/zenodo.24093084
@@ -226,6 +278,19 @@ domains:
             tree_digest: sha256:b651ee20090c78a072a96fa61448c0415a750326b2c16ec204c9994192870380
             version_doi: 10.5281/zenodo.24224625
             released: 2026-11-14
+        capsules:
+          version_doi: 10.5281/zenodo.24261677
+          concept_doi: 10.5281/zenodo.24261676
+          record_id: '24261677'
+          supplements: 10.5281/zenodo.24255457
+          builds_packed: 137
+          builds_left_out: 0
+          builds_not_released: 0
+          capsules: 1003
+          benchmark_capsules: 39
+          archive_bytes: 174530191
+          archive_sha256: 80f5ff302f2e36dac803d403340c3d9bd12b98a2bcff306560bf3b0ebc45c9da
+          published: 2026-11-15
   metagenomics:
     repository: HolobiomicsLab/asb-skills-metagenomics
     concept_doi: 10.5281/zenodo.24093086
@@ -258,6 +323,19 @@ domains:
             tree_digest: sha256:17fda8c3bd20616778b6135211801d14048bd030b6984d2ad96f21ed4add3a81
             version_doi: 10.5281/zenodo.24224628
             released: 2026-11-14
+        capsules:
+          version_doi: 10.5281/zenodo.24261697
+          concept_doi: 10.5281/zenodo.24261696
+          record_id: '24261697'
+          supplements: 10.5281/zenodo.24255462
+          builds_packed: 116
+          builds_left_out: 1
+          builds_not_released: 1
+          capsules: 799
+          benchmark_capsules: 35
+          archive_bytes: 127345613
+          archive_sha256: 676afafaad2b35456d47dc365d707d86a5e452f04874ba010501f0aea0b8287c
+          published: 2026-11-15
   metabarcoding:
     repository: HolobiomicsLab/asb-skills-metabarcoding
     concept_doi: 10.5281/zenodo.24093088
@@ -290,6 +368,19 @@ domains:
             tree_digest: sha256:95ac2bf521d5fd5cd3822d2a5aab9545d82d492ca86380498d39d44d8e7a627c
             version_doi: 10.5281/zenodo.24224633
             released: 2026-11-14
+        capsules:
+          version_doi: 10.5281/zenodo.24261708
+          concept_doi: 10.5281/zenodo.24261707
+          record_id: '24261708'
+          supplements: 10.5281/zenodo.24255467
+          builds_packed: 29
+          builds_left_out: 0
+          builds_not_released: 0
+          capsules: 210
+          benchmark_capsules: 14
+          archive_bytes: 33114891
+          archive_sha256: 787f7d6bbe0577ad5b377ea665aa846be33fc8f78447a5ffcee0d7199ef0f7d1
+          published: 2026-11-15
   multi-omics:
     repository: HolobiomicsLab/asb-skills-multi-omics
     concept_doi: 10.5281/zenodo.24093090
@@ -322,6 +413,19 @@ domains:
             tree_digest: sha256:2fb95e9bf27a3fae87b350a07cafea7c6304c82c9cab9b3fecf17d7f57ed3adb
             version_doi: 10.5281/zenodo.24224636
             released: 2026-11-14
+        capsules:
+          version_doi: 10.5281/zenodo.24261710
+          concept_doi: 10.5281/zenodo.24261709
+          record_id: '24261710'
+          supplements: 10.5281/zenodo.24255470
+          builds_packed: 29
+          builds_left_out: 0
+          builds_not_released: 0
+          capsules: 211
+          benchmark_capsules: 3
+          archive_bytes: 33749373
+          archive_sha256: dfdf647c18b2c2a8f0e774d452f46f2e3ff203dee1ef909908c346c9b4479605
+          published: 2026-11-15
   astronomy:
     repository: HolobiomicsLab/asb-skills-astronomy
     concept_doi: 10.5281/zenodo.24093094
@@ -354,6 +458,19 @@ domains:
             tree_digest: sha256:34cb7cf221a7989a016abcdb5437f6bdaf5206cfad732716d93ec11dff72c017
             version_doi: 10.5281/zenodo.24224641
             released: 2026-11-14
+        capsules:
+          version_doi: 10.5281/zenodo.24261817
+          concept_doi: 10.5281/zenodo.24261816
+          record_id: '24261817'
+          supplements: 10.5281/zenodo.24255473
+          builds_packed: 100
+          builds_left_out: 0
+          builds_not_released: 5
+          capsules: 594
+          benchmark_capsules: 19
+          archive_bytes: 86463007
+          archive_sha256: 40ab760796c0ae740d2d6609bb82d4693423d468b0f6e32aa72e3689f6fd4fdd
+          published: 2026-11-15
   agentic-ai:
     repository: HolobiomicsLab/asb-skills-agentic-ai
     concept_doi: 10.5281/zenodo.24093109
@@ -386,3 +503,16 @@ domains:
             tree_digest: sha256:c7ba1f8b120839bfbb0e73e299c5596e820f10d9c32a42c84574502073fb1b27
             version_doi: 10.5281/zenodo.24224644
             released: 2026-11-14
+        capsules:
+          version_doi: 10.5281/zenodo.24261734
+          concept_doi: 10.5281/zenodo.24261733
+          record_id: '24261734'
+          supplements: 10.5281/zenodo.24255476
+          builds_packed: 28
+          builds_left_out: 1
+          builds_not_released: 0
+          capsules: 195
+          benchmark_capsules: 14
+          archive_bytes: 29756407
+          archive_sha256: be636ed7bfdec20b2cf7235e6c5d1bd786efac1dc09018542043d54c3521e52e
+          published: 2026-11-15

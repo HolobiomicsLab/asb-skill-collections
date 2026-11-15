@@ -52,7 +52,7 @@
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
   "description": "Auto-generated registry of the ASB Skill Collections in the domain repositories. Each entry's status says whether it is released or legacy.",
-  "generated_at": "2026-11-15T19:32:52Z",
+  "generated_at": "2026-11-15T21:54:45Z",
   "collections": [
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/agentic-ai/v1",
@@ -77,7 +77,8 @@
       "papers_count": 29,
       "workflows_count": 2,
       "tag": "agentic-ai-v1.1.1",
-      "release_label": "1.1.1"
+      "release_label": "1.1.1",
+      "capsules_doi": "10.5281/zenodo.24261734"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/astronomy/v1",
@@ -102,7 +103,8 @@
       "papers_count": 100,
       "workflows_count": 2,
       "tag": "astronomy-v1.1.1",
-      "release_label": "1.1.1"
+      "release_label": "1.1.1",
+      "capsules_doi": "10.5281/zenodo.24261817"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics/v1",
@@ -195,7 +197,8 @@
       "papers_count": 92,
       "workflows_count": 2,
       "tag": "epigenomics-v2.1.1",
-      "release_label": "2.1.1"
+      "release_label": "2.1.1",
+      "capsules_doi": "10.5281/zenodo.24261763"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/genomics/v1",
@@ -220,7 +223,8 @@
       "papers_count": 137,
       "workflows_count": 2,
       "tag": "genomics-v1.1.1",
-      "release_label": "1.1.1"
+      "release_label": "1.1.1",
+      "capsules_doi": "10.5281/zenodo.24261677"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/metabarcoding/v1",
@@ -245,7 +249,8 @@
       "papers_count": 29,
       "workflows_count": 2,
       "tag": "metabarcoding-v1.1.1",
-      "release_label": "1.1.1"
+      "release_label": "1.1.1",
+      "capsules_doi": "10.5281/zenodo.24261708"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v1",
@@ -613,7 +618,8 @@
       "papers_count": 477,
       "workflows_count": 20,
       "tag": "metabolomics-v3.1.1",
-      "release_label": "3.1.1"
+      "release_label": "3.1.1",
+      "capsules_doi": "10.5281/zenodo.24261776"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/metagenomics/v1",
@@ -638,7 +644,8 @@
       "papers_count": 117,
       "workflows_count": 2,
       "tag": "metagenomics-v1.1.1",
-      "release_label": "1.1.1"
+      "release_label": "1.1.1",
+      "capsules_doi": "10.5281/zenodo.24261697"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/multi-omics/v1",
@@ -663,7 +670,8 @@
       "papers_count": 29,
       "workflows_count": 2,
       "tag": "multi-omics-v1.1.1",
-      "release_label": "1.1.1"
+      "release_label": "1.1.1",
+      "capsules_doi": "10.5281/zenodo.24261710"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/proteomics/v1",
@@ -688,7 +696,8 @@
       "papers_count": 28,
       "workflows_count": 2,
       "tag": "proteomics-v1.1.1",
-      "release_label": "1.1.1"
+      "release_label": "1.1.1",
+      "capsules_doi": "10.5281/zenodo.24261664"
     },
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/transcriptomics/v1",
@@ -792,7 +801,8 @@
       "papers_count": 450,
       "workflows_count": 2,
       "tag": "transcriptomics-v2.1.1",
-      "release_label": "2.1.1"
+      "release_label": "2.1.1",
+      "capsules_doi": "10.5281/zenodo.24261744"
     }
   ]
 }
