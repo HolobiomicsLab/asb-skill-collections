@@ -166,7 +166,7 @@ After a no, do not raise it again. Draft the report, show the user its exact
 title, labels and body, and post only on an explicit yes. Never paste paths,
 credentials or sample names.
 {how}
-Reports go to the public registry; a maintainer carries them into the private
+Reports go to the public registry; a maintainer carries them into the
 domain repository."""
 
 CONTRIBUTION_WITH_HELPER = """
