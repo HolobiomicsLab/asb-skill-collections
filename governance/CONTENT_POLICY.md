@@ -504,7 +504,7 @@ and `pii_dual_use` is PASS with zero findings across all four collections.
 **Corrected 2026-11-11.** This section used to describe an advisory gate on pull
 requests to a `staged-collections/` directory of this repository. This repository
 holds no collection tree and no `staged-collections/` directory. Released content
-lives in the private domain repositories `asb-skills-<domain>`, and the content
+lives in the domain repositories `asb-skills-<domain>`, public since 2026-11-14, and the content
 checks run there.
 
 **In this repository.** The `Validate` workflow (`.github/workflows/validate.yml`)
@@ -533,7 +533,7 @@ and the check scripts listed in `.github/workflows/README.md`), then
 configured, re-verifies the committed `gate_report.json` with `--verify`. Any failing
 step fails the job.
 
-**While GitHub Actions is unavailable on the private domain repositories**, a
+**When GitHub Actions is unavailable on a domain repository**, a
 maintainer runs the same checks locally, with `scripts/run_domain_gates.sh` and the
 commands in `docs/domain-onboarding.md` section 4, and records the results in the
 pull-request body.

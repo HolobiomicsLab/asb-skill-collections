@@ -319,7 +319,7 @@ Cite the collection and the original paper behind each skill you use
 - **Concept DOI**, metabolomics, for all its versions: [10.5281/zenodo.20794026](https://doi.org/10.5281/zenodo.20794026).
 - **Version DOI**, v3, release `metabolomics-v3.1.0` (14 November 2026): [10.5281/zenodo.24224655](https://doi.org/10.5281/zenodo.24224655);
   the release is recorded in [`collections.yaml`](collections.yaml). The
-  earlier v3 deposits, `metabolomics-v3.1.0` (10 November 2026,
+  earlier v3 deposits, `metabolomics-v3.0.2` (10 November 2026,
   [10.5281/zenodo.24122117](https://doi.org/10.5281/zenodo.24122117)), `metabolomics-v3.0.1`
   ([10.5281/zenodo.24093587](https://doi.org/10.5281/zenodo.24093587)) and `metabolomics-v3.0.0`
   ([10.5281/zenodo.24054446](https://doi.org/10.5281/zenodo.24054446)), are

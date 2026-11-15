@@ -53,7 +53,8 @@ importable code never reads the clock.
   executable), `evaluable_plus.jsonl` (evaluable or executable) and
   `benchmark.jsonl` (the rows of
   `benchmark-manifest.json`); Parquet copies only when `pyarrow` is installed.
-  Zenodo is the archival record; HuggingFace is the day-to-day access point.
+  Zenodo is the archival record. The `hf/` files prepare a HuggingFace mirror
+  for day-to-day access; no mirror exists yet.
   The packer writes these files locally and uploads nothing.
 - `MANIFEST.json`: `asb-capsules-manifest/1`, including source digests, archive
   sizes and hashes, access, validation, evaluation and per-build screen data.
@@ -164,8 +165,8 @@ ships, and Bronze, Silver and Gold are assigned only through the maturity
 criteria and their records, Gold requiring expert review. No capsule has been
 executed under a workflow engine: the task cards sampled on 13 November 2026
 are `type-checked` or `manual-only`, none `certified`, so `executable` is
-empty. On the ten packs of 11 November 2026 the rule gives documented 4,260,
-validated 5,893, evaluable 278 and executable 0. Expert review is a separate
+empty. On the ten packs of 14 November 2026 the rule gives documented 4,078,
+validated 5,536, evaluable 258 and executable 0. Expert review is a separate
 axis, still being designed, and is not part of readiness.
 
 The generated README field dictionary defines every capsule and benchmark row
@@ -247,9 +248,11 @@ capped build over 1,500 characters fails the build and prevents its archive.
 A GitHub URL of a
 private repository (web, raw or SSH form, with or without `.git` and a trailing
 path) then becomes the bare `owner/name`, counted as `private_urls_rewritten`;
-other fields, such as a commit hash, are untouched. The private repositories
-are the pipeline and every `repository` of `collections.yaml`, read by
-`pack_capsules.private_repositories`, which the plan also uses. Emails then
+other fields, such as a commit hash, are untouched. The repositories rewritten
+this way are the pipeline, which is private, and every `repository` of
+`collections.yaml`: the domain repositories are public since 2026-11-14 and are
+still rewritten, so a capsules record points to its collection by DOI. The list
+is read by `pack_capsules.private_repositories`, which the plan also uses. Emails then
 use the release-gate rules. A phone-shaped number is redacted only with a
 cue: an international prefix (`+`), an area code of three to five digits in
 parentheses that is not a year, or a telephone or fax label (tel, tél,
@@ -405,7 +408,7 @@ rewrite the private source build.
      from `scripts/release_creators.yaml`;
    - `isSupplementTo`, or the manifest, does not name the collection's current
      version DOI (run refresh);
-   - a URL of a private repository (the pipeline or a domain repository) is in
+   - a URL of a rewritten repository (the pipeline or a domain repository) is in
      a descriptive file or in a text member of a build zip;
    - a local absolute path (`/Users/`, `/Volumes/`, `/private/`) is in a
      descriptive file.

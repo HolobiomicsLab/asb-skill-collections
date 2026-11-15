@@ -7,8 +7,8 @@ release must be retracted post-publication.
 ## When to invoke
 
 Rollback is appropriate when one or more of the following becomes true
-**after** a release has been tagged, deposited to Zenodo, and mirrored to
-HuggingFace:
+**after** a release has been tagged and deposited to Zenodo (and mirrored to
+HuggingFace, once a mirror exists):
 
 - A source paper in the corpus has been **retracted** by its publisher.
 - An **author opt-out** request (see `AUTHOR_OPT_OUT.md`) covers content
@@ -73,6 +73,8 @@ e.g. `metabolomics-v1.0.0` -> `metabolomics-v1.0.1`. The patch release:
 - Bumps the collection's `version` field in `corpus.yaml`
 
 ### 5. Update the HuggingFace mirror
+
+No mirror exists on 2026-11-15; skip this step until one does.
 
 - Delete the affected dataset card via the HF API
   (`DELETE /api/datasets/<owner>/<dataset>`), or — if the dataset

@@ -23,7 +23,7 @@ It complements:
 A tool's author files a **claim-skill** issue
 ([`.github/ISSUE_TEMPLATE/claim-skill.md`](../.github/ISSUE_TEMPLATE/claim-skill.md));
 a maintainer runs the **maintainer-run** `claim-skill` command
-(`collections/metabolomics/v2/commands/claim-skill.md` in the private repository
+(`collections/metabolomics/v2/commands/claim-skill.md` in the repository
 `asb-skills-metabolomics`; the v3 collection ships no `commands/` directory),
 which reuses the `propose-skill` flow (normalize → match → ground → stage), writes
 the author into the staged skill, and prepares a reviewable PR. The author reviews
