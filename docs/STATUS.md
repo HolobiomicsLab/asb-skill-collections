@@ -35,6 +35,18 @@ Measured in isolated configuration directories, with evidence kept by the mainta
 - Remarks returned by the agents: no harness other than Claude Code expands `${CLAUDE_SKILL_DIR}` (the router's
   instruction to substitute the absolute path was followed each time); the entry written by a managed install
   tells the reader to `cd` into the unit while the router says not to `cd`.
+- Corrected the same day in `asbb`, then measured again with the same two hosts:
+  - `asbb install … --runtime opencode` installs into OpenCode's own skills directory
+    (`$XDG_CONFIG_HOME/opencode/skills`), where OpenCode skips the hidden snapshot: `opencode debug skill` lists the
+    2 routers and its built-in skill, and the first request of the session carries 5,052 input tokens with no
+    skill permission set. OpenCode asks before reading a file outside the project, and a run without a prompt
+    refuses; with the `external_directory` permission that the command prints, the session ran the search and
+    read the leaf.
+  - `asbb install … --runtime vibe` installs into `$VIBE_HOME/skills`.
+  - The entry written by a managed install no longer asks for a `cd`: the commands of the router carry the
+    absolute path of the installed unit and ran as printed on the first call in both hosts. A router whose
+    commands are relative to the pack root keeps the `cd` instruction.
+  - The `/ground` command template uses `python3`.
 - Not measured: Copilot CLI, Gemini CLI, Cursor, Cline, VS Code; a session on a pack other than
   `metabolomics-nmr`; OpenCode and Vibe on a collection other than proteomics.
 

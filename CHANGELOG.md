@@ -34,6 +34,10 @@ This repository records two release surfaces, each noted per release:
   index, the catalogue and the marketplace pins follow them.
 
 ### Added
+- `asbb install --runtime opencode` and `--runtime vibe`: the managed install for OpenCode
+  (`$XDG_CONFIG_HOME/opencode/skills`, where only the routers are registered) and for Mistral Vibe
+  (`$VIBE_HOME/skills`). After an OpenCode install the command prints the `external_directory` permission
+  that lets OpenCode read the installed skills without a prompt.
 - Evaluation card (`scripts/render_evaluation_card.py`): a readiness table per domain, read from the `readiness`
   column of the packs (a pack without the column, or with a value outside documented, validated, evaluable and
   executable, is refused), and a short section on using the capsules in an evaluation: rubrics need a reader or a
@@ -264,6 +268,12 @@ This repository records two release surfaces, each noted per release:
   commit (the `packs/` tree is byte-identical to the v3.0.0 commit).
 
 ### Fixed
+- The entry written by a managed install told the reader to `cd` into the unit while the router said not to,
+  and its commands kept `${CLAUDE_SKILL_DIR}`, which only Claude Code fills in and which points at the
+  wrong directory in a copied entry. The installer now writes the absolute path of the installed unit into
+  the commands; they run as printed from any working directory. A router with root-relative commands
+  keeps the `cd` instruction. The preface names the unit by its absolute path first.
+- The `/ground` command template printed `python`; it prints `python3`.
 - Marketplace sources are written with the https clone address (`https://github.com/<owner>/<repo>.git`) and `scripts/sync_marketplace.py` checks and writes it. A plugin whose `git-subdir` source named an `owner/repo` shorthand was cloned over SSH only, so installing a collection failed for anyone without a GitHub SSH key (checked with Claude Code 2.1, SSH disabled: the marketplace is added over https, the plugin clone failed; with the full address it installs).
 - The capsule screen now redacts a telephone or fax number whose label is in brackets
   (`(Tel) 886-2-12345679`, `(Fax) 886-2-12345678`, the address line of an article): the labelled-number expression

@@ -100,11 +100,20 @@ def _cmd_get(args) -> int:
 
 
 def _install_opts(args):
+    import os
     from pathlib import Path
     from .asbb.targets import InstallOpts
     home = Path(args.home) if args.home else Path.home()
+
+    def host_dir(variable):
+        """An absolute directory named by the environment, else None."""
+        value = os.environ.get(variable, "")
+        return Path(value) if os.path.isabs(value) else None
+
     return InstallOpts(
         home=home,
+        config_home=host_dir("XDG_CONFIG_HOME"),
+        vibe_home=host_dir("VIBE_HOME"),
         project=Path.cwd(),
         user=getattr(args, "user", False),
         copy=getattr(args, "copy", False) or bool(args.dest),
@@ -188,11 +197,18 @@ def _cmd_install(args) -> int:
     if written is None:
         return 1
     print(f"{_verb(args)} {len(written)} skill(s) from {args.pack} -> {_where(target, args)}")
+    _print_note(target, args)
     return 0
 
 
 def _verb(args) -> str:
     return "would install" if args.dry_run else "installed"
+
+
+def _print_note(target, args) -> None:
+    """Print what the host still needs from the user, when the target states it."""
+    if target.note is not None and not args.dry_run:
+        print(target.note(_install_opts(args)))
 
 
 def _where(target, args):
@@ -266,6 +282,7 @@ def _install_selection(args, repo, target) -> int:
           f"{len(written)} advertised entry(ies)) -> {_where(target, args)}")
     place = f"--dest {args.dest}" if args.dest else f"--runtime {args.runtime}"
     print(f"remove with: asbb uninstall {selection.name} {place}")
+    _print_note(target, args)
     return 0
 
 

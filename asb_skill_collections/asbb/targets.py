@@ -15,6 +15,11 @@ class InstallOpts:
     force: bool = False
     dry_run: bool = False
     dest_override: Optional[Path] = None
+    #: Where the hosts that follow the environment keep their configuration:
+    #: ``$XDG_CONFIG_HOME`` and ``$VIBE_HOME``. The command line reads them; an
+    #: unset one falls back to the directory under ``home``.
+    config_home: Optional[Path] = None
+    vibe_home: Optional[Path] = None
 
 
 @dataclass(frozen=True)
@@ -25,6 +30,8 @@ class Target:
     help: str
     filename: Optional[Callable[[str], str]] = None
     render: Optional[Callable[[dict, str, str], str]] = None
+    #: What the user still has to do on this host, printed after an install.
+    note: Optional[Callable[[InstallOpts], str]] = None
 
 
 def _skill_dir(sub: str) -> Callable[[InstallOpts], Path]:
@@ -34,6 +41,31 @@ def _skill_dir(sub: str) -> Callable[[InstallOpts], Path]:
 def _claude_dest(o: InstallOpts) -> Path:
     base = o.home if o.user else o.project
     return base / ".claude" / "skills"
+
+
+def _opencode_dest(o: InstallOpts) -> Path:
+    """OpenCode's own skills directory.
+
+    OpenCode also reads ``~/.agents/skills``, but there it registers every
+    ``SKILL.md`` below the managed snapshot, leaves included (measured with
+    OpenCode 1.19.5: 837 skills for two units). In its own directory it skips
+    hidden directories, so the snapshot stays data and only the entries show.
+    """
+    return (o.config_home or o.home / ".config") / "opencode" / "skills"
+
+
+def _opencode_note(o: InstallOpts) -> str:
+    """OpenCode asks before a tool reads outside the project; a run without a prompt refuses."""
+    units = _opencode_dest(o) / ".asbb-units"
+    return (
+        "OpenCode asks before reading a file outside the project. To let it read the "
+        "installed skills without a prompt, add to opencode.json:\n"
+        f'  "permission": {{"external_directory": {{"{units}/**": "allow"}}}}'
+    )
+
+
+def _vibe_dest(o: InstallOpts) -> Path:
+    return (o.vibe_home or o.home / ".vibe") / "skills"
 
 
 # --- rules adapters ------------------------------------------------------
@@ -74,6 +106,11 @@ TARGETS: dict[str, Target] = {
                       "Copilot CLI (~/.copilot/skills)"),
     "gemini": Target("gemini", "skill", _skill_dir(".gemini"),
                      "Gemini CLI (~/.gemini/skills)"),
+    "opencode": Target("opencode", "skill", _opencode_dest,
+                       "OpenCode ($XDG_CONFIG_HOME/opencode/skills, default ~/.config/opencode/skills)",
+                       note=_opencode_note),
+    "vibe": Target("vibe", "skill", _vibe_dest,
+                   "Mistral Vibe ($VIBE_HOME/skills, default ~/.vibe/skills)"),
     "claude": Target("claude", "skill", _claude_dest,
                      "Claude Code project ./.claude/skills (or ~/.claude/skills with --user)"),
     "cursor": Target("cursor", "rules", lambda o: o.project / ".cursor" / "rules",

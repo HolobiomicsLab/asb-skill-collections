@@ -21,6 +21,14 @@ RECEIPT_FILE = ".asbb-unit.json"
 #: that survives the installation being moved on disk.
 ABSOLUTE_MARKER = re.compile(r"<!-- asbb-unit: (.+?) -->")
 RELATIVE_MARKER = re.compile(r"<!-- asbb-unit-relative: (.+?) -->")
+#: A router writes its commands from its own directory, as
+#: ``${CLAUDE_SKILL_DIR}/../../bin/...``. Only Claude Code fills that variable in,
+#: and it fills in the directory of the installed entry, which in a copied entry
+#: is the host's skills directory, two levels away from nothing the pack ships.
+SKILL_DIR_VARIABLE = "${CLAUDE_SKILL_DIR}"
+#: Characters a shell still interprets between double quotes. A unit path that
+#: holds one is not written into a quoted command.
+UNSAFE_IN_DOUBLE_QUOTES = frozenset('"$`\\')
 LOCAL_STATE = frozenset(
     {".git", ".cache", "__pycache__", ".pytest_cache", ".ruff_cache", ".venv"}
 )
@@ -119,23 +127,54 @@ def bind_body(body: str, unit: Path, source_entry: str, entry_file: Path) -> str
     from this entry's own directory, so it survives any move of the install root.
     Readers resolve the relative marker against the directory they read the entry
     from and fall back to the absolute one; see :func:`unit_from_entry`.
+
+    A body whose commands start from ``${CLAUDE_SKILL_DIR}`` gets the absolute
+    directory of its source entry written in their place. A body with
+    root-relative commands is left as written and prefixed with the `cd` that
+    makes them run.
     """
     import shlex
 
     relative = entry_relative_unit(unit, Path(entry_file).parent)
+    source_dir = (Path(unit) / source_entry).parent
+    fills_commands = SKILL_DIR_VARIABLE in body and not (
+        UNSAFE_IN_DOUBLE_QUOTES & set(str(source_dir))
+    )
+    if fills_commands:
+        # The commands are written from the entry's source directory. The
+        # installer knows where that directory is now, which no host does for a
+        # copied entry, so it writes the path in: the commands then run as
+        # printed, from any working directory, and nothing asks for a `cd`.
+        body = body.replace(SKILL_DIR_VARIABLE, str(source_dir))
+        how = (
+            "The commands below carry that absolute path and run from any working "
+            "directory.\n\n"
+        )
+        after_move = f" Replace `{unit}` in the commands with it."
+    else:
+        how = (
+            "Before running the commands below, change the working directory in the "
+            "same shell — set `ENTRY` to the path this entry is installed at, which "
+            "is the line below unless the installation has moved:\n\n"
+            f"```sh\nENTRY={shlex.quote(str(entry_file))}\n"
+            f'cd -- "$(dirname -- "$ENTRY")/{relative}"\n```\n\n'
+        )
+        after_move = ""
+    # The relative form is stated against the directory the entry is installed
+    # in, by name. A host that resolves a linked entry before reading it stands
+    # inside the unit, where "the directory holding this file" is not that
+    # directory; such a reader finds the unit by its receipt instead.
     return (
         f"<!-- asbb-unit: {json.dumps(str(unit))} -->\n"
         f"<!-- asbb-unit-relative: {json.dumps(relative)} -->\n"
         "## Installed pack location\n\n"
-        f"This pack's asset root is `{relative}`, resolved against the directory "
-        "holding this file. That is the form to prefer: it stays correct if this "
-        f"installation is moved. While it has not moved it is `{unit}`. Resolve "
-        "pack-relative paths there, including indexes, leaves and helper scripts. "
-        "Before running the commands below, change the working directory in the "
-        "same shell — set `ENTRY` to the path you read this file from, which is "
-        "the line below unless the installation has moved:\n\n"
-        f"```sh\nENTRY={shlex.quote(str(entry_file))}\n"
-        f'cd -- "$(dirname -- "$ENTRY")/{relative}"\n```\n\n'
+        f"This pack's asset root is `{unit}`. Resolve pack-relative paths there, "
+        "including indexes, leaves and helper scripts. "
+        f"{how}"
+        f"If the installation has been moved, the asset root is `{relative}` from "
+        "the directory this entry is installed in "
+        f"(`{Path(entry_file).parent}` when it was written), or the nearest "
+        f"directory above this file that holds `{RECEIPT_FILE}`.{after_move}\n\n"
         f"The original entry is `{source_entry}` beneath that root; resolve "
         "entry-local supporting files beside that file.\n\n"
         f"{body}"
