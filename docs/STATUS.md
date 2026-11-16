@@ -47,6 +47,12 @@ Measured in isolated configuration directories, with evidence kept by the mainta
     absolute path of the installed unit and ran as printed on the first call in both hosts. A router whose
     commands are relative to the pack root keeps the `cd` instruction.
   - The `/ground` command template uses `python3`.
+  - The eight packs are at version 0.1.1 (`asb-skills-metabolomics` commit `e2426a076`, pinned by the
+    marketplace): routers rendered again with `router_shape.py`, search wrapper refreshed around the selector each
+    pack ships (the same 30 hits in the same order on three queries of the NMR pack; a hit prints its tier and
+    source DOI), `/ground` with `python3`. Leaves, indexes and `kb_bundle.json` are unchanged
+    (`build_packs --check`: 0 of 8 packs differ). In a Claude Code session on the regenerated `metabolomics-nmr`
+    the router's search command ran as printed on the first call, with no refused call.
 - Not measured: Copilot CLI, Gemini CLI, Cursor, Cline, VS Code; a session on a pack other than
   `metabolomics-nmr`; OpenCode and Vibe on a collection other than proteomics.
 
@@ -127,7 +133,7 @@ Two kinds of historical entry appear below.
 | Claude Code, local-checkout marketplace | verified | Claude Code 2.1.241; no date stated |
 | Checkout CLI (`asbb search`, `get`, `--list-collections`) | verified | 2026-09-13, shared-selector behaviour at `777671bc3` |
 | Claude Code, public GitHub marketplace transport | verified at CLI level, in-session load not exercised | measured 2026-10-30, Claude Code 2.1.304, `main` at `e80767838`; 358 MB on disk |
-| Per-technique packs, marketplace install | the eight packs install with Claude Code and with Codex CLI, each equal to its pinned commit file for file; their routers print the older relative search command; one session, on `metabolomics-nmr` | measured 2026-11-16: Claude Code 2.1.325 and Codex CLI 0.154.0, sixteen exit 0; detail in the update of 2026-11-16 above |
+| Per-technique packs, marketplace install | the eight packs install with Claude Code and with Codex CLI, each equal to its pinned commit file for file; version 0.1.0 printed the older relative search command, corrected in 0.1.1 the same day; one session, on `metabolomics-nmr` | measured 2026-11-16: Claude Code 2.1.325 and Codex CLI 0.154.0, sixteen exit 0; detail in the update of 2026-11-16 above |
 | Per-technique packs | `metabolomics-lc-ms` verified at CLI level, in-session load not exercised; the other seven experimental, not installed | measured 2026-10-30, Claude Code 2.1.304 and `--runtime agents`; 29 MB |
 | Marketplace install of the ten current releases (`v1.1.1`, `v2.1.1`, `metabolomics-v3.1.1`) | verified at CLI level, the domain repositories cloned with no credentials, each installed tree equal to its registered commit file for file; in a session the proteomics router was exercised once per harness | measured 2026-11-15: Claude Code 2.1.325 and Codex CLI 0.154.0, ten exit 0 each; detail in the update of 2026-11-15 above |
 | Marketplace install of the nine initial domains released on 2026-11-09 | verified at CLI level with repository access; in a session the router was exercised on collections loaded with `--plugin-dir`, not on a marketplace install; these checks predate the current patch versions | measured 2026-11-10: Claude Code 2.1.319 (`claude plugin install <domain>@asb-skill-collections`, nine exit 0, installed commit equal to the then-current registry commit) and Codex CLI 0.154.0 (`codex plugin add <domain>@asb-skill-collections`, nine exit 0); the `metabolomics` entry at `metabolomics-v3.0.1` was not re-installed |

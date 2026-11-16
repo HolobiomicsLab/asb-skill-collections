@@ -185,10 +185,9 @@ size is claimed here.
 | a fetch, `asbb fetch a,b --collection metabolomics/v2 --dest DIR` | chosen slugs | 10 in the example | 112 KiB |
 
 The eight packs install by name with `/plugin install <name>@asb-skill-collections`
-(installed on 2026-11-16 with Claude Code and with Codex CLI). Their routers
-still print `python bin/search_skills.py`, relative to the pack root: run
-`python3 "<pack root>/bin/search_skills.py"` instead, as in
-[Use](#use-search-apply-ground).
+(installed on 2026-11-16 with Claude Code and with Codex CLI). Since version
+0.1.1 of that day their routers print the same `python3` commands as the
+collections, which run from any directory.
 Their sizes are `du -sk` of the v2 units measured before the domain split. The
 selection and fetch rows are the 10-skill example of
 [docs/partial-install.md](docs/partial-install.md#sizes), and a fetch also
@@ -427,7 +426,7 @@ carries them into the domain repository.
 
 - Step 2 of the per-domain split is complete: this master is the registry and tooling repository; released content is in the domain repositories.
 - The marketplace installs were measured again on 2026-11-15 on the ten current releases; the managed-install measurements predate the new marketplace sources. See [docs/STATUS.md](docs/STATUS.md) for their scope and dates.
-- Pending or experimental: the eight packs (they install; their routers print the older search command), the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI and the dataset mirror. The build-capsules records are deposited on Zenodo, one per domain (DOIs in the collections table and under `capsules` in `collections.yaml`). The evaluation material is definitions only: no validated benchmark, reference results or agent-performance leaderboard exists. The [documentation site](https://holobiomicslab.github.io/asb-skill-collections/) is live.
+- Pending or experimental: the eight packs (v2-derived; they install, one was exercised in a session), the web UI, runtime adapters other than `agents`, the MCP server. Not yet published: PyPI and the dataset mirror. The build-capsules records are deposited on Zenodo, one per domain (DOIs in the collections table and under `capsules` in `collections.yaml`). The evaluation material is definitions only: no validated benchmark, reference results or agent-performance leaderboard exists. The [documentation site](https://holobiomicslab.github.io/asb-skill-collections/) is live.
 - The `w3id.org/holobiomicslab/` and `w3id.org/asb` identifiers resolve. Dates, measurements and detail per surface: [docs/STATUS.md](docs/STATUS.md).
 
 ## Acknowledgements

@@ -172,6 +172,9 @@ This repository records two release surfaces, each noted per release:
   byte-identical.
 
 ### Changed
+- The marketplace pins the eight metabolomics technique packs at version 0.1.1 (`asb-skills-metabolomics`
+  commit `e2426a076`): their routers print the `python3` commands of the collections, which run from any
+  directory. Leaves and indexes are unchanged.
 - The README and `docs/STATUS.md` report the install checks of 2026-11-16: the eight metabolomics technique packs
   with Claude Code and Codex CLI, and the managed install under OpenCode 1.19.5 and Mistral Vibe 3.1.2, with the
   OpenCode setting that keeps only the routers visible.
